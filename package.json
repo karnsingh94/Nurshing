@@ -1,0 +1,24 @@
+{
+  "name": "nurshing-azz",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check:pages": "node scripts/check-react-pages.mjs",
+    "generate:pages": "npm run check:pages",
+    "check": "node --check scripts/check-react-pages.mjs && npm run check:pages && npm run build"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

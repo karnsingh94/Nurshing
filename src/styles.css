@@ -1,0 +1,832 @@
+@import "tailwindcss";
+@source "./**/*.{js,jsx,ts,tsx,html}";
+@source not "../dist";
+@source not "../node_modules";
+
+@layer base {
+  html,
+  body,
+  #root {
+    @apply min-h-full w-full;
+  }
+
+  html {
+    @apply overflow-x-hidden overflow-y-auto scroll-smooth;
+  }
+
+  body {
+    @apply m-0 bg-[#f4f5f7] font-sans text-[#282828] antialiased overflow-x-hidden overflow-y-auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  img,
+  iframe,
+  video,
+  canvas {
+    @apply max-w-full;
+  }
+}
+
+@layer components {
+  /* Navigation Bar Tailwind Utility Layer */
+  .site-nav {
+    @apply sticky top-0 z-[1000] w-full bg-[#0966c2] text-white shadow-md;
+  }
+
+  .site-nav a,
+  .site-nav button {
+    @apply no-underline border-0 outline-none;
+  }
+
+  .site-nav__inner {
+    @apply relative mx-auto flex min-h-[60px] h-[60px] w-full max-w-[1740px] items-center gap-6 px-6 max-xl:gap-3 max-xl:px-4 max-md:min-h-[58px] max-md:gap-4 max-md:px-3;
+  }
+
+  .site-nav__brand {
+    @apply inline-flex shrink-0 items-center justify-center h-[44px] rounded-lg no-underline outline-none focus-visible:ring-2 focus-visible:ring-cyan-300;
+  }
+
+  .site-nav__links {
+    @apply ml-auto flex items-center justify-end gap-1 h-full;
+    overflow: visible !important;
+    scrollbar-width: none !important;
+  }
+
+  .site-nav__links::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .site-nav__item {
+    @apply static shrink-0 flex items-center h-full;
+  }
+
+  .site-nav__item > a,
+  .site-nav__item > button {
+    @apply inline-flex h-[40px] min-h-[40px] cursor-pointer items-center gap-1 whitespace-nowrap border-0 rounded-md bg-transparent px-2.5 text-[14px] font-semibold text-white transition-all duration-150 hover:bg-white/15 focus-visible:bg-white/15 focus-visible:outline-none max-xl:px-2 max-xl:text-[13px] max-lg:px-1.5 max-lg:text-[12px] max-md:min-h-[58px] max-md:px-2 max-md:text-[13px];
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  .site-nav__item > a:visited,
+  .site-nav__item > button:visited {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  .site-nav__item > a:hover,
+  .site-nav__item > button:hover,
+  .site-nav__item > a:focus-visible,
+  .site-nav__item > button:focus-visible {
+    @apply bg-white/15 outline-none;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  .site-nav__item > a.active,
+  .site-nav__item > button.active {
+    @apply bg-white/20 shadow-[inset_0_-2px_0_0_#ffffff] outline-none;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  .site-nav__caret {
+    @apply text-xl leading-none text-white/80 -translate-y-[1px];
+  }
+
+  .site-nav__mega {
+    @apply absolute left-1/2 top-full z-[1001] hidden overflow-hidden border border-[#e6e6e6] bg-white text-[#333333] shadow-2xl -translate-x-1/2 w-[min(98vw,1250px)] max-h-[calc(100vh-68px)] rounded-b-xl;
+  }
+
+  .site-nav__item:hover > .site-nav__mega:not(.site-nav__mega--more),
+  .site-nav__item:focus-within > .site-nav__mega:not(.site-nav__mega--more) {
+    @apply block;
+  }
+
+  .site-nav__mega-grid {
+    @apply grid gap-10 px-8 py-7 grid-cols-6 max-md:gap-5 max-md:px-4 max-md:py-5 max-md:grid-cols-2;
+  }
+
+  .site-nav__mega-column h3 {
+    @apply m-0 pb-4 text-[16px] font-bold uppercase leading-6 text-black;
+  }
+
+  .site-nav__mega-column ul {
+    @apply m-0 list-none p-0;
+  }
+
+  .site-nav__mega-column li {
+    @apply m-0 pb-2 text-[15px] leading-7;
+  }
+
+  .site-nav__mega-column a {
+    @apply text-[#404040] no-underline hover:text-[#0966c2] hover:underline focus-visible:text-[#0966c2] focus-visible:underline focus-visible:outline-none;
+  }
+
+  .site-nav__mega-secondary {
+    @apply mt-8;
+  }
+
+  .site-nav__mega--abroad .site-nav__mega-grid {
+    @apply grid-cols-4 max-md:grid-cols-2;
+  }
+
+  .site-nav__mega--more {
+    @apply p-0 grid-cols-[300px_minmax(0,1fr)] max-md:grid-cols-1;
+  }
+
+  .site-nav__item--more:hover > .site-nav__mega--more,
+  .site-nav__item--more:focus-within > .site-nav__mega--more,
+  .site-nav__mega--more.open {
+    @apply grid;
+  }
+
+  .site-nav__more-list {
+    @apply flex min-h-[420px] flex-col bg-[#f7f7f7] py-0 max-md:min-h-0 max-md:flex-row max-md:overflow-x-auto;
+  }
+
+  .site-nav__more-list button {
+    @apply min-h-[54px] cursor-pointer border-0 bg-transparent px-5 text-left text-[15px] font-semibold uppercase leading-5 text-[#404040] hover:bg-[#ff4e53] hover:text-white focus-visible:bg-[#ff4e53] focus-visible:text-white focus-visible:outline-none max-md:min-h-12 max-md:shrink-0 max-md:px-4 max-md:text-xs;
+  }
+
+  .site-nav__more-list button.active {
+    @apply bg-[#ff4e53] text-white outline-none;
+  }
+
+  .site-nav__mega--more .site-nav__mega-grid {
+    @apply px-6 py-7 grid-cols-5 max-md:gap-5 max-md:px-4 max-md:py-5 max-md:grid-cols-2;
+  }
+
+  /* Converted Page Shell & Scraped Page Utilities */
+  .converted-page-shell,
+  .converted-page {
+    @apply relative w-full min-h-[calc(100vh-64px)] overflow-x-hidden overflow-y-visible;
+  }
+
+  .converted-page .page-header,
+  .converted-page #primary-js-nav,
+  .converted-page noscript iframe,
+  .converted-page .lazy-ad,
+  .converted-page [data-freestar-ad],
+  .converted-page .pageLoader,
+  .converted-page #lead-form-js-new,
+  .converted-page #login-form-js,
+  .converted-page #fees-breakup,
+  .converted-page iframe[src*="googletagmanager"],
+  .converted-page iframe[src*="doubleclick"],
+  .converted-page .college__Landing__Hero__Section1,
+  .converted-page .college__Landing__Hero__Section,
+  .converted-page .breadcrumbDiv,
+  .converted-page .pageRedirectionMenu,
+  .converted-page .blueBgDiv {
+    display: none !important;
+  }
+
+  .converted-page .college__Landing__New,
+  .converted-page .filtered__colleges__list,
+  .converted-page .searchedcollegeList,
+  .converted-page .mobile__white__bg {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .converted-page .pageInfo,
+  .converted-page .pageData.pageInfo,
+  .converted-page .college__Landing__Hero__Section.pageData.pageInfo {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .converted-page .carouselSection {
+    @apply relative;
+  }
+
+  .converted-page .carouselDiv {
+    display: none;
+  }
+
+  .converted-page .carouselDiv:first-child {
+    display: block;
+  }
+
+  .converted-page .tab-nav-link,
+  .converted-page [data-target],
+  .converted-page .viewMoreCards,
+  .converted-page .scrollToTop {
+    @apply cursor-pointer;
+  }
+
+  .converted-page .tab-content:not(.activeTab) {
+    display: none;
+  }
+
+  .converted-page .show-all-cards .dataCard,
+  .converted-page .show-all-cards .displayCard,
+  .converted-page .show-all-cards .collegeCard,
+  .converted-page .show-all-cards .sliderCard {
+    display: flex !important;
+  }
+
+  .converted-page table {
+    @apply max-w-full max-md:block max-md:overflow-x-auto max-md:whitespace-nowrap;
+  }
+
+  .converted-page ._tableWrapper_1rjym_13,
+  .converted-page ._tableContainer_1rjym_1 {
+    @apply overflow-x-auto;
+  }
+
+  .converted-page .all-college-ajax.react-filter-sidebar {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Grid & Flex Layout Utilities (Bootstrap / jQuery replacement classes mapped to Tailwind) */
+  .row {
+    @apply flex flex-wrap -mx-3;
+  }
+
+  .col-md-3 {
+    @apply w-full md:w-1/4 px-3;
+  }
+
+  .col-md-4 {
+    @apply w-full md:w-1/3 px-3;
+  }
+
+  .col-md-6 {
+    @apply w-full md:w-1/2 px-3;
+  }
+
+  .col-md-8 {
+    @apply w-full md:w-2/3 px-3;
+  }
+
+  .col-md-9 {
+    @apply w-full md:w-3/4 px-3;
+  }
+
+  .col-md-12 {
+    @apply w-full px-3;
+  }
+
+  .container {
+    @apply w-full max-w-[1440px] mx-auto px-4;
+  }
+
+  /* Filter Panel & Search Classes mapped to Tailwind */
+  .converted-page .react-filter-layout {
+    @apply grid grid-cols-[250px_minmax(0,1fr)] gap-6 items-start max-w-[1740px] w-full my-6 mb-12 mx-auto px-4 sm:px-6 max-md:grid-cols-1 max-md:gap-3.5 max-md:my-4 max-md:mb-8 max-md:px-3;
+  }
+
+  .converted-page .react-filter-layout > .desktopOnly,
+  .converted-page .react-filter-layout > .col-md-3:not(.all-college-ajax),
+  .converted-page .react-filter-layout > div:not(.all-college-ajax):not(.mobile__white__bg) {
+    display: none !important;
+  }
+
+  .converted-page .react-filter-sidebar {
+    width: 250px !important;
+    max-width: 250px !important;
+    flex: 0 0 250px !important;
+  }
+
+  .converted-page .mobile__white__bg,
+  .converted-page .col-md-6.mobile__white__bg,
+  div.converted-page div.mobile__white__bg {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 0% !important;
+    grid-column: 2 / -1 !important;
+  }
+
+  .converted-page .react-filter-panel {
+    @apply rounded-2xl border border-gray-200/80 bg-white p-4 sticky top-[90px] max-h-[calc(100vh-110px)] overflow-y-auto text-[#282828] shadow-sm max-md:static max-md:max-h-none;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  .converted-page .react-filter-panel::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .converted-page .react-filter-header {
+    @apply mb-4 flex items-center justify-between gap-3 pb-3 border-b border-gray-100;
+  }
+
+  .converted-page .react-filter-header h2 {
+    @apply m-0 text-base font-extrabold text-gray-900 leading-snug;
+  }
+
+  .converted-page .react-filter-header button {
+    @apply cursor-pointer border-0 bg-transparent text-xs font-bold text-[#e5383b] hover:underline;
+  }
+
+  .converted-page .react-filter-search {
+    @apply mb-4 grid gap-1.5 text-xs font-bold text-gray-700 uppercase tracking-wider;
+  }
+
+  .converted-page .react-filter-search input {
+    @apply min-h-11 w-full rounded-xl border border-gray-200 bg-gray-50 px-3.5 text-sm font-medium text-gray-800 outline-none transition-all duration-200 focus:bg-white focus:border-[#0966c2] focus:ring-4 focus:ring-[#0966c2]/10;
+  }
+
+  .converted-page .react-filter-group {
+    @apply mt-4 border-t border-gray-100 pt-3.5;
+  }
+
+  .converted-page .react-filter-group h3 {
+    @apply mb-2.5 mt-0 text-xs font-bold uppercase tracking-wider text-gray-500 leading-snug;
+  }
+
+  .converted-page .react-filter-options {
+    @apply grid gap-2;
+  }
+
+  .converted-page .react-filter-option {
+    @apply grid cursor-pointer items-center gap-2.5 text-sm font-medium text-gray-700 leading-relaxed grid-cols-[16px_minmax(0,1fr)_auto] hover:text-gray-900;
+  }
+
+  .converted-page .react-filter-option input {
+    @apply h-4 w-4 rounded border-gray-300 accent-[#e5383b] cursor-pointer;
+  }
+
+  .converted-page .react-filter-option small {
+    @apply min-w-7 rounded-full bg-gray-100 px-2.5 text-center text-xs font-bold text-gray-500 leading-5;
+  }
+
+  .converted-page .react-filter-chip {
+    @apply cursor-pointer;
+  }
+
+  .converted-page .filter__by__exam.hide__widget {
+    display: block !important;
+    margin: 16px 0 !important;
+  }
+
+  .converted-page .filter__by__exam[hidden],
+  .converted-page .react-filter-empty[hidden],
+  .converted-page .college__card__new[hidden] {
+    display: none !important;
+  }
+
+  .converted-page .mobile__white__bg {
+    @apply w-full flex-1 bg-white rounded-2xl p-5 sm:p-7 shadow-sm border border-gray-200/80 max-md:p-3.5 max-md:rounded-xl;
+  }
+
+  .converted-page .sort__row__container {
+    @apply flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-gray-100;
+  }
+
+  .converted-page .filtered__college_count {
+    @apply text-lg sm:text-xl font-extrabold text-gray-900 m-0 leading-tight;
+  }
+
+  .converted-page .sortBy__select2__container {
+    @apply inline-flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-xl px-3 py-1.5 shadow-xs transition-all duration-200 hover:bg-gray-100 hover:border-gray-300;
+    float: none !important;
+    width: auto !important;
+  }
+
+  .converted-page .sortBy__select2__container span {
+    @apply text-xs font-semibold text-gray-500 whitespace-nowrap;
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .converted-page .sortBy__select2__container select,
+  .converted-page #college-sort {
+    @apply border-0 bg-transparent text-xs font-extrabold text-gray-800 outline-none cursor-pointer pr-1 transition-all;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .converted-page .filter__selected__container {
+    @apply flex flex-wrap items-center justify-between gap-2 mb-3;
+  }
+
+  .converted-page .clearAll,
+  .converted-page .mobile__clear__filter span {
+    @apply text-xs font-bold text-[#e5383b] cursor-pointer hover:underline;
+  }
+
+  .converted-page .searchBar {
+    @apply relative w-full my-4;
+  }
+
+  .converted-page .searchBar input,
+  .converted-page input.search-listing {
+    @apply w-full pl-4 pr-10 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-sm font-semibold text-gray-800 placeholder-gray-400 outline-none transition-all duration-200 focus:bg-white focus:border-[#0966c2] focus:ring-4 focus:ring-[#0966c2]/10;
+  }
+
+  .converted-page .searchBar .search-remove,
+  .converted-page .searchBar .small__close__icon {
+    @apply absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer hover:text-gray-600;
+  }
+
+  .converted-page .searchedcollegeList {
+    @apply grid gap-4 mt-5 w-full;
+  }
+
+  .converted-page .college__card__new {
+    @apply rounded-2xl border border-gray-200/90 bg-white p-5 sm:p-6 shadow-xs transition-all duration-200 hover:shadow-md hover:border-gray-300;
+  }
+
+  .converted-page .react-filter-empty {
+    @apply my-6 rounded-2xl border-2 border-dashed border-gray-200 bg-gray-50 p-8 sm:p-12 text-center shadow-xs flex flex-col items-center justify-center gap-1 w-full;
+  }
+
+  .converted-page .leadFilterData[role="button"]:focus-visible {
+    @apply outline-none ring-4 ring-red-400/25;
+  }
+
+  .converted-page .scrollToTop {
+    @apply fixed right-[18px] bottom-[18px] z-[1000];
+  }
+
+  .react-page-fallback {
+    @apply mx-auto max-w-5xl px-5 py-10 text-[#282828];
+  }
+
+  .react-page-fallback h1 {
+    @apply mb-3 text-3xl font-bold;
+  }
+
+  .react-page-list {
+    @apply mt-6 grid gap-3 grid-cols-[repeat(auto-fit,minmax(180px,1fr))];
+  }
+
+  .react-page-list a,
+  .react-page-retry {
+    @apply rounded-xl border border-[#e1e1e1] bg-white px-4 py-3 text-sm font-semibold text-[#282828] no-underline;
+  }
+
+  .react-page-retry {
+    @apply cursor-pointer border-0 text-white bg-[#e93042];
+  }
+
+  /* Action CTA Buttons mapped to Tailwind Utilities */
+  .cta__grid {
+    @apply flex flex-col gap-2 items-stretch;
+  }
+
+  .cta__div,
+  .leadFilterData {
+    @apply flex items-center justify-center px-5 py-2.5 text-[15px] font-bold rounded-xl cursor-pointer transition-all duration-200 text-center select-none shadow-xs;
+  }
+
+  /* Apply Now & Download Brochure - White with Soft Crimson Border */
+  .lead-cta-college-filter-2,
+  .apply-now-btn,
+  .download__brochure {
+    @apply bg-white text-[#e5383b] border-[1.8px] border-[#e5383b] rounded-xl font-bold hover:bg-red-50 hover:text-[#c92a37] hover:border-[#c92a37] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200;
+  }
+
+  /* View College / Primary CTA - Solid Soft Crimson */
+  .lead-cta-college-filter-1,
+  .view-details-btn,
+  .primaryBtn {
+    @apply bg-[#e5383b] text-white border-[1.8px] border-[#e5383b] rounded-xl font-bold hover:bg-[#c92a37] hover:border-[#c92a37] hover:text-white hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200;
+  }
+
+  /* Shared Brand artwork */
+  .converted-page .headerLogo {
+    @apply w-[230px] h-[44px] inline-block bg-[url('/brand-logo.svg')] bg-left bg-contain bg-no-repeat;
+  }
+
+  .converted-page img[src*="brand-logo"] {
+    @apply w-[230px] h-auto max-h-[48px] object-contain inline-block;
+  }
+
+  .site-nav .mobile-nav-toggle {
+    @apply hidden max-md:inline-flex max-md:items-center max-md:gap-2 max-md:ml-auto max-md:min-h-[44px] max-md:px-3 max-md:py-2 max-md:text-white max-md:bg-transparent max-md:border max-md:border-current max-md:rounded-lg;
+  }
+
+  .site-nav .nav-expand {
+    display: none !important;
+  }
+
+  @media (max-width: 768px) {
+    .site-nav__inner {
+      flex-wrap: wrap !important;
+      min-height: 58px !important;
+      height: auto !important;
+      padding: 8px 12px !important;
+    }
+
+    .site-nav__links {
+      display: none !important;
+    }
+
+    .site-nav.mobile-menu-open .site-nav__links {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      max-height: 75vh !important;
+      overflow-y: auto !important;
+      margin-top: 8px !important;
+      padding: 8px 0 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .site-nav__item {
+      width: 100% !important;
+      flex-wrap: wrap !important;
+    }
+
+    .site-nav__item > a,
+    .site-nav__item > button {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      min-height: 44px !important;
+      padding: 10px 12px !important;
+    }
+
+    .site-nav .nav-expand {
+      display: none !important;
+    }
+
+    .site-nav__caret {
+      display: inline-block !important;
+      margin-left: auto !important;
+    }
+  }
+
+  /* Mobile Filter Drawer Responsive Rules */
+  .mobile-filter-trigger-btn,
+  .mobile-filter-close-btn,
+  .mobile-filter-apply-btn {
+    display: none !important;
+  }
+
+  @media (max-width: 768px) {
+    .converted-page .react-filter-sidebar {
+      min-height: 0 !important;
+    }
+
+    .converted-page .react-filter-panel {
+      display: none !important;
+    }
+
+    .mobile-filter-trigger-btn {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      padding: 12px 16px !important;
+      margin: 10px 0 16px !important;
+      background-color: #ffffff !important;
+      color: #0966c2 !important;
+      border: 1.5px solid #0966c2 !important;
+      border-radius: 12px !important;
+      font-size: 14px !important;
+      font-weight: 700 !important;
+      box-shadow: 0 2px 6px rgba(9, 102, 194, 0.08) !important;
+      cursor: pointer !important;
+    }
+
+    .mobile-filter-trigger-btn .filter-badge {
+      font-size: 11px !important;
+      background-color: #ebf5ff !important;
+      color: #0966c2 !important;
+      padding: 4px 10px !important;
+      border-radius: 20px !important;
+      font-weight: 600 !important;
+    }
+
+    .converted-page .react-filter-panel.mobile-drawer-open {
+      display: flex !important;
+      flex-direction: column !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      max-height: 100vh !important;
+      z-index: 999999 !important;
+      background-color: #ffffff !important;
+      padding: 16px 16px 80px !important;
+      overflow-y: auto !important;
+      border-radius: 0 !important;
+      animation: mobileSlideUp 0.25s ease-out !important;
+    }
+
+    .mobile-filter-close-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      background: #f1f3f4 !important;
+      color: #333333 !important;
+      border: none !important;
+      padding: 6px 14px !important;
+      border-radius: 20px !important;
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      cursor: pointer !important;
+    }
+
+    .mobile-filter-apply-btn {
+      display: block !important;
+      position: fixed !important;
+      bottom: 16px !important;
+      left: 16px !important;
+      right: 16px !important;
+      background-color: #e5383b !important;
+      color: #ffffff !important;
+      border: none !important;
+      padding: 14px !important;
+      border-radius: 14px !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      box-shadow: 0 4px 14px rgba(229, 56, 59, 0.4) !important;
+      z-index: 1000000 !important;
+      cursor: pointer !important;
+    }
+  }
+}
+
+@keyframes mobileSlideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Study Abroad Options Horizontal Layout */
+.react-full-width-study,
+.container:has(.studyAbroad) .col-md-6 {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+}
+
+.studyAbroad {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 3.5rem !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 2.5rem auto 1.5rem auto !important;
+  overflow-x: auto !important;
+}
+
+.studyAbroadCard {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  flex: 0 0 auto !important;
+  transition: transform 0.2s ease !important;
+}
+
+.studyAbroadCard:hover {
+  transform: translateY(-4px) !important;
+}
+
+.studyAbroadCard img {
+  width: 75px !important;
+  height: 75px !important;
+  object-fit: contain !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.studyAbroadCard p {
+  margin: 0 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #333333 !important;
+}
+
+/* Auto Infinite Marquee Slider for Media Logos */
+.featuredBrandWrapper {
+  overflow: hidden !important;
+  width: 100% !important;
+  position: relative !important;
+  padding: 1rem 0 !important;
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent) !important;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent) !important;
+}
+
+.featuredBrandTrack {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 2rem !important;
+  width: max-content !important;
+  animation: mediaMarquee 20s linear infinite !important;
+}
+
+.featuredBrandTrack:hover {
+  animation-play-state: paused !important;
+}
+
+@keyframes mediaMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.featuredCard {
+  flex: 0 0 auto !important;
+  width: 150px !important;
+  height: 80px !important;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid #e2e8f0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 12px 16px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.featuredCard:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+.featuredCard img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Premium Single-Line Pill Styling for Load More Colleges Button */
+.searchedcollegeList {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.load__more__button,
+.loadMoreList {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  width: auto !important;
+  max-width: fit-content !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 32px auto 20px auto !important;
+  padding: 12px 32px !important;
+  background: #008080 !important;
+  color: #ffffff !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border: none !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 4px 16px rgba(0, 128, 128, 0.35) !important;
+  cursor: pointer !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+  clear: both !important;
+}
+
+.load__more__button:hover,
+.loadMoreList:hover {
+  background: #006666 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 22px rgba(0, 128, 128, 0.45) !important;
+  color: #ffffff !important;
+}
+
+.load__more__button span,
+.loadMoreList span {
+  color: #ffffff !important;
+}
+
+
+
+

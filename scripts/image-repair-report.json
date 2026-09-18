@@ -1,0 +1,209 @@
+{
+  "downloaded": 71,
+  "failed": [
+    [
+      "https://media.getmyuni.com/azure/college-image/big/post-graduate-institute-of-medical-education-and-research-pgimer-chandigarh.jpg",
+      "/images/imported/307564ad22c67d1c.jpg",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://media.getmyuni.com/azure/college-image/small/post-graduate-institute-of-medical-education-and-research-pgimer-chandigarh.jpg",
+      "/images/imported/e4d93b0506695c18.jpg",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://media.getmyuni.com/azure/college-image/big/jawaharlal-institute-of-postgraduate-medical-education-and-research-jipmer-puducherry.jpg",
+      "/images/imported/d1f0e9a68873b3c3.jpg",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://media.getmyuni.com/azure/college-image/small/jawaharlal-institute-of-postgraduate-medical-education-and-research-jipmer-puducherry.jpg",
+      "/images/imported/627b56bd7cdc07c8.jpg",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://media.getmyuni.com/azure/college-image/big/king-georges-medical-university-kgmu-lucknow.jpg",
+      "/images/imported/a1036eb038ba4f02.jpg",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://media.getmyuni.com/azure/college-image/small/king-georges-medical-university-kgmu-lucknow.jpg",
+      "/images/imported/b31e2e17801c90dc.jpg",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://media.getmyuni.com/azure/college-image/big/kasturba-medical-college-kmc-manipal.jpg",
+      "/images/imported/840c7af0edf32547.jpg",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://media.getmyuni.com/azure/college-image/small/kasturba-medical-college-kmc-manipal.jpg",
+      "/images/imported/3b95be4975ef8e2b.jpg",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://www.getmyuni.com/yas/images/home_new/homepage_background_3.jpg",
+      "/yas/images/home_new/homepage_background_3.jpg",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://www.getmyuni.com/yas/css/version2/images/ui-icons_444444_256x240.png",
+      "/images/imported/7d5f5dba27010e0a.png",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://www.getmyuni.com/yas/css/version2/images/ui-icons_555555_256x240.png",
+      "/images/imported/e20eaac40a24b91c.png",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://www.getmyuni.com/yas/css/version2/images/ui-icons_ffffff_256x240.png",
+      "/images/imported/fe1752bedb5a2432.png",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://www.getmyuni.com/yas/css/version2/images/ui-icons_777620_256x240.png",
+      "/images/imported/dfbc30a5bf187872.png",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://www.getmyuni.com/yas/css/version2/images/ui-icons_cc0000_256x240.png",
+      "/images/imported/3cda11d555641b0d.png",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://www.getmyuni.com/yas/css/version2/images/ui-icons_777777_256x240.png",
+      "/images/imported/3bb6b51fd6fbfa00.png",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://www.getmyuni.com/yas/images/home_new/quote2.png",
+      "/yas/images/home_new/quote2.png",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://www.getmyuni.com/yas/images/home_new/quote1.png",
+      "/yas/images/home_new/quote1.png",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://www.getmyuni.com/yas/images/home_new/aboutus-banner.webp",
+      "/yas/images/home_new/aboutus-banner.webp",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://www.getmyuni.com/images/master_sprite.webp",
+      "/images/imported/3b27c5a015e8fd60.webp",
+      "HTTP Error 404: Not Found"
+    ],
+    [
+      "https://www.getmyuni.com/images/clgProfileIcon.png?d172f0a71be89cc4333190e2c63f28a4",
+      "/images/imported/fc029c4d12214ef9.png",
+      "HTTP Error 404: Not Found"
+    ]
+  ],
+  "recovered": [
+    [
+      "https://media.getmyuni.com/azure/college-image/big/post-graduate-institute-of-medical-education-and-research-pgimer-chandigarh.jpg",
+      "/images/imported/307564ad22c67d1c.jpg",
+      "https://media.getmyuni.com/azure/college-image/big/post-graduate-institute-of-medical-education-research-pgiome-r-chandigarh.webp"
+    ],
+    [
+      "https://media.getmyuni.com/azure/college-image/small/post-graduate-institute-of-medical-education-and-research-pgimer-chandigarh.jpg",
+      "/images/imported/e4d93b0506695c18.jpg",
+      "https://media.getmyuni.com/azure/college-image/small/post-graduate-institute-of-medical-education-research-pgiome-r-chandigarh.webp"
+    ],
+    [
+      "https://media.getmyuni.com/azure/college-image/big/jawaharlal-institute-of-postgraduate-medical-education-and-research-jipmer-puducherry.jpg",
+      "/images/imported/d1f0e9a68873b3c3.jpg",
+      "https://media.getmyuni.com/azure/college-image/big/jawaharlal-institute-of-post-graduate-medical-education-and-research-jiopgmear-puducherry.jpg"
+    ],
+    [
+      "https://media.getmyuni.com/azure/college-image/small/jawaharlal-institute-of-postgraduate-medical-education-and-research-jipmer-puducherry.jpg",
+      "/images/imported/627b56bd7cdc07c8.jpg",
+      "https://media.getmyuni.com/azure/college-image/small/jawaharlal-institute-of-post-graduate-medical-education-and-research-jiopgmear-puducherry.jpg"
+    ],
+    [
+      "https://media.getmyuni.com/azure/college-image/big/kasturba-medical-college-kmc-manipal.jpg",
+      "/images/imported/840c7af0edf32547.jpg",
+      "https://media.getmyuni.com/azure/college-image/big/kasturba-medical-college-kmc-udupi.jpg"
+    ],
+    [
+      "https://media.getmyuni.com/azure/college-image/small/kasturba-medical-college-kmc-manipal.jpg",
+      "/images/imported/3b95be4975ef8e2b.jpg",
+      "https://media.getmyuni.com/azure/college-image/small/kasturba-medical-college-kmc-udupi.jpg"
+    ],
+    [
+      "https://www.getmyuni.com/yas/css/version2/images/ui-icons_444444_256x240.png",
+      "/images/imported/7d5f5dba27010e0a.png",
+      "https://code.jquery.com/ui/1.12.1/themes/base/images/ui-icons_444444_256x240.png"
+    ],
+    [
+      "https://www.getmyuni.com/yas/css/version2/images/ui-icons_555555_256x240.png",
+      "/images/imported/e20eaac40a24b91c.png",
+      "https://code.jquery.com/ui/1.12.1/themes/base/images/ui-icons_555555_256x240.png"
+    ],
+    [
+      "https://www.getmyuni.com/yas/css/version2/images/ui-icons_ffffff_256x240.png",
+      "/images/imported/fe1752bedb5a2432.png",
+      "https://code.jquery.com/ui/1.12.1/themes/base/images/ui-icons_ffffff_256x240.png"
+    ],
+    [
+      "https://www.getmyuni.com/yas/css/version2/images/ui-icons_777620_256x240.png",
+      "/images/imported/dfbc30a5bf187872.png",
+      "https://code.jquery.com/ui/1.12.1/themes/base/images/ui-icons_777620_256x240.png"
+    ],
+    [
+      "https://www.getmyuni.com/yas/css/version2/images/ui-icons_cc0000_256x240.png",
+      "/images/imported/3cda11d555641b0d.png",
+      "https://code.jquery.com/ui/1.12.1/themes/base/images/ui-icons_cc0000_256x240.png"
+    ],
+    [
+      "https://www.getmyuni.com/yas/css/version2/images/ui-icons_777777_256x240.png",
+      "/images/imported/3bb6b51fd6fbfa00.png",
+      "https://code.jquery.com/ui/1.12.1/themes/base/images/ui-icons_777777_256x240.png"
+    ],
+    [
+      "https://www.getmyuni.com/images/master_sprite.webp",
+      "/images/imported/3b27c5a015e8fd60.webp",
+      "https://www.getmyuni.com/yas/images/master_sprite.webp"
+    ],
+    [
+      "https://www.getmyuni.com/images/clgProfileIcon.png?d172f0a71be89cc4333190e2c63f28a4",
+      "/images/imported/fc029c4d12214ef9.png",
+      "https://www.getmyuni.com/yas/images/clgProfileIcon.png"
+    ]
+  ],
+  "remaining": [
+    [
+      "https://media.getmyuni.com/azure/college-image/big/king-georges-medical-university-kgmu-lucknow.jpg",
+      "/images/imported/a1036eb038ba4f02.jpg",
+      null
+    ],
+    [
+      "https://media.getmyuni.com/azure/college-image/small/king-georges-medical-university-kgmu-lucknow.jpg",
+      "/images/imported/b31e2e17801c90dc.jpg",
+      null
+    ],
+    [
+      "https://www.getmyuni.com/yas/images/home_new/homepage_background_3.jpg",
+      "/yas/images/home_new/homepage_background_3.jpg",
+      null
+    ],
+    [
+      "https://www.getmyuni.com/yas/images/home_new/quote2.png",
+      "/yas/images/home_new/quote2.png",
+      null
+    ],
+    [
+      "https://www.getmyuni.com/yas/images/home_new/quote1.png",
+      "/yas/images/home_new/quote1.png",
+      null
+    ],
+    [
+      "https://www.getmyuni.com/yas/images/home_new/aboutus-banner.webp",
+      "/yas/images/home_new/aboutus-banner.webp",
+      null
+    ]
+  ]
+}
