@@ -40,19 +40,21 @@
 
   .site-nav a,
   .site-nav button {
-    @apply no-underline border-0 outline-none;
+    text-decoration: none !important;
+    border: 0;
+    outline: none;
   }
 
   .site-nav__inner {
-    @apply relative mx-auto flex min-h-[60px] h-[60px] w-full max-w-[1740px] items-center gap-6 px-6 max-xl:gap-3 max-xl:px-4 max-md:min-h-[58px] max-md:gap-4 max-md:px-3;
+    @apply relative mx-auto flex min-h-[60px] h-[60px] w-full max-w-[1740px] items-center px-8 max-xl:px-4 max-md:min-h-[58px] max-md:px-3;
   }
 
   .site-nav__brand {
-    @apply inline-flex shrink-0 items-center justify-center h-[44px] rounded-lg no-underline outline-none focus-visible:ring-2 focus-visible:ring-cyan-300;
+    @apply inline-flex shrink-0 items-center justify-center h-[44px] mr-8 max-xl:mr-4 rounded-lg no-underline outline-none focus-visible:ring-2 focus-visible:ring-cyan-300;
   }
 
   .site-nav__links {
-    @apply ml-auto flex items-center justify-end gap-1 h-full;
+    @apply flex items-center justify-start gap-0.5 h-full pr-6 max-xl:pr-2;
     overflow: visible !important;
     scrollbar-width: none !important;
   }
@@ -67,44 +69,144 @@
 
   .site-nav__item > a,
   .site-nav__item > button {
-    @apply inline-flex h-[40px] min-h-[40px] cursor-pointer items-center gap-1 whitespace-nowrap border-0 rounded-md bg-transparent px-2.5 text-[14px] font-semibold text-white transition-all duration-150 hover:bg-white/15 focus-visible:bg-white/15 focus-visible:outline-none max-xl:px-2 max-xl:text-[13px] max-lg:px-1.5 max-lg:text-[12px] max-md:min-h-[58px] max-md:px-2 max-md:text-[13px];
+    position: relative;
+    display: inline-flex;
+    height: 40px;
+    min-height: 40px;
+    cursor: pointer;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+    border: 0;
+    border-radius: 0;
+    background: transparent !important;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 600;
     color: #ffffff !important;
+    text-decoration: none !important;
     -webkit-text-fill-color: #ffffff !important;
+    transition: color 0.2s ease;
+    box-shadow: none !important;
+  }
+
+  .site-nav__item > a::after,
+  .site-nav__item > button::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 10px;
+    right: 10px;
+    height: 2.5px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .site-nav__item > a:visited,
   .site-nav__item > button:visited {
     color: #ffffff !important;
+    text-decoration: none !important;
     -webkit-text-fill-color: #ffffff !important;
   }
 
   .site-nav__item > a:hover,
   .site-nav__item > button:hover,
   .site-nav__item > a:focus-visible,
-  .site-nav__item > button:focus-visible {
-    @apply bg-white/15 outline-none;
+  .site-nav__item > button:focus-visible,
+  .site-nav__item:hover > a,
+  .site-nav__item:hover > button {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    outline: none;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
+  }
+
+  .site-nav__item > a:hover::after,
+  .site-nav__item > button:hover::after,
+  .site-nav__item > a:focus-visible::after,
+  .site-nav__item > button:focus-visible::after,
+  .site-nav__item:hover > a::after,
+  .site-nav__item:hover > button::after {
+    transform: scaleX(1);
   }
 
   .site-nav__item > a.active,
   .site-nav__item > button.active {
-    @apply bg-white/20 shadow-[inset_0_-2px_0_0_#ffffff] outline-none;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    outline: none;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
   }
 
+  .site-nav__item > a.active::after,
+  .site-nav__item > button.active::after {
+    transform: scaleX(1);
+  }
+
   .site-nav__caret {
-    @apply text-xl leading-none text-white/80 -translate-y-[1px];
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    width: 14px;
+    height: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+    transform: rotate(0deg);
+    flex-shrink: 0;
+  }
+
+  .site-nav__item:hover .site-nav__caret,
+  .site-nav__item:focus-within .site-nav__caret,
+  .site-nav__item.touch-open .site-nav__caret,
+  .site-nav__item > button[aria-expanded="true"] .site-nav__caret {
+    transform: rotate(180deg);
+    color: #ffffff;
   }
 
   .site-nav__mega {
-    @apply absolute left-1/2 top-full z-[1001] hidden overflow-hidden border border-[#e6e6e6] bg-white text-[#333333] shadow-2xl -translate-x-1/2 w-[min(98vw,1250px)] max-h-[calc(100vh-68px)] rounded-b-xl;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    z-index: 1001;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    color: #333333;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.2);
+    width: min(98vw, 1250px);
+    max-height: calc(100vh - 68px);
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+
+    /* Dropdown Hover Animation */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, 8px);
+    transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                visibility 0.22s step-end;
   }
 
-  .site-nav__item:hover > .site-nav__mega:not(.site-nav__mega--more),
-  .site-nav__item:focus-within > .site-nav__mega:not(.site-nav__mega--more) {
-    @apply block;
+  .site-nav__item:hover > .site-nav__mega,
+  .site-nav__item:focus-within > .site-nav__mega,
+  .site-nav__item.touch-open > .site-nav__mega,
+  .site-nav__mega--more.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, 0px);
+    transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                visibility 0s step-start;
   }
 
   .site-nav__mega-grid {
@@ -136,13 +238,7 @@
   }
 
   .site-nav__mega--more {
-    @apply p-0 grid-cols-[300px_minmax(0,1fr)] max-md:grid-cols-1;
-  }
-
-  .site-nav__item--more:hover > .site-nav__mega--more,
-  .site-nav__item--more:focus-within > .site-nav__mega--more,
-  .site-nav__mega--more.open {
-    @apply grid;
+    @apply p-0;
   }
 
   .site-nav__more-list {
@@ -558,7 +654,7 @@
     }
 
     .site-nav__caret {
-      display: inline-block !important;
+      display: inline-flex !important;
       margin-left: auto !important;
     }
   }
@@ -825,6 +921,131 @@
 .load__more__button span,
 .loadMoreList span {
   color: #ffffff !important;
+}
+
+/* Banner Search Bar Input & Placeholder High Visibility Styling */
+.searchSection input,
+.college-name-text-box,
+.foucus-search {
+  background-color: #ffffff !important;
+  color: #1a202c !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.searchSection input::placeholder,
+.college-name-text-box::placeholder,
+.foucus-search::placeholder {
+  color: #475569 !important;
+  opacity: 1 !important;
+  font-size: 14.5px !important;
+  font-weight: 500 !important;
+}
+
+.searchSection input:focus,
+.college-name-text-box:focus,
+.foucus-search:focus {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(9, 102, 194, 0.3) !important;
+}
+
+/* Featured Colleges Slider Navigation Arrows & Cards UI */
+.featured-slider-arrow {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 30 !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 9999px !important;
+  background: #ffffff !important;
+  color: #0966c2 !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  outline: none !important;
+  user-select: none !important;
+}
+
+.featured-slider-arrow svg {
+  display: block !important;
+  margin: auto !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.featured-slider-arrow:hover {
+  background: #0966c2 !important;
+  color: #ffffff !important;
+  border-color: #0966c2 !important;
+  transform: translateY(-50%) scale(1.12) !important;
+  box-shadow: 0 8px 24px rgba(9, 102, 194, 0.38) !important;
+}
+
+.featured-slider-arrow:active {
+  transform: translateY(-50%) scale(0.96) !important;
+}
+
+.featured-slider-prev {
+  left: -20px !important;
+}
+
+.featured-slider-next {
+  right: -20px !important;
+}
+
+.homeFeaturedCollege {
+  display: flex !important;
+  gap: 18px !important;
+  overflow-x: auto !important;
+  scroll-behavior: smooth !important;
+  scrollbar-width: none !important;
+  padding: 8px 6px 16px 6px !important;
+}
+
+.homeFeaturedCollege::-webkit-scrollbar {
+  display: none !important;
+}
+
+.homeFeaturedCollege .displayCard {
+  flex: 0 0 calc(25% - 14px) !important;
+  min-width: 260px !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+  text-decoration: none !important;
+}
+
+.homeFeaturedCollege .displayCard:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12) !important;
+  border-color: #0966c2 !important;
+}
+
+.homeFeaturedCollege .displayCard figure {
+  overflow: hidden !important;
+  margin: 0 !important;
+}
+
+.homeFeaturedCollege .displayCard figure img {
+  transition: transform 0.35s ease !important;
+}
+
+.homeFeaturedCollege .displayCard:hover figure img {
+  transform: scale(1.06) !important;
 }
 
 

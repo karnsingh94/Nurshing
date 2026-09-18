@@ -1,3 +1,4 @@
+import { useState, useMemo } from 'react';
 import CollegeImage from '../components/CollegeImage.jsx';
 import CollegeLogo from '../components/CollegeLogo.jsx';
 import { collegesData } from '../data/collegesData.js';
@@ -225,52 +226,313 @@ export const page = {
   },
 };
 
+const sampleColleges = [
+  { id: '1', name: 'IIT Bombay - Indian Institute of Technology', city: 'Mumbai', state: 'Maharashtra', stream: 'Engineering', sector: 'Government', rating: '4.9', fee: '₹2.2L / Year' },
+  { id: '2', name: 'IIT Delhi - Indian Institute of Technology', city: 'New Delhi', state: 'Delhi', stream: 'Engineering', sector: 'Government', rating: '4.9', fee: '₹2.1L / Year' },
+  { id: '3', name: 'IIT Madras - Indian Institute of Technology', city: 'Chennai', state: 'Tamil Nadu', stream: 'Engineering', sector: 'Government', rating: '4.9', fee: '₹2.0L / Year' },
+  { id: '4', name: 'AIIMS New Delhi - All India Institute of Medical Sciences', city: 'New Delhi', state: 'Delhi', stream: 'Medical', sector: 'Government', rating: '4.9', fee: '₹1.6K / Year' },
+  { id: '5', name: 'IIM Ahmedabad - Indian Institute of Management', city: 'Ahmedabad', state: 'Gujarat', stream: 'Management', sector: 'Government', rating: '4.9', fee: '₹25L (Total)' },
+  { id: '6', name: 'VIT Vellore - Vellore Institute of Technology', city: 'Vellore', state: 'Tamil Nadu', stream: 'Engineering', sector: 'Private', rating: '4.6', fee: '₹1.9L / Year' },
+  { id: '7', name: 'Chandigarh University (CU)', city: 'Mohali', state: 'Punjab', stream: 'Engineering', sector: 'Private', rating: '4.5', fee: '₹1.6L / Year' },
+  { id: '8', name: 'Lovely Professional University (LPU)', city: 'Jalandhar', state: 'Punjab', stream: 'Management', sector: 'Private', rating: '4.5', fee: '₹1.4L / Year' },
+  { id: '9', name: 'BITS Pilani - Birla Institute of Technology and Science', city: 'Pilani', state: 'Rajasthan', stream: 'Engineering', sector: 'Private', rating: '4.8', fee: '₹4.5L / Year' },
+  { id: '10', name: 'Manipal Academy of Higher Education (MAHE)', city: 'Manipal', state: 'Karnataka', stream: 'Medical', sector: 'Private', rating: '4.6', fee: '₹3.8L / Year' },
+  { id: '11', name: 'CMC Vellore - Christian Medical College', city: 'Vellore', state: 'Tamil Nadu', stream: 'Medical', sector: 'Private', rating: '4.8', fee: '₹50K / Year' },
+  { id: '12', name: 'NIFD National Institute of Fashion Design', city: 'Mumbai', state: 'Maharashtra', stream: 'Design', sector: 'Private', rating: '4.4', fee: '₹1.8L / Year' },
+  { id: '13', name: 'IIM Bangalore - Indian Institute of Management', city: 'Bangalore', state: 'Karnataka', stream: 'Management', sector: 'Government', rating: '4.9', fee: '₹24L (Total)' },
+  { id: '14', name: 'JIPMER Puducherry - Jawaharlal Institute of Postgraduate Medical Education', city: 'Puducherry', state: 'Puducherry', stream: 'Medical', sector: 'Government', rating: '4.8', fee: '₹12K / Year' },
+  { id: '15', name: 'Jamia Millia Islamia, New Delhi', city: 'New Delhi', state: 'Delhi', stream: 'Arts & Science', sector: 'Government', rating: '4.6', fee: '₹15K / Year' }
+];
+
+const sampleCourses = [
+  { id: 'c1', name: 'B.Tech Computer Science and Engineering (CSE)', stream: 'Engineering', duration: '4 Years', avgFee: '₹1.5L - ₹4.5L / Year', popularIn: 'IITs, NITs, VIT, CU, LPU' },
+  { id: 'c2', name: 'MBA - Master of Business Administration', stream: 'Management', duration: '2 Years', avgFee: '₹3.0L - ₹12L / Year', popularIn: 'IIMs, XLRI, FMS, ISB, JIMS' },
+  { id: 'c3', name: 'MBBS - Bachelor of Medicine and Bachelor of Surgery', stream: 'Medical', duration: '5.5 Years', avgFee: '₹50K - ₹15L / Year', popularIn: 'AIIMS, CMC, JIPMER, KGMU' },
+  { id: 'c4', name: 'B.Pharm - Bachelor of Pharmacy', stream: 'Pharmacy', duration: '4 Years', avgFee: '₹80K - ₹2.5L / Year', popularIn: 'Jamia Hamdard, NIPER, BITS' },
+  { id: 'c5', name: 'BCA - Bachelor of Computer Applications', stream: 'Computer Application', duration: '3 Years', avgFee: '₹60K - ₹1.8L / Year', popularIn: 'Christ Univ, Symbiosis, CU' },
+  { id: 'c6', name: 'B.Arch - Bachelor of Architecture', stream: 'Architecture', duration: '5 Years', avgFee: '₹1.2L - ₹3.5L / Year', popularIn: 'SPA Delhi, IIT Roorkee, CEPT' },
+  { id: 'c7', name: 'BA LLB (Hons) - Integrated Law', stream: 'Law', duration: '5 Years', avgFee: '₹1.5L - ₹4.0L / Year', popularIn: 'NLSIU Bangalore, NALSAR, WBNUJS' },
+  { id: 'c8', name: 'B.Sc Nursing - Bachelor of Science in Nursing', stream: 'Paramedical', duration: '4 Years', avgFee: '₹40K - ₹1.5L / Year', popularIn: 'AIIMS, PGIMER, CMC Vellore' },
+  { id: 'c9', name: 'B.Des - Bachelor of Design (UI/UX / Fashion)', stream: 'Design', duration: '4 Years', avgFee: '₹2.0L - ₹4.5L / Year', popularIn: 'NIFT, NID, Pearl Academy' },
+  { id: 'c10', name: 'B.Com (Hons) - Bachelor of Commerce', stream: 'Commerce', duration: '3 Years', avgFee: '₹30K - ₹1.5L / Year', popularIn: 'SRCC Delhi, Loyola, St. Xaviers' }
+];
+
 function HomeContent() {
+  const [activeSearchTab, setActiveSearchTab] = useState('colleges');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const allColleges = useMemo(() => {
+    const list = [...sampleColleges];
+    if (Array.isArray(collegesData)) {
+      collegesData.forEach((c) => {
+        if (c && c.name && !list.some(item => item.name.toLowerCase() === c.name.toLowerCase())) {
+          list.push({
+            id: c.id || c.name,
+            name: c.name,
+            city: c.city || c.stateName || 'India',
+            state: c.stateName || '',
+            stream: c.sector || 'Colleges',
+            sector: c.sector || 'Private/Govt',
+            rating: '4.5',
+            fee: '₹1.5L / Year'
+          });
+        }
+      });
+    }
+    return list;
+  }, []);
+
+  const filteredResults = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+    if (activeSearchTab === 'colleges') {
+      if (!query) return allColleges.slice(0, 12);
+      return allColleges.filter((item) =>
+        item.name.toLowerCase().includes(query) ||
+        (item.city && item.city.toLowerCase().includes(query)) ||
+        (item.state && item.state.toLowerCase().includes(query)) ||
+        (item.stream && item.stream.toLowerCase().includes(query))
+      ).slice(0, 30);
+    } else {
+      if (!query) return sampleCourses.slice(0, 10);
+      return sampleCourses.filter((item) =>
+        item.name.toLowerCase().includes(query) ||
+        item.stream.toLowerCase().includes(query) ||
+        item.popularIn.toLowerCase().includes(query)
+      );
+    }
+  }, [searchQuery, activeSearchTab, allColleges]);
+
+  const handleSearchSubmit = (e) => {
+    if (e) e.preventDefault();
+    setIsPopupOpen(true);
+  };
+
   return (
     <>
+      {/* Search Results Popup Overlay */}
+      {isPopupOpen && (
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-all duration-200"
+          onClick={() => setIsPopupOpen(false)}
+        >
+          <div
+            className="bg-white w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[88vh] border border-gray-100 animate-in fade-in zoom-in-95 duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header with Live Search Input */}
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 px-6 py-4 bg-gradient-to-r from-[#0966c2] to-[#008080] text-white">
+              <div className="flex items-center gap-3 shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center font-bold text-xl">
+                  {activeSearchTab === 'colleges' ? '🎓' : '📚'}
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white leading-tight">
+                    {searchQuery.trim()
+                      ? `Searching "${searchQuery}"`
+                      : `Explore ${activeSearchTab === 'colleges' ? 'Colleges' : 'Courses'}`}
+                  </h3>
+                  <p className="text-xs text-white/80">
+                    {filteredResults.length} {activeSearchTab} found
+                  </p>
+                </div>
+              </div>
+
+              {/* Top Search Input inside Popup Header */}
+              <div className="relative flex-1 max-w-md mx-2">
+                <input
+                  type="text"
+                  autoFocus
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder={`Search ${activeSearchTab === 'colleges' ? 'Colleges (e.g. IIT, VIT, Delhi, CSE)...' : 'Courses (e.g. B.Tech, MBA, MBBS)...'}`}
+                  className="w-full pl-9 pr-8 py-2 text-xs md:text-sm border border-white/20 rounded-xl outline-none focus:bg-white focus:text-gray-900 bg-white/95 text-gray-900 placeholder-gray-500 shadow-inner transition-all"
+                />
+                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm">🔍</span>
+                {searchQuery && (
+                  <button
+                    type="button"
+                    onClick={() => setSearchQuery('')}
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 text-xs font-bold w-4 h-4 rounded-full flex items-center justify-center bg-gray-200"
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(false)}
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white text-lg font-bold transition-all cursor-pointer shrink-0 ml-auto md:ml-0"
+                aria-label="Close search popup"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Modal Filter Tabs inside Popup */}
+            <div className="flex items-center gap-2 px-6 py-3 bg-gray-50 border-b border-gray-200/80">
+              <button
+                type="button"
+                onClick={() => setActiveSearchTab('colleges')}
+                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                  activeSearchTab === 'colleges'
+                    ? 'bg-[#0966c2] text-white shadow-sm'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                🎓 Colleges ({activeSearchTab === 'colleges' ? filteredResults.length : allColleges.length})
+              </button>
+              <button
+                type="button"
+                onClick={() => setActiveSearchTab('courses')}
+                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                  activeSearchTab === 'courses'
+                    ? 'bg-[#008080] text-white shadow-sm'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                📚 Courses ({sampleCourses.length})
+              </button>
+            </div>
+
+            {/* Modal Body / Results Grid */}
+            <div className="p-6 overflow-y-auto max-h-[60vh] bg-slate-50/50">
+              {filteredResults.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {filteredResults.map((item) => (
+                    <div
+                      key={item.id || item.name}
+                      className="bg-white p-4 rounded-xl border border-gray-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group hover:border-[#0966c2]/40"
+                    >
+                      <div>
+                        <div className="flex items-start justify-between gap-2 mb-1.5">
+                          <h4 className="font-bold text-sm text-gray-900 group-hover:text-[#0966c2] transition-colors leading-snug">
+                            {item.name}
+                          </h4>
+                          {item.rating && (
+                            <span className="shrink-0 bg-amber-50 text-amber-700 font-bold text-[11px] px-2 py-0.5 rounded-md border border-amber-200/60 flex items-center gap-1">
+                              ★ {item.rating}
+                            </span>
+                          )}
+                        </div>
+
+                        {activeSearchTab === 'colleges' ? (
+                          <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500 mb-3">
+                            <span className="bg-blue-50 text-blue-700 font-medium px-2 py-0.5 rounded">
+                              📍 {item.city}{item.state ? `, ${item.state}` : ''}
+                            </span>
+                            {item.stream && (
+                              <span className="bg-teal-50 text-teal-700 font-medium px-2 py-0.5 rounded">
+                                🏷️ {item.stream}
+                              </span>
+                            )}
+                            {item.sector && (
+                              <span className="bg-gray-100 text-gray-600 font-medium px-2 py-0.5 rounded">
+                                🏛️ {item.sector}
+                              </span>
+                            )}
+                          </div>
+                        ) : (
+                          <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500 mb-3">
+                            <span className="bg-teal-50 text-teal-700 font-medium px-2 py-0.5 rounded">
+                              ⏱️ {item.duration}
+                            </span>
+                            <span className="bg-blue-50 text-blue-700 font-medium px-2 py-0.5 rounded">
+                              🏷️ Stream: {item.stream}
+                            </span>
+                            <span className="bg-emerald-50 text-emerald-700 font-medium px-2 py-0.5 rounded">
+                              💰 Fee: {item.avgFee}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="pt-2.5 border-t border-gray-100 flex items-center justify-between">
+                        <span className="text-xs font-semibold text-gray-500">
+                          {activeSearchTab === 'colleges' ? `Fees: ${item.fee}` : `Top: ${item.popularIn}`}
+                        </span>
+                        <a
+                          href={
+                            activeSearchTab === 'colleges'
+                              ? `/colleges?search=${encodeURIComponent(item.name.split('-')[0].trim())}`
+                              : `/colleges?search=${encodeURIComponent(item.stream)}`
+                          }
+                          onClick={() => setIsPopupOpen(false)}
+                          className="inline-flex items-center gap-1 text-xs font-bold text-[#0966c2] hover:text-[#084e96] hover:underline"
+                        >
+                          {activeSearchTab === 'colleges' ? 'View College →' : 'Explore Colleges →'}
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-12 px-4">
+                  <div className="text-4xl mb-3">🔍</div>
+                  <h4 className="text-base font-bold text-gray-800 mb-1">
+                    No {activeSearchTab} found matching "{searchQuery}"
+                  </h4>
+                  <p className="text-xs text-gray-500 mb-4 max-w-md mx-auto">
+                    Try searching with different keywords like engineering, MBA, medical, Delhi, or IIT.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setSearchQuery('')}
+                    className="px-4 py-2 bg-[#0966c2] text-white text-xs font-semibold rounded-lg shadow hover:bg-[#084e96] transition-all cursor-pointer"
+                  >
+                    Clear Search & Show All {activeSearchTab}
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className={"blueBgDiv mobileOnly"}></div>
       <div className={"indexPage"}>
         <section className={"indexSection p-0"}>
           <div className={"carouselSection"}>
             <div className={"carouselDiv"}>
               <img src={"/images/imported/69670b806b84500c.webp"} sizes={"(max-width: 768px) 100vw, 1200px"} height={"444"} width={"1200"} alt={"Chandigarh University, Uttar Pradesh"} decoding={"async"} fetchPriority={"high"} />
-              <a  className={"sliderName"} aria-label={"Read more about Chandigarh University, Uttar Pradesh"} rel={"nofollow"}>
+              <a className={"sliderName"} aria-label={"Read more about Chandigarh University, Uttar Pradesh"} rel={"nofollow"}>
                 {"Chandigarh University, Uttar Pradesh"}
               </a>
             </div>
             <div className={"carouselDiv"}>
               <img src={"/images/imported/d12f408d72312ebd.webp"} sizes={"(max-width: 768px) 100vw, 1200px"} height={"444"} width={"1200"} alt={"Parul University, Vadodara"} decoding={"async"} fetchPriority={"high"} />
-              <a  className={"sliderName"} aria-label={"Read more about Parul University, Vadodara"} rel={"nofollow"}>
+              <a className={"sliderName"} aria-label={"Read more about Parul University, Vadodara"} rel={"nofollow"}>
                 {"Parul University, Vadodara"}
               </a>
             </div>
             <div className={"carouselDiv"}>
               <img src={"/images/imported/819f4fbbe542300f.webp"} sizes={"(max-width: 768px) 100vw, 1200px"} height={"444"} width={"1200"} alt={"Lovely Professional University- LPU Jalandhar"} decoding={"async"} fetchPriority={"high"} />
-              <a  className={"sliderName"} aria-label={"Read more about Lovely Professional University- LPU Jalandhar"} rel={"nofollow"}>
+              <a className={"sliderName"} aria-label={"Read more about Lovely Professional University- LPU Jalandhar"} rel={"nofollow"}>
                 {"Lovely Professional University- LPU Jalandhar"}
               </a>
             </div>
             <div className={"carouselDiv"}>
               <img src={"/images/imported/54ff4d90c55f7d73.webp"} sizes={"(max-width: 768px) 100vw, 1200px"} height={"444"} width={"1200"} alt={"Indian Institute of Technology, [IIT] Guwahati "} decoding={"async"} fetchPriority={"high"} />
-              <a  className={"sliderName"} aria-label={"Read more about Indian Institute of Technology, [IIT] Guwahati "}>
+              <a className={"sliderName"} aria-label={"Read more about Indian Institute of Technology, [IIT] Guwahati "}>
                 {"Indian Institute of Technology, [IIT] Guwahati"}
               </a>
             </div>
             <div className={"carouselDiv"}>
               <img src={"/images/imported/da3ee65d3100f65f.webp"} sizes={"(max-width: 768px) 100vw, 1200px"} height={"444"} width={"1200"} alt={"Galgotias University, Noida"} decoding={"async"} fetchPriority={"high"} />
-              <a  className={"sliderName"} aria-label={"Read more about Galgotias University, Noida"} rel={"nofollow"}>
+              <a className={"sliderName"} aria-label={"Read more about Galgotias University, Noida"} rel={"nofollow"}>
                 {"Galgotias University, Noida"}
               </a>
             </div>
             <div className={"carouselDiv"}>
               <img src={"/images/imported/f93e5ff5f38453a0.webp"} sizes={"(max-width: 768px) 100vw, 1200px"} height={"444"} width={"1200"} alt={"Indian Institute of Science, [IIS] Bangalore"} decoding={"async"} fetchPriority={"high"} />
-              <a  className={"sliderName"} aria-label={"Read more about Indian Institute of Science, [IIS] Bangalore"}>
+              <a className={"sliderName"} aria-label={"Read more about Indian Institute of Science, [IIS] Bangalore"}>
                 {"Indian Institute of Science, [IIS] Bangalore"}
               </a>
             </div>
             <div className={"carouselDiv"}>
               <img src={"/images/imported/90d71934e6024c4c.webp"} sizes={"(max-width: 768px) 100vw, 1200px"} height={"444"} width={"1200"} alt={"IIM Lucknow - Indian Institute of Management"} decoding={"async"} fetchPriority={"high"} />
-              <a  className={"sliderName"} aria-label={"Read more about IIM Lucknow - Indian Institute of Management"}>
+              <a className={"sliderName"} aria-label={"Read more about IIM Lucknow - Indian Institute of Management"}>
                 {"IIM Lucknow - Indian Institute of Management"}
               </a>
             </div>
@@ -282,51 +544,49 @@ function HomeContent() {
             <div className={"searchSection"}>
               <div>
                 <ul className={"bannerTabButtons"}>
-                  <li className={"tab-nav-link tabLink"} data-target={"#college-tab"}>
+                  <li
+                    className={`tab-nav-link ${activeSearchTab === 'colleges' ? 'activeTab tabLink' : ''}`}
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => { setActiveSearchTab('colleges'); setSearchQuery(''); }}
+                  >
                     {"Colleges"}
                   </li>
-                  <li className={"tab-nav-link"} data-target={"#exams-tab"}>
-                    {"Exams"}
-                  </li>
-                  <li className={"tab-nav-link"} data-target={"#course-tab"}>
+                  <li
+                    className={`tab-nav-link ${activeSearchTab === 'courses' ? 'activeTab tabLink' : ''}`}
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => { setActiveSearchTab('courses'); setSearchQuery(''); }}
+                  >
                     {"Courses"}
                   </li>
                 </ul>
               </div>
               <div className={"inputSection"}>
-                <div id={"college-tab"} className={"tab-content activeTab"}>
-                  <div className={"row m-0"}>
-                    <input type={"text"} placeholder={"Enter College Name"} spellCheck={"false"} className={"college-name-text-box foucus-search"} autoComplete={"off"} />
-                    <button className={"primaryBtn searchIcon-home"}>
+                <form onSubmit={handleSearchSubmit} className={"tab-content activeTab m-0"}>
+                  <div className={"row m-0"} style={{ position: 'relative' }}>
+                    <input
+                      type={"text"}
+                      value={searchQuery}
+                      onChange={(e) => {
+                        setSearchQuery(e.target.value);
+                        if (!isPopupOpen) setIsPopupOpen(true);
+                      }}
+                      placeholder={
+                        activeSearchTab === 'colleges'
+                          ? "Enter College Name, City or Stream (e.g. IIT, Chandigarh, VIT)"
+                          : "Enter Course Name (e.g. B.Tech, MBA, MBBS, Nursing)"
+                      }
+                      spellCheck={"false"}
+                      className={"college-name-text-box foucus-search"}
+                      autoComplete={"off"}
+                    />
+                    <button type="submit" className={"primaryBtn searchIcon-home"} onClick={handleSearchSubmit}>
                       <i className={"spriteIcon searchIcon"}></i>
                       <span className={"desktopOnly"}>
                         {"Search"}
                       </span>
                     </button>
                   </div>
-                </div>
-                <div id={"exams-tab"} className={"tab-content"}>
-                  <div className={"row m-0"}>
-                    <input type={"text"} placeholder={"Enter Exam Name eg: JEE,CAT,XAT"} className={"exam-name-text-box foucus-search"} />
-                    <button className={"primaryBtn searchIcon-home"}>
-                      <i className={"spriteIcon searchIcon"}></i>
-                      <span className={"desktopOnly"}>
-                        {"Search"}
-                      </span>
-                    </button>
-                  </div>
-                </div>
-                <div id={"course-tab"} className={"tab-content"}>
-                  <div className={"row m-0"}>
-                    <input type={"text"} placeholder={"Enter Course Name"} className={"course-name-text-box foucus-search"} />
-                    <button className={"primaryBtn searchIcon-home"}>
-                      <i className={"spriteIcon searchIcon"}></i>
-                      <span className={"desktopOnly"}>
-                        {"Search"}
-                      </span>
-                    </button>
-                  </div>
-                </div>
+                </form>
                 <div className={"trending"}></div>
               </div>
             </div>
@@ -378,11 +638,35 @@ function HomeContent() {
             <h2>
               {"Featured Colleges"}
             </h2>
-            <div className={"customSlider four-cardDisplay"}>
-              <i className={"spriteIcon scrollLeft featuredScrollLeft"}></i>
-              <i className={"spriteIcon scrollRight featuredScrollRight"}></i>
+            <div className={"customSlider four-cardDisplay"} style={{ position: 'relative' }}>
+              <button
+                type="button"
+                aria-label="Scroll left"
+                className="featured-slider-arrow featured-slider-prev"
+                onClick={() => {
+                  const el = document.querySelector('.homeFeaturedCollege');
+                  if (el) el.scrollBy({ left: -320, behavior: 'smooth' });
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                aria-label="Scroll right"
+                className="featured-slider-arrow featured-slider-next"
+                onClick={() => {
+                  const el = document.querySelector('.homeFeaturedCollege');
+                  if (el) el.scrollBy({ left: 320, behavior: 'smooth' });
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </button>
               <div className={"customSliderCards homeFeaturedCollege"}>
-                {collegesData.slice(0, 16).map((item, index) => {
+                {collegesData.filter(item => item.sector === 'Government').slice(0, 16).map((item, index) => {
                   const stateName = {"HR":"Haryana","RJ":"Rajasthan","TG":"Telangana","OR":"Odisha","JK":"Jammu & Kashmir","KA":"Karnataka","BR":"Bihar","ML":"Meghalaya","UP":"Uttar Pradesh","PB":"Punjab","MH":"Maharashtra","WB":"West Bengal","TR":"Tripura","HP":"Himachal Pradesh","JH":"Jharkhand","CT":"Chhattisgarh","AP":"Andhra Pradesh","GJ":"Gujarat","GA":"Goa","TN":"Tamil Nadu","MP":"Madhya Pradesh","KL":"Kerala","UT":"Uttarakhand"}[item.state] || item.state || '';
                   const locationStr = `${item.city || item.district || ''}${(item.city || item.district) && stateName ? ', ' : ''}${stateName}`;
                   return (
@@ -466,9 +750,9 @@ function HomeContent() {
                 <li className={"tab-nav-link tabLink"} data-target={"#colleges-category"}>
                   {"Colleges"}
                 </li>
-                <li className={"tab-nav-link"} data-target={"#exams-category"}>
+                {/* <li className={"tab-nav-link"} data-target={"#exams-category"}>
                   {"Exams"}
-                </li>
+                </li> */}
                 <li className={"tab-nav-link"} data-target={"#courses-category"}>
                   {"Courses"}
                 </li>
@@ -715,7 +999,7 @@ function HomeContent() {
                   </button>
                 </div>
               </div>
-              <div id={"exams-category"} className={"tab-content"}>
+              {/* <div id={"exams-category"} className={"tab-content"}>
                 <div className={"row limitCards"}>
                   <a  className={"dataCard"}>
                     <span title={"Agriculture Exam"} className={"indexSprite agriculture"}></span>
@@ -932,7 +1216,7 @@ function HomeContent() {
                     {"View More"}
                   </button>
                 </div>
-              </div>
+              </div> */}
               <div id={"courses-category"} className={"tab-content"}>
                 <div className={"row limitCards"}>
                   <a  className={"dataCard"}>
@@ -1176,7 +1460,7 @@ function HomeContent() {
             </div>
           </div>
         </section>
-        <section className={"indexSection"}>
+        {/* <section className={"indexSection"}>
           <div className={"container"}>
             <h2>
               {"Study Abroad Options"}
@@ -1221,7 +1505,7 @@ function HomeContent() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <section className={"indexSection articleIndexBox"}>
           <div className={"container"}>
             <div className={"articleRelataedLinks"}>
@@ -1429,7 +1713,7 @@ function HomeContent() {
             </div>
           </div>
         </section>
-        <section className={"indexSection bg-lightgray"}>
+        {/* <section className={"indexSection bg-lightgray"}>
           <div className={"container"}>
             <h2>
               {"Trending Exams"}
@@ -1601,7 +1885,7 @@ function HomeContent() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <section className={"indexSection "}>
           <div className={"container"}>
             <h2>
@@ -1775,7 +2059,7 @@ function HomeContent() {
             </div>
           </div>
         </section>
-        <section className={"indexSection bg-lightgray"}>
+        {/* <section className={"indexSection bg-lightgray"}>
           <div className={"container"}>
             <h2>
               {"Top School Exams in India"}
@@ -1977,8 +2261,8 @@ function HomeContent() {
               </div>
             </div>
           </div>
-        </section>
-        <section className={"indexSection"}>
+        </section> */}
+        {/* <section className={"indexSection"}>
           <div className={"container"}>
             <h2>
               {"Popular Medical Colleges"}
@@ -2110,7 +2394,7 @@ function HomeContent() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <section className={"indexSection bg-lightgray"}>
           <div className={"container"}>
             <h2>

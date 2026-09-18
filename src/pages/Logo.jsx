@@ -1462,7 +1462,7 @@ function LogoContent() {
             </div>
           </div>
         </section>
-        <section className={"indexSection"}>
+        {/* <section className={"indexSection"}>
           <div className={"container"}>
             <h2>
               {"Study Abroad Options"}
@@ -1507,7 +1507,7 @@ function LogoContent() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <section className={"indexSection articleIndexBox"}>
           <div className={"container"}>
             <div className={"articleRelataedLinks"}>

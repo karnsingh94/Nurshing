@@ -26,6 +26,25 @@ const labels = {
   vocational: 'Vocational Courses',
 };
 
+function ChevronCaret({ className = "site-nav__caret" }) {
+  return (
+    <svg
+      className={className}
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  );
+}
+
 const localMenuOrder = ['home', 'colleges', 'engineering', 'management', 'medical', 'science', 'commerce', 'pharmacy'];
 
 const morePageOrder = [
@@ -203,7 +222,7 @@ function PageNavLink({ page, activeSlug, onNavigate, withCaret = false }) {
       }}
     >
       {page.label}
-      {withCaret ? <span className="site-nav__caret">⌄</span> : null}
+      {withCaret ? <ChevronCaret /> : null}
     </a>
   );
 }
@@ -215,7 +234,7 @@ function DropdownNavItem({ page, activeSlug, onNavigate }) {
   return (
     <div className={`site-nav__item${touchOpen ? " touch-open" : ""}`}>
       <PageNavLink page={page} activeSlug={activeSlug} onNavigate={onNavigate} withCaret={Boolean(menu)} />
-      {menu ? <button type="button" className="nav-expand" aria-label={`Toggle ${page.label} menu`} aria-expanded={touchOpen} onClick={() => setTouchOpen(open => !open)}>⌄</button> : null}
+      {menu ? <button type="button" className="nav-expand" aria-label={`Toggle ${page.label} menu`} aria-expanded={touchOpen} onClick={() => setTouchOpen(open => !open)}><ChevronCaret /></button> : null}
       {menu ? (
         <div className="site-nav__mega" role="menu">
           <MegaMenuPanel menu={menu} category={page.slug} />
@@ -321,9 +340,9 @@ export default function Navbar({ activeSlug, onNavigate }) {
           <div className={`site-nav__item${abroadOpen ? " touch-open" : ""}`}>
             <a href={navUrl('/study-abroad')}>
               Go Abroad
-              <span className="site-nav__caret">⌄</span>
+              <ChevronCaret />
             </a>
-            <button type="button" className="nav-expand" aria-label="Toggle Go Abroad menu" aria-expanded={abroadOpen} onClick={() => setAbroadOpen(open => !open)}>⌄</button>
+            <button type="button" className="nav-expand" aria-label="Toggle Go Abroad menu" aria-expanded={abroadOpen} onClick={() => setAbroadOpen(open => !open)}><ChevronCaret /></button>
             <div className="site-nav__mega site-nav__mega--abroad" role="menu">
               <MegaMenuPanel menu={abroadMenu} category="logo" />
             </div>
@@ -338,7 +357,7 @@ export default function Navbar({ activeSlug, onNavigate }) {
               onClick={() => setMoreOpen((open) => !open)}
             >
               More
-              <span className="site-nav__caret">⌄</span>
+              <ChevronCaret />
             </button>
             <div className={`site-nav__mega site-nav__mega--more${moreOpen ? ' open' : ''}`} role="menu">
               <aside className="site-nav__more-list" aria-label="More pages">
