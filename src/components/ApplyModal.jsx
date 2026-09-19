@@ -67,6 +67,7 @@ const TWELFTH_SUBJECTS = [
 
 const WA_TOKEN = "6akffxcaw1bafcntw0cu8rstof7hsocc";
 const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbxPzrxa1JSo21jWDGD2xH7ivZQK0Xa1Zxt5zwAn33dqRIf4Jns3hiOgZqYoUyAfM6I46A/exec";
+const AUTO_POPUP_INTERVAL_MS = 60 * 1000; // 1 minute interval
 
 const initialFormData = {
   name: '',
@@ -120,7 +121,7 @@ export default function ApplyModal() {
 
   const timerRef = useRef(null);
 
-  // Timer countdown effect
+  // Timer countdown effect for OTP resend
   useEffect(() => {
     if (otpTimer > 0) {
       timerRef.current = setTimeout(() => {
@@ -129,6 +130,39 @@ export default function ApplyModal() {
     }
     return () => clearTimeout(timerRef.current);
   }, [otpTimer]);
+
+  // Recurring 1-minute auto-popup timer until form is filled & submitted
+  useEffect(() => {
+    try {
+      const isAlreadySubmitted = localStorage.getItem('enquiry_form_submitted') === 'true';
+      if (isAlreadySubmitted) return;
+    } catch (e) {}
+
+    let autoTimer = null;
+
+    const scheduleNextPopup = () => {
+      autoTimer = setTimeout(() => {
+        try {
+          const isDone = localStorage.getItem('enquiry_form_submitted') === 'true';
+          if (!isDone && !isOpen) {
+            setCollegeName('citsAdmission Admission Counseling');
+            setFormError('');
+            setOtpError('');
+            setIsSubmitted(false);
+            setIsOpen(true);
+          }
+        } catch (e) {}
+      }, AUTO_POPUP_INTERVAL_MS);
+    };
+
+    if (!isOpen) {
+      scheduleNextPopup();
+    }
+
+    return () => {
+      if (autoTimer) clearTimeout(autoTimer);
+    };
+  }, [isOpen]);
 
   useEffect(() => {
     const handleOpenModal = (event) => {
@@ -177,8 +211,6 @@ export default function ApplyModal() {
       document.removeEventListener('click', handleGlobalClick, true);
     };
   }, []);
-
-  if (!isOpen) return null;
 
   // Fully reset all form state and clear fields
   const handleClose = () => {
@@ -325,12 +357,18 @@ export default function ApplyModal() {
         body: JSON.stringify(sheetData)
       });
       console.log('Saved to Google Sheet successfully:', sheetData);
+      try {
+        localStorage.setItem('enquiry_form_submitted', 'true');
+      } catch (e) {}
     } catch (sheetErr) {
       console.error('Google Sheet submit error:', sheetErr);
     } finally {
       setIsSavingToSheet(false);
       setSubmittedData({ ...sheetData });
       setIsSubmitted(true);
+      try {
+        localStorage.setItem('enquiry_form_submitted', 'true');
+      } catch (e) {}
       // Reset form data so when reopened or refreshed, no previous data remains
       setFormData(initialFormData);
       setIsPhoneVerified(false);
@@ -340,6 +378,8 @@ export default function ApplyModal() {
   };
 
   const availableCities = formData.state ? statesCitiesMap[formData.state] || [] : [];
+
+  if (!isOpen) return null;
 
   return (
     <div
