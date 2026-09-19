@@ -126,7 +126,10 @@ export default function App() {
   useEffect(() => {
     window.history.scrollRestoration = 'manual';
     window.scrollTo(0, 0);
-  }, [pathname, pageModule]);
+    if (currentPageInfo?.title) {
+      document.title = currentPageInfo.title;
+    }
+  }, [pathname, pageModule, currentPageInfo]);
 
   if (!pageLoader) {
     return <HomeFallback onNavigate={navigate} />;

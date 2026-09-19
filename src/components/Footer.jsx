@@ -63,22 +63,22 @@ export default function Footer({ onNavigate }) {
             <div className={"row"}>
               <ul>
                 <li>
-                  <a  title={"About Us"}>
+                  <a href={allowedLink("/about-us")} title={"About Us"}>
                     {"About Us"}
                   </a>
                 </li>
                 <li>
-                  <a  title={"Contact Us"}>
+                  <a href={allowedLink("/contact-us")} title={"Contact Us"}>
                     {"Contact Us"}
                   </a>
                 </li>
                 <li>
-                  <a  title={"Privacy Policy"}>
+                  <a href={allowedLink("/privacy-policy")} title={"Privacy Policy"}>
                     {"Privacy Policy"}
                   </a>
                 </li>
                 <li>
-                  <a  title={"Terms & Conditions"}>
+                  <a href={allowedLink("/terms-conditions")} title={"Terms & Conditions"}>
                     {"Terms & Conditions"}
                   </a>
                 </li>
