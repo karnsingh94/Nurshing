@@ -520,69 +520,69 @@ export const megaMenus = {
   pharmacy: {
     columns: [
       {
-        title: 'Top Ranked Colleges',
+        title: 'COLLEGES',
         items: [
-          ['Top Pharmacy Colleges in India', '/pharmacy'],
-          ['Top B.Pharm Colleges in India', '/bpharm-colleges'],
-          ['Top D.Pharm Colleges in India', '/dpharm-colleges'],
-          ['Top M.Pharm Colleges in India', '/mpharm-colleges'],
-          ['Top NIPER Institutes', '/colleges?search=NIPER'],
+          ['Jamia Hamdard (Pharmacy)', '/colleges?search=Jamia+Hamdard'],
+          ['NIPER Mohali', '/colleges?search=NIPER'],
+          ['ICT Mumbai (Dept of Pharmacy)', '/colleges?search=ICT+Mumbai'],
+          ['BITS Pilani (Pharmacy)', '/colleges?search=BITS'],
         ],
+        viewMoreUrl: '/colleges?search=Pharmacy',
+        viewMoreLabel: 'View More',
       },
       {
-        title: 'Popular Courses',
+        title: 'COURSES',
         items: [
-          ['B.Pharm (Bachelor of Pharmacy)', '/bpharm-colleges'],
-          ['D.Pharm (Diploma in Pharmacy)', '/dpharm-colleges'],
-          ['M.Pharm Courses', '/mpharm-colleges'],
-          ['Pharm.D (Doctor of Pharmacy)', '/pharmd-colleges'],
+          ['B. PHARMACY', '/colleges?search=B+Pharmacy'],
+          ['D. PHARMACY', '/colleges?search=D+Pharmacy'],
+          ['M. PHARMACY', '/colleges?search=M+Pharmacy'],
         ],
       },
+    ],
+  },
+  nursing: {
+    columns: [
       {
-        title: 'Exams',
+        title: 'COLLEGES',
         items: [
-          ['GPAT 2026', '/exams/gpat'],
-          ['NIPER JEE 2026', '/exams/niper-jee'],
-          ['UPSEE Pharmacy', '/exams/upsee'],
-          ['KCET Pharmacy', '/exams/kcet'],
-          ['MHT CET Pharmacy', '/exams/mht-cet-pharmacy'],
+          ['AIIMS New Delhi (Nursing)', '/colleges?search=AIIMS'],
+          ['PGIMER Chandigarh (Nursing)', '/colleges?search=PGIMER'],
+          ['CMC Vellore (College of Nursing)', '/colleges?search=CMC'],
+          ['St. John\'s College of Nursing', '/colleges?search=St.+John'],
         ],
+        viewMoreUrl: '/colleges?search=Nursing',
+        viewMoreLabel: 'View More',
       },
       {
-        title: 'Colleges By Location',
+        title: 'COURSES',
         items: [
-          ['Pharmacy Colleges in Maharashtra', '/colleges?search=Maharashtra'],
-          ['Pharmacy Colleges in Uttar Pradesh', '/colleges?search=Uttar+Pradesh'],
-          ['Pharmacy Colleges in Karnataka', '/colleges?search=Karnataka'],
-          ['Pharmacy Colleges in Tamil Nadu', '/colleges?search=Tamil+Nadu'],
+          ['B.SC. NURSING', '/colleges?search=BSc+Nursing'],
+          ['POST BASIC B.SC NURSING', '/colleges?search=Post+Basic+BSc+Nursing'],
+          ['G.N.M.', '/colleges?search=GNM'],
+          ['A.N.M.', '/colleges?search=ANM'],
         ],
       },
+    ],
+  },
+  yoga: {
+    columns: [
       {
-        title: 'Compare Colleges',
+        title: 'COLLEGES',
         items: [
-          ['Compare Jamia Hamdard vs NIPER Mohali', '/colleges?compare=jamia-vs-niper'],
-          ['Compare ICT Mumbai vs BITS Pilani Pharmacy', '/colleges?compare=ict-vs-bits'],
+          ['Morarji Desai Institute of Yoga', '/colleges?search=Morarji'],
+          ['Patanjali Yogpeeth University', '/colleges?search=Patanjali'],
+          ['SVYASA Yoga University', '/colleges?search=SVYASA'],
         ],
+        viewMoreUrl: '/colleges?search=Yoga',
+        viewMoreLabel: 'View More',
       },
       {
-        title: 'College Predictors',
+        title: 'COURSES',
         items: [
-          ['GPAT College Predictor 2026', '/college-predictor/gpat'],
-          ['MHT CET Pharmacy Predictor', '/college-predictor/mht-cet-pharmacy'],
-        ],
-      },
-      {
-        title: 'College Reviews',
-        items: [
-          ['Jamia Hamdard Pharmacy Reviews', '/colleges?search=Jamia+Hamdard'],
-          ['ICT Mumbai Student Reviews', '/colleges?search=ICT+Mumbai'],
-        ],
-      },
-      {
-        title: 'Resources',
-        items: [
-          ['Pharmacy Admission Guide 2026', '/pharmacy-admission-guide'],
-          ['Scope & Salary of Pharmacist in India', '/pharmacist-careers'],
+          ['B.SC. IN YOGIC SCIENCE', '/colleges?search=BSc+Yogic+Science'],
+          ['DIPLOMA IN YOGA', '/colleges?search=Diploma+in+Yoga'],
+          ['PG DIPLOMA IN YOGA', '/colleges?search=PG+Diploma+in+Yoga'],
+          ['CERTIFICATE IN YOGA', '/colleges?search=Certificate+in+Yoga'],
         ],
       },
     ],
@@ -590,44 +590,20 @@ export const megaMenus = {
   paramedical: {
     columns: [
       {
-        title: 'Top Ranked Colleges',
+        title: 'COLLEGES',
         items: [
-          ['Top Paramedical Colleges in India', '/paramedical'],
-          ['Top B.Sc Nursing Colleges', '/bsc-nursing-colleges'],
-          ['Top BPT Physiotherapy Colleges', '/bpt-colleges'],
-          ['Top MLT Colleges in India', '/mlt-colleges'],
+          ['AIIMS Delhi (Paramedical)', '/colleges?search=AIIMS'],
+          ['PGIMER Chandigarh (Allied Health)', '/colleges?search=PGIMER'],
+          ['CMC Vellore (Paramedical)', '/colleges?search=CMC'],
         ],
+        viewMoreUrl: '/colleges?search=Paramedical',
+        viewMoreLabel: 'View More',
       },
       {
-        title: 'Popular Courses',
+        title: 'COURSES',
         items: [
-          ['B.Sc Nursing', '/bsc-nursing-colleges'],
-          ['BPT (Bachelor of Physiotherapy)', '/bpt-colleges'],
-          ['B.Sc MLT (Medical Lab Tech)', '/mlt-colleges'],
-          ['B.Sc Radiology & Imaging', '/radiology-colleges'],
-        ],
-      },
-      {
-        title: 'Exams',
-        items: [
-          ['AIIMS B.Sc Nursing Exam', '/exams/aiims-nursing'],
-          ['JENPAS UG 2026', '/exams/jenpas-ug'],
-          ['KCET B.Sc Nursing', '/exams/kcet-nursing'],
-        ],
-      },
-      {
-        title: 'Colleges By Location',
-        items: [
-          ['Paramedical Colleges in Delhi', '/city-colleges?city=Delhi'],
-          ['Paramedical Colleges in Bangalore', '/city-colleges?city=Bangalore'],
-          ['Paramedical Colleges in Punjab', '/colleges?search=Punjab'],
-        ],
-      },
-      {
-        title: 'Resources',
-        items: [
-          ['Paramedical Admission Guide 2026', '/paramedical-admission-guide'],
-          ['B.Sc Nursing Salary & Scope', '/nursing-careers'],
+          ['DMLT', '/colleges?search=DMLT'],
+          ['DRT', '/colleges?search=DRT'],
         ],
       },
     ],

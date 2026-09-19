@@ -133,6 +133,17 @@ export const pageInfo = {
     "slug": "collegedetails",
     "title": "Institute Information & Seat Matrix — CITS Admissions 2026"
   },
+  "nursing": {
+    "name": "Nursing",
+    "sourceFile": "Paramedical.jsx",
+    "slug": "nursing",
+    "title": "Top Nursing Colleges in India 2026: Ranking, Courses, Fees & Placements"
+  },
+  "yoga": {
+    "name": "Yoga",
+    "sourceFile": "Paramedical.jsx",
+    "slug": "yoga",
+    "title": "Top Yoga & Naturopathy Colleges in India 2026: Ranking, Courses, Fees & Placements"
   "about-us": {
     "name": "About Us",
     "sourceFile": "AboutUs.jsx",
@@ -162,7 +173,7 @@ export const pageInfo = {
 export const pageLoaders = {
   "architecture": () => import('./Architecture.jsx'),
   "arts": () => import('./Arts.jsx'),
-  "colleges": () => import('./Colleges.jsx'),
+  "colleges": () => import('./CityColleges.jsx'),
   "commerce": () => import('./Commerce.jsx'),
   "computer": () => import('./Computer.jsx'),
   "dental": () => import('./Dental.jsx'),
@@ -182,6 +193,8 @@ export const pageLoaders = {
   "vocational": () => import('./Vocational.jsx'),
   "citycolleges": () => import('./CityColleges.jsx'),
   "collegedetails": () => import('./CollegeDetails.jsx'),
+  "nursing": () => import('./Paramedical.jsx'),
+  "yoga": () => import('./Paramedical.jsx'),
   "about-us": () => import('./AboutUs.jsx'),
   "contact-us": () => import('./ContactUs.jsx'),
   "privacy-policy": () => import('./PrivacyPolicy.jsx'),
@@ -199,6 +212,8 @@ const pathAliases = {
   "citycolleges": "citycolleges",
   "college-details": "collegedetails",
   "collegedetails": "collegedetails",
+  "nursing": "nursing",
+  "yoga": "yoga",
   "about": "about-us",
   "about-us": "about-us",
   "aboutus": "about-us",
