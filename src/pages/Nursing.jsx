@@ -3,10 +3,10 @@ import PageRenderer from '../PageRenderer.jsx';
 import StreamCourseSections from '../components/StreamCourseSections.jsx';
 
 export const page = {
-  name: "Paramedical",
-  sourceFile: "Paramedical.html",
-  slug: "paramedical",
-  title: "Top Paramedical Colleges in India 2025: Ranking, Courses, Fees & Placements",
+  name: "Nursing",
+  sourceFile: "Nursing.jsx",
+  slug: "nursing",
+  title: "Top Nursing Colleges in India 2026: Ranking, Courses, Fees & Placements",
   head: {
     "meta": [
       {
@@ -34,7 +34,7 @@ export const page = {
       },
       {
         "property": "og:title",
-        "content": "Top Paramedical Colleges in India 2025: Ranking, Courses, Fees & Placements"
+        "content": "Top Nursing Colleges in India 2026: Ranking, Courses, Fees & Placements"
       },
       {
         "property": "og:url",
@@ -66,7 +66,7 @@ export const page = {
       },
       {
         "property": "twitter:title",
-        "content": "Top Paramedical Colleges in India 2025: Ranking, Courses, Fees & Placements"
+        "content": "Top Nursing Colleges in India 2026: Ranking, Courses, Fees & Placements"
       },
       {
         "property": "twitter:description",
@@ -215,7 +215,7 @@ export const page = {
   },
 };
 
-function ParamedicalContent() {
+function NursingContent() {
   return (
     <>
       <nav className={"breadcrumbDiv news"}>
@@ -232,7 +232,7 @@ function ParamedicalContent() {
               </a>
             </li>
             <li className={"active"}>
-              {"Top Paramedical Colleges in India"}
+              {"Top Nursing Colleges in India"}
             </li>
           </ul>
         </div>
@@ -240,14 +240,14 @@ function ParamedicalContent() {
       <div className={"blueBgDiv mobileOnly"}></div>
       <div className={"container"}>
         {/* 3 Core Stream Sections at the very TOP: Course Highlights, Eligibility Criteria, Admission Process */}
-        <StreamCourseSections streamKey="paramedical" />
+        <StreamCourseSections streamKey="nursing" />
 
         <div className={"pageRedirectionMenu"}></div>
         <div className={"college__Landing__New"}>
           <div className={"college__Landing__Hero__Section1"}>
             <div className={"college__Landing__Hero__Section pageData pageInfo"}>
               <h1 className={"college__Landing__Hero__Section__Heading"}>
-                {"Top Paramedical Colleges in India 2026"}
+                {"Top Nursing Colleges in India 2026"}
               </h1>
               <p>
                 <span>
@@ -264,7 +264,7 @@ function ParamedicalContent() {
               </p>
               <h2>
                 <strong>
-                  {"Top Paramedical Colleges in India by NIRF"}
+                  {"Top Nursing Colleges in India by NIRF"}
                 </strong>
               </h2>
               <p>
@@ -483,7 +483,7 @@ function ParamedicalContent() {
               </table>
               <h2>
                 <strong>
-                  {"Top Paramedical Colleges in India by India Today"}
+                  {"Top Nursing Colleges in India by India Today"}
                 </strong>
               </h2>
               <p>
@@ -686,7 +686,7 @@ function ParamedicalContent() {
               </table>
               <h2>
                 <strong>
-                  {"Top Paramedical Colleges in India Based on Zones"}
+                  {"Top Nursing Colleges in India Based on Zones"}
                 </strong>
               </h2>
               <p>
@@ -866,7 +866,7 @@ function ParamedicalContent() {
               </ul>
               <h2>
                 <strong>
-                  {"Specialisations-wise Top Paramedical Colleges in India"}
+                  {"Specialisations-wise Top Nursing Colleges in India"}
                 </strong>
               </h2>
               <p>
@@ -992,7 +992,7 @@ function ParamedicalContent() {
               </ul>
               <h2>
                 <strong>
-                  {"Fee Structure for Top Paramedical Colleges in India"}
+                  {"Fee Structure for Top Nursing Colleges in India"}
                 </strong>
               </h2>
               <p>
@@ -1451,7 +1451,7 @@ function ParamedicalContent() {
               </table>
               <h2>
                 <strong>
-                  {"Entrance Exams Accepted by Top Paramedical Colleges in India"}
+                  {"Entrance Exams Accepted by Top Nursing Colleges in India"}
                 </strong>
               </h2>
               <p>
@@ -1518,7 +1518,7 @@ function ParamedicalContent() {
               </ul>
               <h2>
                 <strong>
-                  {"Admissions and Eligibility Criteria for Top Paramedical Colleges in India"}
+                  {"Admissions and Eligibility Criteria for Top Nursing Colleges in India"}
                 </strong>
               </h2>
               <p>
@@ -1538,7 +1538,7 @@ function ParamedicalContent() {
               </p>
               <h3>
                 <strong>
-                  {"Eligibility Criteria for Top Paramedical Colleges in India"}
+                  {"Eligibility Criteria for Top Nursing Colleges in India"}
                 </strong>
               </h3>
               <p>
@@ -1571,7 +1571,7 @@ function ParamedicalContent() {
               </ul>
               <h3>
                 <strong>
-                  {"Admissions to Top Paramedical Colleges in India"}
+                  {"Admissions to Top Nursing Colleges in India"}
                 </strong>
               </h3>
               <p>
@@ -1586,7 +1586,7 @@ function ParamedicalContent() {
               </p>
               <h2>
                 <strong>
-                  {"Cut Offs for Top Paramedical Colleges in India"}
+                  {"Cut Offs for Top Nursing Colleges in India"}
                 </strong>
               </h2>
               <p>
@@ -2013,7 +2013,7 @@ function ParamedicalContent() {
               </table>
               <h3>
                 <strong>
-                  {"Average Salary Offered in Top Paramedical Colleges in India"}
+                  {"Average Salary Offered in Top Nursing Colleges in India"}
                 </strong>
               </h3>
               <p>
@@ -2899,10 +2899,10 @@ function ParamedicalContent() {
   );
 }
 
-export default function ParamedicalPage({ onNavigate }) {
+export default function NursingPage({ onNavigate }) {
   return (
     <PageRenderer page={page} onNavigate={onNavigate}>
-      <ParamedicalContent />
+      <NursingContent />
     </PageRenderer>
   );
 }
