@@ -135,13 +135,13 @@ export const pageInfo = {
   },
   "nursing": {
     "name": "Nursing",
-    "sourceFile": "Paramedical.jsx",
+    "sourceFile": "Nursing.jsx",
     "slug": "nursing",
     "title": "Top Nursing Colleges in India 2026: Ranking, Courses, Fees & Placements"
   },
   "yoga": {
     "name": "Yoga",
-    "sourceFile": "Paramedical.jsx",
+    "sourceFile": "Yoga.jsx",
     "slug": "yoga",
     "title": "Top Yoga & Naturopathy Colleges in India 2026: Ranking, Courses, Fees & Placements"
   },
@@ -194,8 +194,8 @@ export const pageLoaders = {
   "vocational": () => import('./Vocational.jsx'),
   "citycolleges": () => import('./CityColleges.jsx'),
   "collegedetails": () => import('./CollegeDetails.jsx'),
-  "nursing": () => import('./Paramedical.jsx'),
-  "yoga": () => import('./Paramedical.jsx'),
+  "nursing": () => import('./Nursing.jsx'),
+  "yoga": () => import('./Yoga.jsx'),
   "about-us": () => import('./AboutUs.jsx'),
   "contact-us": () => import('./ContactUs.jsx'),
   "privacy-policy": () => import('./PrivacyPolicy.jsx'),
@@ -214,7 +214,9 @@ const pathAliases = {
   "college-details": "collegedetails",
   "collegedetails": "collegedetails",
   "nursing": "nursing",
+  "nursing-colleges": "nursing",
   "yoga": "yoga",
+  "yoga-colleges": "yoga",
   "about": "about-us",
   "about-us": "about-us",
   "aboutus": "about-us",

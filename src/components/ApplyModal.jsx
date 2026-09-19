@@ -31,9 +31,14 @@ const COURSES = [
   "Bachelor of Pharmacy (B.Pharm)",
   "Diploma in Pharmacy (D.Pharm)",
   "Master of Pharmacy (M.Pharm)",
-  "MBBS",
+  "B.Sc MLT (Medical Lab Technology)",
   "BPT (Physiotherapy)",
-  "Paramedical Diploma"
+  "B.Sc Radiology & Imaging",
+  "Paramedical Diploma",
+  "BNYS (Naturopathy & Yogic Sciences)",
+  "B.Sc Yoga",
+  "Diploma in Yoga Therapy",
+  "MBBS"
 ];
 
 export default function ApplyModal() {

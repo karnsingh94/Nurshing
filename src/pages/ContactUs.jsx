@@ -6,7 +6,7 @@ export default function ContactUs({ onNavigate }) {
     email: '',
     phone: '',
     city: '',
-    stream: 'Engineering',
+    stream: 'Nursing (B.Sc / GNM / ANM)',
     queryType: 'Admission Counseling',
     message: ''
   });
@@ -16,16 +16,15 @@ export default function ContactUs({ onNavigate }) {
   const [activeFaq, setActiveFaq] = useState(null);
 
   const streams = [
-    'Engineering & Tech (B.Tech/M.Tech)',
+    'Nursing (B.Sc / GNM / ANM)',
+    'Pharmacy (B.Pharm / D.Pharm)',
+    'Paramedical (B.Sc MLT / Radiology / BPT)',
+    'Yoga & Naturopathy (BNYS / B.Sc Yoga)',
     'Medical (MBBS/BDS/AYUSH)',
+    'Engineering & Tech (B.Tech/M.Tech)',
     'Management (MBA/BBA/PGDM)',
-    'Nursing & Paramedical (B.Sc/GNM)',
-    'Pharmacy (B.Pharm/Pharm.D)',
-    'Law (BA LLB/LLM)',
-    'Architecture & Design (B.Arch/B.Des)',
-    'Science (B.Sc/M.Sc)',
-    'Commerce & Arts',
-    'Veterinary Science (BVSc)'
+    'Science & Computer Application',
+    'Law, Arts & Commerce'
   ];
 
   const queryTypes = [
