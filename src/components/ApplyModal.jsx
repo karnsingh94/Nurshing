@@ -88,7 +88,9 @@ const TWELFTH_SUBJECTS = [
 
 const WA_TOKEN = "6akffxcaw1bafcntw0cu8rstof7hsocc";
 const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbxPzrxa1JSo21jWDGD2xH7ivZQK0Xa1Zxt5zwAn33dqRIf4Jns3hiOgZqYoUyAfM6I46A/exec";
-const AUTO_POPUP_INTERVAL_MS = 60 * 1000; // 1 minute interval
+const SUBMITTED_STORAGE_KEY = "cits_enquiry_submitted_v2";
+const INITIAL_POPUP_DELAY_MS = 3000; // 3 seconds on website visit
+const RECURRING_POPUP_INTERVAL_MS = 60 * 1000; // 1 minute interval after close
 
 const initialFormData = {
   name: '',
@@ -141,6 +143,20 @@ export default function ApplyModal() {
   const [submittedData, setSubmittedData] = useState(null);
 
   const timerRef = useRef(null);
+  const popupTimerRef = useRef(null);
+  const hasTriggeredInitialPopupRef = useRef(false);
+
+  // Expose helper to easily reset popup status in browser console if testing
+  useEffect(() => {
+    window.resetEnquiryPopup = () => {
+      try {
+        localStorage.removeItem(SUBMITTED_STORAGE_KEY);
+        localStorage.removeItem('enquiry_form_submitted');
+        console.log('Enquiry popup status reset. Refreshing page...');
+        window.location.reload();
+      } catch (e) {}
+    };
+  }, []);
 
   // Timer countdown effect for OTP resend
   useEffect(() => {
@@ -152,36 +168,42 @@ export default function ApplyModal() {
     return () => clearTimeout(timerRef.current);
   }, [otpTimer]);
 
-  // Recurring 1-minute auto-popup timer until form is filled & submitted
+  // Initial visit popup (after 3s) + recurring every 1 minute after close until form is submitted
   useEffect(() => {
-    try {
-      const isAlreadySubmitted = localStorage.getItem('enquiry_form_submitted') === 'true';
-      if (isAlreadySubmitted) return;
-    } catch (e) {}
+    const isAlreadySubmitted = () => {
+      try {
+        return localStorage.getItem(SUBMITTED_STORAGE_KEY) === 'true';
+      } catch (e) {
+        return false;
+      }
+    };
 
-    let autoTimer = null;
+    if (isAlreadySubmitted()) return;
 
-    const scheduleNextPopup = () => {
-      autoTimer = setTimeout(() => {
-        try {
-          const isDone = localStorage.getItem('enquiry_form_submitted') === 'true';
-          if (!isDone && !isOpen) {
-            setCollegeName('citsAdmission Admission Counseling');
-            setFormError('');
-            setOtpError('');
-            setIsSubmitted(false);
-            setIsOpen(true);
-          }
-        } catch (e) {}
-      }, AUTO_POPUP_INTERVAL_MS);
+    const triggerPopup = () => {
+      if (isAlreadySubmitted()) return;
+      setCollegeName('citsAdmission Admission Counseling');
+      setFormError('');
+      setOtpError('');
+      setIsSubmitted(false);
+      setIsOpen(true);
     };
 
     if (!isOpen) {
-      scheduleNextPopup();
+      if (!hasTriggeredInitialPopupRef.current) {
+        // First visit: pop up quickly after 3 seconds so visitor sees it on visit
+        hasTriggeredInitialPopupRef.current = true;
+        popupTimerRef.current = setTimeout(triggerPopup, INITIAL_POPUP_DELAY_MS);
+      } else {
+        // Subsequent times (visitor closed it without submitting): pop up every 1 minute
+        popupTimerRef.current = setTimeout(triggerPopup, RECURRING_POPUP_INTERVAL_MS);
+      }
     }
 
     return () => {
-      if (autoTimer) clearTimeout(autoTimer);
+      if (popupTimerRef.current) {
+        clearTimeout(popupTimerRef.current);
+      }
     };
   }, [isOpen]);
 
@@ -379,6 +401,7 @@ export default function ApplyModal() {
       });
       console.log('Saved to Google Sheet successfully:', sheetData);
       try {
+        localStorage.setItem(SUBMITTED_STORAGE_KEY, 'true');
         localStorage.setItem('enquiry_form_submitted', 'true');
       } catch (e) {}
     } catch (sheetErr) {
@@ -388,6 +411,7 @@ export default function ApplyModal() {
       setSubmittedData({ ...sheetData });
       setIsSubmitted(true);
       try {
+        localStorage.setItem(SUBMITTED_STORAGE_KEY, 'true');
         localStorage.setItem('enquiry_form_submitted', 'true');
       } catch (e) {}
       // Reset form data so when reopened or refreshed, no previous data remains
