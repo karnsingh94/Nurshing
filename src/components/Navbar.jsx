@@ -7,13 +7,17 @@ const labels = {
   home: 'Home',
   colleges: 'Colleges',
   logo: 'Logo Page',
+  nursing: 'Nursing',
+  pharmacy: 'Pharmacy',
+  paramedical: 'Paramedical',
+  yoga: 'Yoga',
+  /* Commented out other categories (code preserved):
   medical: 'Medical',
   engineering: 'Engineering',
   commerce: 'Commerce',
   science: 'Science',
   management: 'Management',
   computer: 'Computer Application',
-  pharmacy: 'Pharmacy',
   architecture: 'Architecture',
   arts: 'Arts',
   dental: 'Dental',
@@ -21,9 +25,9 @@ const labels = {
   education: 'Education',
   hospitality: 'Hospitality',
   law: 'Law',
-  paramedical: 'Paramedical',
   veterinary: 'Veterinary Science',
   vocational: 'Vocational Courses',
+  */
 };
 
 function ChevronCaret({ className = "site-nav__caret" }) {
@@ -45,8 +49,16 @@ function ChevronCaret({ className = "site-nav__caret" }) {
   );
 }
 
-const localMenuOrder = ['home', 'colleges', 'engineering', 'management', 'medical', 'science', 'commerce', 'pharmacy'];
+// Navbar links requested: logo, Home, Colleges, nursing, pharmacy, paramedical, yoga
+const localMenuOrder = ['home', 'colleges', 'nursing', 'pharmacy', 'paramedical', 'yoga'];
 
+/* Commented out original localMenuOrder (code preserved):
+const localMenuOrder = ['home', 'colleges', 'engineering', 'management', 'medical', 'science', 'commerce', 'pharmacy'];
+*/
+
+const morePageOrder = [];
+
+/* Commented out original morePageOrder (code preserved):
 const morePageOrder = [
   'paramedical',
   'architecture',
@@ -61,6 +73,7 @@ const morePageOrder = [
   'education',
   'logo',
 ];
+*/
 
 function getPage(slug) {
   return pageInfo[slug] ? { ...pageInfo[slug], label: labels[slug] || pageInfo[slug].name } : null;
@@ -82,128 +95,58 @@ function MenuLink({ item, category, className = '' }) {
   );
 }
 
-function MegaMenuPanel({ menu, category }) {
+function MegaMenuPanel({ menu, category, onNavigate }) {
   if (!menu?.columns?.length) return null;
 
-  const [activeTabIdx, setActiveTabIdx] = useState(0);
-  const activeColumn = menu.columns[activeTabIdx] || menu.columns[0];
-
-  const featuredCollegesMap = {
-    engineering: [
-      { name: 'NHCE Bangalore - New Horizon College of Engineering', href: '/college/bms-college-of-engineering-bangalore' },
-      { name: 'Jain Deemed -to- be University, Faculty of Engineering and Technology', href: '/colleges?search=Jain' },
-      { name: 'Chandigarh University (CU)', href: '/colleges?search=Chandigarh' }
-    ],
-    management: [
-      { name: 'International Institute of Management Studies (IIMS Pune)', href: '/colleges?search=IIMS' },
-      { name: 'Jagan Institute of Management Studies, Rohini', href: '/colleges?search=JIMS' },
-      { name: 'Chandigarh University (CU)', href: '/colleges?search=Chandigarh' }
-    ],
-    medical: [
-      { name: 'AIIMS New Delhi - All India Institute of Medical Sciences', href: '/colleges?search=AIIMS' },
-      { name: 'PGIMER Chandigarh', href: '/colleges?search=PGIMER' },
-      { name: 'CMC Vellore - Christian Medical College', href: '/colleges?search=CMC' }
-    ]
+  const handleLinkClick = (e, path) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    if (onNavigate) {
+      onNavigate(path);
+    }
   };
 
-  const featuredColleges = featuredCollegesMap[category] || [
-    { name: 'NHCE Bangalore - New Horizon College of Engineering', href: '/colleges?search=Engineering' },
-    { name: 'Jain Deemed -to- be University, Faculty of Engineering and Technology', href: '/colleges?search=Jain' },
-    { name: 'Chandigarh University (CU)', href: '/colleges?search=Chandigarh' }
-  ];
-
-  const itemsCount = activeColumn?.items?.length || 0;
-  const isMultiCol = itemsCount > 9;
-
   return (
-    <div className="tabbed-mega-container flex bg-white text-gray-800 rounded-b-xl shadow-2xl overflow-hidden border border-gray-200/90 max-h-[calc(100vh-70px)] h-fit min-h-[380px] w-full">
-      {/* Left Sidebar Category Tabs */}
-      <div className="w-[275px] shrink-0 bg-white border-r border-gray-200/80 py-2.5 pb-10 overflow-y-auto max-h-[calc(100vh-70px)]">
-        {menu.columns.map((col, idx) => {
-          const isActive = idx === activeTabIdx;
-          return (
-            <button
-              key={col.title}
-              type="button"
-              onMouseEnter={() => setActiveTabIdx(idx)}
-              onClick={() => setActiveTabIdx(idx)}
-              className={`w-full flex items-center justify-between px-5 py-2.5 text-[13.5px] text-left transition-all duration-150 cursor-pointer ${
-                isActive
-                  ? 'bg-[#f0fbf9] text-[#008080] font-semibold'
-                  : 'text-[#4a5568] hover:bg-gray-50 hover:text-gray-900 font-normal'
-              }`}
-            >
-              <span className="truncate pr-2">{col.title}</span>
-              <span className={`text-[12px] shrink-0 ${isActive ? 'text-[#008080] font-bold' : 'text-gray-300'}`}>❯</span>
-            </button>
-          );
-        })}
-      </div>
-
-      {/* Middle & Right Content Panel (Soft mint background #f5fbf9) */}
-      <div className="flex-1 grid grid-cols-[minmax(0,1fr)_320px] p-6 px-8 pb-12 gap-8 overflow-y-auto max-h-[calc(100vh-70px)] bg-[#f5fbf9]">
-        {/* Middle Column: Active Tab Links */}
-        <div className="py-1 pb-6">
-          {activeColumn ? (
-            <div className="flex flex-col gap-2.5">
-              {activeColumn.items?.map((item) => {
+    <div className="mega-menu-clean bg-white text-gray-900 rounded-xl shadow-2xl p-6 px-7 border border-gray-100 min-w-[500px] w-max max-w-[94vw] flex gap-10">
+      {menu.columns.map((col) => (
+        <div key={col.title} className="flex flex-col justify-between min-w-[220px] flex-1">
+          <div>
+            <h3 className="text-[12.5px] font-extrabold text-gray-900 uppercase tracking-wider mb-3.5 pb-1 border-b border-gray-200/80">
+              {col.title}
+            </h3>
+            <ul className="flex flex-col gap-2 p-0 m-0 list-none">
+              {col.items?.map((item) => {
                 if (!item || !Array.isArray(item)) return null;
+                const targetUrl = navUrl(item[1]);
                 return (
-                  <a
-                    key={item[0]}
-                    href={`${navUrl(item[1])}?category=${category}`}
-                    className="text-[13.5px] font-normal text-[#4a5568] hover:text-[#008080] transition-colors py-0.5 block truncate"
-                  >
-                    {item[0]}
-                  </a>
+                  <li key={item[0]}>
+                    <a
+                      href={targetUrl}
+                      onClick={(e) => handleLinkClick(e, targetUrl)}
+                      className="mega-menu-link text-[13.5px] font-semibold text-gray-900 hover:text-[#0966c2] transition-colors py-0.5 block"
+                    >
+                      {item[0]}
+                    </a>
+                  </li>
                 );
               })}
-
-              {activeColumn.secondTitle && (
-                <div className="col-span-full mt-4 pt-3 border-t border-teal-100/60">
-                  <h4 className="text-xs font-bold text-gray-800 uppercase tracking-wider mb-2.5">
-                    {activeColumn.secondTitle}
-                  </h4>
-                  <div className="flex flex-col gap-2">
-                    {activeColumn.secondItems?.map((item) => {
-                      if (!item || !Array.isArray(item)) return null;
-                      return (
-                        <a
-                          key={item[0]}
-                          href={`${navUrl(item[1])}?category=${category}`}
-                          className="text-[13px] font-normal text-gray-600 hover:text-[#008080] py-0.5 block truncate"
-                        >
-                          {item[0]}
-                        </a>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
-            </div>
-          ) : (
-            <div className="text-xs text-gray-400 py-8">Select a category from the left menu</div>
-          )}
-        </div>
-
-        {/* Right Column: Featured Colleges */}
-        <div className="pl-4 border-l border-teal-100/60 h-fit py-1 pb-6">
-          <h3 className="text-[14px] font-bold text-[#1a202c] mb-3.5">
-            Featured Colleges
-          </h3>
-          <div className="flex flex-col gap-3.5">
-            {featuredColleges.map((fc) => (
-              <a
-                key={fc.name}
-                href={fc.href}
-                className="text-[13.5px] font-normal text-[#4a5568] hover:text-[#008080] leading-snug transition-colors py-0.5 block"
-              >
-                {fc.name}
-              </a>
-            ))}
+            </ul>
           </div>
+          {col.viewMoreUrl && (() => {
+            const targetUrl = navUrl(col.viewMoreUrl);
+            return (
+              <a
+                href={targetUrl}
+                onClick={(e) => handleLinkClick(e, targetUrl)}
+                className="view-more-btn mt-5 inline-flex items-center justify-between w-full px-3.5 py-2.5 rounded-lg bg-gray-50 hover:bg-[#0966c2] text-[#111827] hover:text-white font-bold text-xs transition-all duration-200 border border-gray-200/90 hover:border-[#0966c2] shadow-xs group"
+              >
+                <span>{col.viewMoreLabel || 'View More'}</span>
+                <span className="transform transition-transform group-hover:translate-x-1.5 font-bold">→</span>
+              </a>
+            );
+          })()}
         </div>
-      </div>
+      ))}
     </div>
   );
 }
@@ -227,8 +170,8 @@ function PageNavLink({ page, activeSlug, onNavigate, withCaret = false }) {
   );
 }
 
-function DropdownNavItem({ page, activeSlug, onNavigate }) {
-  const menu = megaMenus[page.slug];
+function DropdownNavItem({ page, activeSlug, onNavigate, isLast = false }) {
+  const menu = page.slug === 'colleges' ? null : megaMenus[page.slug];
   const [touchOpen, setTouchOpen] = useState(false);
 
   return (
@@ -236,8 +179,8 @@ function DropdownNavItem({ page, activeSlug, onNavigate }) {
       <PageNavLink page={page} activeSlug={activeSlug} onNavigate={onNavigate} withCaret={Boolean(menu)} />
       {menu ? <button type="button" className="nav-expand" aria-label={`Toggle ${page.label} menu`} aria-expanded={touchOpen} onClick={() => setTouchOpen(open => !open)}><ChevronCaret /></button> : null}
       {menu ? (
-        <div className="site-nav__mega" role="menu">
-          <MegaMenuPanel menu={menu} category={page.slug} />
+        <div className={`site-nav__mega${isLast ? " site-nav__mega--right" : ""}`} role="menu">
+          <MegaMenuPanel menu={menu} category={page.slug} onNavigate={onNavigate} />
         </div>
       ) : null}
     </div>
@@ -320,67 +263,92 @@ export default function Navbar({ activeSlug, onNavigate }) {
         <button type="button" className="mobile-nav-toggle" aria-controls="main-navigation" aria-expanded={mobileOpen} aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'} onClick={() => { setMobileOpen(open => !open); setDismissed(false); }}>
           <span aria-hidden="true">{mobileOpen ? '✕' : '☰'}</span> Menu
         </button>
-        <nav
-          id="main-navigation"
-          className="site-nav__links"
-          aria-label="Main pages"
-          onClick={(event) => {
-            if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-            const link = event.target.closest('a[href]');
-            if (!link || !event.currentTarget.contains(link)) return;
-            event.preventDefault();
-            onNavigate(link.getAttribute('href'));
-            setMoreOpen(false);
-          }}
-        >
-          {visiblePages.map((page) => (
-            <DropdownNavItem key={page.slug} page={page} activeSlug={activeSlug} onNavigate={onNavigate} />
-          ))}
+        <div className="site-nav__right flex items-center gap-3 ml-auto h-full">
+          <nav
+            id="main-navigation"
+            className="site-nav__links"
+            aria-label="Main pages"
+            onClick={(event) => {
+              if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+              const link = event.target.closest('a[href]');
+              if (!link || !event.currentTarget.contains(link)) return;
+              event.preventDefault();
+              onNavigate(link.getAttribute('href'));
+              setMoreOpen(false);
+            }}
+          >
+            {visiblePages.map((page, idx) => (
+              <DropdownNavItem
+                key={page.slug}
+                page={page}
+                activeSlug={activeSlug}
+                onNavigate={onNavigate}
+                isLast={['pharmacy', 'paramedical', 'yoga'].includes(page.slug)}
+              />
+            ))}
 
-          <div className={`site-nav__item${abroadOpen ? " touch-open" : ""}`}>
-            <a href={navUrl('/study-abroad')}>
-              Go Abroad
-              <ChevronCaret />
-            </a>
-            <button type="button" className="nav-expand" aria-label="Toggle Go Abroad menu" aria-expanded={abroadOpen} onClick={() => setAbroadOpen(open => !open)}><ChevronCaret /></button>
-            <div className="site-nav__mega site-nav__mega--abroad" role="menu">
-              <MegaMenuPanel menu={abroadMenu} category="logo" />
+            {/* Go Abroad menu item commented out (code preserved): */}
+            {/*
+            <div className={`site-nav__item${abroadOpen ? " touch-open" : ""}`}>
+              <a href={navUrl('/study-abroad')}>
+                Go Abroad
+                <ChevronCaret />
+              </a>
+              <button type="button" className="nav-expand" aria-label="Toggle Go Abroad menu" aria-expanded={abroadOpen} onClick={() => setAbroadOpen(open => !open)}><ChevronCaret /></button>
+              <div className="site-nav__mega site-nav__mega--abroad" role="menu">
+                <MegaMenuPanel menu={abroadMenu} category="logo" />
+              </div>
             </div>
-          </div>
+            */}
 
-          <div className="site-nav__item site-nav__item--more" ref={moreRef}>
+            {/* More dropdown menu item commented out (code preserved): */}
+            {/*
+            <div className="site-nav__item site-nav__item--more" ref={moreRef}>
+              <button
+                type="button"
+                className={moreIsActive ? 'active' : ''}
+                aria-expanded={moreOpen}
+                aria-haspopup="menu"
+                onClick={() => setMoreOpen((open) => !open)}
+              >
+                More
+                <ChevronCaret />
+              </button>
+              <div className={`site-nav__mega site-nav__mega--more${moreOpen ? ' open' : ''}`} role="menu">
+                <aside className="site-nav__more-list" aria-label="More pages">
+                  {morePages.map((page) => (
+                    <button
+                      type="button"
+                      key={page.slug}
+                      className={activeMoreSlug === page.slug ? 'active' : ''}
+                      onMouseEnter={() => setActiveMoreSlug(page.slug)}
+                      onFocus={() => setActiveMoreSlug(page.slug)}
+                      onClick={() => {
+                        setMoreOpen(false);
+                        onNavigate(`/${page.slug}`);
+                      }}
+                    >
+                      {page.label}
+                    </button>
+                  ))}
+                </aside>
+                <MegaMenuPanel menu={moreMenu} category={activeMoreSlug} />
+              </div>
+            </div>
+            */}
+          </nav>
+
+          <div className="site-nav__actions hidden md:flex items-center gap-3">
             <button
               type="button"
-              className={moreIsActive ? 'active' : ''}
-              aria-expanded={moreOpen}
-              aria-haspopup="menu"
-              onClick={() => setMoreOpen((open) => !open)}
+              onClick={() => window.dispatchEvent(new CustomEvent('open-apply-modal', { detail: { collegeName: 'Enquiry Now' } }))}
+              className="bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold text-xs md:text-sm px-4.5 py-2 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center gap-1.5 cursor-pointer shrink-0 ml-2"
             >
-              More
-              <ChevronCaret />
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
+              <span>Enquiry</span>
             </button>
-            <div className={`site-nav__mega site-nav__mega--more${moreOpen ? ' open' : ''}`} role="menu">
-              <aside className="site-nav__more-list" aria-label="More pages">
-                {morePages.map((page) => (
-                  <button
-                    type="button"
-                    key={page.slug}
-                    className={activeMoreSlug === page.slug ? 'active' : ''}
-                    onMouseEnter={() => setActiveMoreSlug(page.slug)}
-                    onFocus={() => setActiveMoreSlug(page.slug)}
-                    onClick={() => {
-                      setMoreOpen(false);
-                      onNavigate(`/${page.slug}`);
-                    }}
-                  >
-                    {page.label}
-                  </button>
-                ))}
-              </aside>
-              <MegaMenuPanel menu={moreMenu} category={activeMoreSlug} />
-            </div>
           </div>
-        </nav>
+        </div>
       </div>
     </header>
   );

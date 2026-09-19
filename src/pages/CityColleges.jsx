@@ -100,38 +100,64 @@ export default function CityColleges({ onNavigate }) {
   }, []);
 
   useEffect(() => {
-    const parseCityFromUrl = () => {
-      const searchParams = new URLSearchParams(window.location.search);
-      const queryCity = searchParams.get('city');
+    const searchParams = new URLSearchParams(window.location.search);
+    const querySearch = searchParams.get('search') || searchParams.get('q') || '';
+    const queryCity = searchParams.get('city') || '';
+    const queryState = searchParams.get('state') || '';
 
-      if (queryCity) {
-        return queryCity;
-      }
+    let pathCity = '';
+    const pathParts = window.location.pathname.split('/').filter(Boolean);
+    if (pathParts.length >= 2 && pathParts[0] === 'city') {
+      const rawCity = pathParts[1].replace(/-/g, ' ');
+      pathCity = rawCity.charAt(0).toUpperCase() + rawCity.slice(1);
+    }
 
-      const pathParts = window.location.pathname.split('/').filter(Boolean);
-      if (pathParts.length >= 2 && pathParts[0] === 'city') {
-        const pathCity = pathParts[1].replace(/-/g, ' ');
-        return pathCity.charAt(0).toUpperCase() + pathCity.slice(1);
-      }
+    const effectiveCity = queryCity || pathCity;
 
-      return 'Chennai';
-    };
+    setSearchQuery(querySearch);
+    setSelectedCity(effectiveCity);
 
-    const initialCity = parseCityFromUrl();
-    setSelectedCity(initialCity);
-
-    // Auto detect state for initialCity if present in STATE_CITIES_MAP
-    if (initialCity) {
+    if (queryState) {
+      setSelectedState(queryState);
+    } else if (effectiveCity) {
+      let foundState = '';
       for (const [st, cities] of Object.entries(STATE_CITIES_MAP)) {
-        if (cities.some(c => c.toLowerCase() === initialCity.toLowerCase())) {
+        if (cities.some(c => c.toLowerCase() === effectiveCity.toLowerCase())) {
+          foundState = st;
+          break;
+        }
+      }
+      setSelectedState(foundState);
+    } else {
+      setSelectedState('');
+    }
+
+    window.scrollTo(0, 0);
+  }, [window.location.search, window.location.pathname]);
+
+  const availableCities = useMemo(() => {
+    if (selectedState && STATE_CITIES_MAP[selectedState]) {
+      return STATE_CITIES_MAP[selectedState];
+    }
+    const allCitiesSet = new Set();
+    Object.values(STATE_CITIES_MAP).forEach(cities => {
+      cities.forEach(c => allCitiesSet.add(c));
+    });
+    return Array.from(allCitiesSet).sort();
+  }, [selectedState]);
+
+  const handleSelectCity = (cityName) => {
+    setSelectedCity(cityName);
+    if (cityName) {
+      for (const [st, cities] of Object.entries(STATE_CITIES_MAP)) {
+        if (cities.some(c => c.toLowerCase() === cityName.toLowerCase())) {
           setSelectedState(st);
           break;
         }
       }
     }
-
-    window.scrollTo(0, 0);
-  }, [window.location.search, window.location.pathname]);
+    setIsCityOpen(false);
+  };
 
   const filteredColleges = useMemo(() => {
     return collegesData.filter(c => {
@@ -161,11 +187,14 @@ export default function CityColleges({ onNavigate }) {
 
       // 3. Search Query Check
       if (searchQuery) {
-        const q = searchQuery.toLowerCase();
-        const matchesSearch = c.name.toLowerCase().includes(q) ||
+        const q = searchQuery.toLowerCase().trim();
+        const matchesSearch = (c.name || '').toLowerCase().includes(q) ||
           (c.city || '').toLowerCase().includes(q) ||
           (c.stateName || '').toLowerCase().includes(q) ||
-          (c.sector || '').toLowerCase().includes(q);
+          (c.sector || '').toLowerCase().includes(q) ||
+          (c.summary || '').toLowerCase().includes(q) ||
+          (c.courses || '').toLowerCase().includes(q) ||
+          (c.stream || '').toLowerCase().includes(q);
         if (!matchesSearch) return false;
       }
 
@@ -194,7 +223,7 @@ export default function CityColleges({ onNavigate }) {
   };
 
   const handleSwitchCity = (cityName) => {
-    setSelectedCity(cityName);
+    handleSelectCity(cityName);
     if (onNavigate) {
       onNavigate(`/city-colleges?city=${encodeURIComponent(cityName)}`);
     } else {
@@ -202,6 +231,8 @@ export default function CityColleges({ onNavigate }) {
       window.scrollTo(0, 0);
     }
   };
+
+  const activeTargetLocation = selectedCity || selectedState || 'India';
 
   return (
     <div className="converted-page min-h-screen bg-[#f4f5f7] pb-16" style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif" }}>
@@ -218,16 +249,26 @@ export default function CityColleges({ onNavigate }) {
               Home
             </a>
             <span>›</span>
-            <span>City Wise Colleges</span>
-            <span>›</span>
-            <span className="font-bold text-white">{selectedCity}</span>
+            <span>Colleges</span>
+            {selectedState && (
+              <>
+                <span>›</span>
+                <span>{selectedState}</span>
+              </>
+            )}
+            {selectedCity && (
+              <>
+                <span>›</span>
+                <span className="font-bold text-white">{selectedCity}</span>
+              </>
+            )}
           </nav>
 
           <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight mb-2">
-            Top Colleges in <span className="text-[#a5f3fc]">{selectedCity}</span> 2026
+            Top Colleges in <span className="text-[#a5f3fc]">{activeTargetLocation}</span> 2026
           </h1>
           <p className="text-sm sm:text-base text-white/90 max-w-3xl leading-relaxed mb-6">
-            Find and compare top accredited colleges in {selectedCity} with details on course fees, rankings, admission cut-offs, review ratings, and placement records.
+            Find and compare top accredited colleges in {activeTargetLocation} with details on course fees, rankings, admission cut-offs, review ratings, and placement records.
           </p>
 
           {/* Search & Filter Bar Container */}
@@ -236,7 +277,7 @@ export default function CityColleges({ onNavigate }) {
             <div className="relative flex-1 w-full">
               <input
                 type="text"
-                placeholder={`Search colleges in ${selectedCity}...`}
+                placeholder={`Search colleges in ${activeTargetLocation}...`}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 rounded-xl bg-white text-gray-800 text-sm font-medium placeholder-gray-400 border border-transparent focus:border-white outline-none shadow-sm"
@@ -244,7 +285,7 @@ export default function CityColleges({ onNavigate }) {
               <span className="absolute left-3.5 top-3.5 text-gray-400 text-base">🔍</span>
             </div>
 
-            {/* Custom Filter Dropdowns: State -> City (Opens downwards, All Sectors & All Genders removed) */}
+            {/* Custom Filter Dropdowns: State -> City */}
             <div ref={dropdownRef} className="flex flex-wrap gap-2 w-full sm:w-auto relative">
               {/* Custom State Dropdown */}
               <div className="relative flex-1 sm:flex-none">
@@ -270,7 +311,7 @@ export default function CityColleges({ onNavigate }) {
                       }}
                       className="px-4 py-2 hover:bg-blue-50 cursor-pointer font-bold text-xs text-gray-500 border-b border-gray-100"
                     >
-                      Select State
+                      Select State (All)
                     </div>
                     {Object.keys(STATE_CITIES_MAP).map((st) => (
                       <div
@@ -291,32 +332,21 @@ export default function CityColleges({ onNavigate }) {
                 )}
               </div>
 
-              {/* Custom Dependent City Dropdown */}
+              {/* Custom City Dropdown */}
               <div className="relative flex-1 sm:flex-none">
                 <button
                   type="button"
-                  disabled={!selectedState}
                   onClick={() => {
-                    if (selectedState) {
-                      setIsCityOpen(!isCityOpen);
-                      setIsStateOpen(false);
-                    }
+                    setIsCityOpen(!isCityOpen);
+                    setIsStateOpen(false);
                   }}
-                  className={`w-full min-w-[160px] px-4 py-3 rounded-xl font-bold text-xs border border-transparent outline-none shadow-sm flex items-center justify-between gap-2 transition-all ${
-                    !selectedState
-                      ? 'bg-gray-200 text-gray-400 cursor-not-allowed opacity-75'
-                      : 'bg-white text-gray-800 cursor-pointer'
-                  }`}
+                  className="w-full min-w-[140px] px-4 py-3 rounded-xl bg-white text-gray-800 font-bold text-xs border border-transparent outline-none cursor-pointer shadow-sm flex items-center justify-between gap-2"
                 >
-                  <span className="truncate">
-                    {!selectedState
-                      ? 'Select State First'
-                      : selectedCity || `All Cities in ${selectedState}`}
-                  </span>
-                  <span className="text-[10px] text-gray-400">▼</span>
+                  <span className="truncate">{selectedCity || 'Select City'}</span>
+                  <span className="text-[10px] text-gray-500">▼</span>
                 </button>
 
-                {isCityOpen && selectedState && (
+                {isCityOpen && (
                   <div className="absolute top-full left-0 mt-1.5 w-56 bg-white text-gray-800 rounded-xl shadow-2xl border border-gray-100 z-50 max-h-60 overflow-y-auto py-1">
                     <div
                       onClick={() => {
@@ -325,15 +355,12 @@ export default function CityColleges({ onNavigate }) {
                       }}
                       className="px-4 py-2 hover:bg-blue-50 cursor-pointer font-bold text-xs text-gray-500 border-b border-gray-100"
                     >
-                      All Cities in {selectedState}
+                      Select City (All)
                     </div>
-                    {STATE_CITIES_MAP[selectedState]?.map((ct) => (
+                    {availableCities.map((ct) => (
                       <div
                         key={ct}
-                        onClick={() => {
-                          setSelectedCity(ct);
-                          setIsCityOpen(false);
-                        }}
+                        onClick={() => handleSelectCity(ct)}
                         className={`px-4 py-2.5 hover:bg-blue-50 cursor-pointer font-semibold text-xs ${
                           selectedCity === ct ? 'bg-blue-50 text-[#0966c2] font-bold' : 'text-gray-700'
                         }`}
@@ -357,9 +384,9 @@ export default function CityColleges({ onNavigate }) {
           <div className="w-full flex-1">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-xl font-bold text-gray-900">
-                Showing {filteredColleges.length} Colleges in {selectedCity}
+                Showing {filteredColleges.length} Colleges {selectedCity ? `in ${selectedCity}` : selectedState ? `in ${selectedState}` : 'in India'}
               </h2>
-              {(selectedState || searchQuery) && (
+              {(selectedState || selectedCity || searchQuery) && (
                 <button
                   type="button"
                   onClick={() => { setSelectedState(''); setSelectedCity(''); setSearchQuery(''); }}
