@@ -217,6 +217,189 @@ export const page = {
   },
 };
 
+const premierPharmacyColleges = [
+  {
+    id: "HAMDARD-PHARM",
+    code: "HAMDARD-PHARM",
+    name: "Jamia Hamdard (School of Pharmaceutical Education & Research), New Delhi",
+    shortName: "Jamia Hamdard Pharmacy",
+    location: "New Delhi, Delhi",
+    city: "New Delhi",
+    state: "Delhi",
+    stateCode: "DL",
+    affiliation: "Deemed University",
+    rating: "4.9",
+    courses: "8 Courses",
+    coursesCount: 8,
+    examAccepted: "NEET / GPAT",
+    tuitionFees: "₹1,45,000 - ₹2,50,000 / Year",
+    gender: "Co-ed",
+    description: "Consistently ranked #1 in India for Pharmacy by NIRF. Jamia Hamdard is globally acclaimed for pharmaceutical research, formulation sciences, and Pharm.D clinical training. Code: HAMDARD-PHARM."
+  },
+  {
+    id: "NIPER-M",
+    code: "NIPER-M",
+    name: "National Institute of Pharmaceutical Education and Research (NIPER), Mohali",
+    shortName: "NIPER Mohali",
+    location: "Mohali, Punjab",
+    city: "Mohali",
+    state: "Punjab",
+    stateCode: "PB",
+    affiliation: "Government",
+    rating: "4.9",
+    courses: "14 Courses",
+    coursesCount: 14,
+    examAccepted: "NIPER JEE / GPAT",
+    tuitionFees: "₹65,000 - ₹1,20,000 / Year",
+    gender: "Co-ed",
+    description: "India's first National Institute in pharmaceutical sciences and an Institute of National Importance offering advanced M.Pharm, MS (Pharm), and Ph.D programs. Code: NIPER-M."
+  },
+  {
+    id: "ICT-MUM",
+    code: "ICT-MUM",
+    name: "Institute of Chemical Technology (Dept of Pharmaceutical Sciences), Mumbai",
+    shortName: "ICT Mumbai Pharmacy",
+    location: "Mumbai, Maharashtra",
+    city: "Mumbai",
+    state: "Maharashtra",
+    stateCode: "MH",
+    affiliation: "Government",
+    rating: "4.8",
+    courses: "6 Courses",
+    coursesCount: 6,
+    examAccepted: "MHT CET / GPAT",
+    tuitionFees: "₹85,000 - ₹1,45,000 / Year",
+    gender: "Co-ed",
+    description: "Premier center of excellence in drug discovery, pharmaceutical chemistry, and chemical biotechnology with top tier pharmaceutical industry placements. Code: ICT-MUM."
+  },
+  {
+    id: "BITS-PILANI-PHARM",
+    code: "BITS-PILANI-PHARM",
+    name: "BITS Pilani (Department of Pharmacy), Pilani",
+    shortName: "BITS Pilani Pharmacy",
+    location: "Pilani, Rajasthan",
+    city: "Pilani",
+    state: "Rajasthan",
+    stateCode: "RJ",
+    affiliation: "Private",
+    rating: "4.8",
+    courses: "6 Courses",
+    coursesCount: 6,
+    examAccepted: "BITSAT / BITS HD",
+    tuitionFees: "₹4,25,000 - ₹5,10,000 / Year",
+    gender: "Co-ed",
+    description: "Ranked among India's top pharmacy institutions, BITS Pilani offers industry-aligned B.Pharm and M.Pharm with world-class faculty and global alumni network. Code: BITS-PILANI-PHARM."
+  },
+  {
+    id: "MCOPS-M",
+    code: "MCOPS-M",
+    name: "Manipal College of Pharmaceutical Sciences (MCOPS), Manipal",
+    shortName: "Manipal MCOPS",
+    location: "Manipal, Karnataka",
+    city: "Manipal",
+    state: "Karnataka",
+    stateCode: "KA",
+    affiliation: "Private",
+    rating: "4.8",
+    courses: "12 Courses",
+    coursesCount: 12,
+    examAccepted: "MET / GPAT",
+    tuitionFees: "₹2,80,000 - ₹4,10,000 / Year",
+    gender: "Co-ed",
+    description: "One of India's oldest and most prestigious private pharmacy institutions with cutting-edge laboratories, PCI accreditation, and multi-national pharmaceutical tie-ups. Code: MCOPS-M."
+  },
+  {
+    id: "JSS-OOTY",
+    code: "JSS-OOTY",
+    name: "JSS College of Pharmacy, Ooty",
+    shortName: "JSS Pharmacy Ooty",
+    location: "Ooty, Tamil Nadu",
+    city: "Ooty",
+    state: "Tamil Nadu",
+    stateCode: "TN",
+    affiliation: "Private",
+    rating: "4.7",
+    courses: "10 Courses",
+    coursesCount: 10,
+    examAccepted: "JSS Entrance / GPAT",
+    tuitionFees: "₹1,50,000 - ₹2,90,000 / Year",
+    gender: "Co-ed",
+    description: "Top-ranked pharmacy college in South India offering B.Pharm, M.Pharm, and Pharm.D with advanced research in herbal drug technology and clinical pharmacy. Code: JSS-OOTY."
+  },
+  {
+    id: "PU-UIPS",
+    code: "PU-UIPS",
+    name: "Panjab University (University Institute of Pharmaceutical Sciences), Chandigarh",
+    shortName: "Panjab University UIPS",
+    location: "Chandigarh, Punjab",
+    city: "Chandigarh",
+    state: "Punjab",
+    stateCode: "PB",
+    affiliation: "Government",
+    rating: "4.7",
+    courses: "8 Courses",
+    coursesCount: 8,
+    examAccepted: "PU-CET / GPAT",
+    tuitionFees: "₹18,000 - ₹45,000 / Year",
+    gender: "Co-ed",
+    description: "UIPS Panjab University is renowned for pioneering research in pharmaceutical sciences, drug delivery, and natural product chemistry with high NIRF rankings. Code: PU-UIPS."
+  },
+  {
+    id: "AU-PHARM",
+    code: "AU-PHARM",
+    name: "Annamalai University (Faculty of Pharmacy), Chidambaram",
+    shortName: "Annamalai Pharmacy",
+    location: "Chidambaram, Tamil Nadu",
+    city: "Chidambaram",
+    state: "Tamil Nadu",
+    stateCode: "TN",
+    affiliation: "Government",
+    rating: "4.6",
+    courses: "9 Courses",
+    coursesCount: 9,
+    examAccepted: "TNEA / GPAT",
+    tuitionFees: "₹35,000 - ₹80,000 / Year",
+    gender: "Co-ed",
+    description: "State government university offering comprehensive education in industrial pharmacy, pharmacology, and pharmaceutical analysis with extensive clinical hospital attachments. Code: AU-PHARM."
+  },
+  {
+    id: "BCP-MUM",
+    code: "BCP-MUM",
+    name: "Bombay College of Pharmacy (BCP), Mumbai",
+    shortName: "Bombay College of Pharmacy",
+    location: "Mumbai, Maharashtra",
+    city: "Mumbai",
+    state: "Maharashtra",
+    stateCode: "MH",
+    affiliation: "Government Aided",
+    rating: "4.6",
+    courses: "7 Courses",
+    coursesCount: 7,
+    examAccepted: "MHT CET / GPAT",
+    tuitionFees: "₹45,000 - ₹1,10,000 / Year",
+    gender: "Co-ed",
+    description: "Established in 1957, BCP Mumbai is an apex institute for pharmaceutical education with high placement rates in top pharmaceutical MNCs across India and abroad. Code: BCP-MUM."
+  },
+  {
+    id: "DPSRU-DEL",
+    code: "DPSRU-DEL",
+    name: "Delhi Pharmaceutical Sciences and Research University (DPSRU), New Delhi",
+    shortName: "DPSRU New Delhi",
+    location: "New Delhi, Delhi",
+    city: "New Delhi",
+    state: "Delhi",
+    stateCode: "DL",
+    affiliation: "Government",
+    rating: "4.6",
+    courses: "11 Courses",
+    coursesCount: 11,
+    examAccepted: "DPSRU Entrance / GPAT",
+    tuitionFees: "₹40,000 - ₹95,000 / Year",
+    gender: "Co-ed",
+    description: "First pharmacy university in India and third in the world, dedicated exclusively to pharmaceutical education, clinical research, and hospital pharmacy. Code: DPSRU-DEL."
+  }
+];
+
 function PharmacyContent() {
   return (
     <>
@@ -2334,7 +2517,7 @@ function PharmacyContent() {
           </div>
         </div>
         <div className={"row"}>
-          <div className={"all-college-ajax  col-md-3 lg-pr-0"} style={{ minHeight: "100vh" }}></div>
+          <div className={"all-college-ajax col-md-3 lg-pr-0"}></div>
           <div className={"col-md-6 mobile__white__bg"}>
             <div className={"filter__selected__container"}>
               <div id={"selectedFilters"} className={"filterDiv"}>
@@ -2351,7 +2534,7 @@ function PharmacyContent() {
             </div>
             <div className={"sort__row__container"}>
               <h3 className={"filtered__college_count"}>
-                {"Showing 926 Colleges"}
+                {`Showing ${premierPharmacyColleges.length} Colleges`}
               </h3>
               <div className={"sortBy__select2__container desktopOnly"}>
                 <span>
@@ -2374,42 +2557,55 @@ function PharmacyContent() {
               </div>
             </div>
             <div className={"searchBar"}>
-              <input className={"search-autocomplete1 search-listing"} id={"autoComplete"} autoComplete={"off"} placeholder={"Search for Colleges"} type={"text"} tabIndex={"1"} />
+              <input 
+                className={"search-autocomplete1 search-listing"} 
+                id={"autoComplete"} 
+                autoComplete={"off"} 
+                placeholder={"Search for Pharmacy Colleges, City, Exam"} 
+                type={"text"} 
+                tabIndex={"1"} 
+              />
               <i className={"spriteIcon small__close__icon search-remove"}></i>
               <div className={"selection"}></div>
             </div>
             <div className={"filtered__colleges__list"}>
               <div className={"searchedcollegeList"}>
-                {collegesData.map((item, index) => {
-                  const stateName = {"HR":"Haryana","RJ":"Rajasthan","TG":"Telangana","OR":"Odisha","JK":"Jammu & Kashmir","KA":"Karnataka","BR":"Bihar","ML":"Meghalaya","UP":"Uttar Pradesh","PB":"Punjab","MH":"Maharashtra","WB":"West Bengal","TR":"Tripura","HP":"Himachal Pradesh","JH":"Jharkhand","CT":"Chhattisgarh","AP":"Andhra Pradesh","GJ":"Gujarat","GA":"Goa","TN":"Tamil Nadu","MP":"Madhya Pradesh","KL":"Kerala","UT":"Uttarakhand"}[item.state] || item.state || '';
-                  const locationStr = `${item.city || item.district || ''}${(item.city || item.district) && stateName ? ', ' : ''}${stateName}`;
+                {premierPharmacyColleges.map((college) => {
+                  const collegeObj = {
+                    id: college.code,
+                    name: college.name,
+                    city: college.city,
+                    state: college.stateCode,
+                    sector: college.affiliation
+                  };
                   return (
-                    <div className={"college__card__new "} key={item.id || index} id={`search-${item.code || index}`}>
+                    <div className={"college__card__new"} key={college.code} id={`search-${college.code}`} data-stream={"Pharmacy"}>
                       <div className={"card__header__row"}>
                         <div className={"college__detail__grid"}>
-                          <CollegeImage college={item} 
+                          <CollegeImage 
+                            college={collegeObj} 
                             width={"56"} 
                             height={"56"} 
                             className={"college__image"} 
-                            alt={item.name} 
+                            alt={college.name} 
                           />
                           <div className={"college__detail__row"}>
                             <h2 className={"college__name"}>
-                              <a href={allowedLink(`/college/${item.id}`)} title={item.name} data-hide={item.code}>
-                                {item.name}
+                              <a href={allowedLink(`/college/${college.code}`)} title={college.name}>
+                                {college.name}
                               </a>
                             </h2>
                             <div className={"detail__list__mobile"}>
                               <span className={"list__style college__location"}>
-                                {locationStr}
+                                {college.location}
                               </span>
                               <span className={"list__style college__affiliation"}>
-                                {item.sector || "Private"}
+                                {college.affiliation}
                               </span>
-                              <a className={"list__style list__style__rating"} target={"_blank"} title={`${item.name} Reviews`} href={allowedLink(`/college/${item.id}/reviews`)}>
+                              <a className={"list__style list__style__rating"} target={"_blank"} title={`${college.name} Reviews`} href={allowedLink("/reviews")}>
                                 <span className={"list__style college__rating"}>
                                   <span className={"spriteIcon__2 review__star__icon"}></span>
-                                  {"4.5"}
+                                  {college.rating}
                                 </span>
                               </a>
                               <div className={"like__compare__grid mobileOnly"}>
@@ -2424,7 +2620,7 @@ function PharmacyContent() {
                       </div>
                       <div className={"summary-text fsdfsdfs"}>
                         <p className={"template-text1 template-text add-read-more show-less-content"}>
-                          {`${item.name} is a premier ${item.sector || 'Private'} institute located in ${locationStr}. College Code: ${item.code || 'N/A'}.`}
+                          {college.description}
                         </p>
                       </div>
                       <div className={"highlight__cta__row"}>
@@ -2433,8 +2629,8 @@ function PharmacyContent() {
                             <h3 className={"highlight__name"}>{"Courses Offered"}</h3>
                             <span className={"highlight__value"}>
                               <h3>
-                                <a title={`${item.name} Courses`}>
-                                  {`${item.coursesCount || 6} Courses`}
+                                <a title={`${college.name} Courses`}>
+                                  {college.courses}
                                 </a>
                               </h3>
                             </span>
@@ -2443,26 +2639,26 @@ function PharmacyContent() {
                             <h3 className={"highlight__name"}>{"Exam Accepted"}</h3>
                             <h3 className={"highlight__value"}>
                               <a target={"_blank"} href={allowedLink("/exams")}>
-                                {"Entrance Exam"}
+                                {college.examAccepted}
                               </a>
                             </h3>
                           </div>
                           <div className={"desktopOnly"}></div>
                           <div className={"highlight__div"}>
                             <h3 className={"highlight__name"}>{"Tuition Fees Range"}</h3>
-                            <h3 className={"highlight__value"}>{"-/-"}</h3>
+                            <h3 className={"highlight__value"}>{college.tuitionFees}</h3>
                           </div>
                           <div className={"highlight__div"}>
                             <h3 className={"highlight__name"}>{"Gender Acceptance"}</h3>
                             <h3 className={"highlight__value"}>
-                              <span className={"highlight__value"}>{item.genderAcceptance || "Co-ed"}</span>
+                              <span className={"highlight__value"}>{college.gender}</span>
                             </h3>
                           </div>
                           <div className={"highlight__div"}></div>
                         </div>
                         <div className={"cta__grid"}>
-                          <div className={"cta__div lead-cta-college-filter-2 leadFilterData apply-now-btn"} data-title={"Apply Now"} data-description={item.name}>{"Apply Now"}</div>
-                          <div className={"cta__div lead-cta-college-filter-1 view-details-btn"} data-title={"View Details"} data-college-id={item.id} data-description={item.name}>{"View College"}</div>
+                          <div className={"cta__div lead-cta-college-filter-2 leadFilterData apply-now-btn"} data-title={"Apply Now"} data-description={college.name}>{"Apply Now"}</div>
+                          <div className={"cta__div lead-cta-college-filter-1 view-details-btn"} data-title={"View Details"} data-description={college.name}>{"View College"}</div>
                         </div>
                       </div>
                     </div>

@@ -80,6 +80,7 @@ const popularCities = [
 export default function CityColleges({ onNavigate }) {
   const [selectedState, setSelectedState] = useState('');
   const [selectedCity, setSelectedCity] = useState('');
+  const [selectedStream, setSelectedStream] = useState('ALL');
   const [searchQuery, setSearchQuery] = useState('');
   const [sectorFilter, setSectorFilter] = useState('ALL');
   const [genderFilter, setGenderFilter] = useState('ALL');
@@ -104,12 +105,21 @@ export default function CityColleges({ onNavigate }) {
     const querySearch = searchParams.get('search') || searchParams.get('q') || '';
     const queryCity = searchParams.get('city') || '';
     const queryState = searchParams.get('state') || '';
+    const queryCategory = searchParams.get('category') || searchParams.get('stream') || '';
 
     let pathCity = '';
     const pathParts = window.location.pathname.split('/').filter(Boolean);
     if (pathParts.length >= 2 && pathParts[0] === 'city') {
       const rawCity = pathParts[1].replace(/-/g, ' ');
       pathCity = rawCity.charAt(0).toUpperCase() + rawCity.slice(1);
+    }
+
+    const pathSlug = (pathParts[0] || '').toLowerCase();
+    const streamCandidate = queryCategory || pathSlug;
+    if (['nursing', 'pharmacy', 'paramedical', 'yoga'].includes(streamCandidate.toLowerCase())) {
+      setSelectedStream(streamCandidate.charAt(0).toUpperCase() + streamCandidate.slice(1).toLowerCase());
+    } else {
+      setSelectedStream('ALL');
     }
 
     const effectiveCity = queryCity || pathCity;
@@ -161,6 +171,23 @@ export default function CityColleges({ onNavigate }) {
 
   const filteredColleges = useMemo(() => {
     return collegesData.filter(c => {
+      // 0. Stream Filter Check (Nursing, Pharmacy, Paramedical, Yoga)
+      if (selectedStream && selectedStream !== 'ALL') {
+        const streamKey = selectedStream.toLowerCase();
+        const cDataStr = `${c.name || ''} ${c.summary || ''} ${c.courses || ''} ${c.stream || ''}`.toLowerCase();
+        let matchesStream = cDataStr.includes(streamKey);
+        if (streamKey === 'paramedical') {
+          matchesStream = matchesStream || cDataStr.includes('mlt') || cDataStr.includes('radiology') || cDataStr.includes('physiotherapy') || cDataStr.includes('bpt');
+        } else if (streamKey === 'nursing') {
+          matchesStream = matchesStream || cDataStr.includes('gnm') || cDataStr.includes('anm') || cDataStr.includes('nurse');
+        } else if (streamKey === 'pharmacy') {
+          matchesStream = matchesStream || cDataStr.includes('pharm') || cDataStr.includes('d.pharm') || cDataStr.includes('b.pharm');
+        } else if (streamKey === 'yoga') {
+          matchesStream = matchesStream || cDataStr.includes('naturopathy') || cDataStr.includes('bnys') || cDataStr.includes('yogic');
+        }
+        if (!matchesStream) return false;
+      }
+
       // 1. State Filter Check
       if (selectedState) {
         const cState = (c.stateName || c.state || '').toLowerCase();
@@ -208,7 +235,7 @@ export default function CityColleges({ onNavigate }) {
 
       return true;
     });
-  }, [selectedState, selectedCity, searchQuery, sectorFilter, genderFilter]);
+  }, [selectedStream, selectedState, selectedCity, searchQuery, sectorFilter, genderFilter]);
 
   const handleApplyNow = (college) => {
     window.dispatchEvent(new CustomEvent('open-apply-modal', {
@@ -265,112 +292,145 @@ export default function CityColleges({ onNavigate }) {
           </nav>
 
           <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight mb-2">
-            Top Colleges in <span className="text-[#a5f3fc]">{activeTargetLocation}</span> 2026
+            Top {selectedStream !== 'ALL' ? `${selectedStream} ` : ''}Colleges in <span className="text-[#a5f3fc]">{activeTargetLocation}</span> 2026
           </h1>
           <p className="text-sm sm:text-base text-white/90 max-w-3xl leading-relaxed mb-6">
             Find and compare top accredited colleges in {activeTargetLocation} with details on course fees, rankings, admission cut-offs, review ratings, and placement records.
           </p>
 
           {/* Search & Filter Bar Container */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-lg flex flex-col sm:flex-row gap-3 items-center">
-            {/* Search Input */}
-            <div className="relative flex-1 w-full">
-              <input
-                type="text"
-                placeholder={`Search colleges in ${activeTargetLocation}...`}
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 rounded-xl bg-white text-gray-800 text-sm font-medium placeholder-gray-400 border border-transparent focus:border-white outline-none shadow-sm"
-              />
-              <span className="absolute left-3.5 top-3.5 text-gray-400 text-base">🔍</span>
-            </div>
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-lg flex flex-col gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 items-center w-full">
+              {/* Search Input */}
+              <div className="relative flex-1 w-full">
+                <input
+                  type="text"
+                  placeholder={`Search colleges in ${activeTargetLocation}...`}
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white text-gray-800 text-sm font-medium placeholder-gray-400 border border-transparent focus:border-white outline-none shadow-sm"
+                />
+                <span className="absolute left-3.5 top-3.5 text-gray-400 text-base">🔍</span>
+              </div>
 
-            {/* Custom Filter Dropdowns: State -> City */}
-            <div ref={dropdownRef} className="flex flex-wrap gap-2 w-full sm:w-auto relative">
-              {/* Custom State Dropdown */}
-              <div className="relative flex-1 sm:flex-none">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsStateOpen(!isStateOpen);
-                    setIsCityOpen(false);
-                  }}
-                  className="w-full min-w-[140px] px-4 py-3 rounded-xl bg-white text-gray-800 font-bold text-xs border border-transparent outline-none cursor-pointer shadow-sm flex items-center justify-between gap-2"
-                >
-                  <span className="truncate">{selectedState || 'Select State'}</span>
-                  <span className="text-[10px] text-gray-500">▼</span>
-                </button>
+              {/* Custom Filter Dropdowns: State -> City */}
+              <div ref={dropdownRef} className="flex flex-wrap gap-2 w-full sm:w-auto relative">
+                {/* Custom State Dropdown */}
+                <div className="relative flex-1 sm:flex-none">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsStateOpen(!isStateOpen);
+                      setIsCityOpen(false);
+                    }}
+                    className="w-full min-w-[140px] px-4 py-3 rounded-xl bg-white text-gray-800 font-bold text-xs border border-transparent outline-none cursor-pointer shadow-sm flex items-center justify-between gap-2"
+                  >
+                    <span className="truncate">{selectedState || 'Select State'}</span>
+                    <span className="text-[10px] text-gray-500">▼</span>
+                  </button>
 
-                {isStateOpen && (
-                  <div className="absolute top-full left-0 mt-1.5 w-52 bg-white text-gray-800 rounded-xl shadow-2xl border border-gray-100 z-50 max-h-60 overflow-y-auto py-1">
-                    <div
-                      onClick={() => {
-                        setSelectedState('');
-                        setSelectedCity('');
-                        setIsStateOpen(false);
-                      }}
-                      className="px-4 py-2 hover:bg-blue-50 cursor-pointer font-bold text-xs text-gray-500 border-b border-gray-100"
-                    >
-                      Select State (All)
-                    </div>
-                    {Object.keys(STATE_CITIES_MAP).map((st) => (
+                  {isStateOpen && (
+                    <div className="absolute top-full left-0 mt-1.5 w-52 bg-white text-gray-800 rounded-xl shadow-2xl border border-gray-100 z-50 max-h-60 overflow-y-auto py-1">
                       <div
-                        key={st}
                         onClick={() => {
-                          setSelectedState(st);
+                          setSelectedState('');
                           setSelectedCity('');
                           setIsStateOpen(false);
                         }}
-                        className={`px-4 py-2.5 hover:bg-blue-50 cursor-pointer font-semibold text-xs ${
-                          selectedState === st ? 'bg-blue-50 text-[#0966c2] font-bold' : 'text-gray-700'
-                        }`}
+                        className="px-4 py-2 hover:bg-blue-50 cursor-pointer font-bold text-xs text-gray-500 border-b border-gray-100"
                       >
-                        {st}
+                        Select State (All)
                       </div>
-                    ))}
-                  </div>
-                )}
-              </div>
+                      {Object.keys(STATE_CITIES_MAP).map((st) => (
+                        <div
+                          key={st}
+                          onClick={() => {
+                            setSelectedState(st);
+                            setSelectedCity('');
+                            setIsStateOpen(false);
+                          }}
+                          className={`px-4 py-2.5 hover:bg-blue-50 cursor-pointer font-semibold text-xs ${
+                            selectedState === st ? 'bg-blue-50 text-[#0966c2] font-bold' : 'text-gray-700'
+                          }`}
+                        >
+                          {st}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
 
-              {/* Custom City Dropdown */}
-              <div className="relative flex-1 sm:flex-none">
+                {/* Custom City Dropdown */}
+                <div className="relative flex-1 sm:flex-none">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsCityOpen(!isCityOpen);
+                      setIsStateOpen(false);
+                    }}
+                    className="w-full min-w-[140px] px-4 py-3 rounded-xl bg-white text-gray-800 font-bold text-xs border border-transparent outline-none cursor-pointer shadow-sm flex items-center justify-between gap-2"
+                  >
+                    <span className="truncate">{selectedCity || 'Select City'}</span>
+                    <span className="text-[10px] text-gray-500">▼</span>
+                  </button>
+
+                  {isCityOpen && (
+                    <div className="absolute top-full left-0 mt-1.5 w-56 bg-white text-gray-800 rounded-xl shadow-2xl border border-gray-100 z-50 max-h-60 overflow-y-auto py-1">
+                      <div
+                        onClick={() => {
+                          setSelectedCity('');
+                          setIsCityOpen(false);
+                        }}
+                        className="px-4 py-2 hover:bg-blue-50 cursor-pointer font-bold text-xs text-gray-500 border-b border-gray-100"
+                      >
+                        Select City (All)
+                      </div>
+                      {availableCities.map((ct) => (
+                        <div
+                          key={ct}
+                          onClick={() => handleSelectCity(ct)}
+                          className={`px-4 py-2.5 hover:bg-blue-50 cursor-pointer font-semibold text-xs ${
+                            selectedCity === ct ? 'bg-blue-50 text-[#0966c2] font-bold' : 'text-gray-700'
+                          }`}
+                        >
+                          {ct}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Stream Filter Pills (Nursing, Pharmacy, Paramedical, Yoga) */}
+            <div className="w-full flex flex-wrap items-center gap-2 pt-3 border-t border-white/20">
+              <span className="text-xs font-bold text-white/90 mr-1 uppercase tracking-wider">Stream:</span>
+              {['ALL', 'Nursing', 'Pharmacy', 'Paramedical', 'Yoga'].map((stream) => (
                 <button
+                  key={stream}
                   type="button"
                   onClick={() => {
-                    setIsCityOpen(!isCityOpen);
-                    setIsStateOpen(false);
+                    setSelectedStream(stream);
+                    const searchParams = new URLSearchParams(window.location.search);
+                    if (stream === 'ALL') {
+                      searchParams.delete('category');
+                      searchParams.delete('stream');
+                    } else {
+                      searchParams.set('category', stream);
+                    }
+                    const newSearch = searchParams.toString();
+                    const newUrl = `${window.location.pathname}${newSearch ? `?${newSearch}` : ''}`;
+                    window.history.replaceState({}, '', newUrl);
                   }}
-                  className="w-full min-w-[140px] px-4 py-3 rounded-xl bg-white text-gray-800 font-bold text-xs border border-transparent outline-none cursor-pointer shadow-sm flex items-center justify-between gap-2"
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                    selectedStream.toUpperCase() === stream.toUpperCase()
+                      ? 'bg-white text-[#0966c2] shadow-md scale-105'
+                      : 'bg-white/20 hover:bg-white/30 text-white border border-white/30'
+                  }`}
                 >
-                  <span className="truncate">{selectedCity || 'Select City'}</span>
-                  <span className="text-[10px] text-gray-500">▼</span>
+                  {stream === 'ALL' ? 'All Streams' : stream}
                 </button>
-
-                {isCityOpen && (
-                  <div className="absolute top-full left-0 mt-1.5 w-56 bg-white text-gray-800 rounded-xl shadow-2xl border border-gray-100 z-50 max-h-60 overflow-y-auto py-1">
-                    <div
-                      onClick={() => {
-                        setSelectedCity('');
-                        setIsCityOpen(false);
-                      }}
-                      className="px-4 py-2 hover:bg-blue-50 cursor-pointer font-bold text-xs text-gray-500 border-b border-gray-100"
-                    >
-                      Select City (All)
-                    </div>
-                    {availableCities.map((ct) => (
-                      <div
-                        key={ct}
-                        onClick={() => handleSelectCity(ct)}
-                        className={`px-4 py-2.5 hover:bg-blue-50 cursor-pointer font-semibold text-xs ${
-                          selectedCity === ct ? 'bg-blue-50 text-[#0966c2] font-bold' : 'text-gray-700'
-                        }`}
-                      >
-                        {ct}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -384,13 +444,26 @@ export default function CityColleges({ onNavigate }) {
           <div className="w-full flex-1">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-xl font-bold text-gray-900">
-                Showing {filteredColleges.length} Colleges {selectedCity ? `in ${selectedCity}` : selectedState ? `in ${selectedState}` : 'in India'}
+                Showing {filteredColleges.length} {selectedStream !== 'ALL' ? `${selectedStream} ` : ''}Colleges {selectedCity ? `in ${selectedCity}` : selectedState ? `in ${selectedState}` : 'in India'}
               </h2>
-              {(selectedState || selectedCity || searchQuery) && (
+              {(selectedState || selectedCity || searchQuery || selectedStream !== 'ALL') && (
                 <button
                   type="button"
-                  onClick={() => { setSelectedState(''); setSelectedCity(''); setSearchQuery(''); }}
-                  className="text-xs font-bold text-[#e5383b] hover:underline"
+                  onClick={() => {
+                    setSelectedState('');
+                    setSelectedCity('');
+                    setSearchQuery('');
+                    setSelectedStream('ALL');
+                    const searchParams = new URLSearchParams(window.location.search);
+                    searchParams.delete('category');
+                    searchParams.delete('stream');
+                    searchParams.delete('search');
+                    searchParams.delete('city');
+                    searchParams.delete('state');
+                    const newSearch = searchParams.toString();
+                    window.history.replaceState({}, '', `${window.location.pathname}${newSearch ? `?${newSearch}` : ''}`);
+                  }}
+                  className="text-xs font-bold text-[#e5383b] hover:underline cursor-pointer"
                 >
                   Clear Filters
                 </button>

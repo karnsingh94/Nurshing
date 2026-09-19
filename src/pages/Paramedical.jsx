@@ -1,5 +1,6 @@
 import { allowedLink } from '../linkPolicy.js';
 import PageRenderer from '../PageRenderer.jsx';
+import CollegeImage from '../components/CollegeImage.jsx';
 import StreamCourseSections from '../components/StreamCourseSections.jsx';
 
 export const page = {
@@ -214,6 +215,189 @@ export const page = {
     ]
   },
 };
+
+const premierParamedicalColleges = [
+  {
+    id: "AIIMS-P",
+    code: "AIIMS-P",
+    name: "All India Institute of Medical Sciences (AIIMS Paramedical), New Delhi",
+    shortName: "AIIMS New Delhi Paramedical",
+    location: "New Delhi, Delhi",
+    city: "New Delhi",
+    state: "Delhi",
+    stateCode: "DL",
+    affiliation: "Government",
+    rating: "4.9",
+    courses: "18 Courses",
+    coursesCount: 18,
+    examAccepted: "AIIMS Paramedical CET / NEET UG",
+    tuitionFees: "₹2,000 - ₹12,000 / Year",
+    gender: "Co-ed",
+    description: "Apex medical and healthcare institute in India offering premier bachelor's and master's paramedical programs in Medical Technology in Radiography, Operation Theatre Technology, and Optometry. Code: AIIMS-P."
+  },
+  {
+    id: "CMC-P",
+    code: "CMC-P",
+    name: "Christian Medical College (CMC Paramedical Sciences), Vellore",
+    shortName: "CMC Vellore Paramedical",
+    location: "Vellore, Tamil Nadu",
+    city: "Vellore",
+    state: "Tamil Nadu",
+    stateCode: "TN",
+    affiliation: "Private",
+    rating: "4.8",
+    courses: "22 Courses",
+    coursesCount: 22,
+    examAccepted: "CMC Entrance / Merit-Based",
+    tuitionFees: "₹45,000 - ₹95,000 / Year",
+    gender: "Co-ed",
+    description: "World-renowned healthcare and medical institution providing extensive allied health training across 2,800+ hospital beds with exceptional clinical exposure. Code: CMC-P."
+  },
+  {
+    id: "PGIMER-P",
+    code: "PGIMER-P",
+    name: "Post Graduate Institute of Medical Education and Research (PGIMER), Chandigarh",
+    shortName: "PGIMER Chandigarh",
+    location: "Chandigarh, Punjab",
+    city: "Chandigarh",
+    state: "Punjab",
+    stateCode: "PB",
+    affiliation: "Government",
+    rating: "4.8",
+    courses: "20 Courses",
+    coursesCount: 20,
+    examAccepted: "PGIMER Entrance Exam",
+    tuitionFees: "₹4,500 - ₹15,000 / Year",
+    gender: "Co-ed",
+    description: "National Institute of Importance providing top-tier academic training in Medical Laboratory Technology, Radiodiagnosis, Radiotherapy, and Dialysis Therapy. Code: PGIMER-P."
+  },
+  {
+    id: "JIPMER-P",
+    code: "JIPMER-P",
+    name: "Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER), Puducherry",
+    shortName: "JIPMER Puducherry",
+    location: "Puducherry, Puducherry",
+    city: "Puducherry",
+    state: "Puducherry",
+    stateCode: "PY",
+    affiliation: "Government",
+    rating: "4.8",
+    courses: "15 Courses",
+    coursesCount: 15,
+    examAccepted: "NEET UG / JIPMER Entrance",
+    tuitionFees: "₹5,000 - ₹18,000 / Year",
+    gender: "Co-ed",
+    description: "Institute of National Importance offering advanced B.Sc and M.Sc Allied Health Sciences courses with comprehensive practical training in multispecialty hospital wards. Code: JIPMER-P."
+  },
+  {
+    id: "MCHP01",
+    code: "MCHP01",
+    name: "Manipal College of Health Professions (MCHP), Manipal",
+    shortName: "MCHP Manipal",
+    location: "Manipal, Karnataka",
+    city: "Manipal",
+    state: "Karnataka",
+    stateCode: "KA",
+    affiliation: "Private (Deemed)",
+    rating: "4.7",
+    courses: "24 Courses",
+    coursesCount: 24,
+    examAccepted: "MET / Merit-Based",
+    tuitionFees: "₹1,10,000 - ₹2,30,000 / Year",
+    gender: "Co-ed",
+    description: "India's first institution exclusively dedicated to allied health professions, equipped with cutting-edge simulation laboratories and international hospital rotations. Code: MCHP01."
+  },
+  {
+    id: "HAMDARD-P",
+    code: "HAMDARD-P",
+    name: "Jamia Hamdard (School of Allied Health Sciences), New Delhi",
+    shortName: "Jamia Hamdard Allied Health",
+    location: "New Delhi, Delhi",
+    city: "New Delhi",
+    state: "Delhi",
+    stateCode: "DL",
+    affiliation: "Deemed University",
+    rating: "4.6",
+    courses: "14 Courses",
+    coursesCount: 14,
+    examAccepted: "NEET UG / Jamia Hamdard Test",
+    tuitionFees: "₹85,000 - ₹1,65,000 / Year",
+    gender: "Co-ed",
+    description: "Distinguished department providing specialised paramedical qualifications in Medical Lab Technology, Cardiology Laboratory Technology, and Emergency Medical Care. Code: HAMDARD-P."
+  },
+  {
+    id: "KGMU-P",
+    code: "KGMU-P",
+    name: "King George's Medical University (Institute of Paramedical Sciences), Lucknow",
+    shortName: "KGMU Paramedical Lucknow",
+    location: "Lucknow, Uttar Pradesh",
+    city: "Lucknow",
+    state: "Uttar Pradesh",
+    stateCode: "UP",
+    affiliation: "Government",
+    rating: "4.7",
+    courses: "16 Courses",
+    coursesCount: 16,
+    examAccepted: "UP CPET / KGMU Entrance",
+    tuitionFees: "₹25,000 - ₹55,000 / Year",
+    gender: "Co-ed",
+    description: "One of northern India's largest medical centers delivering hands-on paramedical diplomas and degrees in Trauma & Emergency Care, Optometry, and Dialysis Technology. Code: KGMU-P."
+  },
+  {
+    id: "MMC-P",
+    code: "MMC-P",
+    name: "Madras Medical College (Division of Allied Health Sciences), Chennai",
+    shortName: "Madras Medical College Paramedical",
+    location: "Chennai, Tamil Nadu",
+    city: "Chennai",
+    state: "Tamil Nadu",
+    stateCode: "TN",
+    affiliation: "Government",
+    rating: "4.6",
+    courses: "12 Courses",
+    coursesCount: 12,
+    examAccepted: "TN Paramedical Selection / Merit",
+    tuitionFees: "₹15,000 - ₹35,000 / Year",
+    gender: "Co-ed",
+    description: "One of the oldest medical institutions in Asia, offering highly respected paramedical degree programs with extensive clinical training at Rajiv Gandhi Government General Hospital. Code: MMC-P."
+  },
+  {
+    id: "NIMS-P",
+    code: "NIMS-P",
+    name: "Nizam's Institute of Medical Sciences (Faculty of Paramedical Courses), Hyderabad",
+    shortName: "NIMS Hyderabad Paramedical",
+    location: "Hyderabad, Telangana",
+    city: "Hyderabad",
+    state: "Telangana",
+    stateCode: "TS",
+    affiliation: "Government",
+    rating: "4.6",
+    courses: "10 Courses",
+    coursesCount: 10,
+    examAccepted: "NIMS Paramedical CET",
+    tuitionFees: "₹30,000 - ₹70,000 / Year",
+    gender: "Co-ed",
+    description: "Autonomous super-specialty hospital and state university providing premier diploma and bachelor's programs in Radiography, Neuro Technology, and Cardiac Care. Code: NIMS-P."
+  },
+  {
+    id: "ILBS-P",
+    code: "ILBS-P",
+    name: "Institute of Liver and Biliary Sciences (Paramedical Sciences), New Delhi",
+    shortName: "ILBS New Delhi",
+    location: "New Delhi, Delhi",
+    city: "New Delhi",
+    state: "Delhi",
+    stateCode: "DL",
+    affiliation: "Autonomous / Deemed",
+    rating: "4.7",
+    courses: "8 Courses",
+    coursesCount: 8,
+    examAccepted: "ILBS Entrance Examination",
+    tuitionFees: "₹50,000 - ₹1,10,000 / Year",
+    gender: "Co-ed",
+    description: "Apex national center of super-specialty medicine offering focused allied health qualifications in Critical Care Technology, Dialysis Technology, and Hepato-Pancreato Technology. Code: ILBS-P."
+  }
+];
 
 function ParamedicalContent() {
   return (
@@ -2229,7 +2413,7 @@ function ParamedicalContent() {
           </div>
         </div>
         <div className={"row"}>
-          <div className={"all-college-ajax  col-md-3 lg-pr-0"} style={{ minHeight: "100vh" }}></div>
+          <div className={"all-college-ajax col-md-3 lg-pr-0"}></div>
           <div className={"col-md-6 mobile__white__bg"}>
             <div className={"filter__selected__container"}>
               <div id={"selectedFilters"} className={"filterDiv"}>
@@ -2246,7 +2430,7 @@ function ParamedicalContent() {
             </div>
             <div className={"sort__row__container"}>
               <h3 className={"filtered__college_count"}>
-                {"Showing 346 Colleges"}
+                {`Showing ${premierParamedicalColleges.length} Colleges`}
               </h3>
               <div className={"sortBy__select2__container desktopOnly"}>
                 <span>
@@ -2269,39 +2453,55 @@ function ParamedicalContent() {
               </div>
             </div>
             <div className={"searchBar"}>
-              <input className={"search-autocomplete1 search-listing"} id={"autoComplete"} autoComplete={"off"} placeholder={"Search for Colleges"} type={"text"} tabIndex={"1"} />
+              <input 
+                className={"search-autocomplete1 search-listing"} 
+                id={"autoComplete"} 
+                autoComplete={"off"} 
+                placeholder={"Search for Paramedical Colleges, City, Exam"} 
+                type={"text"} 
+                tabIndex={"1"} 
+              />
               <i className={"spriteIcon small__close__icon search-remove"}></i>
               <div className={"selection"}></div>
             </div>
             <div className={"filtered__colleges__list"}>
               <div className={"searchedcollegeList"}>
-                    <div className={"college__card__new "} key={"AIIMS-P"} id={"search-AIIMS-P"}>
+                {premierParamedicalColleges.map((college) => {
+                  const collegeObj = {
+                    id: college.code,
+                    name: college.name,
+                    city: college.city,
+                    state: college.stateCode,
+                    sector: college.affiliation
+                  };
+                  return (
+                    <div className={"college__card__new"} key={college.code} id={`search-${college.code}`} data-stream={"Paramedical"}>
                       <div className={"card__header__row"}>
                         <div className={"college__detail__grid"}>
-                          <img 
+                          <CollegeImage 
+                            college={collegeObj} 
                             width={"56"} 
                             height={"56"} 
                             className={"college__image"} 
-                            src={"https://media.getmyuni.com/azure/college-image/small/university-college-of-medical-sciences-ucms-new-delhi.jpg"} 
-                            alt={"All India Institute of Medical Sciences (AIIMS Paramedical), New Delhi"} 
+                            alt={college.name} 
                           />
                           <div className={"college__detail__row"}>
                             <h2 className={"college__name"}>
-                              <a href={allowedLink("/college/AIIMS-P")} title={"All India Institute of Medical Sciences (AIIMS Paramedical), New Delhi"}>
-                                {"All India Institute of Medical Sciences (AIIMS Paramedical), New Delhi"}
+                              <a href={allowedLink(`/college/${college.code}`)} title={college.name}>
+                                {college.name}
                               </a>
                             </h2>
                             <div className={"detail__list__mobile"}>
                               <span className={"list__style college__location"}>
-                                {"New Delhi, Delhi"}
+                                {college.location}
                               </span>
                               <span className={"list__style college__affiliation"}>
-                                {"Government"}
+                                {college.affiliation}
                               </span>
-                              <a className={"list__style list__style__rating"} target={"_blank"} title={"All India Institute of Medical Sciences (AIIMS Paramedical), New Delhi Reviews"} href={allowedLink("/reviews")}>
+                              <a className={"list__style list__style__rating"} target={"_blank"} title={`${college.name} Reviews`} href={allowedLink("/reviews")}>
                                 <span className={"list__style college__rating"}>
                                   <span className={"spriteIcon__2 review__star__icon"}></span>
-                                  {"4.5"}
+                                  {college.rating}
                                 </span>
                               </a>
                               <div className={"like__compare__grid mobileOnly"}>
@@ -2316,7 +2516,7 @@ function ParamedicalContent() {
                       </div>
                       <div className={"summary-text fsdfsdfs"}>
                         <p className={"template-text1 template-text add-read-more show-less-content"}>
-                          {"All India Institute of Medical Sciences (AIIMS Paramedical), New Delhi is a top accredited Government institute located in New Delhi, Delhi. Code: AIIMS-P."}
+                          {college.description}
                         </p>
                       </div>
                       <div className={"highlight__cta__row"}>
@@ -2325,8 +2525,8 @@ function ParamedicalContent() {
                             <h3 className={"highlight__name"}>{"Courses Offered"}</h3>
                             <span className={"highlight__value"}>
                               <h3>
-                                <a title={"All India Institute of Medical Sciences (AIIMS Paramedical), New Delhi Courses"}>
-                                  {"18 Courses"}
+                                <a title={`${college.name} Courses`}>
+                                  {college.courses}
                                 </a>
                               </h3>
                             </span>
@@ -2335,361 +2535,31 @@ function ParamedicalContent() {
                             <h3 className={"highlight__name"}>{"Exam Accepted"}</h3>
                             <h3 className={"highlight__value"}>
                               <a target={"_blank"} href={allowedLink("/exams")}>
-                                {"Entrance Exam"}
+                                {college.examAccepted}
                               </a>
                             </h3>
                           </div>
                           <div className={"desktopOnly"}></div>
                           <div className={"highlight__div"}>
                             <h3 className={"highlight__name"}>{"Tuition Fees Range"}</h3>
-                            <h3 className={"highlight__value"}>{"-/-"}</h3>
+                            <h3 className={"highlight__value"}>{college.tuitionFees}</h3>
                           </div>
                           <div className={"highlight__div"}>
                             <h3 className={"highlight__name"}>{"Gender Acceptance"}</h3>
                             <h3 className={"highlight__value"}>
-                              <span className={"highlight__value"}>{"Co-ed"}</span>
+                              <span className={"highlight__value"}>{college.gender}</span>
                             </h3>
                           </div>
                           <div className={"highlight__div"}></div>
                         </div>
                         <div className={"cta__grid"}>
-                          <div className={"cta__div lead-cta-college-filter-2 leadFilterData apply-now-btn"} data-title={"Apply Now"} data-description={"All India Institute of Medical Sciences (AIIMS Paramedical), New Delhi"}>{"Apply Now"}</div>
-                          <div className={"cta__div lead-cta-college-filter-1 view-details-btn"} data-title={"View Details"} data-description={"All India Institute of Medical Sciences (AIIMS Paramedical), New Delhi"}>{"View College"}</div>
+                          <div className={"cta__div lead-cta-college-filter-2 leadFilterData apply-now-btn"} data-title={"Apply Now"} data-description={college.name}>{"Apply Now"}</div>
+                          <div className={"cta__div lead-cta-college-filter-1 view-details-btn"} data-title={"View Details"} data-description={college.name}>{"View College"}</div>
                         </div>
                       </div>
                     </div>
-                    <div className={"college__card__new "} key={"CMC-P"} id={"search-CMC-P"}>
-                      <div className={"card__header__row"}>
-                        <div className={"college__detail__grid"}>
-                          <img 
-                            width={"56"} 
-                            height={"56"} 
-                            className={"college__image"} 
-                            src={"https://media.getmyuni.com/azure/college-image/small/university-college-of-medical-sciences-ucms-new-delhi.jpg"} 
-                            alt={"Christian Medical College (CMC Paramedical), Vellore"} 
-                          />
-                          <div className={"college__detail__row"}>
-                            <h2 className={"college__name"}>
-                              <a href={allowedLink("/college/CMC-P")} title={"Christian Medical College (CMC Paramedical), Vellore"}>
-                                {"Christian Medical College (CMC Paramedical), Vellore"}
-                              </a>
-                            </h2>
-                            <div className={"detail__list__mobile"}>
-                              <span className={"list__style college__location"}>
-                                {"Vellore, Tamil Nadu"}
-                              </span>
-                              <span className={"list__style college__affiliation"}>
-                                {"Private"}
-                              </span>
-                              <a className={"list__style list__style__rating"} target={"_blank"} title={"Christian Medical College (CMC Paramedical), Vellore Reviews"} href={allowedLink("/reviews")}>
-                                <span className={"list__style college__rating"}>
-                                  <span className={"spriteIcon__2 review__star__icon"}></span>
-                                  {"4.5"}
-                                </span>
-                              </a>
-                              <div className={"like__compare__grid mobileOnly"}>
-                                <span className={"compare__icon spriteIcon__2 compareIcon"}></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className={"like__compare__grid desktopOnly"}>
-                          <span className={"compare__icon spriteIcon__2 compareIcon"}></span>
-                        </div>
-                      </div>
-                      <div className={"summary-text fsdfsdfs"}>
-                        <p className={"template-text1 template-text add-read-more show-less-content"}>
-                          {"Christian Medical College (CMC Paramedical), Vellore is a top accredited Private institute located in Vellore, Tamil Nadu. Code: CMC-P."}
-                        </p>
-                      </div>
-                      <div className={"highlight__cta__row"}>
-                        <div className={"highlights__grid"}>
-                          <div className={"highlight__div"}>
-                            <h3 className={"highlight__name"}>{"Courses Offered"}</h3>
-                            <span className={"highlight__value"}>
-                              <h3>
-                                <a title={"Christian Medical College (CMC Paramedical), Vellore Courses"}>
-                                  {"22 Courses"}
-                                </a>
-                              </h3>
-                            </span>
-                          </div>
-                          <div className={"highlight__div exam__accepted__div"}>
-                            <h3 className={"highlight__name"}>{"Exam Accepted"}</h3>
-                            <h3 className={"highlight__value"}>
-                              <a target={"_blank"} href={allowedLink("/exams")}>
-                                {"Entrance Exam"}
-                              </a>
-                            </h3>
-                          </div>
-                          <div className={"desktopOnly"}></div>
-                          <div className={"highlight__div"}>
-                            <h3 className={"highlight__name"}>{"Tuition Fees Range"}</h3>
-                            <h3 className={"highlight__value"}>{"-/-"}</h3>
-                          </div>
-                          <div className={"highlight__div"}>
-                            <h3 className={"highlight__name"}>{"Gender Acceptance"}</h3>
-                            <h3 className={"highlight__value"}>
-                              <span className={"highlight__value"}>{"Co-ed"}</span>
-                            </h3>
-                          </div>
-                          <div className={"highlight__div"}></div>
-                        </div>
-                        <div className={"cta__grid"}>
-                          <div className={"cta__div lead-cta-college-filter-2 leadFilterData apply-now-btn"} data-title={"Apply Now"} data-description={"Christian Medical College (CMC Paramedical), Vellore"}>{"Apply Now"}</div>
-                          <div className={"cta__div lead-cta-college-filter-1 view-details-btn"} data-title={"View Details"} data-description={"Christian Medical College (CMC Paramedical), Vellore"}>{"View College"}</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className={"college__card__new "} key={"JIPMER-P"} id={"search-JIPMER-P"}>
-                      <div className={"card__header__row"}>
-                        <div className={"college__detail__grid"}>
-                          <img 
-                            width={"56"} 
-                            height={"56"} 
-                            className={"college__image"} 
-                            src={"https://media.getmyuni.com/azure/college-image/small/university-college-of-medical-sciences-ucms-new-delhi.jpg"} 
-                            alt={"JIPMER Paramedical Sciences, Puducherry"} 
-                          />
-                          <div className={"college__detail__row"}>
-                            <h2 className={"college__name"}>
-                              <a href={allowedLink("/college/JIPMER-P")} title={"JIPMER Paramedical Sciences, Puducherry"}>
-                                {"JIPMER Paramedical Sciences, Puducherry"}
-                              </a>
-                            </h2>
-                            <div className={"detail__list__mobile"}>
-                              <span className={"list__style college__location"}>
-                                {"Puducherry, Puducherry"}
-                              </span>
-                              <span className={"list__style college__affiliation"}>
-                                {"Government"}
-                              </span>
-                              <a className={"list__style list__style__rating"} target={"_blank"} title={"JIPMER Paramedical Sciences, Puducherry Reviews"} href={allowedLink("/reviews")}>
-                                <span className={"list__style college__rating"}>
-                                  <span className={"spriteIcon__2 review__star__icon"}></span>
-                                  {"4.5"}
-                                </span>
-                              </a>
-                              <div className={"like__compare__grid mobileOnly"}>
-                                <span className={"compare__icon spriteIcon__2 compareIcon"}></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className={"like__compare__grid desktopOnly"}>
-                          <span className={"compare__icon spriteIcon__2 compareIcon"}></span>
-                        </div>
-                      </div>
-                      <div className={"summary-text fsdfsdfs"}>
-                        <p className={"template-text1 template-text add-read-more show-less-content"}>
-                          {"JIPMER Paramedical Sciences, Puducherry is a top accredited Government institute located in Puducherry, Puducherry. Code: JIPMER-P."}
-                        </p>
-                      </div>
-                      <div className={"highlight__cta__row"}>
-                        <div className={"highlights__grid"}>
-                          <div className={"highlight__div"}>
-                            <h3 className={"highlight__name"}>{"Courses Offered"}</h3>
-                            <span className={"highlight__value"}>
-                              <h3>
-                                <a title={"JIPMER Paramedical Sciences, Puducherry Courses"}>
-                                  {"15 Courses"}
-                                </a>
-                              </h3>
-                            </span>
-                          </div>
-                          <div className={"highlight__div exam__accepted__div"}>
-                            <h3 className={"highlight__name"}>{"Exam Accepted"}</h3>
-                            <h3 className={"highlight__value"}>
-                              <a target={"_blank"} href={allowedLink("/exams")}>
-                                {"Entrance Exam"}
-                              </a>
-                            </h3>
-                          </div>
-                          <div className={"desktopOnly"}></div>
-                          <div className={"highlight__div"}>
-                            <h3 className={"highlight__name"}>{"Tuition Fees Range"}</h3>
-                            <h3 className={"highlight__value"}>{"-/-"}</h3>
-                          </div>
-                          <div className={"highlight__div"}>
-                            <h3 className={"highlight__name"}>{"Gender Acceptance"}</h3>
-                            <h3 className={"highlight__value"}>
-                              <span className={"highlight__value"}>{"Co-ed"}</span>
-                            </h3>
-                          </div>
-                          <div className={"highlight__div"}></div>
-                        </div>
-                        <div className={"cta__grid"}>
-                          <div className={"cta__div lead-cta-college-filter-2 leadFilterData apply-now-btn"} data-title={"Apply Now"} data-description={"JIPMER Paramedical Sciences, Puducherry"}>{"Apply Now"}</div>
-                          <div className={"cta__div lead-cta-college-filter-1 view-details-btn"} data-title={"View Details"} data-description={"JIPMER Paramedical Sciences, Puducherry"}>{"View College"}</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className={"college__card__new "} key={"MCHP01"} id={"search-MCHP01"}>
-                      <div className={"card__header__row"}>
-                        <div className={"college__detail__grid"}>
-                          <img 
-                            width={"56"} 
-                            height={"56"} 
-                            className={"college__image"} 
-                            src={"https://media.getmyuni.com/azure/college-image/small/university-college-of-medical-sciences-ucms-new-delhi.jpg"} 
-                            alt={"Manipal College of Health Professions, Manipal"} 
-                          />
-                          <div className={"college__detail__row"}>
-                            <h2 className={"college__name"}>
-                              <a href={allowedLink("/college/MCHP01")} title={"Manipal College of Health Professions, Manipal"}>
-                                {"Manipal College of Health Professions, Manipal"}
-                              </a>
-                            </h2>
-                            <div className={"detail__list__mobile"}>
-                              <span className={"list__style college__location"}>
-                                {"Manipal, Karnataka"}
-                              </span>
-                              <span className={"list__style college__affiliation"}>
-                                {"Private"}
-                              </span>
-                              <a className={"list__style list__style__rating"} target={"_blank"} title={"Manipal College of Health Professions, Manipal Reviews"} href={allowedLink("/reviews")}>
-                                <span className={"list__style college__rating"}>
-                                  <span className={"spriteIcon__2 review__star__icon"}></span>
-                                  {"4.5"}
-                                </span>
-                              </a>
-                              <div className={"like__compare__grid mobileOnly"}>
-                                <span className={"compare__icon spriteIcon__2 compareIcon"}></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className={"like__compare__grid desktopOnly"}>
-                          <span className={"compare__icon spriteIcon__2 compareIcon"}></span>
-                        </div>
-                      </div>
-                      <div className={"summary-text fsdfsdfs"}>
-                        <p className={"template-text1 template-text add-read-more show-less-content"}>
-                          {"Manipal College of Health Professions, Manipal is a top accredited Private institute located in Manipal, Karnataka. Code: MCHP01."}
-                        </p>
-                      </div>
-                      <div className={"highlight__cta__row"}>
-                        <div className={"highlights__grid"}>
-                          <div className={"highlight__div"}>
-                            <h3 className={"highlight__name"}>{"Courses Offered"}</h3>
-                            <span className={"highlight__value"}>
-                              <h3>
-                                <a title={"Manipal College of Health Professions, Manipal Courses"}>
-                                  {"24 Courses"}
-                                </a>
-                              </h3>
-                            </span>
-                          </div>
-                          <div className={"highlight__div exam__accepted__div"}>
-                            <h3 className={"highlight__name"}>{"Exam Accepted"}</h3>
-                            <h3 className={"highlight__value"}>
-                              <a target={"_blank"} href={allowedLink("/exams")}>
-                                {"Entrance Exam"}
-                              </a>
-                            </h3>
-                          </div>
-                          <div className={"desktopOnly"}></div>
-                          <div className={"highlight__div"}>
-                            <h3 className={"highlight__name"}>{"Tuition Fees Range"}</h3>
-                            <h3 className={"highlight__value"}>{"-/-"}</h3>
-                          </div>
-                          <div className={"highlight__div"}>
-                            <h3 className={"highlight__name"}>{"Gender Acceptance"}</h3>
-                            <h3 className={"highlight__value"}>
-                              <span className={"highlight__value"}>{"Co-ed"}</span>
-                            </h3>
-                          </div>
-                          <div className={"highlight__div"}></div>
-                        </div>
-                        <div className={"cta__grid"}>
-                          <div className={"cta__div lead-cta-college-filter-2 leadFilterData apply-now-btn"} data-title={"Apply Now"} data-description={"Manipal College of Health Professions, Manipal"}>{"Apply Now"}</div>
-                          <div className={"cta__div lead-cta-college-filter-1 view-details-btn"} data-title={"View Details"} data-description={"Manipal College of Health Professions, Manipal"}>{"View College"}</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className={"college__card__new "} key={"PGIMER-P"} id={"search-PGIMER-P"}>
-                      <div className={"card__header__row"}>
-                        <div className={"college__detail__grid"}>
-                          <img 
-                            width={"56"} 
-                            height={"56"} 
-                            className={"college__image"} 
-                            src={"https://media.getmyuni.com/azure/college-image/small/university-college-of-medical-sciences-ucms-new-delhi.jpg"} 
-                            alt={"Post Graduate Institute of Medical Education (PGIMER), Chandigarh"} 
-                          />
-                          <div className={"college__detail__row"}>
-                            <h2 className={"college__name"}>
-                              <a href={allowedLink("/college/PGIMER-P")} title={"Post Graduate Institute of Medical Education (PGIMER), Chandigarh"}>
-                                {"Post Graduate Institute of Medical Education (PGIMER), Chandigarh"}
-                              </a>
-                            </h2>
-                            <div className={"detail__list__mobile"}>
-                              <span className={"list__style college__location"}>
-                                {"Chandigarh, Punjab"}
-                              </span>
-                              <span className={"list__style college__affiliation"}>
-                                {"Government"}
-                              </span>
-                              <a className={"list__style list__style__rating"} target={"_blank"} title={"Post Graduate Institute of Medical Education (PGIMER), Chandigarh Reviews"} href={allowedLink("/reviews")}>
-                                <span className={"list__style college__rating"}>
-                                  <span className={"spriteIcon__2 review__star__icon"}></span>
-                                  {"4.5"}
-                                </span>
-                              </a>
-                              <div className={"like__compare__grid mobileOnly"}>
-                                <span className={"compare__icon spriteIcon__2 compareIcon"}></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className={"like__compare__grid desktopOnly"}>
-                          <span className={"compare__icon spriteIcon__2 compareIcon"}></span>
-                        </div>
-                      </div>
-                      <div className={"summary-text fsdfsdfs"}>
-                        <p className={"template-text1 template-text add-read-more show-less-content"}>
-                          {"Post Graduate Institute of Medical Education (PGIMER), Chandigarh is a top accredited Government institute located in Chandigarh, Punjab. Code: PGIMER-P."}
-                        </p>
-                      </div>
-                      <div className={"highlight__cta__row"}>
-                        <div className={"highlights__grid"}>
-                          <div className={"highlight__div"}>
-                            <h3 className={"highlight__name"}>{"Courses Offered"}</h3>
-                            <span className={"highlight__value"}>
-                              <h3>
-                                <a title={"Post Graduate Institute of Medical Education (PGIMER), Chandigarh Courses"}>
-                                  {"20 Courses"}
-                                </a>
-                              </h3>
-                            </span>
-                          </div>
-                          <div className={"highlight__div exam__accepted__div"}>
-                            <h3 className={"highlight__name"}>{"Exam Accepted"}</h3>
-                            <h3 className={"highlight__value"}>
-                              <a target={"_blank"} href={allowedLink("/exams")}>
-                                {"Entrance Exam"}
-                              </a>
-                            </h3>
-                          </div>
-                          <div className={"desktopOnly"}></div>
-                          <div className={"highlight__div"}>
-                            <h3 className={"highlight__name"}>{"Tuition Fees Range"}</h3>
-                            <h3 className={"highlight__value"}>{"-/-"}</h3>
-                          </div>
-                          <div className={"highlight__div"}>
-                            <h3 className={"highlight__name"}>{"Gender Acceptance"}</h3>
-                            <h3 className={"highlight__value"}>
-                              <span className={"highlight__value"}>{"Co-ed"}</span>
-                            </h3>
-                          </div>
-                          <div className={"highlight__div"}></div>
-                        </div>
-                        <div className={"cta__grid"}>
-                          <div className={"cta__div lead-cta-college-filter-2 leadFilterData apply-now-btn"} data-title={"Apply Now"} data-description={"Post Graduate Institute of Medical Education (PGIMER), Chandigarh"}>{"Apply Now"}</div>
-                          <div className={"cta__div lead-cta-college-filter-1 view-details-btn"} data-title={"View Details"} data-description={"Post Graduate Institute of Medical Education (PGIMER), Chandigarh"}>{"View College"}</div>
-                        </div>
-                      </div>
-                    </div>
+                  );
+                })}
               </div>
               <div className={"load__more__row"}>
                 <div className={"load__more__button loadMoreList"} hasnesxt={"1"} data-irank={"1"} data-page={"1"}>
