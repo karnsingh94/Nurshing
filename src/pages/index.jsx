@@ -144,6 +144,7 @@ export const pageInfo = {
     "sourceFile": "Paramedical.jsx",
     "slug": "yoga",
     "title": "Top Yoga & Naturopathy Colleges in India 2026: Ranking, Courses, Fees & Placements"
+  },
   "about-us": {
     "name": "About Us",
     "sourceFile": "AboutUs.jsx",

@@ -41,7 +41,7 @@ for (const dir of scanDirs) {
 
 pageFiles.forEach((file) => {
   const source = fs.readFileSync(path.join(pageDir, file), 'utf8');
-  if (!source.includes('export default function')) failures.push(`${file} is missing default export.`);
+  if (!source.includes('export default')) failures.push(`${file} is missing default export.`);
 });
 
 if (failures.length) {
