@@ -144,6 +144,29 @@ export const pageInfo = {
     "sourceFile": "Paramedical.jsx",
     "slug": "yoga",
     "title": "Top Yoga & Naturopathy Colleges in India 2026: Ranking, Courses, Fees & Placements"
+  "about-us": {
+    "name": "About Us",
+    "sourceFile": "AboutUs.jsx",
+    "slug": "about-us",
+    "title": "About Us — citsAdmission.com | College Discovery & Admission Advisory"
+  },
+  "contact-us": {
+    "name": "Contact Us",
+    "sourceFile": "ContactUs.jsx",
+    "slug": "contact-us",
+    "title": "Contact Us — citsAdmission.com | Student Counseling & Helpdesk"
+  },
+  "privacy-policy": {
+    "name": "Privacy Policy",
+    "sourceFile": "PrivacyPolicy.jsx",
+    "slug": "privacy-policy",
+    "title": "Privacy Policy — citsAdmission.com | Student Data Protection"
+  },
+  "terms-conditions": {
+    "name": "Terms & Conditions",
+    "sourceFile": "TermsConditions.jsx",
+    "slug": "terms-conditions",
+    "title": "Terms & Conditions — citsAdmission.com | User Agreement"
   }
 };
 
@@ -172,6 +195,10 @@ export const pageLoaders = {
   "collegedetails": () => import('./CollegeDetails.jsx'),
   "nursing": () => import('./Paramedical.jsx'),
   "yoga": () => import('./Paramedical.jsx'),
+  "about-us": () => import('./AboutUs.jsx'),
+  "contact-us": () => import('./ContactUs.jsx'),
+  "privacy-policy": () => import('./PrivacyPolicy.jsx'),
+  "terms-conditions": () => import('./TermsConditions.jsx'),
 };
 
 export const pageList = Object.values(pageInfo);
@@ -187,6 +214,20 @@ const pathAliases = {
   "collegedetails": "collegedetails",
   "nursing": "nursing",
   "yoga": "yoga",
+  "about": "about-us",
+  "about-us": "about-us",
+  "aboutus": "about-us",
+  "contact": "contact-us",
+  "contact-us": "contact-us",
+  "contactus": "contact-us",
+  "privacy": "privacy-policy",
+  "privacy-policy": "privacy-policy",
+  "privacypolicy": "privacy-policy",
+  "terms": "terms-conditions",
+  "terms-conditions": "terms-conditions",
+  "termsconditions": "terms-conditions",
+  "terms-and-conditions": "terms-conditions",
+  "terms-and-condition": "terms-conditions",
   "architecture-colleges": "architecture",
   "arts-colleges": "arts",
   "commerce-colleges": "commerce",

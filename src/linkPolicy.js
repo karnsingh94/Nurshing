@@ -39,6 +39,20 @@ export const localRoutes = new Map([
   ['/veterinary-colleges', '/veterinary'],
   ['/vocational', '/vocational'],
   ['/vocational-courses-colleges', '/vocational'],
+  ['/about', '/about-us'],
+  ['/about-us', '/about-us'],
+  ['/contact', '/contact-us'],
+  ['/contact-us', '/contact-us'],
+  ['/privacy', '/privacy-policy'],
+  ['/privacy-policy', '/privacy-policy'],
+  ['/terms', '/terms-conditions'],
+  ['/terms-conditions', '/terms-conditions'],
+  ['/terms-and-conditions', '/terms-conditions'],
+  ['/colleges', '/colleges'],
+  ['/citycolleges', '/citycolleges'],
+  ['/city-colleges', '/citycolleges'],
+  ['/collegedetails', '/collegedetails'],
+  ['/college-details', '/collegedetails'],
 ]);
 
 // Resolve navigation against this website, including legacy imported links.
