@@ -1,6 +1,6 @@
-import CollegeImage from '../components/CollegeImage.jsx';
 import { allowedLink } from '../linkPolicy.js';
 import PageRenderer from '../PageRenderer.jsx';
+import CollegeImage from '../components/CollegeImage.jsx';
 import StreamCourseSections from '../components/StreamCourseSections.jsx';
 
 export const page = {
@@ -10,189 +10,6 @@ export const page = {
   title: "Top Nursing Colleges in India 2026: Ranking, Courses, Fees & Placements",
   head: {
     "meta": [
-      { "charset": "UTF-8" },
-      { "http-equiv": "X-UA-Compatible", "content": "IE=edge" },
-      { "name": "viewport", "content": "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" },
-      { "name": "theme-color", "content": "#545ebd" },
-      { "name": "description", "content": "Find Top Nursing Colleges in India based on 2026 rankings with details on B.Sc Nursing, GNM, ANM, M.Sc Nursing courses, fees, placements, admission and cut offs." },
-      { "property": "og:type", "content": "website" },
-      { "property": "og:title", "content": "Top Nursing Colleges in India 2026: Ranking, Courses, Fees & Placements" },
-      { "property": "og:url", "content": "/nursing" },
-      { "property": "og:site_name", "content": "citsAdmission.com" },
-      { "property": "og:description", "content": "Find Top Nursing Colleges in India based on 2026 rankings with details on B.Sc Nursing, GNM, ANM, M.Sc Nursing courses, fees, placements, admission and cut offs." },
-      { "name": "robots", "content": "index, follow" }
-    ],
-    "links": [
-      { "rel": "icon", "href": "/favicon.png", "type": "image/x-icon" },
-      { "href": "/nursing", "rel": "canonical" }
-    ],
-    "styles": []
-  },
-};
-
-const nursingColleges = [
-  {
-    code: "AIIMS-N",
-    name: "All India Institute of Medical Sciences (AIIMS College of Nursing), New Delhi",
-    shortName: "AIIMS Nursing",
-    location: "New Delhi, Delhi",
-    city: "New Delhi",
-    state: "Delhi",
-    stateCode: "DL",
-    affiliation: "Government",
-    rating: "4.9",
-    description: "AIIMS College of Nursing, New Delhi is India's apex nursing institute, offering world-class clinical training in B.Sc (Hons) Nursing, Post-Basic B.Sc Nursing, M.Sc Nursing, and Ph.D. Code: AIIMS-N.",
-    courses: "8 Courses",
-    examAccepted: "AIIMS B.Sc Nursing Exam",
-    tuitionFees: "₹1,500 - ₹5,000 / Year",
-    gender: "Female / Co-ed"
-  },
-  {
-    code: "CMC-N",
-    name: "Christian Medical College (CMC College of Nursing), Vellore",
-    shortName: "CMC Vellore Nursing",
-    location: "Vellore, Tamil Nadu",
-    city: "Vellore",
-    state: "Tamil Nadu",
-    stateCode: "TN",
-    affiliation: "Private",
-    rating: "4.8",
-    description: "CMC College of Nursing, Vellore is nationally renowned for its clinical excellence, compassionate care training, simulation laboratories, and extensive global alumni network. Code: CMC-N.",
-    courses: "12 Courses",
-    examAccepted: "CMC Entrance Exam / NEET",
-    tuitionFees: "₹40,000 - ₹80,000 / Year",
-    gender: "Co-ed"
-  },
-  {
-    code: "PGIMER-N",
-    name: "National Institute of Nursing Education (PGIMER), Chandigarh",
-    shortName: "PGIMER Nursing",
-    location: "Chandigarh, Punjab",
-    city: "Chandigarh",
-    state: "Punjab",
-    stateCode: "PB",
-    affiliation: "Government",
-    rating: "4.8",
-    description: "National Institute of Nursing Education (NINE) at PGIMER Chandigarh is a premier institution offering undergraduate, postgraduate, and super-specialty clinical nursing education. Code: PGIMER-N.",
-    courses: "6 Courses",
-    examAccepted: "PGIMER Nursing Entrance",
-    tuitionFees: "₹2,500 - ₹12,000 / Year",
-    gender: "Co-ed"
-  },
-  {
-    code: "STJOHNS-N",
-    name: "St. John's College of Nursing, Bengaluru",
-    shortName: "St. John's Nursing",
-    location: "Bengaluru, Karnataka",
-    city: "Bengaluru",
-    state: "Karnataka",
-    stateCode: "KA",
-    affiliation: "Private",
-    rating: "4.7",
-    description: "St. John's College of Nursing Bengaluru is attached to a 1,350+ bed tertiary care hospital providing advanced multi-specialty clinical exposure and high placement records. Code: STJOHNS-N.",
-    courses: "7 Courses",
-    examAccepted: "KCET / Institute Test",
-    tuitionFees: "₹80,000 - ₹1,50,000 / Year",
-    gender: "Co-ed"
-  },
-  {
-    code: "MCON-N",
-    name: "Manipal College of Nursing (MCON), Manipal",
-    shortName: "Manipal College of Nursing",
-    location: "Manipal, Karnataka",
-    city: "Manipal",
-    state: "Karnataka",
-    stateCode: "KA",
-    affiliation: "Private (Deemed)",
-    rating: "4.7",
-    description: "Manipal College of Nursing is ranked among India's top private nursing colleges with state-of-the-art virtual simulation labs and international university exchange programs. Code: MCON-N.",
-    courses: "9 Courses",
-    examAccepted: "MET / Merit-Based",
-    tuitionFees: "₹1,20,000 - ₹2,10,000 / Year",
-    gender: "Co-ed"
-  },
-  {
-    code: "RAKCON-N",
-    name: "Rajkumari Amrit Kaur College of Nursing (RAKCON), New Delhi",
-    shortName: "RAK College of Nursing",
-    location: "New Delhi, Delhi",
-    city: "New Delhi",
-    state: "Delhi",
-    stateCode: "DL",
-    affiliation: "Government",
-    rating: "4.6",
-    description: "Affiliated with the University of Delhi, RAKCON is a pioneer nursing institution established under the Ministry of Health and Family Welfare, producing nurse leaders since 1946. Code: RAKCON-N.",
-    courses: "5 Courses",
-    examAccepted: "NEET UG",
-    tuitionFees: "₹8,000 - ₹25,000 / Year",
-    gender: "Female"
-  },
-  {
-    code: "APOLLO-N",
-    name: "Apollo College of Nursing, Chennai",
-    shortName: "Apollo Nursing Chennai",
-    location: "Chennai, Tamil Nadu",
-    city: "Chennai",
-    state: "Tamil Nadu",
-    stateCode: "TN",
-    affiliation: "Private",
-    rating: "4.5",
-    description: "Apollo College of Nursing provides direct hospital-based clinical training at Apollo Hospitals with guaranteed placement pathways in Apollo hospitals and healthcare networks worldwide. Code: APOLLO-N.",
-    courses: "6 Courses",
-    examAccepted: "Tamil Nadu Paramedical CET",
-    tuitionFees: "₹75,000 - ₹1,40,000 / Year",
-    gender: "Co-ed"
-  },
-  {
-    code: "HAMDARD-N",
-    name: "Rufaidah College of Nursing (Jamia Hamdard), New Delhi",
-    shortName: "Rufaidah College of Nursing",
-    location: "New Delhi, Delhi",
-    city: "New Delhi",
-    state: "Delhi",
-    stateCode: "DL",
-    affiliation: "Deemed University",
-    rating: "4.5",
-    description: "Rufaidah College of Nursing at Jamia Hamdard offers comprehensive nursing courses with hands-on clinical rotations at HAH Centenary Hospital and leading multi-speciality centers. Code: HAMDARD-N.",
-    courses: "7 Courses",
-    examAccepted: "NEET UG / Jamia Hamdard Test",
-    tuitionFees: "₹1,10,000 - ₹1,80,000 / Year",
-    gender: "Co-ed"
-  },
-  {
-    code: "KGMU-N",
-    name: "Institute of Nursing (KGMU), Lucknow",
-    shortName: "KGMU Institute of Nursing",
-    location: "Lucknow, Uttar Pradesh",
-    city: "Lucknow",
-    state: "Uttar Pradesh",
-    stateCode: "UP",
-    affiliation: "Government",
-    rating: "4.6",
-    description: "Institute of Nursing at King George's Medical University is Uttar Pradesh's apex nursing institute providing extensive hands-on experience in 4,500+ bed hospital facilities. Code: KGMU-N.",
-    courses: "6 Courses",
-    examAccepted: "UP CNET (Common Nursing Entrance)",
-    tuitionFees: "₹18,000 - ₹48,000 / Year",
-    gender: "Co-ed"
-  },
-  {
-    code: "MMC-N",
-    name: "College of Nursing (Madras Medical College), Chennai",
-    shortName: "MMC College of Nursing",
-    location: "Chennai, Tamil Nadu",
-    city: "Chennai",
-    state: "Tamil Nadu",
-    stateCode: "TN",
-    affiliation: "Government",
-    rating: "4.6",
-    description: "College of Nursing at Madras Medical College is one of South India's oldest and most prestigious government nursing institutions, affiliated to Dr. M.G.R. Medical University. Code: MMC-N.",
-    courses: "5 Courses",
-    examAccepted: "TN Health Science Selection / Merit",
-    tuitionFees: "₹5,000 - ₹16,000 / Year",
-    gender: "Co-ed"
-  }
-];
-
       {
         "charset": "UTF-8"
       },
@@ -222,7 +39,7 @@ const nursingColleges = [
       },
       {
         "property": "og:url",
-        "content": "/paramedical-colleges"
+        "content": "/nursing"
       },
       {
         "property": "og:site_name",
@@ -246,7 +63,7 @@ const nursingColleges = [
       },
       {
         "property": "twitter:url",
-        "content": "/paramedical-colleges"
+        "content": "/nursing"
       },
       {
         "property": "twitter:title",
@@ -361,7 +178,7 @@ const nursingColleges = [
         "href": "https://a.pub.network/getmyuni-com/cls.css"
       },
       {
-        "href": "/paramedical-colleges",
+        "href": "/nursing",
         "rel": "canonical"
       },
       {
@@ -399,6 +216,189 @@ const nursingColleges = [
   },
 };
 
+const premierParamedicalColleges = [
+  {
+    id: "AIIMS-P",
+    code: "AIIMS-P",
+    name: "All India Institute of Medical Sciences (AIIMS Paramedical), New Delhi",
+    shortName: "AIIMS New Delhi Paramedical",
+    location: "New Delhi, Delhi",
+    city: "New Delhi",
+    state: "Delhi",
+    stateCode: "DL",
+    affiliation: "Government",
+    rating: "4.9",
+    courses: "18 Courses",
+    coursesCount: 18,
+    examAccepted: "AIIMS Paramedical CET / NEET UG",
+    tuitionFees: "₹2,000 - ₹12,000 / Year",
+    gender: "Co-ed",
+    description: "Apex medical and healthcare institute in India offering premier bachelor's and master's paramedical programs in Medical Technology in Radiography, Operation Theatre Technology, and Optometry. Code: AIIMS-P."
+  },
+  {
+    id: "CMC-P",
+    code: "CMC-P",
+    name: "Christian Medical College (CMC Paramedical Sciences), Vellore",
+    shortName: "CMC Vellore Paramedical",
+    location: "Vellore, Tamil Nadu",
+    city: "Vellore",
+    state: "Tamil Nadu",
+    stateCode: "TN",
+    affiliation: "Private",
+    rating: "4.8",
+    courses: "22 Courses",
+    coursesCount: 22,
+    examAccepted: "CMC Entrance / Merit-Based",
+    tuitionFees: "₹45,000 - ₹95,000 / Year",
+    gender: "Co-ed",
+    description: "World-renowned healthcare and medical institution providing extensive allied health training across 2,800+ hospital beds with exceptional clinical exposure. Code: CMC-P."
+  },
+  {
+    id: "PGIMER-P",
+    code: "PGIMER-P",
+    name: "Post Graduate Institute of Medical Education and Research (PGIMER), Chandigarh",
+    shortName: "PGIMER Chandigarh",
+    location: "Chandigarh, Punjab",
+    city: "Chandigarh",
+    state: "Punjab",
+    stateCode: "PB",
+    affiliation: "Government",
+    rating: "4.8",
+    courses: "20 Courses",
+    coursesCount: 20,
+    examAccepted: "PGIMER Entrance Exam",
+    tuitionFees: "₹4,500 - ₹15,000 / Year",
+    gender: "Co-ed",
+    description: "National Institute of Importance providing top-tier academic training in Medical Laboratory Technology, Radiodiagnosis, Radiotherapy, and Dialysis Therapy. Code: PGIMER-P."
+  },
+  {
+    id: "JIPMER-P",
+    code: "JIPMER-P",
+    name: "Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER), Puducherry",
+    shortName: "JIPMER Puducherry",
+    location: "Puducherry, Puducherry",
+    city: "Puducherry",
+    state: "Puducherry",
+    stateCode: "PY",
+    affiliation: "Government",
+    rating: "4.8",
+    courses: "15 Courses",
+    coursesCount: 15,
+    examAccepted: "NEET UG / JIPMER Entrance",
+    tuitionFees: "₹5,000 - ₹18,000 / Year",
+    gender: "Co-ed",
+    description: "Institute of National Importance offering advanced B.Sc and M.Sc Allied Health Sciences courses with comprehensive practical training in multispecialty hospital wards. Code: JIPMER-P."
+  },
+  {
+    id: "MCHP01",
+    code: "MCHP01",
+    name: "Manipal College of Health Professions (MCHP), Manipal",
+    shortName: "MCHP Manipal",
+    location: "Manipal, Karnataka",
+    city: "Manipal",
+    state: "Karnataka",
+    stateCode: "KA",
+    affiliation: "Private (Deemed)",
+    rating: "4.7",
+    courses: "24 Courses",
+    coursesCount: 24,
+    examAccepted: "MET / Merit-Based",
+    tuitionFees: "₹1,10,000 - ₹2,30,000 / Year",
+    gender: "Co-ed",
+    description: "India's first institution exclusively dedicated to allied health professions, equipped with cutting-edge simulation laboratories and international hospital rotations. Code: MCHP01."
+  },
+  {
+    id: "HAMDARD-P",
+    code: "HAMDARD-P",
+    name: "Jamia Hamdard (School of Allied Health Sciences), New Delhi",
+    shortName: "Jamia Hamdard Allied Health",
+    location: "New Delhi, Delhi",
+    city: "New Delhi",
+    state: "Delhi",
+    stateCode: "DL",
+    affiliation: "Deemed University",
+    rating: "4.6",
+    courses: "14 Courses",
+    coursesCount: 14,
+    examAccepted: "NEET UG / Jamia Hamdard Test",
+    tuitionFees: "₹85,000 - ₹1,65,000 / Year",
+    gender: "Co-ed",
+    description: "Distinguished department providing specialised paramedical qualifications in Medical Lab Technology, Cardiology Laboratory Technology, and Emergency Medical Care. Code: HAMDARD-P."
+  },
+  {
+    id: "KGMU-P",
+    code: "KGMU-P",
+    name: "King George's Medical University (Institute of Paramedical Sciences), Lucknow",
+    shortName: "KGMU Paramedical Lucknow",
+    location: "Lucknow, Uttar Pradesh",
+    city: "Lucknow",
+    state: "Uttar Pradesh",
+    stateCode: "UP",
+    affiliation: "Government",
+    rating: "4.7",
+    courses: "16 Courses",
+    coursesCount: 16,
+    examAccepted: "UP CPET / KGMU Entrance",
+    tuitionFees: "₹25,000 - ₹55,000 / Year",
+    gender: "Co-ed",
+    description: "One of northern India's largest medical centers delivering hands-on paramedical diplomas and degrees in Trauma & Emergency Care, Optometry, and Dialysis Technology. Code: KGMU-P."
+  },
+  {
+    id: "MMC-P",
+    code: "MMC-P",
+    name: "Madras Medical College (Division of Allied Health Sciences), Chennai",
+    shortName: "Madras Medical College Paramedical",
+    location: "Chennai, Tamil Nadu",
+    city: "Chennai",
+    state: "Tamil Nadu",
+    stateCode: "TN",
+    affiliation: "Government",
+    rating: "4.6",
+    courses: "12 Courses",
+    coursesCount: 12,
+    examAccepted: "TN Paramedical Selection / Merit",
+    tuitionFees: "₹15,000 - ₹35,000 / Year",
+    gender: "Co-ed",
+    description: "One of the oldest medical institutions in Asia, offering highly respected paramedical degree programs with extensive clinical training at Rajiv Gandhi Government General Hospital. Code: MMC-P."
+  },
+  {
+    id: "NIMS-P",
+    code: "NIMS-P",
+    name: "Nizam's Institute of Medical Sciences (Faculty of Paramedical Courses), Hyderabad",
+    shortName: "NIMS Hyderabad Paramedical",
+    location: "Hyderabad, Telangana",
+    city: "Hyderabad",
+    state: "Telangana",
+    stateCode: "TS",
+    affiliation: "Government",
+    rating: "4.6",
+    courses: "10 Courses",
+    coursesCount: 10,
+    examAccepted: "NIMS Paramedical CET",
+    tuitionFees: "₹30,000 - ₹70,000 / Year",
+    gender: "Co-ed",
+    description: "Autonomous super-specialty hospital and state university providing premier diploma and bachelor's programs in Radiography, Neuro Technology, and Cardiac Care. Code: NIMS-P."
+  },
+  {
+    id: "ILBS-P",
+    code: "ILBS-P",
+    name: "Institute of Liver and Biliary Sciences (Paramedical Sciences), New Delhi",
+    shortName: "ILBS New Delhi",
+    location: "New Delhi, Delhi",
+    city: "New Delhi",
+    state: "Delhi",
+    stateCode: "DL",
+    affiliation: "Autonomous / Deemed",
+    rating: "4.7",
+    courses: "8 Courses",
+    coursesCount: 8,
+    examAccepted: "ILBS Entrance Examination",
+    tuitionFees: "₹50,000 - ₹1,10,000 / Year",
+    gender: "Co-ed",
+    description: "Apex national center of super-specialty medicine offering focused allied health qualifications in Critical Care Technology, Dialysis Technology, and Hepato-Pancreato Technology. Code: ILBS-P."
+  }
+];
+
 function NursingContent() {
   return (
     <>
@@ -435,7 +435,6 @@ function NursingContent() {
               </h1>
               <p>
                 <span>
-                  {"Top Nursing Colleges in India include prestigious institutes like AIIMS New Delhi (College of Nursing), Christian Medical College (CMC Vellore), PGIMER Chandigarh, and St. John's College of Nursing Bengaluru. Nursing is an integral branch of the healthcare sector dedicated to patient care, critical treatment support, rehabilitation, and preventive community health."}
                   {"The majority of the top paramedical colleges in India provide a comprehensive curriculum of paramedical courses for diploma, UG, PG and doctorate certifications. Students can choose any paramedical courses after passing their 12th or higher studies with Diploma in X-Ray Technology, Diploma in Occupational Therapy, Certificate in ECG and CT Scan Technician, B.Sc Nursing, M.Sc in optometry, etc., with a course duration ranging from six months to 4 years depending on the programs."}
                 </span>
               </p>
@@ -1904,42 +1903,6 @@ function NursingContent() {
               </p>
               <p>
                 <span>
-                  {"Students can pursue high-demand nursing courses such as "}
-                  <strong>{"B.Sc Nursing (4 Years)"}</strong>{", "}
-                  <strong>{"Post-Basic B.Sc Nursing (2 Years)"}</strong>{", "}
-                  <strong>{"G.N.M. - General Nursing and Midwifery (3 Years)"}</strong>{", "}
-                  <strong>{"A.N.M. - Auxiliary Nurse Midwife (2 Years)"}</strong>{", and "}
-                  <strong>{"M.Sc Nursing (2 Years)"}</strong>
-                  {". Admissions are primarily conducted through entrance exams like AIIMS B.Sc Nursing, NEET-UG, PGIMER Nursing Exam, UP CNET, and various state-level CETs. Career opportunities after nursing include Clinical Nurse Specialist, ICU Care Nurse, Nurse Administrator, Nurse Educator, and Military Nursing Service with excellent global demand in the UK, USA, Canada, and Gulf nations."}
-                </span>
-              </p>
-              <h2>
-                <strong>{"Top Nursing Colleges in India: Key Highlights"}</strong>
-              </h2>
-              <table border={"1"}>
-                <tbody>
-                  <tr>
-                    <td><p><strong>{"Recognized Nursing Colleges"}</strong></p></td>
-                    <td><p><span>{"Government Colleges: 420+ | Private Colleges: 1,800+"}</span></p></td>
-                  </tr>
-                  <tr>
-                    <td><p><strong>{"Apex Regulatory Body"}</strong></p></td>
-                    <td><p><span>{"Indian Nursing Council (INC) & State Nursing Registration Councils"}</span></p></td>
-                  </tr>
-                  <tr>
-                    <td><p><strong>{"Top Entrance Examinations"}</strong></p></td>
-                    <td><p><span>{"AIIMS Nursing CET, NEET UG, PGIMER Nursing, KCET, UP CNET, JENPAS UG"}</span></p></td>
-                  </tr>
-                  <tr>
-                    <td><p><strong>{"Average Course Fees"}</strong></p></td>
-                    <td><p><span>{"Govt: ₹2,000 - ₹30,000/yr | Private: ₹60,000 - ₹2,00,000/yr"}</span></p></td>
-                  </tr>
-                  <tr>
-                    <td><p><strong>{"Top Healthcare Recruiters"}</strong></p></td>
-                    <td><p><span>{"AIIMS, Apollo Hospitals, Fortis, Max Healthcare, Medanta, Manipal Hospitals"}</span></p></td>
-                  </tr>
-                </tbody>
-              </table>
                   {"Check out the following table to break an idea of the cut-off score as per category reservation for admissions counsellings:"}
                 </span>
               </p>
@@ -2454,8 +2417,8 @@ function NursingContent() {
           <div className={"col-md-6 mobile__white__bg"}>
             <div className={"filter__selected__container"}>
               <div id={"selectedFilters"} className={"filterDiv"}>
-                <button id={"nursing"} data-attr={"stream"} className={"filter__selected"}>
-                  {"Nursing"}
+                <button id={"paramedical"} data-attr={"stream"} className={"filter__selected"}>
+                  {"Paramedical"}
                   <i className={"spriteIcon small__close__icon remove-college-filter"}></i>
                 </button>
               </div>
@@ -2467,15 +2430,25 @@ function NursingContent() {
             </div>
             <div className={"sort__row__container"}>
               <h3 className={"filtered__college_count"}>
-                {`Showing ${nursingColleges.length} Colleges`}
+                {`Showing ${premierParamedicalColleges.length} Colleges`}
               </h3>
               <div className={"sortBy__select2__container desktopOnly"}>
-                <span>{"Sort By:"}</span>
+                <span>
+                  {"Sort By:"}
+                </span>
                 <select id={"college-sort"} name={"college-sort"}>
-                  <option value={"position"}>{"Popularity"}</option>
-                  <option value={"rank"}>{"Ranking"}</option>
-                  <option value={"highest_fee"}>{"Highest Fees"}</option>
-                  <option value={"lowest_fee"}>{"Lowest Fees"}</option>
+                  <option value={"position"}>
+                    {"Popularity"}
+                  </option>
+                  <option value={"rank"}>
+                    {"Ranking"}
+                  </option>
+                  <option value={"highest_fee"}>
+                    {"Highest Fees"}
+                  </option>
+                  <option value={"lowest_fee"}>
+                    {"Lowest Fees"}
+                  </option>
                 </select>
               </div>
             </div>
@@ -2484,7 +2457,7 @@ function NursingContent() {
                 className={"search-autocomplete1 search-listing"} 
                 id={"autoComplete"} 
                 autoComplete={"off"} 
-                placeholder={"Search for Nursing Colleges, City, Exam"} 
+                placeholder={"Search for Paramedical Colleges, City, Exam"} 
                 type={"text"} 
                 tabIndex={"1"} 
               />
@@ -2493,7 +2466,7 @@ function NursingContent() {
             </div>
             <div className={"filtered__colleges__list"}>
               <div className={"searchedcollegeList"}>
-                {nursingColleges.map((college) => {
+                {premierParamedicalColleges.map((college) => {
                   const collegeObj = {
                     id: college.code,
                     name: college.name,
@@ -2502,7 +2475,7 @@ function NursingContent() {
                     sector: college.affiliation
                   };
                   return (
-                    <div className={"college__card__new"} key={college.code} id={`search-${college.code}`} data-stream={"Nursing"}>
+                    <div className={"college__card__new"} key={college.code} id={`search-${college.code}`} data-stream={"Paramedical"}>
                       <div className={"card__header__row"}>
                         <div className={"college__detail__grid"}>
                           <CollegeImage 
@@ -2597,18 +2570,199 @@ function NursingContent() {
             </div>
           </div>
           <div className={"col-md-3 desktopOnly"}>
-            <div className={"lazy-ad"} data-slot={"0"} style={{ textAlign: "center" }}></div>
-            <div className={"lazy-ad"} data-slot={"1"} style={{ textAlign: "center" }}></div>
+            <div className={"lazy-ad"} data-slot={"0"} data-freestar-ad={"__300x600"} id={"getmyuni-com_siderail_right_2"} style={{ textAlign: "center" }}></div>
+            <div className={"lazy-ad"} data-slot={"1"} data-freestar-ad={"__300x600"} id={"getmyuni-com_siderail_right"} style={{ textAlign: "center" }}></div>
+          </div>
+          <div className={"col-md-3 mobileOnly"}>
+            <div className={"lazy-ad"} data-slot={"2"} data-freestar-ad={"__300x250"} id={"getmyuni-com_siderail_right"} style={{ textAlign: "center" }}></div>
           </div>
         </div>
+        <div className={"interestedExam"}></div>
+        <div className={"filter-faq"}></div>
+        <section className={"testing"}></section>
       </div>
+      <div className={"desktopOnly getSupport college-filter-get-support"}>
+        <div className={"brochureBtn filter-college-scholership leadFilterData predict-my-college-cta"} data-filter={"college-listing"} data-entity={"college"} data-lead_cta={"22"} data-stream={"paramedical"} data-ctalocation={"colleges_listing_card_predict_my_college"}></div>
+      </div>
+      <div id={"college_compare_header_select_panel"}></div>
+      <div className={"feedback__container"}>
+        <form className={"feedback__form"} action={"#"} id={"feedback-form"}>
+          <div className={"errorHtml"}></div>
+          <span className={"spriteIcon closeIcon"}></span>
+          <div className={"show_form"}>
+            <p className={"text1"}>
+              {"Your opinion matters to us!"}
+            </p>
+            <p className={"text2"}>
+              {"We will use this feedback to improve your experience."}
+            </p>
+            <ul className={"rating__buttons"}>
+              <li data-value={"1"}>
+                <input type={"radio"} name={"rating"} id={"rating1"} defaultValue={"1"} />
+                <label htmlFor={"rating1"}>
+                  {"1"}
+                </label>
+              </li>
+              <li data-value={"2"}>
+                <input type={"radio"} name={"rating"} id={"rating2"} defaultValue={"2"} />
+                <label htmlFor={"rating2"}>
+                  {"2"}
+                </label>
+              </li>
+              <li data-value={"3"}>
+                <input type={"radio"} name={"rating"} id={"rating3"} defaultValue={"3"} />
+                <label htmlFor={"rating3"}>
+                  {"3"}
+                </label>
+              </li>
+              <li data-value={"4"}>
+                <input type={"radio"} name={"rating"} id={"rating4"} defaultValue={"4"} />
+                <label htmlFor={"rating4"}>
+                  {"4"}
+                </label>
+              </li>
+              <li data-value={"5"}>
+                <input type={"radio"} name={"rating"} id={"rating5"} defaultValue={"5"} />
+                <label htmlFor={"rating5"}>
+                  {"5"}
+                </label>
+              </li>
+              <li data-value={"6"}>
+                <input type={"radio"} name={"rating"} id={"rating6"} defaultValue={"6"} />
+                <label htmlFor={"rating6"}>
+                  {"6"}
+                </label>
+              </li>
+              <li data-value={"7"}>
+                <input type={"radio"} name={"rating"} id={"rating7"} defaultValue={"7"} />
+                <label htmlFor={"rating7"}>
+                  {"7"}
+                </label>
+              </li>
+              <li data-value={"8"}>
+                <input type={"radio"} name={"rating"} id={"rating8"} defaultValue={"8"} />
+                <label htmlFor={"rating8"}>
+                  {"8"}
+                </label>
+              </li>
+              <li data-value={"9"}>
+                <input type={"radio"} name={"rating"} id={"rating9"} defaultValue={"9"} />
+                <label htmlFor={"rating9"}>
+                  {"9"}
+                </label>
+              </li>
+              <li data-value={"10"}>
+                <input type={"radio"} name={"rating"} id={"rating10"} defaultValue={"10"} />
+                <label htmlFor={"rating10"}>
+                  {"10"}
+                </label>
+              </li>
+            </ul>
+            <p className={"text3"}>
+              {"You Rated Below Average"}
+            </p>
+            <input type={"hidden"} name={"rating_option_text"} className={"rating_option_text"} defaultValue={""} />
+            <input type={"hidden"} name={"url"} className={"current-url"} defaultValue={""} />
+            <p className={"text4"}>
+              {"I found the page information"}
+            </p>
+            <ul className={"feedback__buttons"}>
+              <li className={"one-to-four"} data-value={"1"}>
+                <input type={"radio"} name={"rating_option"} id={"feedback1"} defaultValue={"Incorrect"} />
+                <label htmlFor={"feedback1"}>
+                  {"Incorrect"}
+                </label>
+              </li>
+              <li className={"one-to-four"} data-value={"2"}>
+                <input type={"radio"} name={"rating_option"} id={"feedback2"} defaultValue={"Irrelevant"} />
+                <label htmlFor={"feedback2"}>
+                  {"Irrelevant"}
+                </label>
+              </li>
+              <li className={"one-to-four"} data-value={"3"}>
+                <input type={"radio"} name={"rating_option"} id={"feedback3"} defaultValue={"Insufficient"} />
+                <label htmlFor={"feedback3"}>
+                  {"Insufficient"}
+                </label>
+              </li>
+              <li className={"one-to-four"} data-value={"4"}>
+                <input type={"radio"} name={"rating_option"} id={"feedback4"} defaultValue={"Confusing"} />
+                <label htmlFor={"feedback4"}>
+                  {"Confusing"}
+                </label>
+              </li>
+              <li className={"five-to-seven"} data-value={"5"}>
+                <input type={"radio"} name={"rating_option"} id={"feedback5"} defaultValue={"Not-up-to-date"} />
+                <label htmlFor={"feedback5"}>
+                  {"Not up-to-date"}
+                </label>
+              </li>
+              <li className={"five-to-seven"} data-value={"6"}>
+                <input type={"radio"} name={"rating_option"} id={"feedback6"} defaultValue={"Insufficient"} />
+                <label htmlFor={"feedback6"}>
+                  {"Insufficient"}
+                </label>
+              </li>
+              <li className={"five-to-seven"} data-value={"7"}>
+                <input type={"radio"} name={"rating_option"} id={"feedback7"} defaultValue={"Helpful"} />
+                <label htmlFor={"feedback7"}>
+                  {"Helpful"}
+                </label>
+              </li>
+              <li className={"eight-to-ten"} data-value={"8"}>
+                <input type={"radio"} name={"rating_option"} id={"feedback8"} defaultValue={"Found-Relevant"} />
+                <label htmlFor={"feedback8"}>
+                  {"Found Relevant"}
+                </label>
+              </li>
+              <li className={"eight-to-ten"} data-value={"9"}>
+                <input type={"radio"} name={"rating_option"} id={"feedback9"} defaultValue={"Easy-to-read"} />
+                <label htmlFor={"feedback9"}>
+                  {"Easy to read"}
+                </label>
+              </li>
+              <li className={"eight-to-ten"} data-value={"10"}>
+                <input type={"radio"} name={"rating_option"} id={"feedback10"} defaultValue={"Up-to-date"} />
+                <label htmlFor={"feedback10"}>
+                  {"Up to date"}
+                </label>
+              </li>
+              <li className={"eight-to-ten"} data-value={"11"}>
+                <input type={"radio"} name={"rating_option"} id={"feedback11"} defaultValue={"Precise"} />
+                <label htmlFor={"feedback11"}>
+                  {"Precise"}
+                </label>
+              </li>
+            </ul>
+            <div id={"option-error-one"} className={"error__position"}></div>
+            <p className={"text4"}>
+              {"Please provide your feedback so that we can improve your experience."}
+            </p>
+            <textarea className={"write__feedback"} placeholder={"Write here..."} name={"experience_text"}></textarea>
+            <div id={"option-error-two"} className={"error__position"}></div>
+            <button className={"primaryBtn feed-back-button"}>
+              {"Submit"}
+            </button>
+          </div>
+          <div className={"hide_form"} style={{ display: "none" }}>
+            <img src={"../../yas/images/lead-form-thankyou.png"} loading={"lazy"} />
+            <img src={"/brand-logo.svg"} className={"lead__form__logo"} loading={"lazy"} />
+            <p className={"feedback-text"}>
+              {"Thanks for FeedBack"}
+            </p>
+          </div>
+        </form>
+      </div>
+      <img src={"/yas/images/scroll_to_top.webp"} className={"scrollToTop"} loading={"lazy"} />
       <div id={"lead-form-js-new"} style={{ display: "none" }}></div>
       <div id={"login-form-js"} style={{ display: "none" }}></div>
       <div id={"fees-breakup"} style={{ display: "none" }}></div>
       <div className={"pageLoader"} id={"filter-loader"}>
         <div className={"pageLoaderDiv"}>
           <div className={"circle"}></div>
-          <p className={"loadText"}>{"Loading..."}</p>
+          <p className={"loadText"}>
+            {"Loading..."}
+          </p>
         </div>
       </div>
     </>

@@ -29,31 +29,52 @@ const DEFAULT_STATES_CITIES = {
   "Tripura": ["Agartala", "West Tripura", "Kamalpur"]
 };
 
-const COURSES = [
-  "B.Sc Nursing",
-  "General Nursing & Midwifery (GNM)",
-  "Auxiliary Nurse Midwife (ANM)",
-  "Post Basic B.Sc Nursing",
-  "M.Sc Nursing",
-  "Bachelor of Pharmacy (B.Pharm)",
-  "Diploma in Pharmacy (D.Pharm)",
-  "Doctor of Pharmacy (Pharm.D)",
-  "Master of Pharmacy (M.Pharm)",
-  "MBBS (Bachelor of Medicine)",
-  "BDS (Dental Surgery)",
-  "BPT (Physiotherapy)",
-  "B.Tech / B.E (Engineering)",
-  "M.Tech / M.E (Engineering)",
-  "MBA / PGDM (Management)",
-  "BBA / BBM",
-  "BCA (Computer Applications)",
-  "MCA (Computer Applications)",
-  "B.Arch (Architecture)",
-  "BA LLB / BBA LLB (Law)",
-  "B.Sc / M.Sc (Science)",
-  "BVSc & AH (Veterinary)",
-  "Paramedical & Allied Health Diploma"
+const COURSE_GROUPS = [
+  {
+    category: "Nursing",
+    courses: [
+      "B.Sc Nursing",
+      "General Nursing & Midwifery (GNM)",
+      "Auxiliary Nurse Midwife (ANM)",
+      "Post Basic B.Sc Nursing",
+      "M.Sc Nursing"
+    ]
+  },
+  {
+    category: "Pharmacy",
+    courses: [
+      "Bachelor of Pharmacy (B.Pharm)",
+      "Diploma in Pharmacy (D.Pharm)",
+      "Doctor of Pharmacy (Pharm.D)",
+      "Master of Pharmacy (M.Pharm)"
+    ]
+  },
+  {
+    category: "Paramedical",
+    courses: [
+      "Bachelor of Medical Laboratory Technology (BMLT)",
+      "Diploma in Medical Laboratory Technology (DMLT)",
+      "Bachelor of Physiotherapy (BPT)",
+      "B.Sc Operation Theatre Technology (OTT)",
+      "B.Sc Radiography & Imaging Technology",
+      "B.Sc Optometry",
+      "Diploma in Dialysis Technology",
+      "Paramedical & Allied Health Diploma"
+    ]
+  },
+  {
+    category: "Yoga & Naturopathy",
+    courses: [
+      "Bachelor of Naturopathy & Yogic Sciences (BNYS)",
+      "B.Sc Yogic Science / Yoga Therapy",
+      "Diploma in Yoga Science (DYSc)",
+      "M.Sc Yogic Science / Yoga Therapy",
+      "Post Graduate Diploma in Yoga (PGDY)"
+    ]
+  }
 ];
+
+const COURSES = COURSE_GROUPS.flatMap(group => group.courses);
 
 const TWELFTH_SUBJECTS = [
   "PCB (Physics, Chemistry, Biology)",
@@ -691,8 +712,12 @@ export default function ApplyModal() {
                   className="w-full px-3 py-2.5 rounded-xl border border-slate-200 bg-slate-50/70 text-slate-800 text-sm focus:bg-white focus:border-[#0966c2] focus:ring-2 focus:ring-[#0966c2]/15 outline-none transition-all cursor-pointer"
                 >
                   <option value="">Select Target Course</option>
-                  {COURSES.map(c => (
-                    <option key={c} value={c}>{c}</option>
+                  {COURSE_GROUPS.map(group => (
+                    <optgroup key={group.category} label={`── ${group.category} ──`}>
+                      {group.courses.map(c => (
+                        <option key={c} value={c}>{c}</option>
+                      ))}
+                    </optgroup>
                   ))}
                 </select>
               </div>
