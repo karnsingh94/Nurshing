@@ -1,6 +1,7 @@
 import { allowedLink } from '../linkPolicy.js';
 import PageRenderer from '../PageRenderer.jsx';
 import CollegeImage from '../components/CollegeImage.jsx';
+import StreamCourseSections from '../components/StreamCourseSections.jsx';
 
 export const page = {
   name: "Paramedical",
@@ -422,6 +423,9 @@ function ParamedicalContent() {
       </nav>
       <div className={"blueBgDiv mobileOnly"}></div>
       <div className={"container"}>
+        {/* 3 Core Stream Sections at the very TOP: Course Highlights, Eligibility Criteria, Admission Process */}
+        <StreamCourseSections streamKey="paramedical" />
+
         <div className={"pageRedirectionMenu"}></div>
         <div className={"college__Landing__New"}>
           <div className={"college__Landing__Hero__Section1"}>

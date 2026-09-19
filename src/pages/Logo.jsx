@@ -2495,34 +2495,141 @@ function LogoContent() {
             </div>
           </div>
         </section>
-        <section className={"indexSection bg-lightgray"}>
-          <h2>
-            {"citsAdmission.com in Media"}
-          </h2>
-          <div className={"featuredBrandList"}>
-            <div className={"featuredCard"}>
-              <img loading={"lazy"} width={"100%"} src={"https://media.getmyuni.com/assets/img/home_new/media/et.webp"} alt={"img"} />
-            </div>
-            <div className={"featuredCard"}>
-              <img loading={"lazy"} width={"100%"} src={"https://media.getmyuni.com/assets/img/home_new/media/i-am-wire.webp"} alt={"img"} />
-            </div>
-            <div className={"featuredCard"}>
-              <img loading={"lazy"} width={"100%"} src={"https://media.getmyuni.com/assets/img/home_new/media/inc-42.webp"} alt={"img"} />
-            </div>
-            <div className={"featuredCard"}>
-              <img loading={"lazy"} width={"100%"} src={"https://media.getmyuni.com/assets/img/home_new/media/news-bugz.webp"} alt={"img"} />
-            </div>
-            <div className={"featuredCard"}>
-              <img loading={"lazy"} width={"100%"} src={"https://media.getmyuni.com/assets/img/home_new/media/tech-in-asia.webp"} alt={"img"} />
-            </div>
-            <div className={"featuredCard"}>
-              <img loading={"lazy"} width={"100%"} src={"https://media.getmyuni.com/assets/img/home_new/media/tropical-post.webp"} alt={"img"} />
-            </div>
-            <div className={"featuredCard"}>
-              <img loading={"lazy"} width={"100%"} src={"https://media.getmyuni.com/assets/img/home_new/media/your-story.webp"} alt={"img"} />
-            </div>
-            <div className={"featuredCard"}>
-              <img loading={"lazy"} width={"100%"} src={"https://media.getmyuni.com/assets/img/home_new/media/bw-disrupt.webp"} alt={"img"} />
+        <section className={"indexSection bg-lightgray py-8"}>
+          <div className={"container"}>
+            <h2 className={"text-center mb-6 text-2xl font-bold"}>
+              {"citsAdmission.com in Media"}
+            </h2>
+            <div className={"featuredBrandWrapper"}>
+              <div className={"featuredBrandTrack"}>
+                {/* First Set of Media Cards */}
+                <div className={"featuredCard"}>
+                  <div className="flex items-center gap-1.5 select-none">
+                    <div className="w-6 h-6 rounded bg-[#1f3a60] flex items-center justify-center text-white text-[10px] font-black border border-cyan-400">
+                      TP
+                    </div>
+                    <div className="flex items-baseline">
+                      <span className="font-extrabold text-[#1f3a60] text-sm tracking-tight">Tropical</span>
+                      <span className="font-bold text-cyan-500 text-sm tracking-tight">Post</span>
+                    </div>
+                  </div>
+                </div>
+                <div className={"featuredCard"}>
+                  <div className="bg-[#e50914] px-3.5 py-1.5 rounded-xs flex flex-col items-center justify-center leading-none text-white shadow-2xs select-none">
+                    <span className="font-black tracking-widest text-[11px] leading-tight uppercase">YOUR</span>
+                    <span className="font-black tracking-wider text-[11px] leading-tight uppercase">STORY</span>
+                  </div>
+                </div>
+                <div className={"featuredCard"}>
+                  <div className="flex items-center gap-1 select-none">
+                    <span className="font-black text-[#e50914] text-sm tracking-tighter">BW</span>
+                    <span className="font-black text-slate-900 text-sm tracking-tight">DISRUPT</span>
+                  </div>
+                </div>
+                <div className={"featuredCard"}>
+                  <div className="bg-[#e50914] px-4 py-1.5 rounded-xs flex items-center justify-center shadow-2xs select-none">
+                    <span className="font-serif font-black text-white text-xl tracking-tighter italic">ET</span>
+                  </div>
+                </div>
+                <div className={"featuredCard"}>
+                  <div className="flex items-center gap-1.5 select-none">
+                    <svg className="w-5 h-5 text-teal-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <circle cx="6" cy="18" r="3" />
+                      <circle cx="18" cy="6" r="3" />
+                      <circle cx="12" cy="12" r="2.5" />
+                      <line x1="8.5" y1="15.5" x2="15.5" y2="8.5" />
+                    </svg>
+                    <span className="font-bold text-slate-900 text-sm tracking-tight">iam<span className="font-extrabold text-teal-600">wire</span></span>
+                  </div>
+                </div>
+                <div className={"featuredCard"}>
+                  <div className="flex items-center select-none">
+                    <span className="font-black text-slate-900 text-base tracking-tight">Inc</span>
+                    <span className="font-black text-[#e50914] text-base tracking-tight">42</span>
+                  </div>
+                </div>
+                <div className={"featuredCard"}>
+                  <div className="flex items-center gap-1.5 select-none">
+                    <div className="w-5 h-5 rounded-full bg-gradient-to-tr from-rose-500 to-amber-500 flex items-center justify-center text-white text-[10px] font-black shadow-2xs">
+                      🐞
+                    </div>
+                    <div className="flex items-baseline">
+                      <span className="font-extrabold text-slate-900 text-xs tracking-tight">News</span>
+                      <span className="font-bold text-rose-600 text-xs tracking-tight">Bugz</span>
+                    </div>
+                  </div>
+                </div>
+                <div className={"featuredCard"}>
+                  <div className="flex items-center gap-1.5 select-none">
+                    <div className="w-3.5 h-3.5 rounded-full bg-[#e50914]"></div>
+                    <span className="font-black text-slate-900 text-[11px] tracking-wider uppercase">TECH IN ASIA</span>
+                  </div>
+                </div>
+
+                {/* Duplicated set for seamless 100% infinite scroll animation */}
+                <div className={"featuredCard"}>
+                  <div className="flex items-center gap-1.5 select-none">
+                    <div className="w-6 h-6 rounded bg-[#1f3a60] flex items-center justify-center text-white text-[10px] font-black border border-cyan-400">
+                      TP
+                    </div>
+                    <div className="flex items-baseline">
+                      <span className="font-extrabold text-[#1f3a60] text-sm tracking-tight">Tropical</span>
+                      <span className="font-bold text-cyan-500 text-sm tracking-tight">Post</span>
+                    </div>
+                  </div>
+                </div>
+                <div className={"featuredCard"}>
+                  <div className="bg-[#e50914] px-3.5 py-1.5 rounded-xs flex flex-col items-center justify-center leading-none text-white shadow-2xs select-none">
+                    <span className="font-black tracking-widest text-[11px] leading-tight uppercase">YOUR</span>
+                    <span className="font-black tracking-wider text-[11px] leading-tight uppercase">STORY</span>
+                  </div>
+                </div>
+                <div className={"featuredCard"}>
+                  <div className="flex items-center gap-1 select-none">
+                    <span className="font-black text-[#e50914] text-sm tracking-tighter">BW</span>
+                    <span className="font-black text-slate-900 text-sm tracking-tight">DISRUPT</span>
+                  </div>
+                </div>
+                <div className={"featuredCard"}>
+                  <div className="bg-[#e50914] px-4 py-1.5 rounded-xs flex items-center justify-center shadow-2xs select-none">
+                    <span className="font-serif font-black text-white text-xl tracking-tighter italic">ET</span>
+                  </div>
+                </div>
+                <div className={"featuredCard"}>
+                  <div className="flex items-center gap-1.5 select-none">
+                    <svg className="w-5 h-5 text-teal-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <circle cx="6" cy="18" r="3" />
+                      <circle cx="18" cy="6" r="3" />
+                      <circle cx="12" cy="12" r="2.5" />
+                      <line x1="8.5" y1="15.5" x2="15.5" y2="8.5" />
+                    </svg>
+                    <span className="font-bold text-slate-900 text-sm tracking-tight">iam<span className="font-extrabold text-teal-600">wire</span></span>
+                  </div>
+                </div>
+                <div className={"featuredCard"}>
+                  <div className="flex items-center select-none">
+                    <span className="font-black text-slate-900 text-base tracking-tight">Inc</span>
+                    <span className="font-black text-[#e50914] text-base tracking-tight">42</span>
+                  </div>
+                </div>
+                <div className={"featuredCard"}>
+                  <div className="flex items-center gap-1.5 select-none">
+                    <div className="w-5 h-5 rounded-full bg-gradient-to-tr from-rose-500 to-amber-500 flex items-center justify-center text-white text-[10px] font-black shadow-2xs">
+                      🐞
+                    </div>
+                    <div className="flex items-baseline">
+                      <span className="font-extrabold text-slate-900 text-xs tracking-tight">News</span>
+                      <span className="font-bold text-rose-600 text-xs tracking-tight">Bugz</span>
+                    </div>
+                  </div>
+                </div>
+                <div className={"featuredCard"}>
+                  <div className="flex items-center gap-1.5 select-none">
+                    <div className="w-3.5 h-3.5 rounded-full bg-[#e50914]"></div>
+                    <span className="font-black text-slate-900 text-[11px] tracking-wider uppercase">TECH IN ASIA</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
