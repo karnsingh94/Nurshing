@@ -1,20 +1,10 @@
-.pageFooter{color:var(--color-white);margin-top:20px}.pageFooter p{font-size:14px;line-height:24px;color:var(--color-white)}.pageFooter .socialMedia{margin:0;padding:0;padding:20px 0}.pageFooter .socialMedia li{display:inline-block;margin-right:5px}.pageFooter .socialMedia li:first-child{display:block;padding-bottom:10px;font-size:14px;line-height:20px;margin:0;color:var(--color-white)}.pageFooter .socialMedia li a{width:28px;height:28px;display:block;border-radius:50px}.pageFooter .copyrightsText{padding-top:20px;border-top:1px solid #c4c4c4}.pageFooter .copyrightsText a{color:var(--color-white);text-decoration:none}.pageFooter .footerPrimarySection{background:#273553;padding:20px 0}.pageFooter .footerPrimarySection .row{margin:0;-webkit-box-align:center;align-items:center;-webkit-box-pack:justify;justify-content:space-between}.pageFooter .footerPrimarySection .contactInfo{padding:0;margin:0;display:inline-block}.pageFooter .footerPrimarySection .contactInfo li{display:inline-block;padding:0 10px}.pageFooter .footerPrimarySection .contactInfo li a{color:var(--color-white)}.pageFooter .footerPrimarySection .socialMedia{padding:0;display:inline-block;margin-right:55px}.pageFooter .footerPrimarySection .socialMedia li{display:-webkit-inline-box;display:inline-flex;vertical-align:middle}.pageFooter .footerPrimarySection .socialMedia li:first-child{display:inline-block;padding:0;font-weight:500}.pageFooter .footerSecondSection{background:#1f2b45;padding:20px 0 20px 0!important}.pageFooter .footerSecondSection .copyrightsText{border:none;padding:0}.pageFooter .footerSecondSection .row{-webkit-box-align:center;align-items:center;margin:0;-webkit-box-pack:justify;justify-content:space-between}.pageFooter .footerSecondSection ul{padding:0;margin:0}.pageFooter .footerSecondSection ul li{display:inline-block;padding:0 8px}.pageFooter .footerSecondSection ul li a{color:var(--color-white);font-size:14px;display:block;line-height:28px}.footerCcontentDiv h3{font-size:14px;line-height:20px;color:var(--color-white);padding-bottom:10px}.footerCcontentDiv ul{margin:0;padding:0;padding-bottom:20px}.footerCcontentDiv ul li{list-style-type:none;font-size:14px;line-height:28px}.footerCcontentDiv ul li a{color:var(--color-white);text-decoration:none}.two-cardDisplay{padding:0 23px;margin-top:16px}@media(max-width:1023px){.pageFooter{padding-bottom:70px}.pageFooter .footerPrimarySection{padding:20px 10px}.pageFooter .footerPrimarySection .socialMedia{margin:22px 0}.pageFooter .footerPrimarySection .contactInfo li{padding:0;padding-bottom:10px}.pageFooter .footerPrimarySection .contactInfo li:last-child{padding-bottom:0}.pageFooter .footerSecondSection{padding:20px 10px;padding-bottom:60px}.pageFooter .footerSecondSection ul{margin-bottom:10px}.pageFooter .footerSecondSection ul li{display:block;padding:0;font-size:14px}.pageFooter .footerSecondSection .copyrightsText{font-size:12px;line-height:24px}.two-cardDisplay{padding:0}}
-/* Keep the shared footer styled on routes without legacy page stylesheets. */
-.site-footer { --color-white: #fff; color: #fff; }
-.site-footer .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
-.site-footer .row { display: flex; flex-wrap: wrap; gap: 16px; }
-.site-footer img { display: block; max-width: 100%; }
-.site-footer a { text-decoration: none; }
-.site-footer a[href]:hover { text-decoration: underline; }
-.site-footer p { margin: 0; }
-.site-footer .spriteIcon{display:inline-block!important;background:url(/yas/images/master_sprite.webp);text-align:left;overflow:hidden}
-.site-footer .spriteIcon.rctIcon{width:18px;height:18px;margin-right:12px;background-position:-83px -557px}
-.site-footer .spriteIcon.starIcon{width:18px;height:18px;margin-right:12px;background-position:-40px -560px}
-.site-footer .spriteIcon{display:inline-block!important;background-image:url(/yas/images/master_sprite.webp);text-align:left;overflow:hidden}
-.site-footer .fbIcon{background-position:476px -200px}
-.site-footer .twitterIcon{background-position:476px -234px}
-.site-footer .instaIcon{background-position:476px -268px}
-.site-footer .linkdIn{background-position:476px -302px}
-.site-footer .youtubeIcon{background-position:476px -364px}
-.site-footer .phoneIcon{width:24px;height:24px;background-position:536px -246px;vertical-align:middle;margin-right:7px}
-.site-footer .whiteMailIcon{width:24px;height:24px;background-position:536px -219px;vertical-align:middle;margin-right:7px}
+/* Footer Sprite Icons */
+.pageFooter .spriteIcon { display: inline-block !important; background: url(/yas/images/master_sprite.webp); text-align: left; overflow: hidden; }
+.pageFooter .fbIcon { background-position: 476px -200px; width: 28px; height: 28px; border-radius: 50px; }
+.pageFooter .twitterIcon { background-position: 476px -234px; width: 28px; height: 28px; border-radius: 50px; }
+.pageFooter .instaIcon { background-position: 476px -268px; width: 28px; height: 28px; border-radius: 50px; }
+.pageFooter .linkdIn { background-position: 476px -302px; width: 28px; height: 28px; border-radius: 50px; }
+.pageFooter .youtubeIcon { background-position: 476px -364px; width: 28px; height: 28px; border-radius: 50px; }
+.pageFooter .phoneIcon { width: 24px; height: 24px; background-position: 536px -246px; vertical-align: middle; margin-right: 7px; }
+.pageFooter .whiteMailIcon { width: 24px; height: 24px; background-position: 536px -219px; vertical-align: middle; margin-right: 7px; }
+

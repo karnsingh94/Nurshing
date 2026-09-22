@@ -662,9 +662,9 @@ function HomeContent() {
             </div>
           </div>
         </section>
-        <section className={"indexSection"}>
-          <div className={"container"}>
-            <h2>
+        <section className="py-8 md:py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">
               {"Featured Colleges"}
             </h2>
             <div className={"customSlider four-cardDisplay"} style={{ position: 'relative' }}>
@@ -2429,9 +2429,9 @@ function HomeContent() {
             </div>
           </div>
         </div>
-        <section className={"indexSection student-testimonial-section"}>
-          <div className={"container"}>
-            <h2>
+        <section className="py-10 md:py-14 bg-white border-t border-slate-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">
               {"Our Students Say"}
             </h2>
             <div className={"customSlider student-testimonial"} style={{ position: 'relative' }}>
@@ -2621,9 +2621,9 @@ function HomeContent() {
             </div>
           </div>
         </section>
-        <section className={"indexSection bg-lightgray py-8"}>
-          <div className={"container"}>
-            <h2 className={"text-center mb-6 text-2xl font-bold"}>
+        <section className="py-10 bg-slate-50 border-y border-slate-200/60">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-center mb-6 text-xl md:text-2xl font-bold text-slate-900">
               {"citsAdmission.com in Media"}
             </h2>
             <div className={"featuredBrandWrapper"}>

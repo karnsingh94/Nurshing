@@ -124,8 +124,8 @@ export default function CollegeDetailsModal() {
       }}
     >
       <div
-        className="relative w-full max-w-[620px] bg-white rounded-[24px] shadow-2xl p-6 sm:p-8 transform transition-all overflow-hidden border border-gray-100 max-h-[90vh] overflow-y-auto"
-        style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif" }}
+        className="relative w-full max-w-[620px] bg-white rounded-[24px] shadow-2xl p-6 sm:p-8 transform transition-all overflow-hidden border border-gray-100 max-h-[90vh] overflow-y-auto modal-no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif", scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {/* Close Button */}
         <button
