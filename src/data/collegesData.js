@@ -1,4 +1,8 @@
-export const collegesData = [
+import { nursingCollegesData } from './nursingCollegesData.js';
+
+export { nursingCollegesData };
+
+const baseCollegesData = [
   {
     "id": "e4df3a2b-63f3-4cbb-bda1-8938b46eeaea",
     "name": "SBS IToT, Kalanwali, Sirsa, Haryana",
@@ -5709,3 +5713,5 @@ export const collegesData = [
     "createdAt": "2026-06-04T07:21:27.000Z"
   }
 ];
+
+export const collegesData = [...baseCollegesData, ...nursingCollegesData];
