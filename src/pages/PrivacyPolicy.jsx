@@ -242,13 +242,13 @@ export default function PrivacyPolicy({ onNavigate }) {
               <p className="mb-4">
                 In accordance with the Information Technology Act 2000 and the Digital Personal Data Protection guidelines, any complaints, data deletion requests, or grievances regarding this policy may be addressed to:
               </p>
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-xs sm:text-sm space-y-1.5">
+              {/* <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-xs sm:text-sm space-y-1.5">
                 <div className="font-bold text-slate-900 text-base">Data Protection & Grievance Officer</div>
                 <div className="text-slate-700">citsAdmission.com Legal & Compliance Cell</div>
                 <div className="text-slate-600">Knowledge Boulevard, Sector 62, Noida, NCR - 201309</div>
                 <div>Email: <a href="mailto:privacy@citsadmission.com" className="text-[#0966c2] font-semibold hover:underline">privacy@citsadmission.com</a></div>
                 <div>Helpline: <a href="tel:18001234567" className="text-[#0966c2] font-semibold hover:underline">1800-123-4567</a></div>
-              </div>
+              </div> */}
             </section>
 
           </main>

@@ -333,20 +333,20 @@ export default function ContactUs({ onNavigate }) {
                 Direct Helpline
               </h3>
               <div className="space-y-4">
-                <div className="p-4 rounded-2xl bg-blue-50/70 border border-blue-100">
+                {/* <div className="p-4 rounded-2xl bg-blue-50/70 border border-blue-100">
                   <div className="text-xs font-bold text-blue-600 uppercase tracking-wider">Toll-Free Student Support</div>
                   <a href="tel:18001234567" className="text-xl font-extrabold text-[#0966c2] hover:underline block mt-0.5">
                     1800-123-4567
                   </a>
                   <p className="text-xs text-slate-500 mt-1">Available 9:00 AM - 7:00 PM (Mon-Sat)</p>
-                </div>
+                </div> */}
 
                 <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                  <div className="text-xs font-bold text-slate-600 uppercase tracking-wider">Direct Admission Desk</div>
+                  <div className="text-xs font-bold text-slate-600 uppercase tracking-wider">Direct Help Desk</div>
                   <a href="tel:+919876543210" className="text-lg font-bold text-slate-900 hover:text-[#0966c2] block mt-0.5">
-                    +91 98765 43210 / +91 91234 56780
+                    +91 98765 43210
                   </a>
-                  <p className="text-xs text-slate-500 mt-1">Instant WhatsApp & Phone Support</p>
+                  <p className="text-xs text-slate-500 mt-1">WhatsApp & Phone Support</p>
                 </div>
               </div>
             </div>
@@ -369,7 +369,7 @@ export default function ContactUs({ onNavigate }) {
                     admissions@citsadmission.com
                   </a>
                 </li>
-                <li className="flex items-start justify-between pb-3 border-b border-slate-100">
+                {/* <li className="flex items-start justify-between pb-3 border-b border-slate-100">
                   <div>
                     <div className="font-semibold text-slate-800">College Tie-ups</div>
                     <div className="text-xs text-slate-500">Institutional profiles</div>
@@ -386,7 +386,7 @@ export default function ContactUs({ onNavigate }) {
                   <a href="mailto:privacy@citsadmission.com" className="text-xs font-bold text-[#0966c2] hover:underline">
                     privacy@citsadmission.com
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
 
@@ -409,7 +409,7 @@ export default function ContactUs({ onNavigate }) {
       </section>
 
       {/* Regional Advisory Hubs */}
-      <section className="bg-white py-16 border-y border-slate-200">
+      {/* <section className="bg-white py-16 border-y border-slate-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-xs font-extrabold uppercase tracking-widest text-[#0966c2] bg-blue-50 px-3 py-1 rounded-full">
@@ -439,7 +439,7 @@ export default function ContactUs({ onNavigate }) {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Accordion */}
       <section className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">

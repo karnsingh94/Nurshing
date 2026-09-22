@@ -294,7 +294,10 @@ export default function AboutUs({ onNavigate }) {
       </section>
 
       {/* Counseling Leadership */}
+{/*       
       <section className="max-w-6xl mx-auto py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+
+      
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="text-xs font-extrabold uppercase tracking-widest text-[#0966c2] bg-blue-50 px-3 py-1 rounded-full">
             Expert Faculty
@@ -322,7 +325,7 @@ export default function AboutUs({ onNavigate }) {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Box */}
       <section className="max-w-6xl mx-auto pb-20 px-4 sm:px-6 lg:px-8">

@@ -50,7 +50,7 @@ function ChevronCaret({ className = "site-nav__caret" }) {
 }
 
 // Navbar links requested: logo, Home, Colleges, nursing, pharmacy, paramedical, yoga
-const localMenuOrder = ['home', 'colleges', 'nursing', 'pharmacy', 'paramedical', 'yoga'];
+const localMenuOrder = ['home', /*'colleges',*/ 'nursing', 'pharmacy', 'paramedical', 'yoga'];
 
 /* Commented out original localMenuOrder (code preserved):
 const localMenuOrder = ['home', 'colleges', 'engineering', 'management', 'medical', 'science', 'commerce', 'pharmacy'];

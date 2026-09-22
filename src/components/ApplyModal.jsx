@@ -499,7 +499,7 @@ export default function ApplyModal() {
             <div className="text-center mb-6">
               <div className="inline-flex items-center gap-1.5 px-3.5 py-1 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 text-[#0966c2] font-extrabold text-[11px] tracking-wider uppercase rounded-full mb-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0966c2] animate-pulse"></span>
-                Official Admission Inquiry
+                Official {/* Admission */}Inquiry
               </div>
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
                 Start Your Journey
@@ -807,8 +807,10 @@ export default function ApplyModal() {
               </div>
 
               {/* Action Buttons: Primary Submit + Request a Callback in Theme Blue */}
+
               <div className="pt-3 space-y-2">
-                <button
+                  
+                {/* <button
                   type="submit"
                   disabled={isSavingToSheet || !isPhoneVerified}
                   className={`w-full py-3.5 px-6 rounded-xl font-black text-sm tracking-wide shadow-md transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer ${isPhoneVerified
@@ -832,6 +834,9 @@ export default function ApplyModal() {
                   )}
                 </button>
 
+ */}
+
+
                 <button
                   type="button"
                   disabled={isSavingToSheet || !isPhoneVerified}
@@ -849,7 +854,7 @@ export default function ApplyModal() {
                   ) : (
                     <>
                       <span>📞</span>
-                      <span>Request an Instant Callback</span>
+                      <span>Request for a callback </span>
                     </>
                   )}
                 </button>
