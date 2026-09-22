@@ -366,6 +366,11 @@ export default function ApplyModal() {
       return;
     }
 
+    if (!formData.email.trim()) {
+      setFormError('Please enter your email address.');
+      return;
+    }
+
     if (!formData.state) {
       setFormError('Please select your state.');
       return;
@@ -434,8 +439,8 @@ export default function ApplyModal() {
       }}
     >
       <div
-        className="relative w-full max-w-[560px] bg-white rounded-[28px] shadow-2xl p-6 sm:p-8 transform transition-all overflow-hidden border border-blue-100/80 max-h-[92vh] overflow-y-auto"
-        style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif" }}
+        className="relative w-full max-w-[560px] bg-white rounded-[28px] shadow-2xl p-6 sm:p-8 transform transition-all overflow-hidden border border-blue-100/80 max-h-[92vh] overflow-y-auto modal-no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif", scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {/* Close Button */}
         <button
@@ -666,12 +671,13 @@ export default function ApplyModal() {
               {/* Email Address */}
               <div>
                 <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
-                  EMAIL ADDRESS <span className="text-slate-400 font-normal">(Optional)</span>
+                  EMAIL ADDRESS <span className="text-rose-500">*</span>
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
+                  required
                   placeholder="student@example.com"
                   value={formData.email}
                   onChange={handleChange}

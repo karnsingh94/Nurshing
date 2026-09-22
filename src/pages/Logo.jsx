@@ -305,33 +305,33 @@ function LogoContent() {
               </div>
               <div className={"inputSection"}>
                 <div id={"college-tab"} className={"tab-content activeTab"}>
-                  <div className={"row m-0"}>
-                    <input type={"text"} placeholder={"Enter College Name"} spellCheck={"false"} className={"college-name-text-box foucus-search"} autoComplete={"off"} />
+                  <div className={"search-input-wrapper flex items-stretch w-full rounded-r-md rounded-bl-md shadow-lg bg-white overflow-hidden border border-slate-200"}>
+                    <input type={"text"} placeholder={"Enter College Name"} spellCheck={"false"} className={"college-name-text-box foucus-search flex-1"} autoComplete={"off"} />
                     <button className={"primaryBtn searchIcon-home"}>
                       <i className={"spriteIcon searchIcon"}></i>
-                      <span className={"desktopOnly"}>
+                      <span className={"desktopOnly font-semibold text-white"}>
                         {"Search"}
                       </span>
                     </button>
                   </div>
                 </div>
                 <div id={"exams-tab"} className={"tab-content"}>
-                  <div className={"row m-0"}>
-                    <input type={"text"} placeholder={"Enter Exam Name eg: JEE,CAT,XAT"} className={"exam-name-text-box foucus-search"} />
+                  <div className={"search-input-wrapper flex items-stretch w-full rounded-r-md rounded-bl-md shadow-lg bg-white overflow-hidden border border-slate-200"}>
+                    <input type={"text"} placeholder={"Enter Exam Name eg: JEE,CAT,XAT"} className={"exam-name-text-box foucus-search flex-1"} />
                     <button className={"primaryBtn searchIcon-home"}>
                       <i className={"spriteIcon searchIcon"}></i>
-                      <span className={"desktopOnly"}>
+                      <span className={"desktopOnly font-semibold text-white"}>
                         {"Search"}
                       </span>
                     </button>
                   </div>
                 </div>
                 <div id={"course-tab"} className={"tab-content"}>
-                  <div className={"row m-0"}>
-                    <input type={"text"} placeholder={"Enter Course Name"} className={"course-name-text-box foucus-search"} />
+                  <div className={"search-input-wrapper flex items-stretch w-full rounded-r-md rounded-bl-md shadow-lg bg-white overflow-hidden border border-slate-200"}>
+                    <input type={"text"} placeholder={"Enter Course Name"} className={"course-name-text-box foucus-search flex-1"} />
                     <button className={"primaryBtn searchIcon-home"}>
                       <i className={"spriteIcon searchIcon"}></i>
-                      <span className={"desktopOnly"}>
+                      <span className={"desktopOnly font-semibold text-white"}>
                         {"Search"}
                       </span>
                     </button>
@@ -342,12 +342,14 @@ function LogoContent() {
             </div>
           </div>
         </section>
-        <section className={"indexSection pb-0"}>
-          <div className={"container"}>
-            <h2>
-              {"Trending Now"}
-            </h2>
-            <div className={"trendingTopicsList relative overflow-hidden py-3 bg-gray-50/80 rounded-xl border border-gray-200/60 my-4"}>
+        <section className={"indexSection pb-0 w-full"}>
+          <div className={"w-full px-3 sm:px-6 md:px-10"}>
+            <div className="max-w-[1236px] mx-auto">
+              <h2>
+                {"Trending Now"}
+              </h2>
+            </div>
+            <div className={"trendingTopicsList relative overflow-hidden py-3 bg-gray-50/90 rounded-xl border border-gray-200/70 my-4 w-full shadow-xs"}>
               <div className={"trending-slider-track flex items-center whitespace-nowrap animate-trending-scroll hover:[animation-play-state:paused] gap-12 font-semibold text-base text-[#0966c2]"}>
                 {[
                   { text: "Top Nursing Colleges", link: "/nursing" },
@@ -362,12 +364,7 @@ function LogoContent() {
                   <a
                     key={idx}
                     href={item.link}
-                    onClick={(e) => {
-                      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-                      e.preventDefault();
-                      onNavigate(item.link);
-                    }}
-                    className="inline-flex items-center gap-2.5 px-4 py-2 rounded-lg hover:bg-white hover:shadow-xs hover:text-[#09488a] transition-all"
+                    className="inline-flex items-center gap-2.5 px-4 py-2 rounded-lg hover:bg-white hover:shadow-xs hover:text-[#09488a] transition-all shrink-0"
                   >
                     <span className="w-2.5 h-2.5 rounded-full bg-[#0966c2] animate-pulse"></span>
                     <span>{item.text}</span>
@@ -2354,9 +2351,54 @@ function LogoContent() {
             <h2>
               {"Our Students Say"}
             </h2>
-            <div className={"customSlider student-testimonial"}>
-              <i className={"spriteIcon scrollLeft over"}></i>
-              <i className={"spriteIcon scrollRight"}></i>
+            <div className={"customSlider student-testimonial"} style={{ position: 'relative' }}>
+              <button
+                type="button"
+                aria-label="Scroll left"
+                className="custom-slider-arrow custom-slider-prev"
+                onClick={(e) => {
+                  const cardContainer = e.currentTarget.parentElement.querySelector('.customSliderCards');
+                  if (cardContainer) cardContainer.scrollBy({ left: -320, behavior: 'smooth' });
+                }}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#1e293b"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+              </button>
+
+              <button
+                type="button"
+                aria-label="Scroll right"
+                className="custom-slider-arrow custom-slider-next"
+                onClick={(e) => {
+                  const cardContainer = e.currentTarget.parentElement.querySelector('.customSliderCards');
+                  if (cardContainer) cardContainer.scrollBy({ left: 320, behavior: 'smooth' });
+                }}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#1e293b"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </button>
               <div className={"customSliderCards"}>
                 <div className={"studentReviewCard"}>
                   <figure>
