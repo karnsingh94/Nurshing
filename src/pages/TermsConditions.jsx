@@ -232,13 +232,15 @@ export default function TermsConditions({ onNavigate }) {
               <p className="mb-4">
                 If you have any questions, clarifications, or grievances regarding these terms, please contact our Legal & Grievance Department:
               </p>
+{/*               
               <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-xs sm:text-sm space-y-1.5">
                 <div className="font-bold text-slate-900 text-base">Legal & Grievance Department</div>
                 <div className="text-slate-700">citsAdmission.com Compliance Cell</div>
                 <div className="text-slate-600">Knowledge Boulevard, Sector 62, Noida, NCR - 201309</div>
                 <div>Email: <a href="mailto:grievance@citsadmission.com" className="text-[#0966c2] font-semibold hover:underline">grievance@citsadmission.com</a></div>
                 <div>Toll-Free Support: <a href="tel:18001234567" className="text-[#0966c2] font-semibold hover:underline">1800-123-4567</a></div>
-              </div>
+              </div> */}
+
             </section>
 
           </main>

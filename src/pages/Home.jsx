@@ -590,7 +590,7 @@ function HomeContent() {
               </div>
               <div className={"inputSection"}>
                 <form onSubmit={handleSearchSubmit} className={"tab-content activeTab m-0"}>
-                  <div className={"row m-0"} style={{ position: 'relative' }}>
+                  <div className={"search-input-wrapper flex items-stretch w-full rounded-r-md rounded-bl-md shadow-lg bg-white overflow-hidden border border-slate-200"} style={{ position: 'relative' }}>
                     <input
                       type={"text"}
                       value={searchQuery}
@@ -604,12 +604,12 @@ function HomeContent() {
                           : "Enter Course Name (e.g. B.Tech, MBA, MBBS, Nursing)"
                       }
                       spellCheck={"false"}
-                      className={"college-name-text-box foucus-search"}
+                      className={"college-name-text-box foucus-search flex-1"}
                       autoComplete={"off"}
                     />
                     <button type="submit" className={"primaryBtn searchIcon-home"} onClick={handleSearchSubmit}>
                       <i className={"spriteIcon searchIcon"}></i>
-                      <span className={"desktopOnly"}>
+                      <span className={"desktopOnly font-semibold text-white"}>
                         {"Search"}
                       </span>
                     </button>
@@ -620,12 +620,14 @@ function HomeContent() {
             </div>
           </div>
         </section>
-        <section className={"indexSection pb-0"}>
-          <div className={"container"}>
-            <h2>
-              {"Trending Now"}
-            </h2>
-            <div className={"trendingTopicsList relative overflow-hidden py-3 bg-gray-50/80 rounded-xl border border-gray-200/60 my-4"}>
+        <section className={"indexSection pb-0 w-full"}>
+          <div className={"w-full px-3 sm:px-6 md:px-10"}>
+            <div className="max-w-[1236px] mx-auto">
+              <h2>
+                {"Trending Now"}
+              </h2>
+            </div>
+            <div className={"trendingTopicsList relative overflow-hidden py-3 bg-gray-50/90 rounded-xl border border-gray-200/70 my-4 w-full shadow-xs"}>
               <div className={"trending-slider-track flex items-center whitespace-nowrap animate-trending-scroll hover:[animation-play-state:paused] gap-12 font-semibold text-base text-[#0966c2]"}>
                 {[
                   { text: "Top Nursing Colleges", link: "/nursing" },
@@ -633,6 +635,10 @@ function HomeContent() {
                   { text: "Top Paramedical Colleges", link: "/paramedical" },
                   { text: "Top Yoga Colleges", link: "/yoga" },
                   // Duplicated array for seamless infinite looping
+                  { text: "Top Nursing Colleges", link: "/nursing" },
+                  { text: "Top Pharmacy Colleges", link: "/pharmacy" },
+                  { text: "Top Paramedical Colleges", link: "/paramedical" },
+                  { text: "Top Yoga Colleges", link: "/yoga" },
                   { text: "Top Nursing Colleges", link: "/nursing" },
                   { text: "Top Pharmacy Colleges", link: "/pharmacy" },
                   { text: "Top Paramedical Colleges", link: "/paramedical" },
@@ -646,7 +652,7 @@ function HomeContent() {
                       e.preventDefault();
                       onNavigate(item.link);
                     }}
-                    className="inline-flex items-center gap-2.5 px-4 py-2 rounded-lg hover:bg-white hover:shadow-xs hover:text-[#09488a] transition-all"
+                    className="inline-flex items-center gap-2.5 px-4 py-2 rounded-lg hover:bg-white hover:shadow-xs hover:text-[#09488a] transition-all shrink-0"
                   >
                     <span className="w-2.5 h-2.5 rounded-full bg-[#0966c2] animate-pulse"></span>
                     <span>{item.text}</span>
@@ -731,24 +737,57 @@ function HomeContent() {
               {"Select Your Dream College In Your Desired City"}
             </h2>
             <div className={"customSlider four-cardDisplay"}>
-              <i
-                className={"spriteIcon scrollLeft"}
-                role="button"
-                aria-label="Previous"
-                onClick={(e) => {
-                  const list = e.currentTarget.parentElement.querySelector('.customSliderList');
-                  if (list) list.scrollBy({ left: -280, behavior: 'smooth' });
-                }}
-              ></i>
-              <i
-                className={"spriteIcon scrollRight"}
-                role="button"
-                aria-label="Next"
-                onClick={(e) => {
-                  const list = e.currentTarget.parentElement.querySelector('.customSliderList');
-                  if (list) list.scrollBy({ left: 280, behavior: 'smooth' });
-                }}
-              ></i>
+              
+          <button
+  type="button"
+  aria-label="Scroll left"
+  className="featured-slider-arrow featured-slider-prev"
+  onClick={(e) => {
+    e.currentTarget.parentElement
+      .querySelector('.customSliderList')
+      ?.scrollBy({ left: -280, behavior: 'smooth' });
+  }}
+>
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <polyline points="15 18 9 12 15 6" />
+  </svg>
+</button>
+
+<button
+  type="button"
+  aria-label="Scroll right"
+  className="featured-slider-arrow featured-slider-next"
+  onClick={(e) => {
+    e.currentTarget.parentElement
+      .querySelector('.customSliderList')
+      ?.scrollBy({ left: 280, behavior: 'smooth' });
+  }}
+>
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <polyline points="9 18 15 12 9 6" />
+  </svg>
+</button>
+
               <div className={"customSliderList"} style={{ scrollBehavior: 'smooth' }}>
                 <a className={"sliderCard"} href="/city-colleges?city=Bangalore" data-city="Bangalore" style={{ cursor: 'pointer' }}>
                   <img loading={"lazy"} src={"/images/imported/046d9cf7e2d349b9.webp"} width={"276"} height={"207"} alt={"Bangalore"} />
@@ -1692,7 +1731,8 @@ function HomeContent() {
                   if (el) el.scrollBy({ left: -240, behavior: 'smooth' });
                 }}
               >
-                ‹
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>             
+
               </button>
               <div className={"trendingBtnSection"}>
                 <button data-entity={"course"} className={"basicCta exam-tab"}>
@@ -1735,7 +1775,9 @@ function HomeContent() {
                   if (el) el.scrollBy({ left: 240, behavior: 'smooth' });
                 }}
               >
-                ›
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+
+
               </button>
             </div>
           </div>
@@ -2392,13 +2434,59 @@ function HomeContent() {
             <h2>
               {"Our Students Say"}
             </h2>
-            <div className={"customSlider student-testimonial"}>
-              <i className={"spriteIcon scrollLeft over"}></i>
-              <i className={"spriteIcon scrollRight"}></i>
+            <div className={"customSlider student-testimonial"} style={{ position: 'relative' }}>
+              <button
+                type="button"
+                aria-label="Scroll left"
+                className="custom-slider-arrow custom-slider-prev"
+                onClick={(e) => {
+                  const cardContainer = e.currentTarget.parentElement.querySelector('.customSliderCards');
+                  if (cardContainer) cardContainer.scrollBy({ left: -320, behavior: 'smooth' });
+                }}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#1e293b"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+              </button>
+
+              <button
+                type="button"
+                aria-label="Scroll right"
+                className="custom-slider-arrow custom-slider-next"
+                onClick={(e) => {
+                  const cardContainer = e.currentTarget.parentElement.querySelector('.customSliderCards');
+                  if (cardContainer) cardContainer.scrollBy({ left: 320, behavior: 'smooth' });
+                }}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#1e293b"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </button>
+
               <div className={"customSliderCards"}>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={"/images/imported/02c5709ce7eea2dd.webp"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={/*"/images/imported/02c5709ce7eea2dd.webp"*/"/public/images/imported/student.png"} alt={"img"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Muskan Bebele"}
@@ -2417,7 +2505,7 @@ function HomeContent() {
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={"/images/imported/cf661ef47c206874.webp"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={/*"/images/imported/cf661ef47c206874.webp"*/"/public/images/imported/student.png"} alt={"img"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Liya Dominic"}
@@ -2436,7 +2524,7 @@ function HomeContent() {
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={"/images/imported/329982224a208ee6.webp"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={/*"/images/imported/329982224a208ee6.webp"*/ "/public/images/imported/student.png"} alt={"img"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Vikas"}
@@ -2455,7 +2543,7 @@ function HomeContent() {
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={"/images/imported/c05d0a32a5702d6f.webp"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={/*"/images/imported/c05d0a32a5702d6f.webp"*/"/public/images/imported/student.png"} alt={"img"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Gaurav Sanjay Kumavat"}
@@ -2474,7 +2562,7 @@ function HomeContent() {
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={"/images/imported/6a5d7939a763f8db.webp"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={/*"/images/imported/6a5d7939a763f8db.webp"*/"/public/images/imported/student.png"} alt={"img"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Ashish Patidar"}
@@ -2493,7 +2581,7 @@ function HomeContent() {
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={"/images/imported/15d9205f80f207f2.webp"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={/*"/images/imported/15d9205f80f207f2.webp"*/"/public/images/imported/student.png"} alt={"img"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Bhumika"}
@@ -2512,7 +2600,7 @@ function HomeContent() {
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={"/images/imported/1f207405846cca6e.webp"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={/*"/images/imported/1f207405846cca6e.webp"*/"/public/images/imported/student.png"} alt={"img"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Tanvi Sharma"}

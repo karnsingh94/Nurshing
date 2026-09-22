@@ -88,7 +88,9 @@ const TWELFTH_SUBJECTS = [
 
 const WA_TOKEN = "6akffxcaw1bafcntw0cu8rstof7hsocc";
 const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbxPzrxa1JSo21jWDGD2xH7ivZQK0Xa1Zxt5zwAn33dqRIf4Jns3hiOgZqYoUyAfM6I46A/exec";
-const AUTO_POPUP_INTERVAL_MS = 60 * 1000; // 1 minute interval
+const SUBMITTED_STORAGE_KEY = "cits_enquiry_submitted_v2";
+const INITIAL_POPUP_DELAY_MS = 3000; // 3 seconds on website visit
+const RECURRING_POPUP_INTERVAL_MS = 60 * 1000; // 1 minute interval after close
 
 const initialFormData = {
   name: '',
@@ -141,6 +143,20 @@ export default function ApplyModal() {
   const [submittedData, setSubmittedData] = useState(null);
 
   const timerRef = useRef(null);
+  const popupTimerRef = useRef(null);
+  const hasTriggeredInitialPopupRef = useRef(false);
+
+  // Expose helper to easily reset popup status in browser console if testing
+  useEffect(() => {
+    window.resetEnquiryPopup = () => {
+      try {
+        localStorage.removeItem(SUBMITTED_STORAGE_KEY);
+        localStorage.removeItem('enquiry_form_submitted');
+        console.log('Enquiry popup status reset. Refreshing page...');
+        window.location.reload();
+      } catch (e) {}
+    };
+  }, []);
 
   // Timer countdown effect for OTP resend
   useEffect(() => {
@@ -152,36 +168,42 @@ export default function ApplyModal() {
     return () => clearTimeout(timerRef.current);
   }, [otpTimer]);
 
-  // Recurring 1-minute auto-popup timer until form is filled & submitted
+  // Initial visit popup (after 3s) + recurring every 1 minute after close until form is submitted
   useEffect(() => {
-    try {
-      const isAlreadySubmitted = localStorage.getItem('enquiry_form_submitted') === 'true';
-      if (isAlreadySubmitted) return;
-    } catch (e) {}
+    const isAlreadySubmitted = () => {
+      try {
+        return localStorage.getItem(SUBMITTED_STORAGE_KEY) === 'true';
+      } catch (e) {
+        return false;
+      }
+    };
 
-    let autoTimer = null;
+    if (isAlreadySubmitted()) return;
 
-    const scheduleNextPopup = () => {
-      autoTimer = setTimeout(() => {
-        try {
-          const isDone = localStorage.getItem('enquiry_form_submitted') === 'true';
-          if (!isDone && !isOpen) {
-            setCollegeName('citsAdmission Admission Counseling');
-            setFormError('');
-            setOtpError('');
-            setIsSubmitted(false);
-            setIsOpen(true);
-          }
-        } catch (e) {}
-      }, AUTO_POPUP_INTERVAL_MS);
+    const triggerPopup = () => {
+      if (isAlreadySubmitted()) return;
+      setCollegeName('citsAdmission Admission Counseling');
+      setFormError('');
+      setOtpError('');
+      setIsSubmitted(false);
+      setIsOpen(true);
     };
 
     if (!isOpen) {
-      scheduleNextPopup();
+      if (!hasTriggeredInitialPopupRef.current) {
+        // First visit: pop up quickly after 3 seconds so visitor sees it on visit
+        hasTriggeredInitialPopupRef.current = true;
+        popupTimerRef.current = setTimeout(triggerPopup, INITIAL_POPUP_DELAY_MS);
+      } else {
+        // Subsequent times (visitor closed it without submitting): pop up every 1 minute
+        popupTimerRef.current = setTimeout(triggerPopup, RECURRING_POPUP_INTERVAL_MS);
+      }
     }
 
     return () => {
-      if (autoTimer) clearTimeout(autoTimer);
+      if (popupTimerRef.current) {
+        clearTimeout(popupTimerRef.current);
+      }
     };
   }, [isOpen]);
 
@@ -344,6 +366,11 @@ export default function ApplyModal() {
       return;
     }
 
+    if (!formData.email.trim()) {
+      setFormError('Please enter your email address.');
+      return;
+    }
+
     if (!formData.state) {
       setFormError('Please select your state.');
       return;
@@ -379,6 +406,7 @@ export default function ApplyModal() {
       });
       console.log('Saved to Google Sheet successfully:', sheetData);
       try {
+        localStorage.setItem(SUBMITTED_STORAGE_KEY, 'true');
         localStorage.setItem('enquiry_form_submitted', 'true');
       } catch (e) {}
     } catch (sheetErr) {
@@ -388,6 +416,7 @@ export default function ApplyModal() {
       setSubmittedData({ ...sheetData });
       setIsSubmitted(true);
       try {
+        localStorage.setItem(SUBMITTED_STORAGE_KEY, 'true');
         localStorage.setItem('enquiry_form_submitted', 'true');
       } catch (e) {}
       // Reset form data so when reopened or refreshed, no previous data remains
@@ -410,8 +439,8 @@ export default function ApplyModal() {
       }}
     >
       <div
-        className="relative w-full max-w-[560px] bg-white rounded-[28px] shadow-2xl p-6 sm:p-8 transform transition-all overflow-hidden border border-blue-100/80 max-h-[92vh] overflow-y-auto"
-        style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif" }}
+        className="relative w-full max-w-[560px] bg-white rounded-[28px] shadow-2xl p-6 sm:p-8 transform transition-all overflow-hidden border border-blue-100/80 max-h-[92vh] overflow-y-auto modal-no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif", scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {/* Close Button */}
         <button
@@ -475,7 +504,7 @@ export default function ApplyModal() {
             <div className="text-center mb-6">
               <div className="inline-flex items-center gap-1.5 px-3.5 py-1 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 text-[#0966c2] font-extrabold text-[11px] tracking-wider uppercase rounded-full mb-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0966c2] animate-pulse"></span>
-                Official Admission Inquiry
+                Official {/* Admission */}Inquiry
               </div>
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
                 Start Your Journey
@@ -642,12 +671,13 @@ export default function ApplyModal() {
               {/* Email Address */}
               <div>
                 <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
-                  EMAIL ADDRESS <span className="text-slate-400 font-normal">(Optional)</span>
+                  EMAIL ADDRESS <span className="text-rose-500">*</span>
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
+                  required
                   placeholder="student@example.com"
                   value={formData.email}
                   onChange={handleChange}
@@ -783,8 +813,10 @@ export default function ApplyModal() {
               </div>
 
               {/* Action Buttons: Primary Submit + Request a Callback in Theme Blue */}
+
               <div className="pt-3 space-y-2">
-                <button
+                  
+                {/* <button
                   type="submit"
                   disabled={isSavingToSheet || !isPhoneVerified}
                   className={`w-full py-3.5 px-6 rounded-xl font-black text-sm tracking-wide shadow-md transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer ${isPhoneVerified
@@ -808,6 +840,9 @@ export default function ApplyModal() {
                   )}
                 </button>
 
+ */}
+
+
                 <button
                   type="button"
                   disabled={isSavingToSheet || !isPhoneVerified}
@@ -825,7 +860,7 @@ export default function ApplyModal() {
                   ) : (
                     <>
                       <span>📞</span>
-                      <span>Request an Instant Callback</span>
+                      <span>Request for a callback </span>
                     </>
                   )}
                 </button>

@@ -1436,16 +1436,140 @@
   scroll-behavior: smooth !important;
 }
 
-.customSlider .scrollLeft,
-.customSlider .scrollRight {
-  cursor: pointer !important;
-  z-index: 5 !important;
+/* Banner Search Bar Inline Right-Button Layout */
+.searchSection .search-input-wrapper,
+.searchSection .inputSection .row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  background: #ffffff !important;
+  border-radius: 0 6px 6px 6px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  overflow: hidden !important;
+  border: 1px solid #cbd5e1 !important;
 }
 
-.customSlider .scrollLeft.disabled,
-.customSlider .scrollRight.disabled {
-  opacity: 0.3 !important;
-  cursor: default !important;
+.searchSection .tab-content input.college-name-text-box,
+.searchSection .tab-content input.foucus-search,
+.searchSection input.college-name-text-box {
+  flex: 1 1 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 48px !important;
+  padding: 10px 16px !important;
+  outline: none !important;
+  background: #ffffff !important;
+  font-size: 15px !important;
+}
+
+.searchSection .primaryBtn.searchIcon-home {
+  flex: 0 0 auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  height: 48px !important;
+  padding: 0 24px !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  border: none !important;
+  background: #ff4e53 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.searchSection .primaryBtn.searchIcon-home:hover {
+  background: #e03d42 !important;
+  box-shadow: none !important;
+}
+
+.searchSection .primaryBtn.searchIcon-home .desktopOnly {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+}
+
+/* Trending Now Full-Width Slider */
+.trendingTopicsList {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Custom Clean Slider Navigation Arrows */
+.custom-slider-arrow {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 25 !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 9999px !important;
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  outline: none !important;
+  user-select: none !important;
+}
+
+.custom-slider-arrow.custom-slider-prev {
+  left: -14px !important;
+}
+
+.custom-slider-arrow.custom-slider-next {
+  right: -14px !important;
+}
+
+.custom-slider-arrow svg {
+  display: block !important;
+  margin: auto !important;
+  width: 20px !important;
+  height: 20px !important;
+  stroke: #1e293b !important;
+  transition: stroke 0.2s ease !important;
+}
+
+.custom-slider-arrow:hover {
+  background: #1e293b !important;
+  border-color: #1e293b !important;
+  transform: translateY(-50%) scale(1.08) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2) !important;
+}
+
+.custom-slider-arrow:hover svg {
+  stroke: #ffffff !important;
+}
+
+.custom-slider-arrow:active {
+  transform: translateY(-50%) scale(0.96) !important;
+}
+
+/* Hide Scrollbar in Modals & Forms while Preserving Smooth Scrolling */
+.modal-no-scrollbar::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.modal-no-scrollbar,
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
 }
 
 
