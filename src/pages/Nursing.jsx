@@ -1,7 +1,10 @@
+import { useState, useMemo } from 'react';
 import { allowedLink } from '../linkPolicy.js';
 import PageRenderer from '../PageRenderer.jsx';
 import CollegeImage from '../components/CollegeImage.jsx';
+import CollegeLogo from '../components/CollegeLogo.jsx';
 import StreamCourseSections from '../components/StreamCourseSections.jsx';
+import { nursingCollegesData } from '../data/nursingCollegesData.js';
 
 export const page = {
   name: "Nursing",
@@ -216,190 +219,108 @@ export const page = {
   },
 };
 
-const premierParamedicalColleges = [
-  {
-    id: "AIIMS-P",
-    code: "AIIMS-P",
-    name: "All India Institute of Medical Sciences (AIIMS Paramedical), New Delhi",
-    shortName: "AIIMS New Delhi Paramedical",
-    location: "New Delhi, Delhi",
-    city: "New Delhi",
-    state: "Delhi",
-    stateCode: "DL",
-    affiliation: "Government",
-    rating: "4.9",
-    courses: "18 Courses",
-    coursesCount: 18,
-    examAccepted: "AIIMS Paramedical CET / NEET UG",
-    tuitionFees: "₹2,000 - ₹12,000 / Year",
-    gender: "Co-ed",
-    description: "Apex medical and healthcare institute in India offering premier bachelor's and master's paramedical programs in Medical Technology in Radiography, Operation Theatre Technology, and Optometry. Code: AIIMS-P."
-  },
-  {
-    id: "CMC-P",
-    code: "CMC-P",
-    name: "Christian Medical College (CMC Paramedical Sciences), Vellore",
-    shortName: "CMC Vellore Paramedical",
-    location: "Vellore, Tamil Nadu",
-    city: "Vellore",
-    state: "Tamil Nadu",
-    stateCode: "TN",
-    affiliation: "Private",
-    rating: "4.8",
-    courses: "22 Courses",
-    coursesCount: 22,
-    examAccepted: "CMC Entrance / Merit-Based",
-    tuitionFees: "₹45,000 - ₹95,000 / Year",
-    gender: "Co-ed",
-    description: "World-renowned healthcare and medical institution providing extensive allied health training across 2,800+ hospital beds with exceptional clinical exposure. Code: CMC-P."
-  },
-  {
-    id: "PGIMER-P",
-    code: "PGIMER-P",
-    name: "Post Graduate Institute of Medical Education and Research (PGIMER), Chandigarh",
-    shortName: "PGIMER Chandigarh",
-    location: "Chandigarh, Punjab",
-    city: "Chandigarh",
-    state: "Punjab",
-    stateCode: "PB",
-    affiliation: "Government",
-    rating: "4.8",
-    courses: "20 Courses",
-    coursesCount: 20,
-    examAccepted: "PGIMER Entrance Exam",
-    tuitionFees: "₹4,500 - ₹15,000 / Year",
-    gender: "Co-ed",
-    description: "National Institute of Importance providing top-tier academic training in Medical Laboratory Technology, Radiodiagnosis, Radiotherapy, and Dialysis Therapy. Code: PGIMER-P."
-  },
-  {
-    id: "JIPMER-P",
-    code: "JIPMER-P",
-    name: "Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER), Puducherry",
-    shortName: "JIPMER Puducherry",
-    location: "Puducherry, Puducherry",
-    city: "Puducherry",
-    state: "Puducherry",
-    stateCode: "PY",
-    affiliation: "Government",
-    rating: "4.8",
-    courses: "15 Courses",
-    coursesCount: 15,
-    examAccepted: "NEET UG / JIPMER Entrance",
-    tuitionFees: "₹5,000 - ₹18,000 / Year",
-    gender: "Co-ed",
-    description: "Institute of National Importance offering advanced B.Sc and M.Sc Allied Health Sciences courses with comprehensive practical training in multispecialty hospital wards. Code: JIPMER-P."
-  },
-  {
-    id: "MCHP01",
-    code: "MCHP01",
-    name: "Manipal College of Health Professions (MCHP), Manipal",
-    shortName: "MCHP Manipal",
-    location: "Manipal, Karnataka",
-    city: "Manipal",
-    state: "Karnataka",
-    stateCode: "KA",
-    affiliation: "Private (Deemed)",
-    rating: "4.7",
-    courses: "24 Courses",
-    coursesCount: 24,
-    examAccepted: "MET / Merit-Based",
-    tuitionFees: "₹1,10,000 - ₹2,30,000 / Year",
-    gender: "Co-ed",
-    description: "India's first institution exclusively dedicated to allied health professions, equipped with cutting-edge simulation laboratories and international hospital rotations. Code: MCHP01."
-  },
-  {
-    id: "HAMDARD-P",
-    code: "HAMDARD-P",
-    name: "Jamia Hamdard (School of Allied Health Sciences), New Delhi",
-    shortName: "Jamia Hamdard Allied Health",
-    location: "New Delhi, Delhi",
-    city: "New Delhi",
-    state: "Delhi",
-    stateCode: "DL",
-    affiliation: "Deemed University",
-    rating: "4.6",
-    courses: "14 Courses",
-    coursesCount: 14,
-    examAccepted: "NEET UG / Jamia Hamdard Test",
-    tuitionFees: "₹85,000 - ₹1,65,000 / Year",
-    gender: "Co-ed",
-    description: "Distinguished department providing specialised paramedical qualifications in Medical Lab Technology, Cardiology Laboratory Technology, and Emergency Medical Care. Code: HAMDARD-P."
-  },
-  {
-    id: "KGMU-P",
-    code: "KGMU-P",
-    name: "King George's Medical University (Institute of Paramedical Sciences), Lucknow",
-    shortName: "KGMU Paramedical Lucknow",
-    location: "Lucknow, Uttar Pradesh",
-    city: "Lucknow",
-    state: "Uttar Pradesh",
-    stateCode: "UP",
-    affiliation: "Government",
-    rating: "4.7",
-    courses: "16 Courses",
-    coursesCount: 16,
-    examAccepted: "UP CPET / KGMU Entrance",
-    tuitionFees: "₹25,000 - ₹55,000 / Year",
-    gender: "Co-ed",
-    description: "One of northern India's largest medical centers delivering hands-on paramedical diplomas and degrees in Trauma & Emergency Care, Optometry, and Dialysis Technology. Code: KGMU-P."
-  },
-  {
-    id: "MMC-P",
-    code: "MMC-P",
-    name: "Madras Medical College (Division of Allied Health Sciences), Chennai",
-    shortName: "Madras Medical College Paramedical",
-    location: "Chennai, Tamil Nadu",
-    city: "Chennai",
-    state: "Tamil Nadu",
-    stateCode: "TN",
-    affiliation: "Government",
-    rating: "4.6",
-    courses: "12 Courses",
-    coursesCount: 12,
-    examAccepted: "TN Paramedical Selection / Merit",
-    tuitionFees: "₹15,000 - ₹35,000 / Year",
-    gender: "Co-ed",
-    description: "One of the oldest medical institutions in Asia, offering highly respected paramedical degree programs with extensive clinical training at Rajiv Gandhi Government General Hospital. Code: MMC-P."
-  },
-  {
-    id: "NIMS-P",
-    code: "NIMS-P",
-    name: "Nizam's Institute of Medical Sciences (Faculty of Paramedical Courses), Hyderabad",
-    shortName: "NIMS Hyderabad Paramedical",
-    location: "Hyderabad, Telangana",
-    city: "Hyderabad",
-    state: "Telangana",
-    stateCode: "TS",
-    affiliation: "Government",
-    rating: "4.6",
-    courses: "10 Courses",
-    coursesCount: 10,
-    examAccepted: "NIMS Paramedical CET",
-    tuitionFees: "₹30,000 - ₹70,000 / Year",
-    gender: "Co-ed",
-    description: "Autonomous super-specialty hospital and state university providing premier diploma and bachelor's programs in Radiography, Neuro Technology, and Cardiac Care. Code: NIMS-P."
-  },
-  {
-    id: "ILBS-P",
-    code: "ILBS-P",
-    name: "Institute of Liver and Biliary Sciences (Paramedical Sciences), New Delhi",
-    shortName: "ILBS New Delhi",
-    location: "New Delhi, Delhi",
-    city: "New Delhi",
-    state: "Delhi",
-    stateCode: "DL",
-    affiliation: "Autonomous / Deemed",
-    rating: "4.7",
-    courses: "8 Courses",
-    coursesCount: 8,
-    examAccepted: "ILBS Entrance Examination",
-    tuitionFees: "₹50,000 - ₹1,10,000 / Year",
-    gender: "Co-ed",
-    description: "Apex national center of super-specialty medicine offering focused allied health qualifications in Critical Care Technology, Dialysis Technology, and Hepato-Pancreato Technology. Code: ILBS-P."
-  }
-];
-
 function NursingContent() {
+  const [selectedState, setSelectedState] = useState("all");
+  const [selectedCity, setSelectedCity] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [visibleCount, setVisibleCount] = useState(24);
+
+  // States with counts
+  const statesList = useMemo(() => {
+    const counts = {};
+    nursingCollegesData.forEach(c => {
+      const s = c.stateName || c.state || 'Other';
+      counts[s] = (counts[s] || 0) + 1;
+    });
+    return Object.entries(counts)
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.count - a.count);
+  }, []);
+
+  // Cities with counts (dynamically filtered by state)
+  const citiesList = useMemo(() => {
+    const counts = {};
+    nursingCollegesData.forEach(c => {
+      if (selectedState !== "all" && c.stateName !== selectedState && c.state !== selectedState) {
+        return;
+      }
+      const city = c.district || c.city;
+      if (city && city.trim()) {
+        const cleanCity = city.replace(/\s*\(location\)$/i, '').trim();
+        if (cleanCity) {
+          counts[cleanCity] = (counts[cleanCity] || 0) + 1;
+        }
+      }
+    });
+    return Object.entries(counts)
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.count - a.count);
+  }, [selectedState]);
+
+  // Filtered colleges
+  const filteredColleges = useMemo(() => {
+    return nursingCollegesData.filter(college => {
+      // State filter
+      if (selectedState !== "all") {
+        if (college.stateName !== selectedState && college.state !== selectedState) {
+          return false;
+        }
+      }
+      // City filter
+      if (selectedCity !== "all") {
+        const cCity = (college.district || college.city || '').replace(/\s*\(location\)$/i, '').trim().toLowerCase();
+        if (!cCity.includes(selectedCity.toLowerCase())) {
+          return false;
+        }
+      }
+      // Search query
+      if (searchQuery.trim()) {
+        const q = searchQuery.toLowerCase();
+        const matchName = college.name?.toLowerCase().includes(q);
+        const matchCity = (college.district || college.city || '').toLowerCase().includes(q);
+        const matchState = (college.stateName || college.state || '').toLowerCase().includes(q);
+        const matchDetails = (college.details || '').toLowerCase().includes(q);
+        if (!matchName && !matchCity && !matchState && !matchDetails) {
+          return false;
+        }
+      }
+      return true;
+    });
+  }, [selectedState, selectedCity, searchQuery]);
+
+  const displayedColleges = useMemo(() => {
+    return filteredColleges.slice(0, visibleCount);
+  }, [filteredColleges, visibleCount]);
+
+  const handleApplyClick = (collegeName) => {
+    window.dispatchEvent(new CustomEvent('open-apply-modal', {
+      detail: { collegeName }
+    }));
+  };
+
+  const handleStateChange = (e) => {
+    setSelectedState(e.target.value);
+    setSelectedCity("all");
+    setVisibleCount(24);
+  };
+
+  const handleCityChange = (e) => {
+    setSelectedCity(e.target.value);
+    setVisibleCount(24);
+  };
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+    setVisibleCount(24);
+  };
+
+  const handleResetFilters = () => {
+    setSelectedState("all");
+    setSelectedCity("all");
+    setSearchQuery("");
+    setVisibleCount(24);
+  };
+
   return (
     <>
       <nav className={"breadcrumbDiv news"}>
@@ -2413,168 +2334,241 @@ function NursingContent() {
           </div>
         </div>
         <div className={"row"}>
-          <div className={"all-college-ajax col-md-3 lg-pr-0"}></div>
-          <div className={"col-md-6 mobile__white__bg"}>
-            <div className={"filter__selected__container"}>
-              <div id={"selectedFilters"} className={"filterDiv"}>
-                <button id={"paramedical"} data-attr={"stream"} className={"filter__selected"}>
-                  {"Paramedical"}
-                  <i className={"spriteIcon small__close__icon remove-college-filter"}></i>
-                </button>
+          {/* Left Filter Sidebar (Desktop) */}
+          <div className={"col-md-3 lg-pr-0"}>
+            <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs mb-6 sticky top-24">
+              <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+                <h3 className="font-extrabold text-slate-900 text-base flex items-center gap-2">
+                  <span>⚙️</span> Filter Colleges
+                </h3>
+                {(selectedState !== 'all' || selectedCity !== 'all' || searchQuery.trim()) && (
+                  <button
+                    type="button"
+                    onClick={handleResetFilters}
+                    className="text-xs font-bold text-[#0966c2] hover:underline cursor-pointer"
+                  >
+                    Reset All
+                  </button>
+                )}
               </div>
-              <div className={"mobile__clear__filter"}>
-                <span id={"clearAllClg"} className={"clearAll"}>
-                  {"Clear All"}
-                </span>
-              </div>
-            </div>
-            <div className={"sort__row__container"}>
-              <h3 className={"filtered__college_count"}>
-                {`Showing ${premierParamedicalColleges.length} Colleges`}
-              </h3>
-              <div className={"sortBy__select2__container desktopOnly"}>
-                <span>
-                  {"Sort By:"}
-                </span>
-                <select id={"college-sort"} name={"college-sort"}>
-                  <option value={"position"}>
-                    {"Popularity"}
-                  </option>
-                  <option value={"rank"}>
-                    {"Ranking"}
-                  </option>
-                  <option value={"highest_fee"}>
-                    {"Highest Fees"}
-                  </option>
-                  <option value={"lowest_fee"}>
-                    {"Lowest Fees"}
-                  </option>
+
+              {/* State Filter */}
+              <div className="mb-5">
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  Select State ({statesList.length})
+                </label>
+                <select
+                  value={selectedState}
+                  onChange={handleStateChange}
+                  className="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-xl px-3 py-2.5 font-medium focus:ring-2 focus:ring-[#0966c2] focus:outline-hidden"
+                >
+                  <option value="all">All States ({nursingCollegesData.length})</option>
+                  {statesList.map(st => (
+                    <option key={st.name} value={st.name}>
+                      {st.name} ({st.count})
+                    </option>
+                  ))}
                 </select>
               </div>
-            </div>
-            <div className={"searchBar"}>
-              <input 
-                className={"search-autocomplete1 search-listing"} 
-                id={"autoComplete"} 
-                autoComplete={"off"} 
-                placeholder={"Search for Paramedical Colleges, City, Exam"} 
-                type={"text"} 
-                tabIndex={"1"} 
-              />
-              <i className={"spriteIcon small__close__icon search-remove"}></i>
-              <div className={"selection"}></div>
-            </div>
-            <div className={"filtered__colleges__list"}>
-              <div className={"searchedcollegeList"}>
-                {premierParamedicalColleges.map((college) => {
-                  const collegeObj = {
-                    id: college.code,
-                    name: college.name,
-                    city: college.city,
-                    state: college.stateCode,
-                    sector: college.affiliation
-                  };
-                  return (
-                    <div className={"college__card__new"} key={college.code} id={`search-${college.code}`} data-stream={"Paramedical"}>
-                      <div className={"card__header__row"}>
-                        <div className={"college__detail__grid"}>
-                          <CollegeImage 
-                            college={collegeObj} 
-                            width={"56"} 
-                            height={"56"} 
-                            className={"college__image"} 
-                            alt={college.name} 
-                          />
-                          <div className={"college__detail__row"}>
-                            <h2 className={"college__name"}>
-                              <a href={allowedLink(`/college/${college.code}`)} title={college.name}>
-                                {college.name}
-                              </a>
-                            </h2>
-                            <div className={"detail__list__mobile"}>
-                              <span className={"list__style college__location"}>
-                                {college.location}
-                              </span>
-                              <span className={"list__style college__affiliation"}>
-                                {college.affiliation}
-                              </span>
-                              <a className={"list__style list__style__rating"} target={"_blank"} title={`${college.name} Reviews`} href={allowedLink("/reviews")}>
-                                <span className={"list__style college__rating"}>
-                                  <span className={"spriteIcon__2 review__star__icon"}></span>
-                                  {college.rating}
-                                </span>
-                              </a>
-                              <div className={"like__compare__grid mobileOnly"}>
-                                <span className={"compare__icon spriteIcon__2 compareIcon"}></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className={"like__compare__grid desktopOnly"}>
-                          <span className={"compare__icon spriteIcon__2 compareIcon"}></span>
-                        </div>
-                      </div>
-                      <div className={"summary-text fsdfsdfs"}>
-                        <p className={"template-text1 template-text add-read-more show-less-content"}>
-                          {college.description}
-                        </p>
-                      </div>
-                      <div className={"highlight__cta__row"}>
-                        <div className={"highlights__grid"}>
-                          <div className={"highlight__div"}>
-                            <h3 className={"highlight__name"}>{"Courses Offered"}</h3>
-                            <span className={"highlight__value"}>
-                              <h3>
-                                <a title={`${college.name} Courses`}>
-                                  {college.courses}
-                                </a>
-                              </h3>
-                            </span>
-                          </div>
-                          <div className={"highlight__div exam__accepted__div"}>
-                            <h3 className={"highlight__name"}>{"Exam Accepted"}</h3>
-                            <h3 className={"highlight__value"}>
-                              <a target={"_blank"} href={allowedLink("/exams")}>
-                                {college.examAccepted}
-                              </a>
-                            </h3>
-                          </div>
-                          <div className={"desktopOnly"}></div>
-                          <div className={"highlight__div"}>
-                            <h3 className={"highlight__name"}>{"Tuition Fees Range"}</h3>
-                            <h3 className={"highlight__value"}>{college.tuitionFees}</h3>
-                          </div>
-                          <div className={"highlight__div"}>
-                            <h3 className={"highlight__name"}>{"Gender Acceptance"}</h3>
-                            <h3 className={"highlight__value"}>
-                              <span className={"highlight__value"}>{college.gender}</span>
-                            </h3>
-                          </div>
-                          <div className={"highlight__div"}></div>
-                        </div>
-                        <div className={"cta__grid"}>
-                          <div className={"cta__div lead-cta-college-filter-2 leadFilterData apply-now-btn"} data-title={"Apply Now"} data-description={college.name}>{"Apply Now"}</div>
-                          <div className={"cta__div lead-cta-college-filter-1 view-details-btn"} data-title={"View Details"} data-description={college.name}>{"View College"}</div>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
+
+              {/* City / District Filter */}
+              <div className="mb-5">
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  Select District / City ({citiesList.length})
+                </label>
+                <select
+                  value={selectedCity}
+                  onChange={handleCityChange}
+                  className="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-xl px-3 py-2.5 font-medium focus:ring-2 focus:ring-[#0966c2] focus:outline-hidden"
+                >
+                  <option value="all">All Districts / Cities</option>
+                  {citiesList.map(ct => (
+                    <option key={ct.name} value={ct.name}>
+                      {ct.name} ({ct.count})
+                    </option>
+                  ))}
+                </select>
               </div>
-              <div className={"load__more__row"}>
-                <div className={"load__more__button loadMoreList"} hasnesxt={"1"} data-irank={"1"} data-page={"1"}>
-                  {"Load More Colleges"}
-                  <span className={"spriteIcon__2 red__angle__icon"}></span>
+
+              {/* Popular States Quick Tags */}
+              <div>
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  Top States
+                </label>
+                <div className="flex flex-wrap gap-1.5 max-h-48 overflow-y-auto pr-1">
+                  {statesList.slice(0, 12).map(st => (
+                    <button
+                      key={st.name}
+                      type="button"
+                      onClick={() => {
+                        setSelectedState(st.name === selectedState ? 'all' : st.name);
+                        setSelectedCity('all');
+                        setVisibleCount(24);
+                      }}
+                      className={`text-xs px-2.5 py-1.5 rounded-lg font-semibold transition-all cursor-pointer ${
+                        selectedState === st.name
+                          ? 'bg-[#0966c2] text-white shadow-xs'
+                          : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                      }`}
+                    >
+                      {st.name} ({st.count})
+                    </button>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
-          <div className={"col-md-3 desktopOnly"}>
-            <div className={"lazy-ad"} data-slot={"0"} data-freestar-ad={"__300x600"} id={"getmyuni-com_siderail_right_2"} style={{ textAlign: "center" }}></div>
-            <div className={"lazy-ad"} data-slot={"1"} data-freestar-ad={"__300x600"} id={"getmyuni-com_siderail_right"} style={{ textAlign: "center" }}></div>
-          </div>
-          <div className={"col-md-3 mobileOnly"}>
-            <div className={"lazy-ad"} data-slot={"2"} data-freestar-ad={"__300x250"} id={"getmyuni-com_siderail_right"} style={{ textAlign: "center" }}></div>
+
+          {/* Right Colleges Listing */}
+          <div className={"col-md-9 mobile__white__bg"}>
+            {/* Active Filters Bar */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-4 mb-4 shadow-xs">
+              <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
+                {/* Search Bar */}
+                <div className="relative flex-1">
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={handleSearchChange}
+                    placeholder="Search 1,811 Nursing Colleges by name, city, state..."
+                    className="w-full bg-slate-50 border border-slate-200 text-slate-800 placeholder-slate-400 text-sm rounded-xl pl-9 pr-8 py-2.5 focus:ring-2 focus:ring-[#0966c2] focus:outline-hidden"
+                  />
+                  <span className="absolute left-3 top-2.5 text-slate-400 text-sm">🔍</span>
+                  {searchQuery && (
+                    <button
+                      type="button"
+                      onClick={() => setSearchQuery('')}
+                      className="absolute right-3 top-2.5 text-slate-400 hover:text-slate-600 cursor-pointer text-sm"
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
+
+                {/* Active Filter Badges */}
+                <div className="flex items-center gap-2 flex-wrap text-xs">
+                  <span className="font-bold text-slate-700">
+                    Showing <strong className="text-[#0966c2]">{filteredColleges.length}</strong> of {nursingCollegesData.length} Colleges
+                  </span>
+                  {selectedState !== 'all' && (
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-blue-50 text-[#0966c2] font-bold rounded-lg border border-blue-200">
+                      State: {selectedState}
+                      <button onClick={() => setSelectedState('all')} className="hover:text-red-500 ml-1 cursor-pointer">✕</button>
+                    </span>
+                  )}
+                  {selectedCity !== 'all' && (
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-indigo-50 text-indigo-700 font-bold rounded-lg border border-indigo-200">
+                      City: {selectedCity}
+                      <button onClick={() => setSelectedCity('all')} className="hover:text-red-500 ml-1 cursor-pointer">✕</button>
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* Colleges Grid / List */}
+            <div className="space-y-4">
+              {displayedColleges.length === 0 ? (
+                <div className="bg-white rounded-2xl border border-slate-200 p-12 text-center shadow-xs">
+                  <div className="text-4xl mb-3">🏥</div>
+                  <h3 className="text-lg font-bold text-slate-800 mb-1">No Nursing Colleges Found</h3>
+                  <p className="text-sm text-slate-500 mb-4">
+                    No colleges match your current search and filter criteria.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={handleResetFilters}
+                    className="px-5 py-2.5 bg-[#0966c2] text-white text-sm font-bold rounded-xl shadow-xs hover:bg-[#07519a] transition-all cursor-pointer"
+                  >
+                    Clear All Filters
+                  </button>
+                </div>
+              ) : (
+                displayedColleges.map((college) => (
+                  <div
+                    key={college.id}
+                    className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-6 shadow-xs hover:shadow-md transition-all group"
+                  >
+                    <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
+                      {/* Left: Logo & Info */}
+                      <div className="flex items-start gap-4 flex-1">
+                        <CollegeLogo
+                          college={college}
+                          size={56}
+                          className="w-14 h-14 rounded-xl shadow-xs shrink-0 border border-slate-100 mt-1"
+                        />
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-wrap items-center gap-1.5 mb-1.5">
+                            <span className="px-2.5 py-0.5 bg-blue-50 text-[#0966c2] font-bold text-[11px] rounded-full border border-blue-100 uppercase">
+                              {college.stream || 'Nursing'}
+                            </span>
+                            <span className="px-2.5 py-0.5 bg-emerald-50 text-emerald-700 font-bold text-[11px] rounded-full border border-emerald-100">
+                              INC Approved
+                            </span>
+                            <span className="px-2 py-0.5 bg-slate-100 text-slate-600 font-medium text-[11px] rounded-full">
+                              {college.sector || 'Recognized'}
+                            </span>
+                          </div>
+
+                          <h2 className="text-base sm:text-lg font-extrabold text-slate-900 group-hover:text-[#0966c2] transition-colors leading-snug">
+                            <a href={allowedLink(`/college/${college.id}`)}>
+                              {college.name}
+                            </a>
+                          </h2>
+
+                          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-xs text-slate-500 font-medium">
+                            <span className="flex items-center gap-1">
+                              📍 <strong className="text-slate-700 font-semibold">{college.district || college.city || 'District'}</strong>, {college.stateName || college.state}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              🎓 <strong className="text-slate-700 font-semibold">B.Sc Nursing, GNM, ANM</strong>
+                            </span>
+                          </div>
+
+                          {college.details && (
+                            <div className="mt-2.5 p-2.5 bg-slate-50 rounded-xl border border-slate-100 text-xs text-slate-600 leading-relaxed">
+                              <span className="font-bold text-slate-700">Official Details: </span>
+                              {college.details}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Right: Action Buttons */}
+                      <div className="flex sm:flex-col items-center gap-2 w-full sm:w-auto shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-100">
+                        <button
+                          type="button"
+                          onClick={() => handleApplyClick(college.name)}
+                          className="flex-1 sm:flex-none w-full px-5 py-2.5 bg-[#0966c2] hover:bg-[#07519a] text-white text-xs font-bold rounded-xl shadow-xs transition-all text-center cursor-pointer"
+                        >
+                          Apply Now
+                        </button>
+                        <a
+                          href={allowedLink(`/college/${college.id}`)}
+                          className="flex-1 sm:flex-none w-full px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold rounded-xl transition-all text-center"
+                        >
+                          View College
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+
+            {/* Load More Pagination */}
+            {displayedColleges.length < filteredColleges.length && (
+              <div className="mt-8 text-center">
+                <button
+                  type="button"
+                  onClick={() => setVisibleCount(prev => prev + 24)}
+                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-white hover:bg-slate-50 text-[#0966c2] font-extrabold text-sm rounded-2xl border-2 border-[#0966c2]/30 hover:border-[#0966c2] shadow-xs hover:shadow-md transition-all cursor-pointer"
+                >
+                  Load More Colleges ({filteredColleges.length - displayedColleges.length} remaining)
+                  <span>↓</span>
+                </button>
+              </div>
+            )}
           </div>
         </div>
         <div className={"interestedExam"}></div>
