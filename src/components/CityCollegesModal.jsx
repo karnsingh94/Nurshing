@@ -184,7 +184,7 @@ export default function CityCollegesModal() {
         </div>
 
         {/* Colleges List Body */}
-        <div className="overflow-y-auto pr-1 space-y-4 flex-1">
+        <div className="overflow-y-auto pr-1 space-y-4 flex-1 modal-no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           {filteredColleges.length === 0 ? (
             <div className="py-12 text-center text-gray-500">
               <p className="text-lg font-semibold">No colleges found matching "{searchQuery}"</p>
