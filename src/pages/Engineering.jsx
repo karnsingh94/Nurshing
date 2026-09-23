@@ -41,11 +41,11 @@ export const page = {
       },
       {
         "property": "og:site_name",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "og:description",
-        "content": "Explore India’s best engineering colleges for 2026. Compare NIRF 2025 ranks, JEE cutoffs, fees, IIT/NIT/IIIT options & top BTech placements up to ₹1.2 crore."
+        "content": "Top Engineering Colleges in India 2025: Check NIRF ranking, placement, fees, admission, cutoff, eligibility, top recruitments, scholarships and latest news of Engineering colleges."
       },
       {
         "property": "twitter:card",
@@ -53,7 +53,7 @@ export const page = {
       },
       {
         "property": "twitter:site",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "twitter:creator",

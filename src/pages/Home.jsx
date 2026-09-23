@@ -10,7 +10,7 @@ export const page = {
   name: "Home",
   sourceFile: "home.html",
   slug: "home",
-  title: "citsAdmission.com - Explore Top Colleges, Courses, Fees and Exams",
+  title: "Admission Portal - Explore Top Colleges, Courses, Fees and Exams",
   head: {
     "meta": [
       {
@@ -30,7 +30,7 @@ export const page = {
       },
       {
         "name": "description",
-        "content": "Get Detailed Information on Top Colleges, Courses & Exams in India.Get Alerts on Results,Cutoff,Admission, Placements, Rankings and more."
+        "content": "Explore top colleges, universities, courses, fee structures, cutoff predictor and exams across India on Admission Portal"
       },
       {
         "property": "og:type",
@@ -38,7 +38,7 @@ export const page = {
       },
       {
         "property": "og:title",
-        "content": "citsAdmission.com - Explore Top Colleges, Courses, Fees and Exams"
+        "content": "Admission Portal - Explore Top Colleges, Courses, Fees and Exams"
       },
       {
         "property": "og:url",
@@ -46,11 +46,11 @@ export const page = {
       },
       {
         "property": "og:site_name",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "og:description",
-        "content": "Get Detailed Information on Top Colleges, Courses & Exams in India.Get Alerts on Results,Cutoff,Admission, Placements, Rankings and more."
+        "content": "Explore top colleges, universities, courses, fee structures, cutoff predictor and exams across India on Admission Portal"
       },
       {
         "property": "twitter:card",
@@ -58,11 +58,11 @@ export const page = {
       },
       {
         "property": "twitter:site",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "twitter:creator",
-        "content": "@getmyuniedu"
+        "content": "@admissionportal"
       },
       {
         "property": "twitter:url",
@@ -70,11 +70,11 @@ export const page = {
       },
       {
         "property": "twitter:title",
-        "content": "citsAdmission.com - Explore Top Colleges, Courses, Fees and Exams"
+        "content": "Admission Portal - Explore Top Colleges, Courses, Fees and Exams"
       },
       {
         "property": "twitter:description",
-        "content": "Get Detailed Information on Top Colleges, Courses & Exams in India.Get Alerts on Results,Cutoff,Admission, Placements, Rankings and more."
+        "content": "Explore top colleges, universities, courses, fee structures, cutoff predictor and exams across India on Admission Portal"
       },
       {
         "property": "og:image",
@@ -215,14 +215,10 @@ export const page = {
       {
         "href": "https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css",
         "rel": "stylesheet"
-      },
-      {
-        "href": "/yas/css/version2/min/getmyUniHomeFooter.css?v=1777964297",
-        "rel": "stylesheet"
       }
     ],
     "styles": [
-  
+
     ]
   },
 };
@@ -403,22 +399,20 @@ function HomeContent() {
               <button
                 type="button"
                 onClick={() => setActiveSearchTab('colleges')}
-                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
-                  activeSearchTab === 'colleges'
+                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${activeSearchTab === 'colleges'
                     ? 'bg-[#0966c2] text-white shadow-sm'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
+                  }`}
               >
                 🎓 Colleges ({activeSearchTab === 'colleges' ? filteredResults.length : allColleges.length})
               </button>
               <button
                 type="button"
                 onClick={() => setActiveSearchTab('courses')}
-                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
-                  activeSearchTab === 'courses'
+                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${activeSearchTab === 'courses'
                     ? 'bg-[#008080] text-white shadow-sm'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
+                  }`}
               >
                 📚 Courses ({sampleCourses.length})
               </button>
@@ -567,7 +561,7 @@ function HomeContent() {
           </div>
           <div className={"bannerContent"}>
             <h1>
-              {"citsAdmission.com - Where Educational Choices Are Made Easy"}
+              {"Admission Portal - Where Educational Choices Are Made Easy"}
             </h1>
             <div className={"searchSection"}>
               <div>
@@ -620,15 +614,15 @@ function HomeContent() {
             </div>
           </div>
         </section>
-        <section className={"indexSection pb-0 w-full"}>
+        <section className={"indexSection pb-4 sm:pb-6 w-full"}>
           <div className={"w-full px-3 sm:px-6 md:px-10"}>
             <div className="max-w-[1236px] mx-auto">
               <h2>
                 {"Trending Now"}
               </h2>
             </div>
-            <div className={"trendingTopicsList relative overflow-hidden py-3 bg-gray-50/90 rounded-xl border border-gray-200/70 my-4 w-full shadow-xs"}>
-              <div className={"trending-slider-track flex items-center whitespace-nowrap animate-trending-scroll hover:[animation-play-state:paused] gap-12 font-semibold text-base text-[#0966c2]"}>
+            <div className={"trendingTopicsList relative overflow-hidden py-3 bg-[#f3f4f6] rounded-xl border border-slate-200/80 my-3 w-full shadow-2xs"}>
+              <div className={"trending-slider-track flex items-center whitespace-nowrap animate-trending-scroll hover:[animation-play-state:paused] gap-10 font-semibold text-[15px] text-[#0966c2]"}>
                 {[
                   { text: "Top Nursing Colleges", link: "/nursing" },
                   { text: "Top Pharmacy Colleges", link: "/pharmacy" },
@@ -652,9 +646,9 @@ function HomeContent() {
                       e.preventDefault();
                       onNavigate(item.link);
                     }}
-                    className="inline-flex items-center gap-2.5 px-4 py-2 rounded-lg hover:bg-white hover:shadow-xs hover:text-[#09488a] transition-all shrink-0"
+                    className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-lg hover:bg-white/80 hover:shadow-xs hover:text-[#07519a] transition-all shrink-0"
                   >
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#0966c2] animate-pulse"></span>
+                    <span className="w-2 h-2 rounded-full bg-[#0966c2] animate-pulse"></span>
                     <span>{item.text}</span>
                   </a>
                 ))}
@@ -662,7 +656,7 @@ function HomeContent() {
             </div>
           </div>
         </section>
-        <section className="py-8 md:py-12 bg-white">
+        <section className="py-10 md:py-14 bg-[#fbf9f4] border-y border-[#ede7db]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">
               {"Featured Colleges"}
@@ -701,16 +695,16 @@ function HomeContent() {
                 onMouseLeave={() => { isHoveredRef.current = false; }}
               >
                 {collegesData.filter(item => item.sector === 'Government').slice(0, 16).map((item, index) => {
-                  const stateName = {"HR":"Haryana","RJ":"Rajasthan","TG":"Telangana","OR":"Odisha","JK":"Jammu & Kashmir","KA":"Karnataka","BR":"Bihar","ML":"Meghalaya","UP":"Uttar Pradesh","PB":"Punjab","MH":"Maharashtra","WB":"West Bengal","TR":"Tripura","HP":"Himachal Pradesh","JH":"Jharkhand","CT":"Chhattisgarh","AP":"Andhra Pradesh","GJ":"Gujarat","GA":"Goa","TN":"Tamil Nadu","MP":"Madhya Pradesh","KL":"Kerala","UT":"Uttarakhand"}[item.state] || item.state || '';
+                  const stateName = { "HR": "Haryana", "RJ": "Rajasthan", "TG": "Telangana", "OR": "Odisha", "JK": "Jammu & Kashmir", "KA": "Karnataka", "BR": "Bihar", "ML": "Meghalaya", "UP": "Uttar Pradesh", "PB": "Punjab", "MH": "Maharashtra", "WB": "West Bengal", "TR": "Tripura", "HP": "Himachal Pradesh", "JH": "Jharkhand", "CT": "Chhattisgarh", "AP": "Andhra Pradesh", "GJ": "Gujarat", "GA": "Goa", "TN": "Tamil Nadu", "MP": "Madhya Pradesh", "KL": "Kerala", "UT": "Uttarakhand" }[item.state] || item.state || '';
                   const locationStr = `${item.city || item.district || ''}${(item.city || item.district) && stateName ? ', ' : ''}${stateName}`;
                   return (
                     <a className={"displayCard"} key={item.id || index} href={allowedLink(`/college/${item.id}`)}>
                       <figure>
-                        <CollegeImage college={item} 
-                          loading={"lazy"} 
-                          alt={item.name} 
-                          width={"275"} 
-                          height={"206"} 
+                        <CollegeImage college={item}
+                          loading={"lazy"}
+                          alt={item.name}
+                          width={"275"}
+                          height={"206"}
                           style={{ objectFit: 'cover', height: '160px', width: '100%' }}
                         />
                       </figure>
@@ -737,56 +731,56 @@ function HomeContent() {
               {"Select Your Dream College In Your Desired City"}
             </h2>
             <div className={"customSlider four-cardDisplay"}>
-              
-          <button
-  type="button"
-  aria-label="Scroll left"
-  className="featured-slider-arrow featured-slider-prev"
-  onClick={(e) => {
-    e.currentTarget.parentElement
-      .querySelector('.customSliderList')
-      ?.scrollBy({ left: -280, behavior: 'smooth' });
-  }}
->
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-  >
-    <polyline points="15 18 9 12 15 6" />
-  </svg>
-</button>
 
-<button
-  type="button"
-  aria-label="Scroll right"
-  className="featured-slider-arrow featured-slider-next"
-  onClick={(e) => {
-    e.currentTarget.parentElement
-      .querySelector('.customSliderList')
-      ?.scrollBy({ left: 280, behavior: 'smooth' });
-  }}
->
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-  >
-    <polyline points="9 18 15 12 9 6" />
-  </svg>
-</button>
+              <button
+                type="button"
+                aria-label="Scroll left"
+                className="featured-slider-arrow featured-slider-prev"
+                onClick={(e) => {
+                  e.currentTarget.parentElement
+                    .querySelector('.customSliderList')
+                    ?.scrollBy({ left: -280, behavior: 'smooth' });
+                }}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+              </button>
+
+              <button
+                type="button"
+                aria-label="Scroll right"
+                className="featured-slider-arrow featured-slider-next"
+                onClick={(e) => {
+                  e.currentTarget.parentElement
+                    .querySelector('.customSliderList')
+                    ?.scrollBy({ left: 280, behavior: 'smooth' });
+                }}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </button>
 
               <div className={"customSliderList"} style={{ scrollBehavior: 'smooth' }}>
                 <a className={"sliderCard"} href="/city-colleges?city=Bangalore" data-city="Bangalore" style={{ cursor: 'pointer' }}>
@@ -844,122 +838,6 @@ function HomeContent() {
             <div className={"collegesWithCategoryData"}>
               <div id={"colleges-category"} className={"tab-content activeTab"}>
                 <div className={"row limitCards"}>
-                  {/* Commented out unused categories (code preserved): */}
-                  {/*
-                  <a className={"dataCard"}>
-                    <span title={"Agriculture Exam"} className={"indexSprite agriculture"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Agriculture"}</p>
-                      <p className={"count"}>{"12 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a className={"dataCard"}>
-                    <span title={"Animation Exam"} className={"indexSprite animation"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Animation"}</p>
-                      <p className={"count"}>{"8 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/architecture")} className={"dataCard"}>
-                    <span title={"Architecture Exam"} className={"indexSprite architecture"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Architecture"}</p>
-                      <p className={"count"}>{"16 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/arts")} className={"dataCard"}>
-                    <span title={"Arts Exam"} className={"indexSprite arts"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Arts"}</p>
-                      <p className={"count"}>{"35 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a className={"dataCard"}>
-                    <span title={"Aviation Exam"} className={"indexSprite aviation"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Aviation"}</p>
-                      <p className={"count"}>{"6 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/commerce")} className={"dataCard"}>
-                    <span title={"Commerce Exam"} className={"indexSprite commerce"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Commerce"}</p>
-                      <p className={"count"}>{"42 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/computer")} className={"dataCard"}>
-                    <span title={"Computer Exam"} className={"indexSprite computer"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Computer"}</p>
-                      <p className={"count"}>{"58 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/dental")} className={"dataCard"}>
-                    <span title={"Dental Exam"} className={"indexSprite dental"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Dental"}</p>
-                      <p className={"count"}>{"14 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/design")} className={"dataCard"}>
-                    <span title={"Design Exam"} className={"indexSprite design"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Design"}</p>
-                      <p className={"count"}>{"24 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/education")} className={"dataCard"}>
-                    <span title={"Education Exam"} className={"indexSprite education"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Education"}</p>
-                      <p className={"count"}>{"32 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/engineering")} className={"dataCard"}>
-                    <span title={"Engineering Exam"} className={"indexSprite engineering"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Engineering"}</p>
-                      <p className={"count"}>{"128 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/hospitality")} className={"dataCard"}>
-                    <span title={"Hotel Management Exam"} className={"indexSprite hotel-management"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Hotel Management"}</p>
-                      <p className={"count"}>{"22 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/law")} className={"dataCard"}>
-                    <span title={"Law Exam"} className={"indexSprite law"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Law"}</p>
-                      <p className={"count"}>{"28 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/management")} className={"dataCard"}>
-                    <span title={"Management Exam"} className={"indexSprite management"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Management"}</p>
-                      <p className={"count"}>{"64 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a className={"dataCard"}>
-                    <span title={"Mass Communication Exam"} className={"indexSprite mass-communication"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Mass Communication"}</p>
-                      <p className={"count"}>{"18 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/medical")} className={"dataCard"}>
-                    <span title={"Medical Exam"} className={"indexSprite medical"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Medical"}</p>
-                      <p className={"count"}>{"45 Colleges"}</p>
-                    </div>
-                  </a>
-                  */}
-
                   {/* Active 4 Fields: Nursing, Pharmacy, Paramedical, Yoga */}
                   <a href={allowedLink("/nursing")} className={"dataCard"}>
                     <span title={"Nursing Colleges"} className={"indexSprite medical"}></span>
@@ -989,246 +867,8 @@ function HomeContent() {
                       <p className={"count"}>{"25 Colleges"}</p>
                     </div>
                   </a>
-
-                  {/* Commented out rest of unused categories (code preserved): */}
-                  {/*
-                  <a href={allowedLink("/science")} className={"dataCard"}>
-                    <span title={"Science Exam"} className={"indexSprite science"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Science"}</p>
-                      <p className={"count"}>{"52 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/veterinary")} className={"dataCard"}>
-                    <span title={"Veterinary Exam"} className={"indexSprite veterinary"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Veterinary"}</p>
-                      <p className={"count"}>{"15 Colleges"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/vocational")} className={"dataCard"}>
-                    <span title={"Vocational Courses Exam"} className={"indexSprite vocational-courses"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Vocational Courses"}</p>
-                      <p className={"count"}>{"128 Colleges"}</p>
-                    </div>
-                  </a>
-                  */}
                 </div>
               </div>
-              {/* <div id={"exams-category"} className={"tab-content"}>
-                <div className={"row limitCards"}>
-                  <a  className={"dataCard"}>
-                    <span title={"Agriculture Exam"} className={"indexSprite agriculture"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Agriculture"}
-                      </p>
-                      <p className={"count"}>
-                        {"94 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Architecture Exam"} className={"indexSprite architecture"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Architecture"}
-                      </p>
-                      <p className={"count"}>
-                        {"33 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Arts Exam"} className={"indexSprite arts"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Arts"}
-                      </p>
-                      <p className={"count"}>
-                        {"64 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Commerce Exam"} className={"indexSprite commerce"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Commerce"}
-                      </p>
-                      <p className={"count"}>
-                        {"54 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Computer Exam"} className={"indexSprite computer"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Computer"}
-                      </p>
-                      <p className={"count"}>
-                        {"49 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Dental Exam"} className={"indexSprite dental"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Dental"}
-                      </p>
-                      <p className={"count"}>
-                        {"10 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Design Exam"} className={"indexSprite design"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Design"}
-                      </p>
-                      <p className={"count"}>
-                        {"38 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Education Exam"} className={"indexSprite education"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Education"}
-                      </p>
-                      <p className={"count"}>
-                        {"128 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Engineering Exam"} className={"indexSprite engineering"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Engineering"}
-                      </p>
-                      <p className={"count"}>
-                        {"184 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Hotel Management Exam"} className={"indexSprite hotel-management"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Hotel Management"}
-                      </p>
-                      <p className={"count"}>
-                        {"16 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Law Exam"} className={"indexSprite law"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Law"}
-                      </p>
-                      <p className={"count"}>
-                        {"64 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Management Exam"} className={"indexSprite management"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Management"}
-                      </p>
-                      <p className={"count"}>
-                        {"121 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Mass Communication Exam"} className={"indexSprite mass-communication"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Mass Communication"}
-                      </p>
-                      <p className={"count"}>
-                        {"13 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Medical Exam"} className={"indexSprite medical"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Medical"}
-                      </p>
-                      <p className={"count"}>
-                        {"47 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Paramedical Exam"} className={"indexSprite paramedical"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Paramedical"}
-                      </p>
-                      <p className={"count"}>
-                        {"16 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Pharmacy Exam"} className={"indexSprite pharmacy"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Pharmacy"}
-                      </p>
-                      <p className={"count"}>
-                        {"56 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Science Exam"} className={"indexSprite science"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Science"}
-                      </p>
-                      <p className={"count"}>
-                        {"113 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Veterinary Exam"} className={"indexSprite veterinary"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Veterinary"}
-                      </p>
-                      <p className={"count"}>
-                        {"8 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                  <a  className={"dataCard"}>
-                    <span title={"Vocational Courses Exam"} className={"indexSprite vocational-courses"}></span>
-                    <div className={"dataCardText"}>
-                      <p>
-                        {"Vocational Courses"}
-                      </p>
-                      <p className={"count"}>
-                        {"89 Exams"}
-                      </p>
-                    </div>
-                  </a>
-                </div>
-              </div> */}
               <div id={"courses-category"} className={"tab-content"}>
                 <div className={"row limitCards"}>
                   {/* Nursing Courses */}
@@ -1329,103 +969,11 @@ function HomeContent() {
                       <p className={"count"}>{"Yoga Course"}</p>
                     </div>
                   </a>
-
-                  {/* Commented out original courses list (code preserved): */}
-                  {/*
-                  <a className={"dataCard"}>
-                    <span title={"Architecture Exam"} className={"indexSprite architecture"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Architecture"}</p>
-                      <p className={"count"}>{"15 Courses"}</p>
-                    </div>
-                  </a>
-                  <a className={"dataCard"}>
-                    <span title={"Arts Exam"} className={"indexSprite arts"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Arts"}</p>
-                      <p className={"count"}>{"187 Courses"}</p>
-                    </div>
-                  </a>
-                  <a className={"dataCard"}>
-                    <span title={"Engineering Exam"} className={"indexSprite engineering"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Engineering"}</p>
-                      <p className={"count"}>{"141 Courses"}</p>
-                    </div>
-                  </a>
-                  <a className={"dataCard"}>
-                    <span title={"Animation Exam"} className={"indexSprite animation"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Animation"}</p>
-                      <p className={"count"}>{"5 Courses"}</p>
-                    </div>
-                  </a>
-                  <a className={"dataCard"}>
-                    <span title={"Agriculture Exam"} className={"indexSprite agriculture"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Agriculture"}</p>
-                      <p className={"count"}>{"8 Courses"}</p>
-                    </div>
-                  </a>
-                  <a className={"dataCard"}>
-                    <span title={"Aviation Exam"} className={"indexSprite aviation"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"Aviation"}</p>
-                      <p className={"count"}>{"6 Courses"}</p>
-                    </div>
-                  </a>
-                  */}
                 </div>
               </div>
             </div>
           </div>
         </section>
-        {/* <section className={"indexSection"}>
-          <div className={"container"}>
-            <h2>
-              {"Study Abroad Options"}
-            </h2>
-            <p className={"sectionSubheading"}>
-              {"Choose from the top study destinations that the world has to offer. Be informed about universities, rankings, admission details, and exams."}
-            </p>
-            <div className={"row justify-content-center"}>
-              <div className={"col-12"}>
-                <div className={"studyAbroad"}>
-                  <a className={"studyAbroadCard"} href={allowedLink("/canada")}>
-                    <img src={"/images/imported/f547d7c7b088b47c.webp"} alt={"CANADA"} title={"CANADA"} width={"75"} height={"75"} loading={"lazy"} />
-                    <p>
-                      {"CANADA"}
-                    </p>
-                  </a>
-                  <a className={"studyAbroadCard"} href={allowedLink("/uk")}>
-                    <img src={"/images/imported/fcd549ac12244739.webp"} alt={"UK"} title={"UK"} width={"75"} height={"75"} loading={"lazy"} />
-                    <p>
-                      {"UK"}
-                    </p>
-                  </a>
-                  <a className={"studyAbroadCard"} href={allowedLink("/usa")}>
-                    <img src={"/images/imported/18e0e99d757ced7a.webp"} alt={"USA"} title={"USA"} width={"75"} height={"75"} loading={"lazy"} />
-                    <p>
-                      {"USA"}
-                    </p>
-                  </a>
-                  <a className={"studyAbroadCard"} href={allowedLink("/australia")}>
-                    <img src={"/images/imported/70b20fad4848bb5e.webp"} alt={"AUSTRALIA"} title={"AUSTRALIA"} width={"75"} height={"75"} loading={"lazy"} />
-                    <p>
-                      {"AUSTRALIA"}
-                    </p>
-                  </a>
-                  <a className={"studyAbroadCard"} href={allowedLink("/germany")}>
-                    <img src={"/images/imported/41a2c411306d1485.webp"} alt={"GERMANY"} title={"GERMANY"} width={"75"} height={"75"} loading={"lazy"} />
-                    <p>
-                      {"GERMANY"}
-                    </p>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
         <section className={"indexSection articleIndexBox"}>
           <div className={"container"}>
             <div className={"articleRelataedLinks"}>
@@ -1543,179 +1091,6 @@ function HomeContent() {
             </div>
           </div>
         </section>
-        {/* <section className={"indexSection bg-lightgray"}>
-          <div className={"container"}>
-            <h2>
-              {"Trending Exams"}
-            </h2>
-            <div className={"trendingBtnSection"}>
-              <button data-entity={"exam"} data-entityid={"85"} className={"basicCta exam-tab"}>
-                {"CLAT"}
-              </button>
-              <button data-entity={"exam"} data-entityid={"21"} className={"basicCta exam-tab"}>
-                {"CAT"}
-              </button>
-              <button data-entity={"exam"} data-entityid={"107"} className={"basicCta exam-tab"}>
-                {"NEET"}
-              </button>
-              <button data-entity={"exam"} data-entityid={"1"} className={"basicCta exam-tab"}>
-                {"JEE Main"}
-              </button>
-              <button data-entity={"exam"} data-entityid={"2"} className={"basicCta exam-tab"}>
-                {"JEE Advanced"}
-              </button>
-              <button data-entity={"exam"} data-entityid={"9"} className={"basicCta exam-tab"}>
-                {"WBJEE"}
-              </button>
-              <button data-entity={"exam"} data-entityid={"97"} className={"basicCta exam-tab"}>
-                {"CUET"}
-              </button>
-              <button data-entity={"exam"} data-entityid={"13"} className={"basicCta exam-tab"}>
-                {"AP EAMCET"}
-              </button>
-              <button data-entity={"exam"} data-entityid={"74"} className={"basicCta exam-tab"}>
-                {"TS EAMCET"}
-              </button>
-              <button data-entity={"exam"} data-entityid={"142"} className={"basicCta exam-tab"}>
-                {"TS LAWCET"}
-              </button>
-            </div>
-          </div>
-          <div className={"container mt-5"}>
-            <div className={"collegesWithCategoryData"}>
-              <div id={"entity-category"} className={"tab-content activeTab"}>
-                <div className={"row limitCards trendingExamCardList"}>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} href={allowedLink("/exams/clat")}>
-                      <p>
-                        {"CLAT 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"CLAT Mock Test 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"CLAT Exam Pattern 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"CLAT Syllabus 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"CLAT Exam Dates 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"CAT Exam Dates 2025"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"CAT Syllabus 2025"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"CAT Exam Pattern 2025"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"CAT Mock Test 2025"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} href={allowedLink("/exams/cat")}>
-                      <p>
-                        {"CAT 2025"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"NEET Mock Test 2025"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"TS LAWCET Exam Dates 2025"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"NEET Syllabus 2025"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"NEET Exam Dates 2025"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"JEE Main Mock Test 2025"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"JEE Main Syllabus 2025"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"JEE Main Exam Dates 2025"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} href={allowedLink("/exams/jee-advanced")}>
-                      <p>
-                        {"JEE Advanced 2025"}
-                      </p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
         <section className={"indexSection "}>
           <div className={"container"}>
             <h2>
@@ -1731,7 +1106,7 @@ function HomeContent() {
                   if (el) el.scrollBy({ left: -240, behavior: 'smooth' });
                 }}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>             
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
 
               </button>
               <div className={"trendingBtnSection"}>
@@ -1902,342 +1277,6 @@ function HomeContent() {
             </div>
           </div>
         </section>
-        {/* <section className={"indexSection bg-lightgray"}>
-          <div className={"container"}>
-            <h2>
-              {"Top School Exams in India"}
-            </h2>
-            <div className={"trendingBtnSection"}>
-              <button data-entity={"board"} data-entityid={"58"} className={"basicCta exam-tab"}>
-                {"Tamil Nadu 10th"}
-              </button>
-              <button data-entity={"board"} data-entityid={"60"} className={"basicCta exam-tab"}>
-                {"TS Intermediate"}
-              </button>
-              <button data-entity={"board"} data-entityid={"61"} className={"basicCta exam-tab"}>
-                {"TS SSC"}
-              </button>
-              <button data-entity={"board"} data-entityid={"31"} className={"basicCta exam-tab"}>
-                {"Karnataka SSLC"}
-              </button>
-              <button data-entity={"board"} data-entityid={"34"} className={"basicCta exam-tab"}>
-                {"Kerala Plus Two"}
-              </button>
-              <button data-entity={"board"} data-entityid={"33"} className={"basicCta exam-tab"}>
-                {"Kerala SSLC"}
-              </button>
-              <button data-entity={"board"} data-entityid={"57"} className={"basicCta exam-tab"}>
-                {"Tamil Nadu 12th"}
-              </button>
-              <button data-entity={"board"} data-entityid={"53"} className={"basicCta exam-tab"}>
-                {"RBSE 10th"}
-              </button>
-              <button data-entity={"board"} data-entityid={"39"} className={"basicCta exam-tab"}>
-                {"MPBSE 12th"}
-              </button>
-              <button data-entity={"board"} data-entityid={"38"} className={"basicCta exam-tab"}>
-                {"MPBSE 10th"}
-              </button>
-              <button data-entity={"board"} data-entityid={"30"} className={"basicCta exam-tab"}>
-                {"Karnataka 2nd PUC"}
-              </button>
-              <button data-entity={"board"} data-entityid={"37"} className={"basicCta exam-tab"}>
-                {"Maharashtra SSC"}
-              </button>
-              <button data-entity={"board"} data-entityid={"8"} className={"basicCta exam-tab"}>
-                {"BSEB 12th"}
-              </button>
-              <button data-entity={"board"} data-entityid={"9"} className={"basicCta exam-tab"}>
-                {"BSEB 10th"}
-              </button>
-              <button data-entity={"board"} data-entityid={"54"} className={"basicCta exam-tab"}>
-                {"RBSE 12th"}
-              </button>
-              <button data-entity={"board"} data-entityid={"64"} className={"basicCta exam-tab"}>
-                {"UP 10th"}
-              </button>
-              <button data-entity={"board"} data-entityid={"36"} className={"basicCta exam-tab"}>
-                {"Maharashtra HSC"}
-              </button>
-              <button data-entity={"board"} data-entityid={"65"} className={"basicCta exam-tab"}>
-                {"UP 12th"}
-              </button>
-              <button data-entity={"board"} data-entityid={"76"} className={"basicCta exam-tab"}>
-                {"CBSE 10th"}
-              </button>
-              <button data-entity={"board"} data-entityid={"77"} className={"basicCta exam-tab"}>
-                {"CBSE 12th"}
-              </button>
-            </div>
-          </div>
-          <div className={"container mt-5"}>
-            <div className={"collegesWithCategoryData"}>
-              <div id={"entity-category"} className={"tab-content activeTab"}>
-                <div className={"row limitCards trendingBoardCardList"}>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"Tamil Nadu Class 12th Time Table 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"Tamil Nadu Class 12th Hall Ticket 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"Tamil Nadu Class 12th Syllabus 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"Tamil Nadu Class 12th Preparation Tips 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"Tamil Nadu Class 10th Exam Pattern 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"Tamil Nadu Class 10th Time Table 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"Tamil Nadu Class 10th Hall Ticket 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"Tamil Nadu Class 10th Syllabus 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"TS Intermediate Exam Pattern 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"TS Intermediate Time Table 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"TS Intermediate Hall Ticket 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"TS Intermediate Syllabus 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"TS Intermediate Preparation Tips 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"TS SSC Exam Pattern 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"TS SSC Time Table 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"TS SSC Hall Ticket 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"TS SSC Syllabus 2026"}
-                      </p>
-                    </a>
-                  </div>
-                  <div className={"dataCard"}>
-                    <a className={"dataCardText"} >
-                      <p>
-                        {"Karnataka 2nd PUC Time Table 2026"}
-                      </p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
-        {/* <section className={"indexSection"}>
-          <div className={"container"}>
-            <h2>
-              {"Popular Medical Colleges"}
-            </h2>
-            <div className={"customSlider four-cardDisplay"}>
-              <i className={"spriteIcon scrollLeft over"}></i>
-              <i className={"spriteIcon scrollRight"}></i>
-              <div className={"customSliderCards"}>
-                <a className={"displayCard"}>
-                  <figure>
-                    <img loading={"lazy"} src={"/images/imported/334d378955e796ab.webp"} alt={"img"} width={"275"} height={"206"} />
-                  </figure>
-                  <div className={"textDiv pt-0"}>
-                    <img loading={"lazy"} src={"/images/imported/e9e340cc1f111c74.jpg"} className={"collegeLogo"} alt={"img"} width={"56"} height={"56"} />
-                    <p className={"widgetCardHeading"}>
-                      {"AIIMS New Delhi"}
-                    </p>
-                    <p className={"subText"}>
-                      <span className={"spriteIcon locationIcon"}></span>
-                      {"New Delhi, Delhi NCR"}
-                    </p>
-                  </div>
-                </a>
-                <a className={"displayCard"}>
-                  <figure>
-                    <img loading={"lazy"} src={"/images/imported/307564ad22c67d1c.jpg"} alt={"img"} width={"275"} height={"206"} />
-                  </figure>
-                  <div className={"textDiv pt-0"}>
-                    <img loading={"lazy"} src={"/images/imported/e4d93b0506695c18.jpg"} className={"collegeLogo"} alt={"img"} width={"56"} height={"56"} />
-                    <p className={"widgetCardHeading"}>
-                      {"PGIMER Chandigarh"}
-                    </p>
-                    <p className={"subText"}>
-                      <span className={"spriteIcon locationIcon"}></span>
-                      {"Chandigarh, Punjab"}
-                    </p>
-                  </div>
-                </a>
-                <a className={"displayCard"}>
-                  <figure>
-                    <img loading={"lazy"} src={"/images/imported/4df634d13c5edc03.jpg"} alt={"img"} width={"275"} height={"206"} />
-                  </figure>
-                  <div className={"textDiv pt-0"}>
-                    <img loading={"lazy"} src={"/images/imported/398e9e093556d90c.jpg"} className={"collegeLogo"} alt={"img"} width={"56"} height={"56"} />
-                    <p className={"widgetCardHeading"}>
-                      {"CMC Vellore"}
-                    </p>
-                    <p className={"subText"}>
-                      <span className={"spriteIcon locationIcon"}></span>
-                      {"Vellore, Tamil Nadu"}
-                    </p>
-                  </div>
-                </a>
-                <a className={"displayCard"}>
-                  <figure>
-                    <img loading={"lazy"} src={"/images/imported/776fb1cecda786bf.webp"} alt={"img"} width={"275"} height={"206"} />
-                  </figure>
-                  <div className={"textDiv pt-0"}>
-                    <img loading={"lazy"} src={"/images/imported/776fb1cecda786bf.webp"} className={"collegeLogo"} alt={"img"} width={"56"} height={"56"} />
-                    <p className={"widgetCardHeading"}>
-                      {"NSTI Panipat Medical & Tech"}
-                    </p>
-                    <p className={"subText"}>
-                      <span className={"spriteIcon locationIcon"}></span>
-                      {"Panipat, Haryana"}
-                    </p>
-                  </div>
-                </a>
-                <a className={"displayCard"}>
-                  <figure>
-                    <img loading={"lazy"} src={"/images/imported/d1f0e9a68873b3c3.jpg"} alt={"img"} width={"275"} height={"206"} />
-                  </figure>
-                  <div className={"textDiv pt-0"}>
-                    <img loading={"lazy"} src={"/images/imported/627b56bd7cdc07c8.jpg"} className={"collegeLogo"} alt={"img"} width={"56"} height={"56"} />
-                    <p className={"widgetCardHeading"}>
-                      {"JIPMER Puducherry"}
-                    </p>
-                    <p className={"subText"}>
-                      <span className={"spriteIcon locationIcon"}></span>
-                      {"Puducherry, Union Territory"}
-                    </p>
-                  </div>
-                </a>
-                <a className={"displayCard"}>
-                  <figure>
-                    <img loading={"lazy"} src={"/images/imported/kgmu-lucknow-campus.jpg"} alt={"img"} width={"275"} height={"206"} />
-                  </figure>
-                  <div className={"textDiv pt-0"}>
-                    <img loading={"lazy"} src={"/images/imported/kgmu-lucknow-campus.jpg"} className={"collegeLogo"} alt={"img"} width={"56"} height={"56"} />
-                    <p className={"widgetCardHeading"}>
-                      {"KGMU Lucknow"}
-                    </p>
-                    <p className={"subText"}>
-                      <span className={"spriteIcon locationIcon"}></span>
-                      {"Lucknow, Uttar Pradesh"}
-                    </p>
-                  </div>
-                </a>
-                <a className={"displayCard"}>
-                  <figure>
-                    <img loading={"lazy"} src={"/images/imported/840c7af0edf32547.jpg"} alt={"img"} width={"275"} height={"206"} />
-                  </figure>
-                  <div className={"textDiv pt-0"}>
-                    <img loading={"lazy"} src={"/images/imported/3b95be4975ef8e2b.jpg"} className={"collegeLogo"} alt={"img"} width={"56"} height={"56"} />
-                    <p className={"widgetCardHeading"}>
-                      {"KMC Manipal"}
-                    </p>
-                    <p className={"subText"}>
-                      <span className={"spriteIcon locationIcon"}></span>
-                      {"Manipal, Karnataka"}
-                    </p>
-                  </div>
-                </a>
-                <a className={"displayCard"}>
-                  <figure>
-                    <img loading={"lazy"} src={"/images/imported/d3221412c66a69c6.jpg"} alt={"img"} width={"275"} height={"206"} />
-                  </figure>
-                  <div className={"textDiv pt-0"}>
-                    <img loading={"lazy"} src={"/images/imported/9fc2c1bb7c8ef049.jpg"} className={"collegeLogo"} alt={"img"} width={"56"} height={"56"} />
-                    <p className={"widgetCardHeading"}>
-                      {"Madras Medical College"}
-                    </p>
-                    <p className={"subText"}>
-                      <span className={"spriteIcon locationIcon"}></span>
-                      {"Chennai, Tamil Nadu"}
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section> */}
         <section className={"indexSection bg-lightgray"}>
           <div className={"container"}>
             <h2>
@@ -2247,49 +1286,49 @@ function HomeContent() {
               {"Search among 500+ government, and competitive entrance exams"}
             </p>
             <div className={"exploreScholorshipDiv row"}>
-              <a title={"State Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"State Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon stateScholarships"}></i>
                 <p>
                   {"State Wise Scholarships"}
                 </p>
               </a>
-              <a title={"Class Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"Class Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon classScholarships"}></i>
                 <p>
                   {"Class Wise Scholarships"}
                 </p>
               </a>
-              <a title={"Discipline Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"Discipline Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon disciplineScholarships"}></i>
                 <p>
                   {"Discipline Wise Scholarships"}
                 </p>
               </a>
-              <a title={"Course Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"Course Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon courseScholarships"}></i>
                 <p>
                   {"Course Wise Scholarships"}
                 </p>
               </a>
-              <a title={"Category Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"Category Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon categoryScholarships"}></i>
                 <p>
                   {"Category Wise Scholarships"}
                 </p>
               </a>
-              <a title={"Type Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"Type Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon typeScholarships"}></i>
                 <p>
                   {"Type Wise Scholarships"}
                 </p>
               </a>
-              <a title={"Gender Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"Gender Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon genderScholarships"}></i>
                 <p>
                   {"Gender Wise Scholarships"}
                 </p>
               </a>
-              <a title={"Country Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"Country Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon countryScholarships"}></i>
                 <p>
                   {"Country Wise Scholarships"}
@@ -2358,7 +1397,7 @@ function HomeContent() {
           <div className={"container"}>
             <div className={"mobileOnly"}>
               <h2>
-                {"citsAdmission.com - Top Education Search Platform."}
+                {"Admission Portal - Top Education Search Platform."}
               </h2>
               <p className={"sectionSubheading"}>
                 {"Your dreams are valuable, let the experts guide to achieve them."}
@@ -2429,9 +1468,9 @@ function HomeContent() {
             </div>
           </div>
         </div>
-        <section className="py-10 md:py-14 bg-white border-t border-slate-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">
+        <section className={"indexSection student-testimonial-section"}>
+          <div className={"container"}>
+            <h2>
               {"Our Students Say"}
             </h2>
             <div className={"customSlider student-testimonial"} style={{ position: 'relative' }}>
@@ -2482,11 +1521,10 @@ function HomeContent() {
                   <polyline points="9 18 15 12 9 6" />
                 </svg>
               </button>
-
               <div className={"customSliderCards"}>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={/*"/images/imported/02c5709ce7eea2dd.webp"*/"/public/images/imported/student.png"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={"/images/testimonials/student-avatar.svg"} alt={"Muskan Bebele"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Muskan Bebele"}
@@ -2499,13 +1537,13 @@ function HomeContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"I am Muskan Babele from Jhansi, Uttar Pradesh. My experience at Sharda University, Greater Noida, in the B.Tech CSE course, is excellent. I got admission in June 2022. Thank you, citsAdmission.com, for making my career better."}
+                      {"I am Muskan Babele from Jhansi, Uttar Pradesh. My experience at Sharda University, Greater Noida, in the B.Tech CSE course, is excellent. I got admission in June 2022. Thank you, Admission Portal, for making my career better."}
                     </p>
                   </div>
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={/*"/images/imported/cf661ef47c206874.webp"*/"/public/images/imported/student.png"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={"/images/testimonials/student-avatar.svg"} alt={"Liya Dominic"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Liya Dominic"}
@@ -2518,13 +1556,13 @@ function HomeContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"This portal has allowed me to enhance my design skills and enrich my knowledge. Presidency University has dependent teachers who make everyone thrilled about future classes. Thanks to citsAdmission.com for assisting me."}
+                      {"This portal has allowed me to enhance my design skills and enrich my knowledge. Presidency University has dependent teachers who make everyone thrilled about future classes. Thanks to Admission Portal for assisting me."}
                     </p>
                   </div>
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={/*"/images/imported/329982224a208ee6.webp"*/ "/public/images/imported/student.png"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={"/images/testimonials/student-avatar.svg"} alt={"Vikas"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Vikas"}
@@ -2537,13 +1575,13 @@ function HomeContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"I am Vikash from Samastipur, Bihar. When I was connected with citsAdmission.com for my future career in Computer Applications, they were more than happy to help me select the best college according to my financial preferences."}
+                      {"I am Vikash from Samastipur, Bihar. When I was connected with Admission Portal for my future career in Computer Applications, they were more than happy to help me select the best college according to my financial preferences."}
                     </p>
                   </div>
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={/*"/images/imported/c05d0a32a5702d6f.webp"*/"/public/images/imported/student.png"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={"/images/testimonials/student-avatar.svg"} alt={"Gaurav Sanjay Kumavat"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Gaurav Sanjay Kumavat"}
@@ -2556,13 +1594,13 @@ function HomeContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"citsAdmission.com helped me to find my dream university, and I am thankful to them. Parul University of technology, Gujarat, is among the best colleges for knowledge and learning. citsAdmission.com’s support team helped me a lot."}
+                      {"Admission Portal helped me to find my dream university, and I am thankful to them. Parul University of technology, Gujarat, is among the best colleges for knowledge and learning. Admission Portal's support team helped me a lot."}
                     </p>
                   </div>
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={/*"/images/imported/6a5d7939a763f8db.webp"*/"/public/images/imported/student.png"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={"/images/testimonials/student-avatar.svg"} alt={"Ashish Patidar"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Ashish Patidar"}
@@ -2575,13 +1613,13 @@ function HomeContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"I am thankful for the assistance and guidance from citsAdmission.com counsellors while choosing the best and budget-friendly college from the never-ending list of colleges."}
+                      {"I am thankful for the assistance and guidance from Admission Portal counsellors while choosing the best and budget-friendly college from the never-ending list of colleges."}
                     </p>
                   </div>
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={/*"/images/imported/15d9205f80f207f2.webp"*/"/public/images/imported/student.png"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={"/images/testimonials/student-avatar.svg"} alt={"Bhumika"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Bhumika"}
@@ -2594,13 +1632,13 @@ function HomeContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"citsAdmission.com provided the best academic assistance. Here, counsellors are very supportive and helpful. When I completed 12th, I was confused about my career, but I got proper guidance in every field, so my path was clearer."}
+                      {"Admission Portal provided the best academic assistance. Here, counsellors are very supportive and helpful. When I completed 12th, I was confused about my career, but I got proper guidance in every field, so my path was clearer."}
                     </p>
                   </div>
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={/*"/images/imported/1f207405846cca6e.webp"*/"/public/images/imported/student.png"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={"/images/testimonials/student-avatar.svg"} alt={"Tanvi Sharma"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Tanvi Sharma"}
@@ -2613,7 +1651,7 @@ function HomeContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"I got to know a lot about LEXICON MILE from citsAdmission.com. The website provided information about campus placement, courses etc. I got a call from their consultant, which greatly helped me. Thank you."}
+                      {"I got to know a lot about LEXICON MILE from Admission Portal. The website provided information about campus placement, courses etc. I got a call from their consultant, which greatly helped me. Thank you."}
                     </p>
                   </div>
                 </div>
@@ -2624,7 +1662,7 @@ function HomeContent() {
         <section className="py-10 bg-slate-50 border-y border-slate-200/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-center mb-6 text-xl md:text-2xl font-bold text-slate-900">
-              {"citsAdmission.com in Media"}
+              {"Admission Portal in Media"}
             </h2>
             <div className={"featuredBrandWrapper"}>
               <div className={"featuredBrandTrack"}>

@@ -41,11 +41,11 @@ export const page = {
       },
       {
         "property": "og:site_name",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "og:description",
-        "content": "Top Dental Colleges in India 2025"
+        "content": "Top Dental Colleges in India 2025: Check NIRF ranking, placement, fees, admission, cutoff, eligibility, top recruitments, scholarships and latest news of Dental colleges."
       },
       {
         "property": "twitter:card",
@@ -53,7 +53,7 @@ export const page = {
       },
       {
         "property": "twitter:site",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "twitter:creator",

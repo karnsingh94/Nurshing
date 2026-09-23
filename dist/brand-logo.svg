@@ -1,31 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="280" height="52" viewBox="0 0 280 52">
   <defs>
-    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00a8cc" />
-      <stop offset="100%" stop-color="#0284c7" />
-    </linearGradient>
-    <filter id="logoShadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.08" />
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.08" />
     </filter>
   </defs>
 
-  <!-- Clean White Badge Container -->
-  <rect x="2" y="2" width="276" height="48" rx="10" fill="#ffffff" filter="url(#logoShadow)" stroke="#e2e8f0" stroke-width="1.5" />
+  <!-- Clean White Rounded Container Badge -->
+  <rect x="2" y="2" width="276" height="48" rx="12" fill="#ffffff" filter="url(#cardShadow)" stroke="#e2e8f0" stroke-width="1.2" />
 
-  <!-- Academic Icon Badge -->
-  <g transform="translate(12, 10)">
-    <rect x="0" y="0" width="32" height="32" rx="8" fill="url(#brandGrad)" />
-    <!-- Graduation Cap -->
-    <path d="M16 8 L6 14 L16 20 L26 14 Z" fill="#ffffff" />
-    <path d="M10 17.5 V22.5 C10 24.5 13 26 16 26 C19 26 22 24.5 22 22.5 V17.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
-    <path d="M24 15 V22" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+  <!-- Cyan/Blue Rounded Icon Square -->
+  <g transform="translate(10, 9)">
+    <rect x="0" y="0" width="34" height="34" rx="8" fill="#0294cb" />
+    <!-- White Graduation Cap Top Diamond -->
+    <path d="M17 7 L28 12.5 L17 18 L6 12.5 Z" fill="#ffffff" />
+    <!-- Cap Neck / Underneath Arch -->
+    <path d="M10.5 15.5 V19 C10.5 22.5 13.5 24.5 17 24.5 C20.5 24.5 23.5 22.5 23.5 19 V15.5" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" />
+    <!-- Cap Tassel Hanging Right -->
+    <path d="M26 13.5 V21" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+    <circle cx="26" cy="21.5" r="1.2" fill="#ffffff" />
   </g>
 
-  <!-- Single Text Element with TSPANS for zero overlap -->
-  <text x="52" y="33" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="800">
-    <tspan fill="#0f172a">cits</tspan>
-    <tspan fill="#00a8cc" font-size="24" font-weight="900" font-style="italic">A</tspan>
-    <tspan fill="#0f172a">dmission</tspan>
-    <tspan fill="#0284c7" font-size="14" font-weight="700">.com</tspan>
+  <!-- Logo Brand Typography -->
+  <text x="52" y="33" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" letter-spacing="-0.3px">
+    <tspan fill="#111827">cits</tspan>
+    <tspan fill="#0099cc" font-size="23" font-weight="900" font-style="italic"> A</tspan>
+    <tspan fill="#111827">dmission</tspan>
+    <tspan fill="#0099cc" font-size="20" font-weight="700">.com</tspan>
   </text>
 </svg>

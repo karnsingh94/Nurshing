@@ -41,11 +41,11 @@ export const page = {
       },
       {
         "property": "og:site_name",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "og:description",
-        "content": "Find TopHotel Management Colleges in India based on  ranking with details on courses, fees, placements, admission, reviews, cut off, and latest news."
+        "content": "Top Hotel Management Colleges in India: Check ranking, placement, fees, admission, cutoff, eligibility, and latest news."
       },
       {
         "property": "twitter:card",
@@ -53,7 +53,7 @@ export const page = {
       },
       {
         "property": "twitter:site",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "twitter:creator",

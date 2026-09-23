@@ -41,11 +41,11 @@ export const page = {
       },
       {
         "property": "og:site_name",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "og:description",
-        "content": "Explore India’s best MBA colleges for 2026-27. Compare IIMs, XLRI, FMS Delhi, and top private B-schools by fees, placements, ROI, and specializations. Plan admissions via CAT, XAT, GMAT, and NMAT for careers in finance, consulting, and analytics."
+        "content": "Top MBA Colleges in India 2026: Check rankings, placement, fees, admission, cutoff, eligibility, top recruitments, scholarships and latest news of MBA colleges."
       },
       {
         "property": "twitter:card",
@@ -53,7 +53,7 @@ export const page = {
       },
       {
         "property": "twitter:site",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "twitter:creator",

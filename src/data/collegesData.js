@@ -1,6 +1,9 @@
 import { nursingCollegesData } from './nursingCollegesData.js';
+import { pharmacyCollegesData } from './pharmacyCollegesData.js';
+import { paramedicalCollegesData } from './paramedicalCollegesData.js';
+import { yogaCollegesData } from './yogaCollegesData.js';
 
-export { nursingCollegesData };
+export { nursingCollegesData, pharmacyCollegesData, paramedicalCollegesData, yogaCollegesData };
 
 const baseCollegesData = [
   {
@@ -5714,4 +5717,10 @@ const baseCollegesData = [
   }
 ];
 
-export const collegesData = [...baseCollegesData, ...nursingCollegesData];
+export const collegesData = [
+  ...baseCollegesData,
+  ...nursingCollegesData,
+  ...pharmacyCollegesData,
+  ...paramedicalCollegesData,
+  ...yogaCollegesData
+];
