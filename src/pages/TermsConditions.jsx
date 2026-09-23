@@ -62,8 +62,8 @@ export default function TermsConditions({ onNavigate }) {
                   type="button"
                   onClick={() => scrollTo(sec.id)}
                   className={`w-full text-left px-3 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors cursor-pointer block ${activeSection === sec.id
-                      ? 'bg-blue-50 text-[#0966c2] font-bold'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                    ? 'bg-blue-50 text-[#0966c2] font-bold'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                     }`}
                 >
                   {sec.title}
