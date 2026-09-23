@@ -911,6 +911,44 @@
       display: inline-flex !important;
       margin-left: auto !important;
     }
+
+    .site-nav__mega {
+      position: static !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      max-height: none !important;
+      margin: 8px 0 !important;
+      box-shadow: none !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      background: #ffffff !important;
+      border-radius: 12px !important;
+      overflow: hidden !important;
+      display: none !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      pointer-events: auto !important;
+    }
+
+    .site-nav__item.touch-open > .site-nav__mega,
+    .site-nav__item:focus-within > .site-nav__mega {
+      display: block !important;
+    }
+
+    .mega-menu-clean {
+      min-width: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      flex-direction: column !important;
+      gap: 16px !important;
+      padding: 14px 16px !important;
+      box-sizing: border-box !important;
+    }
+
+    .mega-menu-clean > div {
+      min-width: 0 !important;
+      width: 100% !important;
+    }
   }
 
   /* Mobile Filter Drawer Responsive Rules */
@@ -1694,6 +1732,44 @@
 .no-scrollbar {
   -ms-overflow-style: none !important;
   scrollbar-width: none !important;
+}
+
+/* Remove underline on hover from all View College, Apply, and College details buttons */
+.view-details-btn,
+.view-details-btn:hover,
+.view-details-btn:focus,
+.lead-cta-college-filter-1,
+.lead-cta-college-filter-1:hover,
+.lead-cta-college-filter-1:focus,
+a[href*="/college/"],
+a[href*="/college/"]:hover,
+a[href*="/college/"]:focus,
+a[href*="/college/"]:visited,
+a.view-more-btn,
+a.view-more-btn:hover {
+  text-decoration: none !important;
+}
+
+/* About Us Section & Laptop Mockup Image Overflow Fix */
+.aboutUsSection {
+  position: relative !important;
+  padding: 40px 0 30px 0 !important;
+  background: url(https://www.getmyuni.com/images/imported/69670b806b84500c.webp) no-repeat center !important;
+  background-size: cover !important;
+  overflow: hidden !important;
+}
+
+.aboutUsSection .websiteImg {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 560px !important;
+  height: auto !important;
+  max-height: 420px !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto !important;
+  top: auto !important;
+  left: auto !important;
 }
 
 

@@ -107,9 +107,9 @@ function MegaMenuPanel({ menu, category, onNavigate }) {
   };
 
   return (
-    <div className="mega-menu-clean bg-white text-gray-900 rounded-xl shadow-2xl p-6 px-7 border border-gray-100 min-w-[500px] w-max max-w-[94vw] flex gap-10">
+    <div className="mega-menu-clean bg-white text-gray-900 rounded-xl shadow-2xl p-5 md:p-6 md:px-7 border border-gray-100 min-w-0 md:min-w-[500px] w-full md:w-max max-w-[94vw] flex flex-col md:flex-row gap-6 md:gap-10">
       {menu.columns.map((col) => (
-        <div key={col.title} className="flex flex-col justify-between min-w-[220px] flex-1">
+        <div key={col.title} className="flex flex-col justify-between min-w-0 md:min-w-[220px] flex-1">
           <div>
             <h3 className="text-[12.5px] font-extrabold text-gray-900 uppercase tracking-wider mb-3.5 pb-1 border-b border-gray-200/80">
               {col.title}
@@ -123,7 +123,8 @@ function MegaMenuPanel({ menu, category, onNavigate }) {
                     <a
                       href={targetUrl}
                       onClick={(e) => handleLinkClick(e, targetUrl)}
-                      className="mega-menu-link text-[13.5px] font-semibold text-gray-900 hover:text-[#0966c2] transition-colors py-0.5 block"
+                      className="mega-menu-link text-[13.5px] font-semibold text-gray-900 hover:text-[#0966c2] transition-colors py-0.5 block no-underline hover:no-underline"
+                      style={{ textDecoration: 'none' }}
                     >
                       {item[0]}
                     </a>
@@ -138,7 +139,8 @@ function MegaMenuPanel({ menu, category, onNavigate }) {
               <a
                 href={targetUrl}
                 onClick={(e) => handleLinkClick(e, targetUrl)}
-                className="view-more-btn mt-5 inline-flex items-center justify-between w-full px-3.5 py-2.5 rounded-lg bg-gray-50 hover:bg-[#0966c2] text-[#111827] hover:text-white font-bold text-xs transition-all duration-200 border border-gray-200/90 hover:border-[#0966c2] shadow-xs group"
+                className="view-more-btn mt-5 inline-flex items-center justify-between w-full px-3.5 py-2.5 rounded-lg bg-gray-50 hover:bg-[#0966c2] text-[#111827] hover:text-white font-bold text-xs transition-all duration-200 border border-gray-200/90 hover:border-[#0966c2] shadow-xs group no-underline hover:no-underline"
+                style={{ textDecoration: 'none' }}
               >
                 <span>{col.viewMoreLabel || 'View More'}</span>
                 <span className="transform transition-transform group-hover:translate-x-1.5 font-bold">→</span>
