@@ -1,5 +1,6 @@
 import CollegeImage from '../components/CollegeImage.jsx';
 import CollegeLogo from '../components/CollegeLogo.jsx';
+import StreamCourseSections from '../components/StreamCourseSections.jsx';
 import { useState, useEffect } from 'react';
 import { collegesData } from '../data/collegesData.js';
 
@@ -80,18 +81,18 @@ export default function CollegeDetails({ onNavigate }) {
 
   return (
     <div className="min-h-screen bg-slate-50/60 py-8 px-4 sm:px-6 lg:px-8 font-sans" style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif" }}>
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Back Link */}
         <button
           type="button"
           onClick={() => window.history.back()}
           className="inline-flex items-center gap-2 mb-6 text-sm font-semibold text-slate-700 hover:text-[#0966c2] transition-colors bg-white px-4 py-2 rounded-xl shadow-xs border border-slate-200 cursor-pointer"
         >
-          ← Back to Nursing Colleges
+          ← Back to Colleges
         </button>
 
         {/* Main Header Card */}
-        <div className="bg-white rounded-3xl shadow-sm border border-slate-200/80 p-6 sm:p-8 mb-6 overflow-hidden">
+        <div className="bg-white rounded-3xl shadow-sm border border-slate-200/80 p-6 sm:p-8 mb-8 overflow-hidden">
           <div className="flex flex-col md:flex-row items-start gap-6 pb-6 border-b border-slate-100">
             <CollegeLogo
               college={college}
@@ -107,7 +108,7 @@ export default function CollegeDetails({ onNavigate }) {
                   {college.sector || 'Recognized Institute'}
                 </span>
                 <span className="px-3 py-1 bg-emerald-50 text-emerald-700 font-bold text-xs rounded-full border border-emerald-100">
-                  INC / State Council Approved
+                  Approved / Registered
                 </span>
               </div>
               <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
@@ -138,17 +139,17 @@ export default function CollegeDetails({ onNavigate }) {
             </div>
             <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 text-center">
               <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Target Stream</span>
-              <span className="text-base font-extrabold text-[#0966c2]">Nursing Science</span>
+              <span className="text-base font-extrabold text-[#0966c2]">{college.stream || 'Healthcare & Nursing'}</span>
             </div>
           </div>
         </div>
 
-        {/* Detailed Sections Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Middle Section: Institute Records + Assistance + Sidebar Facilities */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {/* Main Info Columns */}
           <div className="md:col-span-2 space-y-6">
             {/* Institute Details / Location Information */}
-            <div className="bg-white rounded-3xl p-6 shadow-sm border border-slate-200/80">
+            <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
               <h2 className="text-lg font-extrabold text-slate-900 mb-4 pb-2 border-b border-slate-100 flex items-center gap-2">
                 🏛️ Institute Location & Record Details
               </h2>
@@ -173,27 +174,27 @@ export default function CollegeDetails({ onNavigate }) {
                 )}
                 <div className="flex items-start gap-2.5 pt-2 border-t border-slate-100">
                   <span className="font-bold text-slate-900 shrink-0">Regulatory Recognition:</span>
-                  <span className="text-emerald-700 font-semibold">Indian Nursing Council (INC) & Respective State Nursing Registration Board</span>
+                  <span className="text-emerald-700 font-semibold">Respective State Regulatory Councils & National Governing Boards</span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <span className="font-bold text-slate-900 shrink-0">Eligible Courses:</span>
-                  <span className="text-slate-700">B.Sc Nursing, General Nursing & Midwifery (GNM), Auxiliary Nurse Midwife (ANM), Post Basic B.Sc & M.Sc Nursing</span>
+                  <span className="text-slate-700">Diploma, Undergraduate (UG), Postgraduate (PG) & Professional Degrees</span>
                 </div>
               </div>
             </div>
 
             {/* Admission Counseling Assistance Card */}
-            <div className="bg-blue-50/60 rounded-3xl p-6 border border-blue-100">
+            <div className="bg-blue-50/60 rounded-3xl p-6 sm:p-8 border border-blue-100">
               <h3 className="text-base font-extrabold text-[#0966c2] mb-2">
-                🎓 2026 Nursing Admission Guidelines
+                🎓 2026 Admission & Choice Filling Guidelines
               </h3>
               <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4">
-                Admissions for this institution are conducted based on merit in 10+2 (Physics, Chemistry, Biology & English) or state/national level nursing entrance examinations. Counseling choice filling and seat allotment support is provided through citsAdmission.
+                Admissions for this institution are conducted based on merit in 10+2 or state/national level entrance examinations. Counseling choice filling and seat allotment support is provided through our expert admission desk.
               </p>
               <button
                 type="button"
                 onClick={handleApplyNow}
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0966c2] hover:bg-blue-700 text-white font-bold text-xs rounded-xl shadow-sm transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#0966c2] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-sm transition-all cursor-pointer"
               >
                 Inquire For This College
               </button>
@@ -207,7 +208,7 @@ export default function CollegeDetails({ onNavigate }) {
                 ✨ Campus & Clinical Facilities
               </h2>
               <div className="flex flex-wrap gap-2">
-                {['Clinical Hospital Training', 'Anatomy & Nursing Labs', 'Modern Library', 'Hostel Facility', 'Transport Support'].map((f, i) => (
+                {['Clinical Training Labs', 'Modern Library', 'Hostel Facility', 'Wi-Fi Campus', 'Transport Support', 'Placement Cell'].map((f, i) => (
                   <span key={i} className="px-3 py-1.5 bg-slate-50 border border-slate-200 text-slate-700 text-xs font-semibold rounded-xl">
                     ✓ {f}
                   </span>
@@ -229,6 +230,11 @@ export default function CollegeDetails({ onNavigate }) {
               </button>
             </div>
           </div>
+        </div>
+
+        {/* Full-Width Horizontal Section at the LAST: Course Highlights, Eligibility, Admission Process & Entrance Exams */}
+        <div className="w-full">
+          <StreamCourseSections streamKey={(college.stream || 'nursing').toLowerCase()} />
         </div>
       </div>
     </div>

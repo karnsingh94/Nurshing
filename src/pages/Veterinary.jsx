@@ -41,7 +41,7 @@ export const page = {
       },
       {
         "property": "og:site_name",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "og:description",
@@ -53,7 +53,7 @@ export const page = {
       },
       {
         "property": "twitter:site",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "twitter:creator",

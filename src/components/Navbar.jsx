@@ -250,14 +250,14 @@ export default function Navbar({ activeSlug, onNavigate }) {
         <a
           className="site-nav__brand"
           href="/home"
-          aria-label="citsAdmission.com home"
+          aria-label="Admission Portal home"
           onClick={(event) => {
             if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
             event.preventDefault();
             onNavigate('/home');
           }}
         >
-          <img src="/brand-logo.svg" alt="citsAdmission.com" style={{ height: '42px', width: 'auto', display: 'block' }} />
+          <img src="/brand-logo.svg" alt="Admission Portal" style={{ height: '42px', width: 'auto', display: 'block' }} />
         </a>
 
         <button type="button" className="mobile-nav-toggle" aria-controls="main-navigation" aria-expanded={mobileOpen} aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'} onClick={() => { setMobileOpen(open => !open); setDismissed(false); }}>

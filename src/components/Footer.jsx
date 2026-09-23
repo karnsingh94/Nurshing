@@ -13,53 +13,56 @@ export default function Footer({ onNavigate }) {
   };
 
   return (
-    <footer className="pageFooter w-full text-white mt-5 select-none" onClick={handleClick}>
+    <footer className="app-unified-footer" onClick={handleClick}>
       {/* Primary Section */}
-      <div className="bg-[#273553] py-5">
-        <div className="w-full max-w-[1200px] mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <a href={allowedLink("/home")}>
+      <div className="footer-primary">
+        <div className="footer-container">
+          <div className="footer-row">
+            <a href={allowedLink("/home")} className="block shrink-0">
               <img
-                className="lazyload block"
                 loading="lazy"
                 width="172"
                 height="40"
-                data-src="/brand-logo.svg"
                 src="/brand-logo.svg"
-                alt="citsAdmission.com Logo"
+                alt="Admission Portal Logo"
+                className="block h-9 sm:h-10 w-auto"
               />
             </a>
-            <div>
-              <ul className="socialMedia m-0 p-0 inline-flex flex-wrap items-center mr-4 md:mr-14 list-none">
-                <li className="text-sm text-white block md:inline-block pr-2 font-medium">
+
+            <div className="footer-right-group">
+              {/* Social Media */}
+              <ul className="social-list">
+                <li className="text-sm text-white font-medium pr-2">
                   Connect with us
                 </li>
-                <li className="inline-block mr-1">
+                <li>
                   <a title="Facebook" rel="noopener nofollow" target="_blank" className="spriteIcon fbIcon block"></a>
                 </li>
-                <li className="inline-block mr-1">
+                <li>
                   <a title="Twitter" rel="noopener nofollow" target="_blank" className="spriteIcon twitterIcon block"></a>
                 </li>
-                <li className="inline-block mr-1">
+                <li>
                   <a title="Instagram" rel="noopener nofollow" target="_blank" className="spriteIcon instaIcon block"></a>
                 </li>
-                <li className="inline-block mr-1">
+                <li>
                   <a title="Linkedin" rel="noopener nofollow" target="_blank" className="spriteIcon linkdIn block"></a>
                 </li>
-                <li className="inline-block mr-1">
+                <li>
                   <a title="Youtube" rel="noopener nofollow" target="_blank" className="spriteIcon youtubeIcon block"></a>
                 </li>
               </ul>
-              <ul className="contactInfo m-0 p-0 inline-flex flex-wrap items-center list-none gap-2 md:gap-4">
-                <li className="inline-flex items-center px-2">
+
+              {/* Direct Contact Info */}
+              <ul className="contact-list">
+                <li className="inline-flex items-center">
                   <span className="spriteIcon phoneIcon"></span>
-                  <a href={allowedLink("tel:+91 0000000000")} title="+91 0000000000" className="text-white text-sm hover:underline">
+                  <a href={allowedLink("tel:+91 0000000000")} title="+91 0000000000" className="contact-link">
                     +91 0000000000
                   </a>
                 </li>
-                <li className="inline-flex items-center px-2">
+                <li className="inline-flex items-center">
                   <span className="spriteIcon whiteMailIcon"></span>
-                  <a href={allowedLink("mailTo:contact@example.com")} title="contact@example.com" className="text-white text-sm hover:underline">
+                  <a href={allowedLink("mailTo:contact@example.com")} title="contact@example.com" className="contact-link">
                     contact@example.com
                   </a>
                 </li>
@@ -70,33 +73,33 @@ export default function Footer({ onNavigate }) {
       </div>
 
       {/* Secondary Section */}
-      <div className="bg-[#1f2b45] py-5">
-        <div className="w-full max-w-[1200px] mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <ul className="m-0 p-0 flex flex-wrap items-center list-none gap-3 md:gap-6">
+      <div className="footer-secondary">
+        <div className="footer-container">
+          <div className="footer-row">
+            <ul className="links-list">
               <li>
-                <a href={allowedLink("/about-us")} title="About Us" className="text-white text-sm block leading-7 hover:underline">
+                <a href={allowedLink("/about-us")} title="About Us">
                   About Us
                 </a>
               </li>
               <li>
-                <a href={allowedLink("/contact-us")} title="Contact Us" className="text-white text-sm block leading-7 hover:underline">
+                <a href={allowedLink("/contact-us")} title="Contact Us">
                   Contact Us
                 </a>
               </li>
               <li>
-                <a href={allowedLink("/privacy-policy")} title="Privacy Policy" className="text-white text-sm block leading-7 hover:underline">
+                <a href={allowedLink("/privacy-policy")} title="Privacy Policy">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href={allowedLink("/terms-conditions")} title="Terms & Conditions" className="text-white text-sm block leading-7 hover:underline">
+                <a href={allowedLink("/terms-conditions")} title="Terms & Conditions">
                   Terms & Conditions
                 </a>
               </li>
             </ul>
-            <p className="copyrightsText text-white text-sm m-0">
-              © 2026 citsAdmission.com  All Rights Reserved.
+            <p className="copyright-text">
+              © 2026 Admission Portal. All Rights Reserved.
             </p>
           </div>
         </div>

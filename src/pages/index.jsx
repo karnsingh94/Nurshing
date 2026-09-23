@@ -59,7 +59,7 @@ export const pageInfo = {
     "name": "Home",
     "sourceFile": "home.html",
     "slug": "home",
-    "title": "citsAdmission.com - Explore Top Colleges, Courses, Fees and Exams"
+    "title": "Admission Portal - Explore Top Colleges, Courses, Fees and Exams"
   },
   "hospitality": {
     "name": "Hospitality",
@@ -77,7 +77,7 @@ export const pageInfo = {
     "name": "Logo",
     "sourceFile": "logo.html",
     "slug": "logo",
-    "title": "citsAdmission.com - Explore Top Colleges, Courses, Fees and Exams"
+    "title": "Admission Portal - Explore Top Colleges, Courses, Fees and Exams"
   },
   "management": {
     "name": "Management",
@@ -131,7 +131,7 @@ export const pageInfo = {
     "name": "College Details",
     "sourceFile": "CollegeDetails.jsx",
     "slug": "collegedetails",
-    "title": "Institute Information & Seat Matrix — CITS Admissions 2026"
+    "title": "Institute Information & Seat Matrix — Admissions 2026"
   },
   "nursing": {
     "name": "Nursing",
@@ -149,25 +149,25 @@ export const pageInfo = {
     "name": "About Us",
     "sourceFile": "AboutUs.jsx",
     "slug": "about-us",
-    "title": "About Us — citsAdmission.com | College Discovery & Admission Advisory"
+    "title": "About Us — Admission Portal | College Discovery & Admission Advisory"
   },
   "contact-us": {
     "name": "Contact Us",
     "sourceFile": "ContactUs.jsx",
     "slug": "contact-us",
-    "title": "Contact Us — citsAdmission.com | Student Counseling & Helpdesk"
+    "title": "Contact Us — Admission Portal | Student Counseling & Helpdesk"
   },
   "privacy-policy": {
     "name": "Privacy Policy",
     "sourceFile": "PrivacyPolicy.jsx",
     "slug": "privacy-policy",
-    "title": "Privacy Policy — citsAdmission.com | Student Data Protection"
+    "title": "Privacy Policy — Admission Portal | Student Data Protection"
   },
   "terms-conditions": {
     "name": "Terms & Conditions",
     "sourceFile": "TermsConditions.jsx",
     "slug": "terms-conditions",
-    "title": "Terms & Conditions — citsAdmission.com | User Agreement"
+    "title": "Terms & Conditions — Admission Portal | User Agreement"
   }
 };
 

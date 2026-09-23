@@ -1,10 +1,183 @@
-/* Footer Sprite Icons */
-.pageFooter .spriteIcon { display: inline-block !important; background: url(/yas/images/master_sprite.webp); text-align: left; overflow: hidden; }
-.pageFooter .fbIcon { background-position: 476px -200px; width: 28px; height: 28px; border-radius: 50px; }
-.pageFooter .twitterIcon { background-position: 476px -234px; width: 28px; height: 28px; border-radius: 50px; }
-.pageFooter .instaIcon { background-position: 476px -268px; width: 28px; height: 28px; border-radius: 50px; }
-.pageFooter .linkdIn { background-position: 476px -302px; width: 28px; height: 28px; border-radius: 50px; }
-.pageFooter .youtubeIcon { background-position: 476px -364px; width: 28px; height: 28px; border-radius: 50px; }
-.pageFooter .phoneIcon { width: 24px; height: 24px; background-position: 536px -246px; vertical-align: middle; margin-right: 7px; }
-.pageFooter .whiteMailIcon { width: 24px; height: 24px; background-position: 536px -219px; vertical-align: middle; margin-right: 7px; }
+/* ==========================================================================
+   Unified Application Footer Styles - Cross-page Consistency Guaranteed
+   ========================================================================== */
 
+.app-unified-footer {
+  width: 100% !important;
+  margin-top: 0 !important;
+  color: #ffffff !important;
+  user-select: none !important;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  display: block !important;
+  clear: both !important;
+  position: relative !important;
+  z-index: 20 !important;
+}
+
+.app-unified-footer * {
+  box-sizing: border-box !important;
+}
+
+.app-unified-footer .footer-primary {
+  background-color: #273553 !important;
+  padding: 20px 0 !important;
+  width: 100% !important;
+}
+
+.app-unified-footer .footer-secondary {
+  background-color: #1f2b45 !important;
+  padding: 16px 0 !important;
+  width: 100% !important;
+}
+
+.app-unified-footer .footer-container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+.app-unified-footer .footer-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+}
+
+.app-unified-footer .footer-right-group {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 24px !important;
+}
+
+.app-unified-footer .social-list {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  display: inline-flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.app-unified-footer .contact-list {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  display: inline-flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+.app-unified-footer .links-list {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 20px !important;
+}
+
+.app-unified-footer .links-list a {
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease !important;
+}
+
+.app-unified-footer .links-list a:hover {
+  text-decoration: underline !important;
+  color: #93c5fd !important;
+}
+
+.app-unified-footer .spriteIcon {
+  display: inline-block !important;
+  background: url(/yas/images/master_sprite.webp) !important;
+  text-align: left !important;
+  overflow: hidden !important;
+}
+
+.app-unified-footer .fbIcon {
+  background-position: 476px -200px !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50px !important;
+  transition: opacity 0.15s ease !important;
+}
+
+.app-unified-footer .twitterIcon {
+  background-position: 476px -234px !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50px !important;
+  transition: opacity 0.15s ease !important;
+}
+
+.app-unified-footer .instaIcon {
+  background-position: 476px -268px !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50px !important;
+  transition: opacity 0.15s ease !important;
+}
+
+.app-unified-footer .linkdIn {
+  background-position: 476px -302px !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50px !important;
+  transition: opacity 0.15s ease !important;
+}
+
+.app-unified-footer .youtubeIcon {
+  background-position: 476px -364px !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50px !important;
+  transition: opacity 0.15s ease !important;
+}
+
+.app-unified-footer a.spriteIcon:hover {
+  opacity: 0.85 !important;
+}
+
+.app-unified-footer .phoneIcon {
+  width: 24px !important;
+  height: 24px !important;
+  background-position: 536px -246px !important;
+  vertical-align: middle !important;
+  margin-right: 6px !important;
+}
+
+.app-unified-footer .whiteMailIcon {
+  width: 24px !important;
+  height: 24px !important;
+  background-position: 536px -219px !important;
+  vertical-align: middle !important;
+  margin-right: 6px !important;
+}
+
+.app-unified-footer .contact-link {
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+}
+
+.app-unified-footer .contact-link:hover {
+  text-decoration: underline !important;
+  color: #93c5fd !important;
+}
+
+.app-unified-footer .copyright-text {
+  color: #ffffff !important;
+  font-size: 14px !important;
+  margin: 0 !important;
+}

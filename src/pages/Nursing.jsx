@@ -3,7 +3,7 @@ import { allowedLink } from '../linkPolicy.js';
 import PageRenderer from '../PageRenderer.jsx';
 import CollegeImage from '../components/CollegeImage.jsx';
 import CollegeLogo from '../components/CollegeLogo.jsx';
-import StreamCourseSections from '../components/StreamCourseSections.jsx';
+import Pagination from '../components/Pagination.jsx';
 import { nursingCollegesData } from '../data/nursingCollegesData.js';
 
 export const page = {
@@ -46,7 +46,7 @@ export const page = {
       },
       {
         "property": "og:site_name",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "og:description",
@@ -58,7 +58,7 @@ export const page = {
       },
       {
         "property": "twitter:site",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "twitter:creator",
@@ -219,11 +219,13 @@ export const page = {
   },
 };
 
+const PAGE_SIZE = 20;
+
 function NursingContent() {
   const [selectedState, setSelectedState] = useState("all");
   const [selectedCity, setSelectedCity] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [visibleCount, setVisibleCount] = useState(24);
+  const [currentPage, setCurrentPage] = useState(1);
 
   // States with counts
   const statesList = useMemo(() => {
@@ -289,8 +291,9 @@ function NursingContent() {
   }, [selectedState, selectedCity, searchQuery]);
 
   const displayedColleges = useMemo(() => {
-    return filteredColleges.slice(0, visibleCount);
-  }, [filteredColleges, visibleCount]);
+    const start = (currentPage - 1) * PAGE_SIZE;
+    return filteredColleges.slice(start, start + PAGE_SIZE);
+  }, [filteredColleges, currentPage]);
 
   const handleApplyClick = (collegeName) => {
     window.dispatchEvent(new CustomEvent('open-apply-modal', {
@@ -301,24 +304,24 @@ function NursingContent() {
   const handleStateChange = (e) => {
     setSelectedState(e.target.value);
     setSelectedCity("all");
-    setVisibleCount(24);
+    setCurrentPage(1);
   };
 
   const handleCityChange = (e) => {
     setSelectedCity(e.target.value);
-    setVisibleCount(24);
+    setCurrentPage(1);
   };
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
-    setVisibleCount(24);
+    setCurrentPage(1);
   };
 
   const handleResetFilters = () => {
     setSelectedState("all");
     setSelectedCity("all");
     setSearchQuery("");
-    setVisibleCount(24);
+    setCurrentPage(1);
   };
 
   return (
@@ -344,9 +347,6 @@ function NursingContent() {
       </nav>
       <div className={"blueBgDiv mobileOnly"}></div>
       <div className={"container"}>
-        {/* 3 Core Stream Sections at the very TOP: Course Highlights, Eligibility Criteria, Admission Process */}
-        <StreamCourseSections streamKey="nursing" />
-
         <div className={"pageRedirectionMenu"}></div>
         <div className={"college__Landing__New"}>
           <div className={"college__Landing__Hero__Section1"}>
@@ -2403,7 +2403,7 @@ function NursingContent() {
                       onClick={() => {
                         setSelectedState(st.name === selectedState ? 'all' : st.name);
                         setSelectedCity('all');
-                        setVisibleCount(24);
+                        setCurrentPage(1);
                       }}
                       className={`text-xs px-2.5 py-1.5 rounded-lg font-semibold transition-all cursor-pointer ${
                         selectedState === st.name
@@ -2556,19 +2556,13 @@ function NursingContent() {
               )}
             </div>
 
-            {/* Load More Pagination */}
-            {displayedColleges.length < filteredColleges.length && (
-              <div className="mt-8 text-center">
-                <button
-                  type="button"
-                  onClick={() => setVisibleCount(prev => prev + 24)}
-                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-white hover:bg-slate-50 text-[#0966c2] font-extrabold text-sm rounded-2xl border-2 border-[#0966c2]/30 hover:border-[#0966c2] shadow-xs hover:shadow-md transition-all cursor-pointer"
-                >
-                  Load More Colleges ({filteredColleges.length - displayedColleges.length} remaining)
-                  <span>↓</span>
-                </button>
-              </div>
-            )}
+            {/* Numbered Pagination (20 colleges per page) */}
+            <Pagination
+              currentPage={currentPage}
+              totalItems={filteredColleges.length}
+              pageSize={PAGE_SIZE}
+              onPageChange={setCurrentPage}
+            />
           </div>
         </div>
         <div className={"interestedExam"}></div>

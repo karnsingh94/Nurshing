@@ -8,7 +8,7 @@ export const page = {
   name: "Logo",
   sourceFile: "logo.html",
   slug: "logo",
-  title: "citsAdmission.com - Explore Top Colleges, Courses, Fees and Exams",
+  title: "Admission Portal - Explore Top Colleges, Courses, Fees and Exams",
   head: {
     "meta": [
       {
@@ -36,7 +36,7 @@ export const page = {
       },
       {
         "property": "og:title",
-        "content": "citsAdmission.com - Explore Top Colleges, Courses, Fees and Exams"
+        "content": "Admission Portal - Explore Top Colleges, Courses, Fees and Exams"
       },
       {
         "property": "og:url",
@@ -44,7 +44,7 @@ export const page = {
       },
       {
         "property": "og:site_name",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "og:description",
@@ -56,11 +56,11 @@ export const page = {
       },
       {
         "property": "twitter:site",
-        "content": "citsAdmission.com"
+        "content": "Admission Portal"
       },
       {
         "property": "twitter:creator",
-        "content": "@getmyuniedu"
+        "content": "@admissionportal"
       },
       {
         "property": "twitter:url",
@@ -68,7 +68,7 @@ export const page = {
       },
       {
         "property": "twitter:title",
-        "content": "citsAdmission.com - Explore Top Colleges, Courses, Fees and Exams"
+        "content": "Admission Portal - Explore Top Colleges, Courses, Fees and Exams"
       },
       {
         "property": "twitter:description",
@@ -213,14 +213,10 @@ export const page = {
       {
         "href": "https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css",
         "rel": "stylesheet"
-      },
-      {
-        "href": "/yas/css/version2/min/getmyUniHomeFooter.css?v=1777964297",
-        "rel": "stylesheet"
       }
     ],
     "styles": [
-  
+
     ]
   },
 };
@@ -244,50 +240,50 @@ function LogoContent() {
           <div className={"carouselSection"}>
             <div className={"carouselDiv"}>
               <img src={"https://media.getmyuni.com/assets/images/homepage/homepage_slides/chandigarh-university-lucknow.webp"} srcSet={"https://media.getmyuni.com/assets/images/homepage/homepage_slides/chandigarh-university-lucknow.webp?w=600 600w,,"} sizes={"(max-width: 768px) 100vw, 1200px"} height={"444"} width={"1200"} alt={"Chandigarh University, Uttar Pradesh"} decoding={"async"} fetchPriority={"high"} />
-              <a  className={"sliderName"} aria-label={"Read more about Chandigarh University, Uttar Pradesh"} rel={"nofollow"}>
+              <a className={"sliderName"} aria-label={"Read more about Chandigarh University, Uttar Pradesh"} rel={"nofollow"}>
                 {"Chandigarh University, Uttar Pradesh"}
               </a>
             </div>
             <div className={"carouselDiv"}>
               <img src={"https://media.getmyuni.com/assets/images/homepage/homepage_slides/parul-university-gujarat.webp"} srcSet={"https://media.getmyuni.com/assets/images/homepage/homepage_slides/parul-university-gujarat.webp?w=600 600w,,"} sizes={"(max-width: 768px) 100vw, 1200px"} height={"444"} width={"1200"} alt={"Parul University, Vadodara"} decoding={"async"} fetchPriority={"high"} />
-              <a  className={"sliderName"} aria-label={"Read more about Parul University, Vadodara"} rel={"nofollow"}>
+              <a className={"sliderName"} aria-label={"Read more about Parul University, Vadodara"} rel={"nofollow"}>
                 {"Parul University, Vadodara"}
               </a>
             </div>
             <div className={"carouselDiv"}>
               <img src={"https://media.getmyuni.com/assets/images/homepage/homepage_slides/lovely-professional-university-lpu-jalandhar.webp"} srcSet={"https://media.getmyuni.com/assets/images/homepage/homepage_slides/lovely-professional-university-lpu-jalandhar.webp?w=600 600w,,"} sizes={"(max-width: 768px) 100vw, 1200px"} height={"444"} width={"1200"} alt={"Lovely Professional University- LPU Jalandhar"} decoding={"async"} fetchPriority={"high"} />
-              <a  className={"sliderName"} aria-label={"Read more about Lovely Professional University- LPU Jalandhar"} rel={"nofollow"}>
+              <a className={"sliderName"} aria-label={"Read more about Lovely Professional University- LPU Jalandhar"} rel={"nofollow"}>
                 {"Lovely Professional University- LPU Jalandhar"}
               </a>
             </div>
             <div className={"carouselDiv"}>
               <img src={"https://media.getmyuni.com/assets/images/homepage/homepage_slides/indian-institute-of-technology-iit-guwahati.webp"} srcSet={"https://media.getmyuni.com/assets/images/homepage/homepage_slides/indian-institute-of-technology-iit-guwahati.webp?w=600 600w,,"} sizes={"(max-width: 768px) 100vw, 1200px"} height={"444"} width={"1200"} alt={"Indian Institute of Technology, [IIT] Guwahati "} decoding={"async"} fetchPriority={"high"} />
-              <a  className={"sliderName"} aria-label={"Read more about Indian Institute of Technology, [IIT] Guwahati "}>
+              <a className={"sliderName"} aria-label={"Read more about Indian Institute of Technology, [IIT] Guwahati "}>
                 {"Indian Institute of Technology, [IIT] Guwahati"}
               </a>
             </div>
             <div className={"carouselDiv"}>
               <img src={"https://media.getmyuni.com/assets/images/homepage/homepage_slides/galgotias-university-noida.webp"} srcSet={"https://media.getmyuni.com/assets/images/homepage/homepage_slides/galgotias-university-noida.webp?w=600 600w,,"} sizes={"(max-width: 768px) 100vw, 1200px"} height={"444"} width={"1200"} alt={"Galgotias University, Noida"} decoding={"async"} fetchPriority={"high"} />
-              <a  className={"sliderName"} aria-label={"Read more about Galgotias University, Noida"} rel={"nofollow"}>
+              <a className={"sliderName"} aria-label={"Read more about Galgotias University, Noida"} rel={"nofollow"}>
                 {"Galgotias University, Noida"}
               </a>
             </div>
             <div className={"carouselDiv"}>
               <img src={"https://media.getmyuni.com/assets/images/homepage/homepage_slides/indian-institute-of-science-iis-bangalore.webp"} srcSet={"https://media.getmyuni.com/assets/images/homepage/homepage_slides/indian-institute-of-science-iis-bangalore.webp?w=600 600w,,"} sizes={"(max-width: 768px) 100vw, 1200px"} height={"444"} width={"1200"} alt={"Indian Institute of Science, [IIS] Bangalore"} decoding={"async"} fetchPriority={"high"} />
-              <a  className={"sliderName"} aria-label={"Read more about Indian Institute of Science, [IIS] Bangalore"}>
+              <a className={"sliderName"} aria-label={"Read more about Indian Institute of Science, [IIS] Bangalore"}>
                 {"Indian Institute of Science, [IIS] Bangalore"}
               </a>
             </div>
             <div className={"carouselDiv"}>
               <img src={"https://media.getmyuni.com/assets/images/homepage/homepage_slides/indian-institute-of-management-iim-lucknow.webp"} srcSet={"https://media.getmyuni.com/assets/images/homepage/homepage_slides/indian-institute-of-management-iim-lucknow.webp?w=600 600w,,"} sizes={"(max-width: 768px) 100vw, 1200px"} height={"444"} width={"1200"} alt={"IIM Lucknow - Indian Institute of Management"} decoding={"async"} fetchPriority={"high"} />
-              <a  className={"sliderName"} aria-label={"Read more about IIM Lucknow - Indian Institute of Management"}>
+              <a className={"sliderName"} aria-label={"Read more about IIM Lucknow - Indian Institute of Management"}>
                 {"IIM Lucknow - Indian Institute of Management"}
               </a>
             </div>
           </div>
           <div className={"bannerContent"}>
             <h1>
-              {"citsAdmission.com - Where Educational Choices Are Made Easy"}
+              {"Admission Portal - Where Educational Choices Are Made Easy"}
             </h1>
             <div className={"searchSection"}>
               <div>
@@ -342,15 +338,15 @@ function LogoContent() {
             </div>
           </div>
         </section>
-        <section className={"indexSection pb-0 w-full"}>
+        <section className={"indexSection pb-4 sm:pb-6 w-full"}>
           <div className={"w-full px-3 sm:px-6 md:px-10"}>
             <div className="max-w-[1236px] mx-auto">
               <h2>
                 {"Trending Now"}
               </h2>
             </div>
-            <div className={"trendingTopicsList relative overflow-hidden py-3 bg-gray-50/90 rounded-xl border border-gray-200/70 my-4 w-full shadow-xs"}>
-              <div className={"trending-slider-track flex items-center whitespace-nowrap animate-trending-scroll hover:[animation-play-state:paused] gap-12 font-semibold text-base text-[#0966c2]"}>
+            <div className={"trendingTopicsList relative overflow-hidden py-3 bg-[#f3f4f6] rounded-xl border border-slate-200/80 my-3 w-full shadow-2xs"}>
+              <div className={"trending-slider-track flex items-center whitespace-nowrap animate-trending-scroll hover:[animation-play-state:paused] gap-10 font-semibold text-[15px] text-[#0966c2]"}>
                 {[
                   { text: "Top Nursing Colleges", link: "/nursing" },
                   { text: "Top Pharmacy Colleges", link: "/pharmacy" },
@@ -364,9 +360,9 @@ function LogoContent() {
                   <a
                     key={idx}
                     href={item.link}
-                    className="inline-flex items-center gap-2.5 px-4 py-2 rounded-lg hover:bg-white hover:shadow-xs hover:text-[#09488a] transition-all shrink-0"
+                    className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-lg hover:bg-white/80 hover:shadow-xs hover:text-[#07519a] transition-all shrink-0"
                   >
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#0966c2] animate-pulse"></span>
+                    <span className="w-2 h-2 rounded-full bg-[#0966c2] animate-pulse"></span>
                     <span>{item.text}</span>
                   </a>
                 ))}
@@ -374,7 +370,7 @@ function LogoContent() {
             </div>
           </div>
         </section>
-        <section className={"indexSection"}>
+        <section className={"indexSection py-10 md:py-14 bg-[#fbf9f4] border-y border-[#ede7db]"}>
           <div className={"container"}>
             <h2>
               {"Featured Colleges"}
@@ -956,7 +952,7 @@ function LogoContent() {
               </div>
               <div id={"exams-category"} className={"tab-content"}>
                 <div className={"row limitCards"}>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Agriculture Exam"} className={"indexSprite agriculture"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -967,7 +963,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Architecture Exam"} className={"indexSprite architecture"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -978,7 +974,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Arts Exam"} className={"indexSprite arts"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -989,7 +985,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Commerce Exam"} className={"indexSprite commerce"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -1000,7 +996,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Computer Exam"} className={"indexSprite computer"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -1011,7 +1007,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Dental Exam"} className={"indexSprite dental"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -1022,7 +1018,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Design Exam"} className={"indexSprite design"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -1033,7 +1029,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Education Exam"} className={"indexSprite education"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -1044,7 +1040,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Engineering Exam"} className={"indexSprite engineering"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -1055,7 +1051,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Hotel Management Exam"} className={"indexSprite hotel-management"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -1066,7 +1062,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Law Exam"} className={"indexSprite law"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -1077,7 +1073,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Management Exam"} className={"indexSprite management"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -1088,7 +1084,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Mass Communication Exam"} className={"indexSprite mass-communication"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -1099,7 +1095,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Medical Exam"} className={"indexSprite medical"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -1110,7 +1106,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Paramedical Exam"} className={"indexSprite paramedical"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -1121,7 +1117,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Pharmacy Exam"} className={"indexSprite pharmacy"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -1132,7 +1128,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Science Exam"} className={"indexSprite science"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -1143,7 +1139,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Veterinary Exam"} className={"indexSprite veterinary"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -1154,7 +1150,7 @@ function LogoContent() {
                       </p>
                     </div>
                   </a>
-                  <a  className={"dataCard"}>
+                  <a className={"dataCard"}>
                     <span title={"Vocational Courses Exam"} className={"indexSprite vocational-courses"}></span>
                     <div className={"dataCardText"}>
                       <p>
@@ -2164,49 +2160,49 @@ function LogoContent() {
               {"Search among 500+ government, and competitive entrance exams"}
             </p>
             <div className={"exploreScholorshipDiv row"}>
-              <a title={"State Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"State Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon stateScholarships"}></i>
                 <p>
                   {"State Wise Scholarships"}
                 </p>
               </a>
-              <a title={"Class Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"Class Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon classScholarships"}></i>
                 <p>
                   {"Class Wise Scholarships"}
                 </p>
               </a>
-              <a title={"Discipline Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"Discipline Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon disciplineScholarships"}></i>
                 <p>
                   {"Discipline Wise Scholarships"}
                 </p>
               </a>
-              <a title={"Course Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"Course Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon courseScholarships"}></i>
                 <p>
                   {"Course Wise Scholarships"}
                 </p>
               </a>
-              <a title={"Category Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"Category Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon categoryScholarships"}></i>
                 <p>
                   {"Category Wise Scholarships"}
                 </p>
               </a>
-              <a title={"Type Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"Type Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon typeScholarships"}></i>
                 <p>
                   {"Type Wise Scholarships"}
                 </p>
               </a>
-              <a title={"Gender Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"Gender Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon genderScholarships"}></i>
                 <p>
                   {"Gender Wise Scholarships"}
                 </p>
               </a>
-              <a title={"Country Wise Scholarships"}  className={"scholorshipCard"}>
+              <a title={"Country Wise Scholarships"} className={"scholorshipCard"}>
                 <i className={"spriteIcon countryScholarships"}></i>
                 <p>
                   {"Country Wise Scholarships"}
@@ -2275,7 +2271,7 @@ function LogoContent() {
           <div className={"container"}>
             <div className={"mobileOnly"}>
               <h2>
-                {"citsAdmission.com - Top Education Search Platform."}
+                {"Admission Portal - Top Education Search Platform."}
               </h2>
               <p className={"sectionSubheading"}>
                 {"Your dreams are valuable, let the experts guide to achieve them."}
@@ -2402,7 +2398,7 @@ function LogoContent() {
               <div className={"customSliderCards"}>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={"https://media.getmyuni.com/assets/img/home_new/testimonials/muskan-bebele.webp"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={"/images/testimonials/student-avatar.svg"} alt={"Muskan Bebele"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Muskan Bebele"}
@@ -2415,13 +2411,13 @@ function LogoContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"I am Muskan Babele from Jhansi, Uttar Pradesh. My experience at Sharda University, Greater Noida, in the B.Tech CSE course, is excellent. I got admission in June 2022. Thank you, citsAdmission.com, for making my career better."}
+                      {"I am Muskan Babele from Jhansi, Uttar Pradesh. My experience at Sharda University, Greater Noida, in the B.Tech CSE course, is excellent. I got admission in June 2022. Thank you, Admission Portal, for making my career better."}
                     </p>
                   </div>
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={"https://media.getmyuni.com/assets/img/home_new/testimonials/liya-dominic.webp"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={"/images/testimonials/student-avatar.svg"} alt={"Liya Dominic"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Liya Dominic"}
@@ -2434,13 +2430,13 @@ function LogoContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"This portal has allowed me to enhance my design skills and enrich my knowledge. Presidency University has dependent teachers who make everyone thrilled about future classes. Thanks to citsAdmission.com for assisting me."}
+                      {"This portal has allowed me to enhance my design skills and enrich my knowledge. Presidency University has dependent teachers who make everyone thrilled about future classes. Thanks to Admission Portal for assisting me."}
                     </p>
                   </div>
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={"https://media.getmyuni.com/assets/img/home_new/testimonials/vikas.webp"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={"/images/testimonials/student-avatar.svg"} alt={"Vikas"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Vikas"}
@@ -2453,13 +2449,13 @@ function LogoContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"I am Vikash from Samastipur, Bihar. When I was connected with citsAdmission.com for my future career in Computer Applications, they were more than happy to help me select the best college according to my financial preferences."}
+                      {"I am Vikash from Samastipur, Bihar. When I was connected with Admission Portal for my future career in Computer Applications, they were more than happy to help me select the best college according to my financial preferences."}
                     </p>
                   </div>
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={"https://media.getmyuni.com/assets/img/home_new/testimonials/gaurav-sanjay-kumavat.webp"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={"/images/testimonials/student-avatar.svg"} alt={"Gaurav Sanjay Kumavat"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Gaurav Sanjay Kumavat"}
@@ -2472,13 +2468,13 @@ function LogoContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"citsAdmission.com helped me to find my dream university, and I am thankful to them. Parul University of technology, Gujarat, is among the best colleges for knowledge and learning. citsAdmission.com’s support team helped me a lot."}
+                      {"Admission Portal helped me to find my dream university, and I am thankful to them. Parul University of technology, Gujarat, is among the best colleges for knowledge and learning. Admission Portal's support team helped me a lot."}
                     </p>
                   </div>
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={"https://media.getmyuni.com/assets/img/home_new/testimonials/ashish-patidar.webp"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={"/images/testimonials/student-avatar.svg"} alt={"Ashish Patidar"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Ashish Patidar"}
@@ -2491,13 +2487,13 @@ function LogoContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"I am thankful for the assistance and guidance from citsAdmission.com counsellors while choosing the best and budget-friendly college from the never-ending list of colleges."}
+                      {"I am thankful for the assistance and guidance from Admission Portal counsellors while choosing the best and budget-friendly college from the never-ending list of colleges."}
                     </p>
                   </div>
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={"https://media.getmyuni.com/assets/img/home_new/testimonials/bhumika.webp"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={"/images/testimonials/student-avatar.svg"} alt={"Bhumika"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Bhumika"}
@@ -2510,13 +2506,13 @@ function LogoContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"citsAdmission.com provided the best academic assistance. Here, counsellors are very supportive and helpful. When I completed 12th, I was confused about my career, but I got proper guidance in every field, so my path was clearer."}
+                      {"Admission Portal provided the best academic assistance. Here, counsellors are very supportive and helpful. When I completed 12th, I was confused about my career, but I got proper guidance in every field, so my path was clearer."}
                     </p>
                   </div>
                 </div>
                 <div className={"studentReviewCard"}>
                   <figure>
-                    <img loading={"lazy"} src={"https://media.getmyuni.com/assets/img/home_new/testimonials/tanvi-sharma.webp"} alt={"img"} width={"45"} height={"45"} />
+                    <img loading={"lazy"} src={"/images/testimonials/student-avatar.svg"} alt={"Tanvi Sharma"} width={"45"} height={"45"} />
                   </figure>
                   <span className={"studentName"}>
                     {"Tanvi Sharma"}
@@ -2529,7 +2525,7 @@ function LogoContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"I got to know a lot about LEXICON MILE from citsAdmission.com. The website provided information about campus placement, courses etc. I got a call from their consultant, which greatly helped me. Thank you."}
+                      {"I got to know a lot about LEXICON MILE from Admission Portal. The website provided information about campus placement, courses etc. I got a call from their consultant, which greatly helped me. Thank you."}
                     </p>
                   </div>
                 </div>
@@ -2540,7 +2536,7 @@ function LogoContent() {
         <section className={"indexSection bg-lightgray py-8"}>
           <div className={"container"}>
             <h2 className={"text-center mb-6 text-2xl font-bold"}>
-              {"citsAdmission.com in Media"}
+              {"Admission Portal in Media"}
             </h2>
             <div className={"featuredBrandWrapper"}>
               <div className={"featuredBrandTrack"}>

@@ -353,6 +353,155 @@ export const streamData = {
         desc: "National level management entrance exams accepted by hundreds of AICTE-approved MBA & PGDM colleges across India."
       }
     ]
+  },
+
+  dental: {
+    streamName: "Dental (BDS / MDS)",
+    highlightsTitle: "Dental (BDS / MDS) Course Highlights",
+    highlightsIntro: "Some of the major highlights of Dental courses in India (covering BDS, MDS, and Dental Technology certifications) are as follows:",
+    highlightsTable: [
+      { label: "Course Level", value: "Undergraduate (BDS) & Postgraduate (MDS / Dental Diplomas)" },
+      { label: "Duration", value: "BDS: 5 Years (4 Years Academic + 1 Year Compulsory Internship) | MDS: 3 Years" },
+      { label: "Examination Type", value: "Annual / Semester Wise (Dental Council of India - DCI Guidelines)" },
+      { label: "Admission Process", value: "Mandatory National Level Entrance Exam (NEET UG for BDS, NEET MDS for MDS)" },
+      { label: "Course Fee", value: "Govt Colleges: INR 15,000 to INR 60,000/yr | Private/Deemed: INR 2.5 Lacs to INR 12 Lacs/yr" },
+      { label: "Employment Sectors", value: "Dental Clinics, Multi-Specialty Hospitals, Oral Pathology Centers, Defense Forces Dental Corps, Global Dental Tourism & Research" },
+      { label: "Average Salary", value: "INR 4.5 Lacs to INR 15.0 Lacs per annum (Increases significantly in private practice/MDS)" },
+    ],
+    eligibilityTitle: "Dental Eligibility Criteria",
+    eligibilityIntro: "The eligibility for Dental courses in India as prescribed by the Dental Council of India (DCI) is as follows:",
+    eligibilityBullets: [
+      "Candidate must have passed 10+2 or equivalent examination from a recognised board in India.",
+      "Physics, Chemistry, and Biology/Biotechnology along with English as mandatory core subjects.",
+      "Candidate must have secured a minimum aggregate score of 50% in PCB in Class 12 (40% for SC/ST/OBC).",
+      "Candidate must have attained a minimum age of 17 years on or before 31st December of the admission year.",
+      "Qualifying NEET-UG is strictly mandatory for all BDS admissions in government, private, and deemed dental colleges across India.",
+      "For MDS: Must hold a recognized BDS degree from a DCI-recognized dental college and qualify NEET MDS."
+    ],
+    admissionTitle: "Dental Admission Process",
+    admissionIntro: "Admission to BDS and MDS courses in India is conducted strictly through centralized merit counseling based on NEET scores.",
+    directAdmissionBullets: [
+      "As per Supreme Court and DCI guidelines, there is NO direct admission without NEET qualification.",
+      "All private and management quota seats are allocated exclusively through MCC or State DGME counseling portals based on NEET merit."
+    ],
+    entranceAdmissionBullets: [
+      "Candidates must register, appear, and qualify in NEET-UG (for BDS) or NEET-MDS (for MDS).",
+      "Medical Counseling Committee (MCC) conducts counseling for 15% All India Quota (AIQ) and 100% Deemed Universities.",
+      "State Medical & Dental counseling boards conduct counseling for the 85% State Quota seats.",
+      "Candidates submit choice filling online, receive seat allotment, and report to the allotted dental college for document verification."
+    ],
+    entranceExamsIntro: "The mandatory entrance exams for Dental admissions in India include:",
+    entranceExams: [
+      {
+        name: "NEET UG (National Eligibility cum Entrance Test)",
+        desc: "The single national-level entrance exam conducted by NTA for admission to BDS in all dental colleges across India."
+      },
+      {
+        name: "NEET MDS",
+        desc: "National level entrance examination conducted by NBEMS for admission to Master of Dental Surgery (MDS) postgraduate seats."
+      },
+      {
+        name: "INI CET (Dental)",
+        desc: "Combined entrance test for MDS admissions at AIIMS New Delhi and PGIMER Chandigarh."
+      }
+    ]
+  },
+
+  engineering: {
+    streamName: "Engineering & Technology",
+    highlightsTitle: "Engineering & Technology Course Highlights",
+    highlightsIntro: "Some of the major highlights of Engineering courses in India (covering B.Tech, B.E., M.Tech, and Polytechnic Diplomas) are as follows:",
+    highlightsTable: [
+      { label: "Course Level", value: "Diploma (Polytechnic), Undergraduate (B.Tech / B.E.) & Postgraduate (M.Tech / M.E.)" },
+      { label: "Duration", value: "Polytechnic: 3 Years | B.Tech/B.E.: 4 Years | Lateral Entry: 3 Years | M.Tech: 2 Years" },
+      { label: "Examination Type", value: "Semester Wise (AICTE / UGC Standard Curriculum)" },
+      { label: "Admission Process", value: "National & State Level Entrance Exams (JEE Main, JEE Advanced, State CETs) / Merit-Based" },
+      { label: "Course Fee", value: "INR 50,000 to INR 4.50 Lacs per year (IITs/NITs/Top Private Universities)" },
+      { label: "Employment Sectors", value: "Information Technology, Software Engineering, AI & Robotics, Core Manufacturing, Automotive, Aerospace, Defense Research, Renewable Energy & Startups" },
+      { label: "Average Salary", value: "INR 4.5 Lacs to INR 22.0 Lacs per annum (Top tier campus offers 30-60+ LPA)" },
+    ],
+    eligibilityTitle: "Engineering Eligibility Criteria",
+    eligibilityIntro: "The eligibility for Engineering courses across India is as follows:",
+    eligibilityBullets: [
+      "Candidate must have passed 10+2 or equivalent examination with Physics and Mathematics as compulsory subjects along with Chemistry/Biotechnology/Computer Science.",
+      "Minimum aggregate of 50% - 60% marks in PCM in Class 12 (45% for reserved categories).",
+      "For IITs & NITs: Candidate must secure at least 75% aggregate marks in 10+2 (65% for SC/ST) or be in the top 20 percentile of their board.",
+      "For Lateral Entry (2nd Year B.Tech): Passed 3-year Diploma in Engineering with minimum 50% marks.",
+      "For M.Tech: Passed B.Tech/B.E. in relevant specialization with valid GATE score or university entrance test."
+    ],
+    admissionTitle: "Engineering Admission Process",
+    admissionIntro: "Admission to Engineering courses is conducted through national and state level entrance examinations or institutional counseling.",
+    directAdmissionBullets: [
+      "Direct admission based on 10+2 marks is available for management quota seats in private engineering colleges.",
+      "Candidates submit direct applications to the institute, followed by document verification and fee payment."
+    ],
+    entranceAdmissionBullets: [
+      "Candidates appear for national level (JEE Main / JEE Advanced) or state level tests (WBJEE, MHT CET, COMEDK, KCET).",
+      "JoSAA / CSAB conducts centralized counseling for IITs, NITs, IIITs, and GFTIs.",
+      "State counseling authorities allocate seats in government and state private engineering colleges based on rank and preference."
+    ],
+    entranceExamsIntro: "Major entrance exams for Engineering admissions in India include:",
+    entranceExams: [
+      {
+        name: "JEE Main & JEE Advanced",
+        desc: "Apex national level entrance exams conducted by NTA and IITs for admission to IITs, NITs, IIITs, and premier engineering institutes."
+      },
+      {
+        name: "BITSAT / VITEEE / SRMJEEE / MET",
+        desc: "Prestigious university-level entrance exams for admission to BITS Pilani, VIT University, SRM Institute, and Manipal Academy."
+      },
+      {
+        name: "State CETs (MHT CET, WBJEE, KCET, AP/TS EAPCET)",
+        desc: "State-level engineering entrance exams for state university colleges and government-aided institutions."
+      }
+    ]
+  },
+
+  computer: {
+    streamName: "Computer Applications & IT",
+    highlightsTitle: "Computer Applications (BCA / MCA) Course Highlights",
+    highlightsIntro: "Some of the major highlights of Computer Applications & IT courses in India (covering BCA, MCA, B.Sc Computer Science, and Data Science) are as follows:",
+    highlightsTable: [
+      { label: "Course Level", value: "Undergraduate (BCA, B.Sc IT / CS) & Postgraduate (MCA, M.Sc IT / Data Science)" },
+      { label: "Duration", value: "BCA / B.Sc IT: 3 Years | MCA / M.Sc CS: 2 Years" },
+      { label: "Examination Type", value: "Semester Wise (AICTE / UGC Guidelines)" },
+      { label: "Admission Process", value: "Merit-Based (10+2) / National & State Entrance Exams (NIMCET, CUET, MAH MCA CET)" },
+      { label: "Course Fee", value: "INR 40,000 to INR 2.20 Lacs per year (Govt and Private Universities)" },
+      { label: "Employment Sectors", value: "Software Development, Cloud Computing, Cybersecurity, Full-Stack Development, Data Analytics, AI/ML Engineering & IT Consulting" },
+      { label: "Average Salary", value: "INR 3.8 Lacs to INR 14.0 Lacs per annum" },
+    ],
+    eligibilityTitle: "Computer Applications Eligibility Criteria",
+    eligibilityIntro: "The eligibility for Computer Applications and IT courses in India is as follows:",
+    eligibilityBullets: [
+      "For BCA: Passed 10+2 in any stream (Science, Commerce, Arts) with Mathematics / Computer Application / Information Practice as a subject with minimum 50% aggregate marks (45% for reserved categories).",
+      "For MCA: Passed BCA / B.Sc (Computer Science/IT) or any Bachelor's degree with Mathematics at 10+2 level or graduation level with minimum 50% marks (45% for reserved categories).",
+      "Qualifying score in NIMCET, MAH MCA CET, CUET-PG, or university specific entrance tests for top colleges."
+    ],
+    admissionTitle: "Computer Applications Admission Process",
+    admissionIntro: "Admission to BCA and MCA courses is conducted on the basis of 10+2/graduation merit or competitive entrance exams.",
+    directAdmissionBullets: [
+      "Direct merit-based admission based on 10+2 marks is offered by most private universities and colleges for BCA.",
+      "Candidates apply directly on the college admissions portal with academic mark sheets."
+    ],
+    entranceAdmissionBullets: [
+      "For premier MCA institutions (NITs, Central Universities), candidates must qualify in NIMCET or CUET-PG.",
+      "Centralized counseling is conducted for seat allotment based on entrance rank and college preference."
+    ],
+    entranceExamsIntro: "Major entrance exams for Computer Applications include:",
+    entranceExams: [
+      {
+        name: "NIMCET (NIT MCA Common Entrance Test)",
+        desc: "National level test conducted by NITs for admission to Master of Computer Applications (MCA) programmes across National Institutes of Technology."
+      },
+      {
+        name: "CUET UG / CUET PG",
+        desc: "Central Universities Entrance Test for admission to BCA and MCA courses in Central and participating State Universities."
+      },
+      {
+        name: "MAH MCA CET / IPU CET",
+        desc: "State and university level tests for top MCA colleges in Maharashtra, Delhi NCR, and other regions."
+      }
+    ]
   }
 };
 

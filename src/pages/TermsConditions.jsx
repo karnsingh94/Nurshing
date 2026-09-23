@@ -41,7 +41,7 @@ export default function TermsConditions({ onNavigate }) {
             Effective Date: January 1, 2026 | Last Revised: 2026 Edition
           </p>
           <p className="text-slate-300 text-xs sm:text-sm max-w-3xl mt-2 leading-relaxed">
-            Please read these terms and conditions carefully before utilizing the educational search, counseling, ranking information, or application assistance tools provided on citsAdmission.com.
+            Please read these terms and conditions carefully before utilizing the educational search, counseling, ranking information, or application assistance tools provided on Admission Portal.
           </p>
         </div>
       </section>
@@ -49,7 +49,7 @@ export default function TermsConditions({ onNavigate }) {
       {/* Main Content Area */}
       <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Table of Contents / Sidebar */}
           <aside className="lg:col-span-4 sticky top-24 bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
             <h3 className="text-xs font-extrabold uppercase tracking-widest text-[#0966c2] mb-4">
@@ -61,11 +61,10 @@ export default function TermsConditions({ onNavigate }) {
                   key={sec.id}
                   type="button"
                   onClick={() => scrollTo(sec.id)}
-                  className={`w-full text-left px-3 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors cursor-pointer block ${
-                    activeSection === sec.id
+                  className={`w-full text-left px-3 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors cursor-pointer block ${activeSection === sec.id
                       ? 'bg-blue-50 text-[#0966c2] font-bold'
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-                  }`}
+                    }`}
                 >
                   {sec.title}
                 </button>
@@ -86,17 +85,17 @@ export default function TermsConditions({ onNavigate }) {
 
           {/* Legal Clauses */}
           <main className="lg:col-span-8 bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-slate-200 space-y-10 text-slate-700 leading-relaxed text-sm sm:text-base">
-            
+
             {/* Clause 1 */}
             <section id="acceptance" className="scroll-mt-24">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 pb-2 border-b border-slate-100">
                 1. Acceptance of Agreement
               </h2>
               <p className="mb-3">
-                This document constitutes a legally binding agreement between you ("User", "Student", "Parent", or "Visitor") and <strong>citsAdmission.com</strong> ("Website", "Portal", "We", "Us").
+                This document constitutes a legally binding agreement between you ("User", "Student", "Parent", or "Visitor") and <strong>Admission Portal</strong> ("Website", "Portal", "We", "Us").
               </p>
               <p>
-                By accessing, browsing, registering on, or submitting an inquiry via citsAdmission.com, you unconditionally accept and agree to comply with and be bound by these Terms & Conditions. If you do not agree with any part of these terms, please discontinue use of this portal.
+                By accessing, browsing, registering on, or submitting an inquiry via Admission Portal, you unconditionally accept and agree to comply with and be bound by these Terms & Conditions. If you do not agree with any part of these terms, please discontinue use of this portal.
               </p>
             </section>
 
@@ -106,7 +105,7 @@ export default function TermsConditions({ onNavigate }) {
                 2. Scope of Counseling Services
               </h2>
               <p className="mb-3">
-                citsAdmission.com is an educational discovery portal and independent student counseling facilitator. Our platform provides:
+                Admission Portal is an educational discovery portal and independent student counseling facilitator. Our platform provides:
               </p>
               <ul className="list-disc pl-5 space-y-2 mb-3">
                 <li>Aggregated college details including courses offered, fees, campus facilities, cutoffs, and NIRF rankings.</li>
@@ -114,7 +113,7 @@ export default function TermsConditions({ onNavigate }) {
                 <li>Direct assistance in downloading brochures, contacting admissions desks, and completing preliminary application forms.</li>
               </ul>
               <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm">
-                <strong>Important Notice:</strong> citsAdmission.com is not an examination conducting authority, university, or affiliated board. Final admission decisions, seat confirmations, and fee disbursements are solely within the jurisdiction of respective colleges and regulatory counseling bodies (such as NTA, MCC, JoSAA, State DTEs).
+                <strong>Important Notice:</strong> Admission Portal is not an examination conducting authority, university, or affiliated board. Final admission decisions, seat confirmations, and fee disbursements are solely within the jurisdiction of respective colleges and regulatory counseling bodies (such as NTA, MCC, JoSAA, State DTEs).
               </div>
             </section>
 
@@ -124,25 +123,25 @@ export default function TermsConditions({ onNavigate }) {
                 3. User Eligibility & Conduct
               </h2>
               <p className="mb-3">
-                By submitting inquiries or registering on our platform, you confirm that:
+                By using this portal, you affirm that:
               </p>
               <ul className="list-disc pl-5 space-y-2">
-                <li>You are at least 16 years of age or accessing under the supervision of a parent or guardian.</li>
-                <li>All personal and academic details (marks, ranks, phone number) provided by you are authentic, true, and up-to-date.</li>
-                <li>You will use the portal solely for legitimate academic exploration and counseling purposes.</li>
+                <li>You are at least 13 years of age, or accessing under the supervision of a parent/guardian.</li>
+                <li>All educational scores, contact credentials, and preference details provided by you are true, accurate, and up-to-date.</li>
+                <li>You will use the information retrieved exclusively for personal educational evaluation and authentic counseling inquiries.</li>
               </ul>
             </section>
 
             {/* Clause 4 */}
             <section id="accuracy" className="scroll-mt-24">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 pb-2 border-b border-slate-100">
-                4. Information Accuracy & Disclaimers
+                4. Information Accuracy & Fee Structure Revisions
               </h2>
               <p className="mb-3">
-                While citsAdmission.com takes every reasonable step to ensure the data displayed (tuition fees, hostel charges, cutoff ranks, placement metrics) is accurate and synchronized with official college prospectuses, <strong>institutions frequently update fee structures and quota policies</strong>.
+                While Admission Portal takes every reasonable step to ensure the data displayed (tuition fees, hostel charges, cutoff ranks, placement metrics) is accurate and synchronized with official college prospectuses, <strong>institutions frequently update fee structures and quota policies</strong>.
               </p>
               <p>
-                Students are strongly encouraged to verify final fee amounts, eligibility criteria, and quota seats with the official college administration before finalizing payments. citsAdmission.com shall not be held liable for discrepancies resulting from unnotified institutional revisions.
+                Students are strongly encouraged to verify final fee amounts, eligibility criteria, and quota seats with the official college administration before finalizing payments. Admission Portal shall not be held liable for discrepancies resulting from unnotified institutional revisions.
               </p>
             </section>
 
@@ -152,7 +151,7 @@ export default function TermsConditions({ onNavigate }) {
                 5. Intellectual Property Rights
               </h2>
               <p className="mb-3">
-                All contents, software code, UI designs, brand marks, logos, graphics, and articles on citsAdmission.com are the exclusive intellectual property of citsAdmission.com or its licensors.
+                All contents, software code, UI designs, brand marks, logos, graphics, and articles on Admission Portal are the exclusive intellectual property of Admission Portal or its licensors.
               </p>
               <p>
                 Institutional logos and college names belong to their respective registered universities and are utilized strictly for informational identification and comparative directory purposes.
@@ -190,7 +189,7 @@ export default function TermsConditions({ onNavigate }) {
                 8. Limitation of Liability
               </h2>
               <p>
-                To the fullest extent permitted under applicable law, citsAdmission.com and its directors, counselors, and employees shall not be liable for any direct, indirect, incidental, or consequential damages resulting from admission rejections, cutoff variations, seat cancellations, or technical outages.
+                To the fullest extent permitted under applicable law, Admission Portal and its directors, counselors, and employees shall not be liable for any direct, indirect, incidental, or consequential damages resulting from admission rejections, cutoff variations, seat cancellations, or technical outages.
               </p>
             </section>
 
@@ -200,7 +199,7 @@ export default function TermsConditions({ onNavigate }) {
                 9. User Indemnification
               </h2>
               <p>
-                You agree to indemnify, defend, and hold harmless citsAdmission.com from any claims, losses, liabilities, and expenses (including legal fees) arising from your breach of these Terms & Conditions or submission of false academic information.
+                You agree to indemnify, defend, and hold harmless Admission Portal from any claims, losses, liabilities, and expenses (including legal fees) arising from your breach of these Terms & Conditions or submission of false academic information.
               </p>
             </section>
 
@@ -229,18 +228,9 @@ export default function TermsConditions({ onNavigate }) {
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 pb-2 border-b border-slate-100">
                 12. Grievance Redressal Mechanism
               </h2>
-              <p className="mb-4">
-                If you have any questions, clarifications, or grievances regarding these terms, please contact our Legal & Grievance Department:
+              <p className="mb-4 text-slate-700 leading-relaxed">
+                If you have any questions, clarifications, or grievances regarding these terms, please contact our Legal & Grievance Department via our Contact Us .
               </p>
-{/*               
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-xs sm:text-sm space-y-1.5">
-                <div className="font-bold text-slate-900 text-base">Legal & Grievance Department</div>
-                <div className="text-slate-700">citsAdmission.com Compliance Cell</div>
-                <div className="text-slate-600">Knowledge Boulevard, Sector 62, Noida, NCR - 201309</div>
-                <div>Email: <a href="mailto:grievance@citsadmission.com" className="text-[#0966c2] font-semibold hover:underline">grievance@citsadmission.com</a></div>
-                <div>Toll-Free Support: <a href="tel:18001234567" className="text-[#0966c2] font-semibold hover:underline">1800-123-4567</a></div>
-              </div> */}
-
             </section>
 
           </main>

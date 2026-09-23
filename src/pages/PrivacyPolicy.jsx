@@ -39,7 +39,7 @@ export default function PrivacyPolicy({ onNavigate }) {
             Effective Date: January 1, 2026 | Last Updated: 2026 Edition
           </p>
           <p className="text-slate-300 text-xs sm:text-sm max-w-3xl mt-2 leading-relaxed">
-            At citsAdmission.com, we are deeply committed to safeguarding your personal and academic information. This policy explains our data practices and your rights regarding your information.
+            At Admission Portal, we are deeply committed to safeguarding your personal and academic information. This policy explains our data practices and your rights regarding your information.
           </p>
         </div>
       </section>
@@ -47,7 +47,7 @@ export default function PrivacyPolicy({ onNavigate }) {
       {/* Main Content Area */}
       <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Table of Contents / Sidebar */}
           <aside className="lg:col-span-4 sticky top-24 bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
             <h3 className="text-xs font-extrabold uppercase tracking-widest text-[#0966c2] mb-4">
@@ -59,11 +59,10 @@ export default function PrivacyPolicy({ onNavigate }) {
                   key={sec.id}
                   type="button"
                   onClick={() => scrollTo(sec.id)}
-                  className={`w-full text-left px-3 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors cursor-pointer block ${
-                    activeSection === sec.id
+                  className={`w-full text-left px-3 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors cursor-pointer block ${activeSection === sec.id
                       ? 'bg-blue-50 text-[#0966c2] font-bold'
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-                  }`}
+                    }`}
                 >
                   {sec.title}
                 </button>
@@ -84,17 +83,17 @@ export default function PrivacyPolicy({ onNavigate }) {
 
           {/* Legal Text Sections */}
           <main className="lg:col-span-8 bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-slate-200 space-y-10 text-slate-700 leading-relaxed text-sm sm:text-base">
-            
+
             {/* Section 1 */}
             <section id="intro" className="scroll-mt-24">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 pb-2 border-b border-slate-100">
                 1. Introduction & Scope
               </h2>
               <p className="mb-3">
-                Welcome to <strong>citsAdmission.com</strong> ("we", "our", or "us"). This Privacy Policy applies to all students, parents, educators, and visitors ("you" or "User") who access our website, mobile interfaces, counseling services, cutoff estimation tools, and college application assistance features.
+                Welcome to <strong>Admission Portal</strong> ("we", "our", or "us"). This Privacy Policy applies to all students, parents, educators, and visitors ("you" or "User") who access our website, mobile interfaces, counseling services, cutoff estimation tools, and college application assistance features.
               </p>
               <p>
-                By accessing or using citsAdmission.com, you acknowledge that you have read, understood, and agree to the collection and handling of your data as outlined in this Privacy Policy.
+                By accessing or using Admission Portal, you acknowledge that you have read, understood, and agree to the collection and handling of your data as outlined in this Privacy Policy.
               </p>
             </section>
 
@@ -177,7 +176,7 @@ export default function PrivacyPolicy({ onNavigate }) {
                 5. Cookies & Tracking Technologies
               </h2>
               <p className="mb-3">
-                citsAdmission.com uses standard cookies and session tracking to improve user experience, memorize search filters (e.g. stream, city, state selections), and analyze website performance.
+                Admission Portal uses standard cookies and session tracking to improve user experience, memorize search filters (e.g. stream, city, state selections), and analyze website performance.
               </p>
               <p>
                 You can configure your browser to reject cookies or notify you when cookies are being stored; however, certain portal functions such as customized college comparisons may have reduced performance.
@@ -210,7 +209,7 @@ export default function PrivacyPolicy({ onNavigate }) {
               <ul className="list-disc pl-5 space-y-2">
                 <li><strong>Right to Access:</strong> Inquire about what personal details we have stored for your account.</li>
                 <li><strong>Right to Rectification:</strong> Request corrections to outdated phone numbers, email addresses, or academic scores.</li>
-                <li><strong>Right to Erasure / Opt-Out:</strong> Request permanent removal of your contact information from our counseling callback lists by emailing <a href="mailto:privacy@citsadmission.com" className="text-[#0966c2] font-semibold hover:underline">privacy@citsadmission.com</a>.</li>
+                <li><strong>Right to Erasure / Opt-Out:</strong> Request permanent removal of your contact information from our counseling callback lists by reaching out via our helpdesk.</li>
               </ul>
             </section>
 
@@ -239,16 +238,9 @@ export default function PrivacyPolicy({ onNavigate }) {
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 pb-2 border-b border-slate-100">
                 10. Grievance Officer & Inquiries
               </h2>
-              <p className="mb-4">
-                In accordance with the Information Technology Act 2000 and the Digital Personal Data Protection guidelines, any complaints, data deletion requests, or grievances regarding this policy may be addressed to:
+              <p className="mb-4 text-slate-700 leading-relaxed">
+                In accordance with the Information Technology Act, 2000 and applicable data protection regulations, any questions, data deletion requests, or grievances regarding this policy may be addressed to our Legal & Grievance Department via our Contact Us .
               </p>
-              {/* <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-xs sm:text-sm space-y-1.5">
-                <div className="font-bold text-slate-900 text-base">Data Protection & Grievance Officer</div>
-                <div className="text-slate-700">citsAdmission.com Legal & Compliance Cell</div>
-                <div className="text-slate-600">Knowledge Boulevard, Sector 62, Noida, NCR - 201309</div>
-                <div>Email: <a href="mailto:privacy@citsadmission.com" className="text-[#0966c2] font-semibold hover:underline">privacy@citsadmission.com</a></div>
-                <div>Helpline: <a href="tel:18001234567" className="text-[#0966c2] font-semibold hover:underline">1800-123-4567</a></div>
-              </div> */}
             </section>
 
           </main>
