@@ -247,23 +247,42 @@ export default function Navbar({ activeSlug, onNavigate }) {
       }}
     >
       <div className="site-nav__inner">
-        <a
-          className="site-nav__brand"
-          href="/home"
-          aria-label="Admission Portal home"
-          onClick={(event) => {
-            if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-            event.preventDefault();
-            onNavigate('/home');
-          }}
-        >
-          <img src="/brand-logo.svg" alt="Admission Portal" style={{ height: '42px', width: 'auto', display: 'block' }} />
-        </a>
+        <div className="site-nav__header-row flex items-center justify-between w-full md:w-auto">
+          <a
+            className="site-nav__brand"
+            href="/home"
+            aria-label="Admission Portal home"
+            onClick={(event) => {
+              if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+              event.preventDefault();
+              onNavigate('/home');
+            }}
+          >
+            <img src="/brand-logo.svg" alt="Admission Portal" style={{ height: '42px', width: 'auto', display: 'block' }} />
+          </a>
 
-        <button type="button" className="mobile-nav-toggle" aria-controls="main-navigation" aria-expanded={mobileOpen} aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'} onClick={() => { setMobileOpen(open => !open); setDismissed(false); }}>
-          <span aria-hidden="true">{mobileOpen ? '✕' : '☰'}</span> Menu
-        </button>
-        <div className="site-nav__right flex items-center gap-3 ml-auto h-full">
+          <button
+            type="button"
+            className="mobile-nav-toggle md:hidden flex items-center justify-center p-2 text-white hover:text-amber-300 focus:outline-none transition-colors cursor-pointer"
+            style={{ marginLeft: 'auto' }}
+            aria-controls="main-navigation"
+            aria-expanded={mobileOpen}
+            aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            onClick={() => { setMobileOpen(open => !open); setDismissed(false); }}
+          >
+            {mobileOpen ? (
+              <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            ) : (
+              <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            )}
+          </button>
+        </div>
+
+        <div className={`site-nav__right flex items-center gap-3 ml-auto h-full max-md:w-full max-md:ml-0 ${mobileOpen ? 'max-md:block' : 'max-md:hidden'}`}>
           <nav
             id="main-navigation"
             className="site-nav__links"

@@ -808,7 +808,7 @@
   }
 
   .site-nav .mobile-nav-toggle {
-    @apply hidden max-md:inline-flex max-md:items-center max-md:gap-2 max-md:ml-auto max-md:min-h-[44px] max-md:px-3 max-md:py-2 max-md:text-white max-md:bg-transparent max-md:border max-md:border-current max-md:rounded-lg;
+    @apply hidden max-md:inline-flex max-md:items-center max-md:justify-center max-md:ml-auto max-md:w-10 max-md:h-10 max-md:p-1 max-md:text-white max-md:bg-transparent max-md:border-0 max-md:rounded-lg;
   }
 
   .site-nav .nav-expand {
@@ -820,7 +820,43 @@
       flex-wrap: wrap !important;
       min-height: 58px !important;
       height: auto !important;
-      padding: 8px 12px !important;
+      padding: 8px 16px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+    }
+
+    .site-nav__header-row {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+    }
+
+    .site-nav__brand {
+      margin-right: 0 !important;
+    }
+
+    .site-nav .mobile-nav-toggle {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin-left: auto !important;
+      width: 42px !important;
+      height: 42px !important;
+      color: #ffffff !important;
+      border: 0 !important;
+      background: transparent !important;
+      outline: none !important;
+      cursor: pointer !important;
+    }
+
+    .site-nav .mobile-nav-toggle svg {
+      width: 28px !important;
+      height: 28px !important;
+      stroke: #ffffff !important;
+      color: #ffffff !important;
     }
 
     .site-nav__links {
@@ -834,8 +870,14 @@
       max-height: 75vh !important;
       overflow-y: auto !important;
       margin-top: 8px !important;
-      padding: 8px 0 !important;
+      padding: 8px 0 16px 0 !important;
       border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .site-nav.mobile-menu-open .site-nav__right {
+      display: block !important;
+      width: 100% !important;
+      margin-left: 0 !important;
     }
 
     .site-nav__item {
@@ -851,6 +893,14 @@
       width: 100% !important;
       min-height: 44px !important;
       padding: 10px 12px !important;
+      border-radius: 8px !important;
+      font-size: 15px !important;
+      font-weight: 600 !important;
+    }
+
+    .site-nav__item > a:hover,
+    .site-nav__item > button:hover {
+      background: rgba(255, 255, 255, 0.1) !important;
     }
 
     .site-nav .nav-expand {
@@ -1250,6 +1300,80 @@
 
 .homeFeaturedCollege .displayCard:hover figure img {
   transform: scale(1.06) !important;
+}
+
+/* Global displayCard / Latest Articles & News Cards Enhancement */
+.displayCard {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  vertical-align: top !important;
+}
+
+.displayCard:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09) !important;
+  border-color: #cbd5e1 !important;
+  text-decoration: none !important;
+}
+
+.displayCard a,
+.displayCard a:hover,
+.displayCard a:focus,
+.displayCard a:visited,
+.displayCard a:active {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.displayCard .widgetCardHeading {
+  color: #1e293b !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.displayCard:hover .widgetCardHeading,
+.displayCard a:hover .widgetCardHeading,
+.displayCard .widgetCardHeading:hover {
+  color: #0966c2 !important;
+  text-decoration: none !important;
+}
+
+.displayCard figure {
+  overflow: hidden !important;
+  margin: 0 !important;
+  border-radius: 12px 12px 0 0 !important;
+}
+
+.displayCard figure img {
+  transition: transform 0.35s ease !important;
+}
+
+.displayCard:hover figure img {
+  transform: scale(1.05) !important;
+}
+
+.displayCard .authorName,
+.displayCard .authorName:hover,
+.displayCard .authorName:focus {
+  text-decoration: none !important;
+}
+
+.displayCard .authorName .subText {
+  color: #0966c2 !important;
+  text-decoration: none !important;
+}
+
+.displayCard .authorName:hover .subText {
+  color: #0753a3 !important;
+  text-decoration: none !important;
 }
 
 @keyframes trending-scroll {
