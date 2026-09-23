@@ -1,7 +1,7 @@
-// Auto-generated Pharmacy Colleges list from official PDF (Total: 727)
+// Auto-generated Pharmacy Colleges list (Updated with newly provided PDF list - Total: 781)
 export const pharmacyCollegesData = [
   {
-    "id": "pharmacy-1",
+    "id": "pharm-1",
     "name": "A.S.N Pharmacy College, Guntur DisT",
     "stream": "Pharmacy",
     "district": "Guntur",
@@ -24,7 +24,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-2",
+    "id": "pharm-2",
     "name": "Adarsha College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -47,7 +47,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-3",
+    "id": "pharm-3",
     "name": "Annamacharya College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -70,7 +70,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-4",
+    "id": "pharm-4",
     "name": "B.V.K. Junior College, Dwarkanagar",
     "stream": "Pharmacy",
     "district": "Dwarkanagar",
@@ -93,7 +93,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-5",
+    "id": "pharm-5",
     "name": "Bapatla College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -116,7 +116,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-6",
+    "id": "pharm-6",
     "name": "Chalapathi Institute of Pharmaceutical Sciences, Guntur",
     "stream": "Pharmacy",
     "district": "Guntur",
@@ -139,7 +139,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-7",
+    "id": "pharm-7",
     "name": "Department of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -162,7 +162,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-8",
+    "id": "pharm-8",
     "name": "Dr. Samuel George Institute of Pharmaceutical Sciences, Thokapally Markapur",
     "stream": "Pharmacy",
     "district": "Markapur",
@@ -185,7 +185,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-9",
+    "id": "pharm-9",
     "name": "Fathima Institute of Pharmacy, Pulivendula road, Kadapa",
     "stream": "Pharmacy",
     "district": "Kadapa",
@@ -208,7 +208,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-10",
+    "id": "pharm-10",
     "name": "Govt. Junior College, Srikakulam Dist",
     "stream": "Pharmacy",
     "district": "Srikakulam",
@@ -231,7 +231,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-11",
+    "id": "pharm-11",
     "name": "Govt. Junior College, Anantpur Dist",
     "stream": "Pharmacy",
     "district": "Anantpur",
@@ -254,7 +254,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-12",
+    "id": "pharm-12",
     "name": "Govt. Junior College, Cuddapah Dist",
     "stream": "Pharmacy",
     "district": "Cuddapah",
@@ -277,7 +277,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-13",
+    "id": "pharm-13",
     "name": "Govt. Junior College for Boys",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -300,7 +300,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-14",
+    "id": "pharm-14",
     "name": "Govt. Junior College for Girls, Chittoor Dist",
     "stream": "Pharmacy",
     "district": "Chittoor",
@@ -323,7 +323,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-15",
+    "id": "pharm-15",
     "name": "Govt. Polytechnic for Women, East Godavari",
     "stream": "Pharmacy",
     "district": "East Godavari",
@@ -346,7 +346,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-16",
+    "id": "pharm-16",
     "name": "Govt. Polytechnic for Women, Anantpur Dist",
     "stream": "Pharmacy",
     "district": "Anantpur",
@@ -369,7 +369,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-17",
+    "id": "pharm-17",
     "name": "Hindu College of Pharmacy Guntur",
     "stream": "Pharmacy",
     "district": "Guntur",
@@ -392,7 +392,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-18",
+    "id": "pharm-18",
     "name": "Institute of Pharmaceutical Technology",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -415,7 +415,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-19",
+    "id": "pharm-19",
     "name": "KJR College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -438,7 +438,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-20",
+    "id": "pharm-20",
     "name": "K.D.R. Govt. Polytechnic",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -461,7 +461,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-21",
+    "id": "pharm-21",
     "name": "K.V.S.R. Siddharatha College of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -484,7 +484,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-22",
+    "id": "pharm-22",
     "name": "Kakateeya Junior College, Cuddapah Dist",
     "stream": "Pharmacy",
     "district": "Cuddapah",
@@ -507,7 +507,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-23",
+    "id": "pharm-23",
     "name": "L.A. Govt, Junior College for Girls",
     "stream": "Pharmacy",
     "district": "Girls",
@@ -530,7 +530,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-24",
+    "id": "pharm-24",
     "name": "Malineni Lakshmaiah College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -553,7 +553,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-25",
+    "id": "pharm-25",
     "name": "Nirmal College or Pharmacy, Buddayapalle (P.O.)",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -576,7 +576,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-26",
+    "id": "pharm-26",
     "name": "Nirmala College of Pharmacy Guntur, Mangalagiri (Mdl)",
     "stream": "Pharmacy",
     "district": "Guntur",
@@ -599,7 +599,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-27",
+    "id": "pharm-27",
     "name": "Raghavendra Institute of Pharmaceutical Education & Research (RIPER), Chiyyedu (PO)",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -622,7 +622,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-28",
+    "id": "pharm-28",
     "name": "Anantapuram (Dt)",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -645,7 +645,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-29",
+    "id": "pharm-29",
     "name": "Ramakrishna Junior College",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -668,7 +668,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-30",
+    "id": "pharm-30",
     "name": "Rao's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -691,7 +691,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-31",
+    "id": "pharm-31",
     "name": "S.V.Govt.Polytechnic, Chittoor Dist",
     "stream": "Pharmacy",
     "district": "Chittoor",
@@ -714,7 +714,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-32",
+    "id": "pharm-32",
     "name": "Sarada College of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -737,7 +737,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-33",
+    "id": "pharm-33",
     "name": "Sasikanth Reddy College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -760,7 +760,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-34",
+    "id": "pharm-34",
     "name": "Shir V.C. Memorial Polytechnic, Cuddapah Dist",
     "stream": "Pharmacy",
     "district": "Cuddapah",
@@ -783,7 +783,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-35",
+    "id": "pharm-35",
     "name": "Shri Vishnu College of Pharmacy, West Godavari District",
     "stream": "Pharmacy",
     "district": "West Godavari",
@@ -806,7 +806,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-36",
+    "id": "pharm-36",
     "name": "Siddhartha College of Pharmaceutical Sciences, Siddhartha Nagar",
     "stream": "Pharmacy",
     "district": "Nagar",
@@ -829,7 +829,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-37",
+    "id": "pharm-37",
     "name": "Sir C.R.Reddy College, West Godavari Dist",
     "stream": "Pharmacy",
     "district": "West Godavari",
@@ -852,7 +852,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-38",
+    "id": "pharm-38",
     "name": "Sree Vidyanikethan College of Pharmacy, A.Rangampet, Chittoor Dist.",
     "stream": "Pharmacy",
     "district": "Chittoor",
@@ -875,7 +875,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-39",
+    "id": "pharm-39",
     "name": "Sri Dwarakanath Junior College, Chittoor Dist",
     "stream": "Pharmacy",
     "district": "Chittoor",
@@ -898,7 +898,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-40",
+    "id": "pharm-40",
     "name": "Sri G.Pulla Reddy Govt. Polytechnic",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -921,7 +921,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-41",
+    "id": "pharm-41",
     "name": "Sri P. Rami Reddy Memorial College of Pharmacy, Utukur",
     "stream": "Pharmacy",
     "district": "Utukur",
@@ -944,7 +944,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-42",
+    "id": "pharm-42",
     "name": "Sri Padmavathi Mahila Visvavidyalaya, Chittoor District",
     "stream": "Pharmacy",
     "district": "Chittoor",
@@ -967,7 +967,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-43",
+    "id": "pharm-43",
     "name": "Sri Padmavathi School of Pharmacy, Bypass Road, Chittoor District",
     "stream": "Pharmacy",
     "district": "Chittoor",
@@ -990,7 +990,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-44",
+    "id": "pharm-44",
     "name": "Sri Padmavathi Women's Polytechnic, Chittoor Dist",
     "stream": "Pharmacy",
     "district": "Chittoor",
@@ -1013,7 +1013,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-45",
+    "id": "pharm-45",
     "name": "Sri Vasavi Institute of Pharmaceutical Sciences, West Godavari District",
     "stream": "Pharmacy",
     "district": "West Godavari",
@@ -1036,7 +1036,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-46",
+    "id": "pharm-46",
     "name": "Sri Venkateshwara College of Pharmacy, By the Side of Iron Yard",
     "stream": "Pharmacy",
     "district": "Yard",
@@ -1059,7 +1059,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-47",
+    "id": "pharm-47",
     "name": "Sri Venkateswara College of Pharmacy, RVS Nagar, Chittoor",
     "stream": "Pharmacy",
     "district": "Chittoor",
@@ -1082,7 +1082,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-48",
+    "id": "pharm-48",
     "name": "Swathi College of Pharmacy, next to Nellore toll plaza, Venkatachalam Post & Mandal, Nellore",
     "stream": "Pharmacy",
     "district": "Nellore",
@@ -1105,7 +1105,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-49",
+    "id": "pharm-49",
     "name": "Vagdevi College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -1128,7 +1128,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-50",
+    "id": "pharm-50",
     "name": "Vignan Pharmacy College",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -1151,7 +1151,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-51",
+    "id": "pharm-51",
     "name": "Vignan's Institute of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -1174,7 +1174,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-52",
+    "id": "pharm-52",
     "name": "Vikas College of B.Pharmacy",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -1197,7 +1197,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-53",
+    "id": "pharm-53",
     "name": "Vishwa Bharathi College of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Amaravati",
@@ -1220,7 +1220,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-54",
+    "id": "pharm-54",
     "name": "College of Pharmaceutical Sciences, Himalayan University, Itanagar, Arunachal Pradesh",
     "stream": "Pharmacy",
     "district": "Itanagar",
@@ -1243,7 +1243,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-55",
+    "id": "pharm-55",
     "name": "Department of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Guwahati",
@@ -1266,7 +1266,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-56",
+    "id": "pharm-56",
     "name": "Institute of Pharmacy Assam Medical College",
     "stream": "Pharmacy",
     "district": "Guwahati",
@@ -1289,7 +1289,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-57",
+    "id": "pharm-57",
     "name": "Institute of Pharmacy Guwahati Medical College, Guwahati",
     "stream": "Pharmacy",
     "district": "Guwahati",
@@ -1312,7 +1312,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-58",
+    "id": "pharm-58",
     "name": "Institute of Pharmacy Silchar Medical College, Silchar",
     "stream": "Pharmacy",
     "district": "Silchar",
@@ -1335,7 +1335,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-59",
+    "id": "pharm-59",
     "name": "B.R. Ambedkar Institute of Pharmacy Sciences",
     "stream": "Pharmacy",
     "district": "Patna",
@@ -1358,7 +1358,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-60",
+    "id": "pharm-60",
     "name": "Bihar College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Patna",
@@ -1381,7 +1381,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-61",
+    "id": "pharm-61",
     "name": "Birla Institute of Technology",
     "stream": "Pharmacy",
     "district": "Patna",
@@ -1404,7 +1404,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-62",
+    "id": "pharm-62",
     "name": "Govt.Pharmacy Institute",
     "stream": "Pharmacy",
     "district": "Patna",
@@ -1427,7 +1427,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-63",
+    "id": "pharm-63",
     "name": "Kishanganj Pharmacy College",
     "stream": "Pharmacy",
     "district": "Kishanganj",
@@ -1450,7 +1450,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-64",
+    "id": "pharm-64",
     "name": "Mother Teresa Institute of Pharmacy, P.O. Dhelwanm, Via-Lohia-Nagar",
     "stream": "Pharmacy",
     "district": "Patna",
@@ -1473,7 +1473,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-65",
+    "id": "pharm-65",
     "name": "Muzaffarpur Institute of Technology",
     "stream": "Pharmacy",
     "district": "Muzaffarpur",
@@ -1496,7 +1496,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-66",
+    "id": "pharm-66",
     "name": "Patliputra College of Pharmacy, New Bailey Road",
     "stream": "Pharmacy",
     "district": "Bailey",
@@ -1519,7 +1519,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-67",
+    "id": "pharm-67",
     "name": "R.L.S. Yadav College of Pharmacy, Kidwaipuri",
     "stream": "Pharmacy",
     "district": "Kidwaipuri",
@@ -1542,7 +1542,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-68",
+    "id": "pharm-68",
     "name": "Columbia Institute of Pharmacy, Tekari",
     "stream": "Pharmacy",
     "district": "Tekari",
@@ -1565,7 +1565,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-69",
+    "id": "pharm-69",
     "name": "Govt. Women's Polytechnic, Raipur",
     "stream": "Pharmacy",
     "district": "Raipur",
@@ -1588,7 +1588,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-70",
+    "id": "pharm-70",
     "name": "Institute of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Raipur",
@@ -1611,7 +1611,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-71",
+    "id": "pharm-71",
     "name": "Raigarh College of Pharmacy, Raigarh",
     "stream": "Pharmacy",
     "district": "Raigarh",
@@ -1634,7 +1634,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-72",
+    "id": "pharm-72",
     "name": "SSR College of Pharmacy, Sayli, Silvassa",
     "stream": "Pharmacy",
     "district": "Silvassa",
@@ -1657,7 +1657,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-73",
+    "id": "pharm-73",
     "name": "Aditya College of Pharmacy, Vasant Gunj",
     "stream": "Pharmacy",
     "district": "Gunj",
@@ -1680,7 +1680,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-74",
+    "id": "pharm-74",
     "name": "Baba Haridas College of Pharmacy, Jarodha Kalan",
     "stream": "Pharmacy",
     "district": "Kalan",
@@ -1703,7 +1703,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-75",
+    "id": "pharm-75",
     "name": "Delhi Institute of Pharmaceutical Sciences and Research (DIPSAR)",
     "stream": "Pharmacy",
     "district": "Delhi",
@@ -1726,7 +1726,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-76",
+    "id": "pharm-76",
     "name": "School of Pharmaceutical Sciences (SPS, DPSRU)",
     "stream": "Pharmacy",
     "district": "New Delhi",
@@ -1749,7 +1749,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-77",
+    "id": "pharm-77",
     "name": "Faculty of Pharmacy, Jamia Hamdard",
     "stream": "Pharmacy",
     "district": "Hamdard",
@@ -1772,7 +1772,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-78",
+    "id": "pharm-78",
     "name": "Maharaja Surajmal Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "New Delhi",
@@ -1795,7 +1795,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-79",
+    "id": "pharm-79",
     "name": "Mahatma Gandhi Institute Of Technology and Management (MGITI)",
     "stream": "Pharmacy",
     "district": "New Delhi",
@@ -1818,7 +1818,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-80",
+    "id": "pharm-80",
     "name": "St. Lawrence Pharmacy College, near Petrol Pump",
     "stream": "Pharmacy",
     "district": "Pump",
@@ -1841,7 +1841,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-81",
+    "id": "pharm-81",
     "name": "Subramaniam Bharati College of Science & Technology",
     "stream": "Pharmacy",
     "district": "New Delhi",
@@ -1864,7 +1864,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-82",
+    "id": "pharm-82",
     "name": "Goa College of Pharmacy, Panaji",
     "stream": "Pharmacy",
     "district": "Panaji",
@@ -1887,7 +1887,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-83",
+    "id": "pharm-83",
     "name": "Kalol Institute of Pharmacy, Kalol, North Gujarat",
     "stream": "Pharmacy",
     "district": "Gujarat",
@@ -1910,7 +1910,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-84",
+    "id": "pharm-84",
     "name": "KV Virani institute of Pharmacy and Research Centre.",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -1933,7 +1933,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-85",
+    "id": "pharm-85",
     "name": "Institute of Pharmacy, Nirma University, Ahmedabad",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -1956,7 +1956,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-86",
+    "id": "pharm-86",
     "name": "A R College & G H Patel Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -1979,7 +1979,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-87",
+    "id": "pharm-87",
     "name": "Atmiya Institute of Pharmacy, Rajkot",
     "stream": "Pharmacy",
     "district": "Rajkot",
@@ -2002,7 +2002,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-88",
+    "id": "pharm-88",
     "name": "B K Mody Government Pharmacy College",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2025,7 +2025,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-89",
+    "id": "pharm-89",
     "name": "C.U. Shah College of Pharmacy & Research, Kotharia Road",
     "stream": "Pharmacy",
     "district": "Kotharia",
@@ -2048,7 +2048,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-90",
+    "id": "pharm-90",
     "name": "Dr. Dayaram Patel Pharmacy College",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2071,7 +2071,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-91",
+    "id": "pharm-91",
     "name": "Faculty of Technology",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2094,7 +2094,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-92",
+    "id": "pharm-92",
     "name": "Indukaka Ipcowala College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2117,7 +2117,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-93",
+    "id": "pharm-93",
     "name": "Institute of Ayurvedic Pharmaceutical Sciences, Irwin Hospital Road",
     "stream": "Pharmacy",
     "district": "Irwin",
@@ -2140,7 +2140,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-94",
+    "id": "pharm-94",
     "name": "K.B. Institute of Pharmaceutical Education & Research",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2163,7 +2163,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-95",
+    "id": "pharm-95",
     "name": "L.B. Rao Institute Of Pharmaceutical Education & Research",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2186,7 +2186,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-96",
+    "id": "pharm-96",
     "name": "L.J. Institute of Pharmacy, Ahmedabad",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2209,7 +2209,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-97",
+    "id": "pharm-97",
     "name": "L. M. College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2232,7 +2232,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-98",
+    "id": "pharm-98",
     "name": "Maliba Pharmacy College",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2255,7 +2255,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-99",
+    "id": "pharm-99",
     "name": "NIPER Ahmedabad, Thaltej",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2278,7 +2278,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-100",
+    "id": "pharm-100",
     "name": "Gandhinagar Institute of Pharmacy, Gandhinagar University",
     "stream": "Pharmacy",
     "district": "Gandhinagar",
@@ -2301,7 +2301,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-101",
+    "id": "pharm-101",
     "name": "Noble Pharmacy College, Junagadh",
     "stream": "Pharmacy",
     "district": "Junagadh",
@@ -2324,7 +2324,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-102",
+    "id": "pharm-102",
     "name": "Parul Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2347,7 +2347,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-103",
+    "id": "pharm-103",
     "name": "Pharmacy Department",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2370,7 +2370,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-104",
+    "id": "pharm-104",
     "name": "ROFEL Shri G.M. Bilakhia College of Pharmacy, VAPI-396191. (W) Ta: PARDI",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2393,7 +2393,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-105",
+    "id": "pharm-105",
     "name": "Shantilal Shah Pharmacy College, Gaurishankar Lake Road",
     "stream": "Pharmacy",
     "district": "Lake",
@@ -2416,7 +2416,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-106",
+    "id": "pharm-106",
     "name": "Shir B.M. Shah College of Pharmaceutical Education and Research",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2439,7 +2439,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-107",
+    "id": "pharm-107",
     "name": "Shree Maruti Kelavani Mandal Trust Managed Diploma Pharmacy College",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2462,7 +2462,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-108",
+    "id": "pharm-108",
     "name": "Shree S K Patel College of Pharm Edu & Res, Taluk & Dist. Mehsana",
     "stream": "Pharmacy",
     "district": "Mehsana",
@@ -2485,7 +2485,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-109",
+    "id": "pharm-109",
     "name": "Shri B.M. Shah College of Pharmacy, P.O. Box No. 12",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2508,7 +2508,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-110",
+    "id": "pharm-110",
     "name": "Shri G.M. Patel College of Pharmacy, Ramba Kanya Chhatralaya Campus, Highway",
     "stream": "Pharmacy",
     "district": "Highway",
@@ -2531,7 +2531,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-111",
+    "id": "pharm-111",
     "name": "Shri Sarvajanik Pharmacy College",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2554,7 +2554,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-112",
+    "id": "pharm-112",
     "name": "Smt. B.N.B. Swaminarayan Pharmacy College, Salvav, Vapi 396191 GJ",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2577,7 +2577,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-113",
+    "id": "pharm-113",
     "name": "Smt. Rupaben B. Patel Mahila Pharmacy College, Bhavnagar Road, Atkot, Jasdan Taluk",
     "stream": "Pharmacy",
     "district": "Bhavnagar",
@@ -2600,7 +2600,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-114",
+    "id": "pharm-114",
     "name": "Tolani Institute of Pharmacy, Nursery Garden, Ward 2/A, Adipur",
     "stream": "Pharmacy",
     "district": "Adipur",
@@ -2623,7 +2623,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-115",
+    "id": "pharm-115",
     "name": "Vidyabharti Trust College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Ahmedabad",
@@ -2646,7 +2646,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-116",
+    "id": "pharm-116",
     "name": "Bhagwan Mahavir College of Pharmacy, Surat.",
     "stream": "Pharmacy",
     "district": "Surat",
@@ -2669,7 +2669,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-117",
+    "id": "pharm-117",
     "name": "CK Pithawala Pharmacy College, Surat.",
     "stream": "Pharmacy",
     "district": "Surat",
@@ -2692,7 +2692,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-118",
+    "id": "pharm-118",
     "name": "Puran Murti College of Pharmacy, Sonipat ( Delhi- NCR )",
     "stream": "Pharmacy",
     "district": "Delhi",
@@ -2715,7 +2715,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-119",
+    "id": "pharm-119",
     "name": "B.P.S. Mahila Polytechnic, Somepat Dist",
     "stream": "Pharmacy",
     "district": "Somepat",
@@ -2738,7 +2738,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-120",
+    "id": "pharm-120",
     "name": "PM College of Pharmacy, Sonipat",
     "stream": "Pharmacy",
     "district": "Sonipat",
@@ -2761,7 +2761,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-121",
+    "id": "pharm-121",
     "name": "Jhankar Pharmacy College Gurgaon, Haryana India.",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -2784,7 +2784,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-122",
+    "id": "pharm-122",
     "name": "Puran Murti Campus, Sonipat ( Delhi-NCR )",
     "stream": "Pharmacy",
     "district": "Delhi",
@@ -2807,7 +2807,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-123",
+    "id": "pharm-123",
     "name": "B.S. Anangpuria Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -2830,7 +2830,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-124",
+    "id": "pharm-124",
     "name": "Bharat Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -2853,7 +2853,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-125",
+    "id": "pharm-125",
     "name": "Dehat Vikas College of Pharmacy, District Faridabad",
     "stream": "Pharmacy",
     "district": "Faridabad",
@@ -2876,7 +2876,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-126",
+    "id": "pharm-126",
     "name": "Department of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -2899,7 +2899,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-127",
+    "id": "pharm-127",
     "name": "Doon Valley Institute of Pharmacy & Medicine",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -2922,7 +2922,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-128",
+    "id": "pharm-128",
     "name": "Faculty of Engineering & Technology",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -2945,7 +2945,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-129",
+    "id": "pharm-129",
     "name": "Gandhi College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -2968,7 +2968,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-130",
+    "id": "pharm-130",
     "name": "Govt. Polytechnic",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -2991,7 +2991,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-131",
+    "id": "pharm-131",
     "name": "Govt. Polytechnic for Women",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -3014,7 +3014,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-132",
+    "id": "pharm-132",
     "name": "Guru Gobind Singh College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -3037,7 +3037,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-133",
+    "id": "pharm-133",
     "name": "GVM College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -3060,7 +3060,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-134",
+    "id": "pharm-134",
     "name": "Hindu College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -3083,7 +3083,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-135",
+    "id": "pharm-135",
     "name": "Jan Nayak Ch. Devi Lal Memorial College of B. Pharmacy",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -3106,7 +3106,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-136",
+    "id": "pharm-136",
     "name": "Janta College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -3129,7 +3129,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-137",
+    "id": "pharm-137",
     "name": "Kurukshetra University Institute of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Kurukshetra",
@@ -3152,7 +3152,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-138",
+    "id": "pharm-138",
     "name": "Lord Shiva College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -3175,7 +3175,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-139",
+    "id": "pharm-139",
     "name": "Maharaja Agarsain Technical Institute",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -3198,7 +3198,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-140",
+    "id": "pharm-140",
     "name": "Maharshi Pharmacy College, Taraori",
     "stream": "Pharmacy",
     "district": "Taraori",
@@ -3221,7 +3221,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-141",
+    "id": "pharm-141",
     "name": "P.D.M. College of Pharmacy, Sarai Aurangabad, Bahadurgarh",
     "stream": "Pharmacy",
     "district": "Aurangabad",
@@ -3244,7 +3244,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-142",
+    "id": "pharm-142",
     "name": "Pt.B.D. Sharma Post-Graduate",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -3267,7 +3267,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-143",
+    "id": "pharm-143",
     "name": "R.K.S.D. College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -3290,7 +3290,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-144",
+    "id": "pharm-144",
     "name": "Rajendra Institutes of Technology & Sciences",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -3313,7 +3313,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-145",
+    "id": "pharm-145",
     "name": "Ram Gopal College of Pharmacy, Farrukhnagar Tehsil",
     "stream": "Pharmacy",
     "district": "Tehsil",
@@ -3336,7 +3336,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-146",
+    "id": "pharm-146",
     "name": "SDD Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -3359,7 +3359,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-147",
+    "id": "pharm-147",
     "name": "Shri Baba Mast Nath Inst of Pharm Sci",
     "stream": "Pharmacy",
     "district": "Gurgaon",
@@ -3382,7 +3382,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-148",
+    "id": "pharm-148",
     "name": "SGT COLLEGE OF PHARMACY, SGT UNIVERSITY",
     "stream": "Pharmacy",
     "district": "University",
@@ -3405,7 +3405,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-149",
+    "id": "pharm-149",
     "name": "Government College of Pharmacy Rohru, Shimla, H.P",
     "stream": "Pharmacy",
     "district": "Shimla",
@@ -3428,7 +3428,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-150",
+    "id": "pharm-150",
     "name": "Government College of Pharmacy Nagrota bagwan, kangra, H.P",
     "stream": "Pharmacy",
     "district": "Kangra",
@@ -3451,7 +3451,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-151",
+    "id": "pharm-151",
     "name": "Government College of Pharmacy Rakar, kangra, H.P",
     "stream": "Pharmacy",
     "district": "Kangra",
@@ -3474,7 +3474,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-152",
+    "id": "pharm-152",
     "name": "Government College of Pharmacy Seraj, Mandi, H.P",
     "stream": "Pharmacy",
     "district": "Mandi",
@@ -3497,7 +3497,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-153",
+    "id": "pharm-153",
     "name": "Abhilashi College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Shimla",
@@ -3520,7 +3520,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-154",
+    "id": "pharm-154",
     "name": "Govt. Polytechnic",
     "stream": "Pharmacy",
     "district": "Shimla",
@@ -3543,7 +3543,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-155",
+    "id": "pharm-155",
     "name": "Govt. Polytechnic for Women, Solan Dist",
     "stream": "Pharmacy",
     "district": "Solan",
@@ -3566,7 +3566,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-156",
+    "id": "pharm-156",
     "name": "Himalayan Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Shimla",
@@ -3589,7 +3589,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-157",
+    "id": "pharm-157",
     "name": "IEC School of Pharmacy, Baddi, Solan",
     "stream": "Pharmacy",
     "district": "Solan",
@@ -3612,7 +3612,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-158",
+    "id": "pharm-158",
     "name": "L.R. Institute of Pharmacy, Rajgarh roadhklh",
     "stream": "Pharmacy",
     "district": "Roadhklh",
@@ -3635,7 +3635,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-159",
+    "id": "pharm-159",
     "name": "Bokaro Institute of Medical & Health Sciences, Baradih, Jainamore, Bokaro, ssmt College",
     "stream": "Pharmacy",
     "district": "Bokaro",
@@ -3658,7 +3658,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-160",
+    "id": "pharm-160",
     "name": "Koderma",
     "stream": "Pharmacy",
     "district": "Koderma",
@@ -3681,7 +3681,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-161",
+    "id": "pharm-161",
     "name": "Acharya & B.M Reddy College of Pharmacy, Hesaraghatta Road, Soladevanahalli",
     "stream": "Pharmacy",
     "district": "Soladevanahalli",
@@ -3704,7 +3704,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-162",
+    "id": "pharm-162",
     "name": "Aditya Bangalore Institute of Pharmacy Education and Research, Yelahanka, Bangalore",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -3727,7 +3727,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-163",
+    "id": "pharm-163",
     "name": "AECS Maaruti College of Pharmacy, Bannerghatta Road",
     "stream": "Pharmacy",
     "district": "Bannerghatta",
@@ -3750,7 +3750,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-164",
+    "id": "pharm-164",
     "name": "Al-Ameen College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -3773,7 +3773,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-165",
+    "id": "pharm-165",
     "name": "Al-Falah College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -3796,7 +3796,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-166",
+    "id": "pharm-166",
     "name": "Anupama College of Pharmacy, Mahalaxmipuram",
     "stream": "Pharmacy",
     "district": "Mahalaxmipuram",
@@ -3819,7 +3819,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-167",
+    "id": "pharm-167",
     "name": "B.E.A's School of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -3842,7 +3842,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-168",
+    "id": "pharm-168",
     "name": "B.L.D.E. Association's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -3865,7 +3865,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-169",
+    "id": "pharm-169",
     "name": "B.L.D.E. Association's School of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -3888,7 +3888,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-170",
+    "id": "pharm-170",
     "name": "Bapuji Pharmacy College",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -3911,7 +3911,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-171",
+    "id": "pharm-171",
     "name": "Basaveshwar College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -3934,7 +3934,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-172",
+    "id": "pharm-172",
     "name": "Basaveshwara College of Pharmacy, Bidar Dist",
     "stream": "Pharmacy",
     "district": "Bidar",
@@ -3957,7 +3957,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-173",
+    "id": "pharm-173",
     "name": "BES Institute of Pharmacy, Jayanagar",
     "stream": "Pharmacy",
     "district": "Jayanagar",
@@ -3980,7 +3980,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-174",
+    "id": "pharm-174",
     "name": "Bharathi College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4003,7 +4003,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-175",
+    "id": "pharm-175",
     "name": "Oxbridge college of pharmacy (C.N.K. Reddy College of Pharmacy), mahadeshwar Nagar,",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4026,7 +4026,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-176",
+    "id": "pharm-176",
     "name": "herohalli cross, Magadi main road, Bangalore",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4049,7 +4049,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-177",
+    "id": "pharm-177",
     "name": "Chennigaramaih College of Pharmacy, Tumkur Dist",
     "stream": "Pharmacy",
     "district": "Tumkur",
@@ -4072,7 +4072,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-178",
+    "id": "pharm-178",
     "name": "CMR College of Pharmacy, HRBR Layout, 2nd Block",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4095,7 +4095,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-179",
+    "id": "pharm-179",
     "name": "College of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4118,7 +4118,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-180",
+    "id": "pharm-180",
     "name": "College of Pharmacy, Sangolli Rayanna Nagar",
     "stream": "Pharmacy",
     "district": "Nagar",
@@ -4141,7 +4141,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-181",
+    "id": "pharm-181",
     "name": "College of Pharmacy, CMH Road, Second Stage, Indiranagar, near Bata",
     "stream": "Pharmacy",
     "district": "Bata",
@@ -4164,7 +4164,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-182",
+    "id": "pharm-182",
     "name": "College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4187,7 +4187,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-183",
+    "id": "pharm-183",
     "name": "College of Pharmacy, Post Box No. 26",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4210,7 +4210,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-184",
+    "id": "pharm-184",
     "name": "D.R. Kari Gowda College of Pharmacy, Kuvempunagar",
     "stream": "Pharmacy",
     "district": "Kuvempunagar",
@@ -4233,7 +4233,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-185",
+    "id": "pharm-185",
     "name": "Dayananda Sagar College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Sagar",
@@ -4256,7 +4256,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-186",
+    "id": "pharm-186",
     "name": "Dr H L Thimmegowda College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4279,7 +4279,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-187",
+    "id": "pharm-187",
     "name": "East West College of Pharmacy, 2nd Stage, Rajaji Nagar",
     "stream": "Pharmacy",
     "district": "Nagar",
@@ -4302,7 +4302,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-188",
+    "id": "pharm-188",
     "name": "Farooquia College of Pharmacy, Tilak Nagar, Eidgah",
     "stream": "Pharmacy",
     "district": "Eidgah",
@@ -4325,7 +4325,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-189",
+    "id": "pharm-189",
     "name": "Friends Cultural Educational Society's, Thyagaraja Nagar",
     "stream": "Pharmacy",
     "district": "Nagar",
@@ -4348,7 +4348,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-190",
+    "id": "pharm-190",
     "name": "G K M College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4371,7 +4371,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-191",
+    "id": "pharm-191",
     "name": "G.M. College of Pharmacy, Nelamangala, Bypass",
     "stream": "Pharmacy",
     "district": "Bypass",
@@ -4394,7 +4394,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-192",
+    "id": "pharm-192",
     "name": "Golden College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4417,7 +4417,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-193",
+    "id": "pharm-193",
     "name": "Goutham College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4440,7 +4440,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-194",
+    "id": "pharm-194",
     "name": "Government College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4463,7 +4463,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-195",
+    "id": "pharm-195",
     "name": "H.K.E.S.'s College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4486,7 +4486,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-196",
+    "id": "pharm-196",
     "name": "Hillside College of Pharmacy and Research Centre",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4509,7 +4509,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-197",
+    "id": "pharm-197",
     "name": "Pharma Colleges in Karnataka",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4532,7 +4532,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-198",
+    "id": "pharm-198",
     "name": "Hanagal Shri Kumareshawr College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4555,7 +4555,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-199",
+    "id": "pharm-199",
     "name": "J S S College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4578,7 +4578,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-200",
+    "id": "pharm-200",
     "name": "K.C.T. College of Pharmacy, Qamar-ul Islam Colony, Roza",
     "stream": "Pharmacy",
     "district": "Roza",
@@ -4601,7 +4601,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-201",
+    "id": "pharm-201",
     "name": "K.L.E. Society's College of Pharmacy, Rajaijnagar",
     "stream": "Pharmacy",
     "district": "Rajaijnagar",
@@ -4624,7 +4624,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-202",
+    "id": "pharm-202",
     "name": "K.L.E. Society's College of Pharmacy, J.N. Medical College Campus",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4647,7 +4647,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-203",
+    "id": "pharm-203",
     "name": "K.L.E. Society's College of Pharmacy, Gadag Dist",
     "stream": "Pharmacy",
     "district": "Gadag",
@@ -4670,7 +4670,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-204",
+    "id": "pharm-204",
     "name": "K.L.E. Society's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4693,7 +4693,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-205",
+    "id": "pharm-205",
     "name": "K.LE.'s College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4716,7 +4716,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-206",
+    "id": "pharm-206",
     "name": "K.R.E Society's Madam Mohan Harishchandra Goel Institute of Pharmacy, P.B. No. 53",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4739,7 +4739,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-207",
+    "id": "pharm-207",
     "name": "Karavali College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4762,7 +4762,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-208",
+    "id": "pharm-208",
     "name": "Karnataka College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4785,7 +4785,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-209",
+    "id": "pharm-209",
     "name": "Krupanidhi College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4808,7 +4808,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-210",
+    "id": "pharm-210",
     "name": "Luqman College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4831,7 +4831,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-211",
+    "id": "pharm-211",
     "name": "M.M.U. College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4854,7 +4854,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-212",
+    "id": "pharm-212",
     "name": "M S Ramaiah College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4877,7 +4877,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-213",
+    "id": "pharm-213",
     "name": "M.E.S College of Pharmacy, Arabic College Post",
     "stream": "Pharmacy",
     "district": "Post",
@@ -4900,7 +4900,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-214",
+    "id": "pharm-214",
     "name": "M.M.J.G. College of Pharmacy, Gadag Dist",
     "stream": "Pharmacy",
     "district": "Gadag",
@@ -4923,7 +4923,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-215",
+    "id": "pharm-215",
     "name": "Mallige College of Pharmacy, Chikkabanavara Post",
     "stream": "Pharmacy",
     "district": "Post",
@@ -4946,7 +4946,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-216",
+    "id": "pharm-216",
     "name": "Maratha Mandal College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4969,7 +4969,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-217",
+    "id": "pharm-217",
     "name": "Milind Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -4992,7 +4992,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-218",
+    "id": "pharm-218",
     "name": "Mohammadi College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5015,7 +5015,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-219",
+    "id": "pharm-219",
     "name": "Nargund College of Pharmacy, 100 ft Ring Road, Banashankari III Stage",
     "stream": "Pharmacy",
     "district": "Stage",
@@ -5038,7 +5038,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-220",
+    "id": "pharm-220",
     "name": "National College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5061,7 +5061,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-221",
+    "id": "pharm-221",
     "name": "NET Pharmacy College",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5084,7 +5084,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-222",
+    "id": "pharm-222",
     "name": "NGSM Institute of Pharmaceutical Sciences, Nanthoor",
     "stream": "Pharmacy",
     "district": "Nanthoor",
@@ -5107,7 +5107,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-223",
+    "id": "pharm-223",
     "name": "Nitte Gulabi Shetty Memorial Institute of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5130,7 +5130,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-224",
+    "id": "pharm-224",
     "name": "Niveditha College of Pharmacy, Bangalore road",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5153,7 +5153,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-225",
+    "id": "pharm-225",
     "name": "Noble College of Pharmacy, Karnataka",
     "stream": "Pharmacy",
     "district": "Karnataka",
@@ -5176,7 +5176,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-226",
+    "id": "pharm-226",
     "name": "Noorie College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5199,7 +5199,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-227",
+    "id": "pharm-227",
     "name": "The Oxford College of Pharmacy, Hongasandra, Begur Road",
     "stream": "Pharmacy",
     "district": "Begur",
@@ -5222,7 +5222,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-228",
+    "id": "pharm-228",
     "name": "P E S College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5245,7 +5245,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-229",
+    "id": "pharm-229",
     "name": "Pandey College of Pharmacy, Naubad",
     "stream": "Pharmacy",
     "district": "Naubad",
@@ -5268,7 +5268,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-230",
+    "id": "pharm-230",
     "name": "Pavan College of Pharmacy, Pavan Nagar P.C. Halli Extn",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5291,7 +5291,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-231",
+    "id": "pharm-231",
     "name": "Priyadarshini College of Pharmacy, Hanumanthpura",
     "stream": "Pharmacy",
     "district": "Hanumanthpura",
@@ -5314,7 +5314,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-232",
+    "id": "pharm-232",
     "name": "R.R.K. Society College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5337,7 +5337,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-233",
+    "id": "pharm-233",
     "name": "Raman College of Pharmacy, Kurubarahalli",
     "stream": "Pharmacy",
     "district": "Kurubarahalli",
@@ -5360,7 +5360,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-234",
+    "id": "pharm-234",
     "name": "Rani Chennamma College of Pharmacy, Vaibhav Nagar",
     "stream": "Pharmacy",
     "district": "Nagar",
@@ -5383,7 +5383,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-235",
+    "id": "pharm-235",
     "name": "RR College of Pharmacy, Chikkabanavara",
     "stream": "Pharmacy",
     "district": "Chikkabanavara",
@@ -5406,7 +5406,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-236",
+    "id": "pharm-236",
     "name": "Rural College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5429,7 +5429,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-237",
+    "id": "pharm-237",
     "name": "S C S College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5452,7 +5452,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-238",
+    "id": "pharm-238",
     "name": "S J M College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5475,7 +5475,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-239",
+    "id": "pharm-239",
     "name": "S V E T S College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5498,7 +5498,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-240",
+    "id": "pharm-240",
     "name": "S. A. C. College of pharmacy, Hassan Dist",
     "stream": "Pharmacy",
     "district": "Hassan",
@@ -5521,7 +5521,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-241",
+    "id": "pharm-241",
     "name": "S. A. C. College of pharmacy, Nagamangala Taluk",
     "stream": "Pharmacy",
     "district": "Nagamangala",
@@ -5544,7 +5544,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-242",
+    "id": "pharm-242",
     "name": "S.B.D. Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5567,7 +5567,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-243",
+    "id": "pharm-243",
     "name": "S.E.S. Pharmacy College",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5590,7 +5590,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-244",
+    "id": "pharm-244",
     "name": "S.J.M.M. College of Pharmacy, P.B.No. 47",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5613,7 +5613,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-245",
+    "id": "pharm-245",
     "name": "S.J.R.E Society's School of Pharmacy, Race Course Road",
     "stream": "Pharmacy",
     "district": "Course",
@@ -5636,7 +5636,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-246",
+    "id": "pharm-246",
     "name": "Sardar V.V. Patil School of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5659,7 +5659,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-247",
+    "id": "pharm-247",
     "name": "Sardavilas College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5682,7 +5682,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-248",
+    "id": "pharm-248",
     "name": "Seshadripuram College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5705,7 +5705,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-249",
+    "id": "pharm-249",
     "name": "Shivaji School of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5728,7 +5728,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-250",
+    "id": "pharm-250",
     "name": "Shree Devi College of Pharmacy, Mangaluru",
     "stream": "Pharmacy",
     "district": "Mangaluru",
@@ -5751,7 +5751,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-251",
+    "id": "pharm-251",
     "name": "Shridevi Institute of Pharmaceutical Sciences, Tumakuru",
     "stream": "Pharmacy",
     "district": "Tumakuru",
@@ -5774,7 +5774,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-252",
+    "id": "pharm-252",
     "name": "Shuttaria Institute of Pharmacy, Neelamangala, B.H. Road",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5797,7 +5797,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-253",
+    "id": "pharm-253",
     "name": "Siddalingeshwar College of Pharmacy, SYE Society",
     "stream": "Pharmacy",
     "district": "Society",
@@ -5820,7 +5820,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-254",
+    "id": "pharm-254",
     "name": "Sonia Education Trust's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5843,7 +5843,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-255",
+    "id": "pharm-255",
     "name": "Sree Krishna College of Pharmacy, Batawadi",
     "stream": "Pharmacy",
     "district": "Krishna",
@@ -5866,7 +5866,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-256",
+    "id": "pharm-256",
     "name": "Sree Siddaganga College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5889,7 +5889,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-257",
+    "id": "pharm-257",
     "name": "Sri Adichunchanagiri College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5912,7 +5912,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-258",
+    "id": "pharm-258",
     "name": "Sri K V College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5935,7 +5935,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-259",
+    "id": "pharm-259",
     "name": "Sri Ramakrishna College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5958,7 +5958,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-260",
+    "id": "pharm-260",
     "name": "Sri Subrahmanya Swamy College of Pharmacyll",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -5981,7 +5981,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-261",
+    "id": "pharm-261",
     "name": "Sri Vasavi Pharmacy College",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -6004,7 +6004,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-262",
+    "id": "pharm-262",
     "name": "Sri Venkateshwara College of Pharmacy, Banashankari, Iind Stage",
     "stream": "Pharmacy",
     "district": "Stage",
@@ -6027,7 +6027,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-263",
+    "id": "pharm-263",
     "name": "Srinivas College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -6050,7 +6050,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-264",
+    "id": "pharm-264",
     "name": "St John's Pharmacy College",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -6073,7 +6073,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-265",
+    "id": "pharm-265",
     "name": "Tipu Sultan College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -6096,7 +6096,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-266",
+    "id": "pharm-266",
     "name": "Togari Veeramallappa Memorial College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -6119,7 +6119,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-267",
+    "id": "pharm-267",
     "name": "Trident Educational Society's Valley College of Pharmacy, J.C. Nagarpipe Line Road",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -6142,7 +6142,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-268",
+    "id": "pharm-268",
     "name": "V.M.V.V.S. School of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -6165,7 +6165,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-269",
+    "id": "pharm-269",
     "name": "V.V.S.P.B. College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -6188,7 +6188,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-270",
+    "id": "pharm-270",
     "name": "Vasavi Jnana Peeth College of Pharmacy, Vijay Nagar",
     "stream": "Pharmacy",
     "district": "Nagar",
@@ -6211,7 +6211,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-271",
+    "id": "pharm-271",
     "name": "VES's Pharmacy College, Dharward Dist",
     "stream": "Pharmacy",
     "district": "Dharward",
@@ -6234,7 +6234,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-272",
+    "id": "pharm-272",
     "name": "Vidya Vikas Trust's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -6257,7 +6257,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-273",
+    "id": "pharm-273",
     "name": "Vidya Siri College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -6280,7 +6280,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-274",
+    "id": "pharm-274",
     "name": "Visveswarapura Institute of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -6303,7 +6303,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-275",
+    "id": "pharm-275",
     "name": "Vivekananda College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -6326,7 +6326,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-276",
+    "id": "pharm-276",
     "name": "Vutkoor Laxmaiah College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bangalore",
@@ -6349,7 +6349,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-277",
+    "id": "pharm-277",
     "name": "A.J. College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6372,7 +6372,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-278",
+    "id": "pharm-278",
     "name": "A.M. College of Pharmacy, Karunagappally",
     "stream": "Pharmacy",
     "district": "Karunagappally",
@@ -6395,7 +6395,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-279",
+    "id": "pharm-279",
     "name": "Al-Shifa College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6418,7 +6418,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-280",
+    "id": "pharm-280",
     "name": "Amrita School of Pharmacy, Ponekkara (P.O)",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6441,7 +6441,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-281",
+    "id": "pharm-281",
     "name": "Calicut Medical College",
     "stream": "Pharmacy",
     "district": "Calicut",
@@ -6464,7 +6464,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-282",
+    "id": "pharm-282",
     "name": "Caritas College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6487,7 +6487,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-283",
+    "id": "pharm-283",
     "name": "Chemists College Of Pharmaceutical Sciences And Research, Ernakulam",
     "stream": "Pharmacy",
     "district": "Ernakulam",
@@ -6510,7 +6510,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-284",
+    "id": "pharm-284",
     "name": "College of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6533,7 +6533,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-285",
+    "id": "pharm-285",
     "name": "College of Pharmaceutical Sciences, Gandhinagar, P.O.",
     "stream": "Pharmacy",
     "district": "Gandhinagar",
@@ -6556,7 +6556,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-286",
+    "id": "pharm-286",
     "name": "College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6579,7 +6579,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-287",
+    "id": "pharm-287",
     "name": "College of Pharmacy, Ernakulam",
     "stream": "Pharmacy",
     "district": "Ernakulam",
@@ -6602,7 +6602,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-288",
+    "id": "pharm-288",
     "name": "Crescent B.Pharm. College",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6625,7 +6625,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-289",
+    "id": "pharm-289",
     "name": "Dale View College of Pharmacy and Research Center",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6648,7 +6648,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-290",
+    "id": "pharm-290",
     "name": "Devaki Amma Memorial College of Pharmacy, Malappuram",
     "stream": "Pharmacy",
     "district": "Malappuram",
@@ -6671,7 +6671,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-291",
+    "id": "pharm-291",
     "name": "Fathima College of Pharmacy, Kallumthazham, Kilikollur",
     "stream": "Pharmacy",
     "district": "Kilikollur",
@@ -6694,7 +6694,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-292",
+    "id": "pharm-292",
     "name": "Grace College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6717,7 +6717,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-293",
+    "id": "pharm-293",
     "name": "Institute of Pharmaceutical Sciences, Medical College P.O.,",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6740,7 +6740,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-294",
+    "id": "pharm-294",
     "name": "Jamia Salafiya Pharmacy College",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6763,7 +6763,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-295",
+    "id": "pharm-295",
     "name": "JDT Islam College of Pharmacy, Kozhikode",
     "stream": "Pharmacy",
     "district": "Kozhikode",
@@ -6786,7 +6786,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-296",
+    "id": "pharm-296",
     "name": "John Enoch college of Pharmacy, Karamana",
     "stream": "Pharmacy",
     "district": "Karamana",
@@ -6809,7 +6809,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-297",
+    "id": "pharm-297",
     "name": "K.T.N College of Pharmacy, Chalavara, Palakkad",
     "stream": "Pharmacy",
     "district": "Palakkad",
@@ -6832,7 +6832,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-298",
+    "id": "pharm-298",
     "name": "Maharaja College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6855,7 +6855,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-299",
+    "id": "pharm-299",
     "name": "Malik Deenar College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6878,7 +6878,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-300",
+    "id": "pharm-300",
     "name": "Mar Dioscorus College of Pharmacy, Sreekariyam P O,",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6901,7 +6901,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-301",
+    "id": "pharm-301",
     "name": "National College of Pharmacy Manassery",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6924,7 +6924,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-302",
+    "id": "pharm-302",
     "name": "Nehru College of Pharmacy, Thiruvilwamala",
     "stream": "Pharmacy",
     "district": "Thiruvilwamala",
@@ -6947,7 +6947,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-303",
+    "id": "pharm-303",
     "name": "Priyadarsini Institute of Para Medical Science",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -6970,7 +6970,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-304",
+    "id": "pharm-304",
     "name": "Sree Krishna College of Pharmacy & Research Centre",
     "stream": "Pharmacy",
     "district": "Krishna",
@@ -6993,7 +6993,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-305",
+    "id": "pharm-305",
     "name": "St. James College of Pharmaceutical Sciences, River Bank, Chalakudy",
     "stream": "Pharmacy",
     "district": "Chalakudy",
@@ -7016,7 +7016,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-306",
+    "id": "pharm-306",
     "name": "St. Joseph's College of Pharmacy, Vadakamcherry",
     "stream": "Pharmacy",
     "district": "Vadakamcherry",
@@ -7039,7 +7039,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-307",
+    "id": "pharm-307",
     "name": "T.D. Medical College",
     "stream": "Pharmacy",
     "district": "Kochi",
@@ -7062,7 +7062,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-308",
+    "id": "pharm-308",
     "name": "West Fort College Of Pharmacy, Pottore, Thrissur",
     "stream": "Pharmacy",
     "district": "Thrissur",
@@ -7085,7 +7085,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-309",
+    "id": "pharm-309",
     "name": "Adina College of Pharmacy, Sagar",
     "stream": "Pharmacy",
     "district": "Sagar",
@@ -7108,7 +7108,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-310",
+    "id": "pharm-310",
     "name": "B R Nahata College of Pharmacy, Mandsaur.",
     "stream": "Pharmacy",
     "district": "Mandsaur",
@@ -7131,7 +7131,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-311",
+    "id": "pharm-311",
     "name": "Bansal Diploma Pharmacy College",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7154,7 +7154,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-312",
+    "id": "pharm-312",
     "name": "College of Pharmacy, Rajendra Nagar, A.B. Road",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7177,7 +7177,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-313",
+    "id": "pharm-313",
     "name": "Department of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7200,7 +7200,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-314",
+    "id": "pharm-314",
     "name": "Department of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7223,7 +7223,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-315",
+    "id": "pharm-315",
     "name": "Devi Ahiya College of Pharmacy, near Jaora Compound",
     "stream": "Pharmacy",
     "district": "Compound",
@@ -7246,7 +7246,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-316",
+    "id": "pharm-316",
     "name": "Dr. Shri R.M.S. Institute of Science & Technology College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7269,7 +7269,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-317",
+    "id": "pharm-317",
     "name": "Govt. Kalaniketan (Polytechnic)",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7292,7 +7292,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-318",
+    "id": "pharm-318",
     "name": "Gry Institute of Pharmacy, Sarvar Deula Road, Borwan",
     "stream": "Pharmacy",
     "district": "Borwan",
@@ -7315,7 +7315,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-319",
+    "id": "pharm-319",
     "name": "Guru Ramdas Khalsa Institute of Science & Technology (Pharmacy)",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7338,7 +7338,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-320",
+    "id": "pharm-320",
     "name": "Indore Institute of Pharmacy, Opposite Indian Institute of Management Rau",
     "stream": "Pharmacy",
     "district": "Indore",
@@ -7361,7 +7361,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-321",
+    "id": "pharm-321",
     "name": "Institute of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7384,7 +7384,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-322",
+    "id": "pharm-322",
     "name": "Mahakal Institute of Pharmaceutical Studies, Station Road, Datana",
     "stream": "Pharmacy",
     "district": "Datana",
@@ -7407,7 +7407,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-323",
+    "id": "pharm-323",
     "name": "Malhotra College of Pharmacy, Gandhi Nagar Bypass",
     "stream": "Pharmacy",
     "district": "Bypass",
@@ -7430,7 +7430,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-324",
+    "id": "pharm-324",
     "name": "Mittal Institute of Pharmacy, Bhopal",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7453,7 +7453,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-325",
+    "id": "pharm-325",
     "name": "NRI Institute of Pharmaceutical Science, (NIPS) Opp. Patel Nagar, Raisen Road",
     "stream": "Pharmacy",
     "district": "Raisen",
@@ -7476,7 +7476,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-326",
+    "id": "pharm-326",
     "name": "NRI Institute of Pharmacy (NIP), Bhopal",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7499,7 +7499,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-327",
+    "id": "pharm-327",
     "name": "Oriental Institute of Science & Technology",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7522,7 +7522,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-328",
+    "id": "pharm-328",
     "name": "Ravi Shankar college of pharmacy, Bhopal",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7545,7 +7545,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-329",
+    "id": "pharm-329",
     "name": "R.K.D.F. Institute of Science & Technology",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7568,7 +7568,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-330",
+    "id": "pharm-330",
     "name": "Rishi Raj College of Pharmacy, Indore",
     "stream": "Pharmacy",
     "district": "Indore",
@@ -7591,7 +7591,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-331",
+    "id": "pharm-331",
     "name": "Rajiv Gandhi College of Pharmacy Kolar Road, Bhopal",
     "stream": "Pharmacy",
     "district": "Kolar",
@@ -7614,7 +7614,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-332",
+    "id": "pharm-332",
     "name": "S.V.Govt. Polytechnic",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7637,7 +7637,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-333",
+    "id": "pharm-333",
     "name": "Sagar Institute of Pharmaceutical Sciences, Sagar",
     "stream": "Pharmacy",
     "district": "Sagar",
@@ -7660,7 +7660,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-334",
+    "id": "pharm-334",
     "name": "Sagar Institute of Research, Technology & Science-Pharmacy (SIRTS-P)",
     "stream": "Pharmacy",
     "district": "Sagar",
@@ -7683,7 +7683,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-335",
+    "id": "pharm-335",
     "name": "Shri G.S. Institute of Technology & Science, Indore",
     "stream": "Pharmacy",
     "district": "Indore",
@@ -7706,7 +7706,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-336",
+    "id": "pharm-336",
     "name": "Shri Ram Nath Singh",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7729,7 +7729,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-337",
+    "id": "pharm-337",
     "name": "Shriram College of Pharmacy, near Gwalior",
     "stream": "Pharmacy",
     "district": "Gwalior",
@@ -7752,7 +7752,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-338",
+    "id": "pharm-338",
     "name": "Smriti College of Pharmaceutical Education, near Dewas Naka, Indore",
     "stream": "Pharmacy",
     "district": "Indore",
@@ -7775,7 +7775,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-339",
+    "id": "pharm-339",
     "name": "Sun Institute of Pharmaceutical Education & Research (SIPER)",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7798,7 +7798,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-340",
+    "id": "pharm-340",
     "name": "Truba Institute of Pharmacy, Bhopal",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7821,7 +7821,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-341",
+    "id": "pharm-341",
     "name": "Ujjain Institute Of Pharmaceutical Sciences, Ujjain",
     "stream": "Pharmacy",
     "district": "Ujjain",
@@ -7844,7 +7844,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-342",
+    "id": "pharm-342",
     "name": "V.N.S. Institute of Pharmacy, Vidya Vihar, Neelbad, Bhopal",
     "stream": "Pharmacy",
     "district": "Bhopal",
@@ -7867,7 +7867,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-343",
+    "id": "pharm-343",
     "name": "A.I.T's Institute of Pharmacy, Pharmacy Nagar",
     "stream": "Pharmacy",
     "district": "Nagar",
@@ -7890,7 +7890,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-344",
+    "id": "pharm-344",
     "name": "A.S.P.M.'s K.T. Patil College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -7913,7 +7913,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-345",
+    "id": "pharm-345",
     "name": "A.S.P.M's Diploma IN Pharmacy Institute, Chaadwad",
     "stream": "Pharmacy",
     "district": "Chaadwad",
@@ -7936,7 +7936,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-346",
+    "id": "pharm-346",
     "name": "Abasaheb Kakade College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -7959,7 +7959,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-347",
+    "id": "pharm-347",
     "name": "Adarsh Shikshan Sanstha's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -7982,7 +7982,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-348",
+    "id": "pharm-348",
     "name": "Agnihotri Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8005,7 +8005,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-349",
+    "id": "pharm-349",
     "name": "Alard College of Pharmacy, near Rajiv Gandhi Infotek Park",
     "stream": "Pharmacy",
     "district": "Park",
@@ -8028,7 +8028,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-350",
+    "id": "pharm-350",
     "name": "All India Shri Shivaji Memorial Society's College of Pharmacy, near R.T.O.",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8051,7 +8051,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-351",
+    "id": "pharm-351",
     "name": "Allana College of Pharmacy, near Poorna College Camp",
     "stream": "Pharmacy",
     "district": "Camp",
@@ -8074,7 +8074,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-352",
+    "id": "pharm-352",
     "name": "Amrutvahini Institute of Pharmacy, Dist. Ahmednagar",
     "stream": "Pharmacy",
     "district": "Ahmednagar",
@@ -8097,7 +8097,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-353",
+    "id": "pharm-353",
     "name": "Anand Charitable Sanstha's College of Pharmacy, Tq- Ashti",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8120,7 +8120,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-354",
+    "id": "pharm-354",
     "name": "Anna Saheb Ajmera College of Pharmacy (Women), Deopur",
     "stream": "Pharmacy",
     "district": "Deopur",
@@ -8143,7 +8143,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-355",
+    "id": "pharm-355",
     "name": "Annasaheb Dange College of B.Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8166,7 +8166,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-356",
+    "id": "pharm-356",
     "name": "Annasaheb Ramesh Ajmera College of Pharmacy (Women)",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8189,7 +8189,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-357",
+    "id": "pharm-357",
     "name": "Arunamai College of Pharmacy, Mumarabad, Jalgaon",
     "stream": "Pharmacy",
     "district": "Jalgaon",
@@ -8212,7 +8212,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-358",
+    "id": "pharm-358",
     "name": "Anuradha College of Pharmacy, Chikhli, Buldhana district",
     "stream": "Pharmacy",
     "district": "Buldhana",
@@ -8235,7 +8235,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-359",
+    "id": "pharm-359",
     "name": "Appasahib Birnale College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8258,7 +8258,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-360",
+    "id": "pharm-360",
     "name": "Armed Forces Medical College",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8281,7 +8281,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-361",
+    "id": "pharm-361",
     "name": "Arts Science, Commerce & Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8304,7 +8304,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-362",
+    "id": "pharm-362",
     "name": "B.V. Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8327,7 +8327,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-363",
+    "id": "pharm-363",
     "name": "Bhagawan Pharmacy College",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8350,7 +8350,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-364",
+    "id": "pharm-364",
     "name": "Bharati Vidyapeeth's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8373,7 +8373,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-365",
+    "id": "pharm-365",
     "name": "Bharati Vidyapeeth's Poona College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8396,7 +8396,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-366",
+    "id": "pharm-366",
     "name": "Bhausaheb Mulak College of D. Pharmacy, Umrer",
     "stream": "Pharmacy",
     "district": "Umrer",
@@ -8419,7 +8419,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-367",
+    "id": "pharm-367",
     "name": "Bhinav Education Society's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8442,7 +8442,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-368",
+    "id": "pharm-368",
     "name": "Bombay College of Pharmacy, Kalina, Mumbai",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8465,7 +8465,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-369",
+    "id": "pharm-369",
     "name": "C U Shah College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8488,7 +8488,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-370",
+    "id": "pharm-370",
     "name": "Channabasweshwar Pharmacy College",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8511,7 +8511,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-371",
+    "id": "pharm-371",
     "name": "Charak College of pharmacy & Research Wagholi, Pune",
     "stream": "Pharmacy",
     "district": "Pune",
@@ -8534,7 +8534,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-372",
+    "id": "pharm-372",
     "name": "College of Pharmacy, Pusad, Yavatmal District",
     "stream": "Pharmacy",
     "district": "Yavatmal",
@@ -8557,7 +8557,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-373",
+    "id": "pharm-373",
     "name": "College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8580,7 +8580,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-374",
+    "id": "pharm-374",
     "name": "College of Pharmacy (Polytechnic), Post. Alore, Talq",
     "stream": "Pharmacy",
     "district": "Talq",
@@ -8603,7 +8603,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-375",
+    "id": "pharm-375",
     "name": "D.S.T.S. Mandal's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8626,7 +8626,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-376",
+    "id": "pharm-376",
     "name": "Dayanand College of Pharmacy, Dayanand Education Society Campus",
     "stream": "Pharmacy",
     "district": "Society",
@@ -8649,7 +8649,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-377",
+    "id": "pharm-377",
     "name": "Department of Chemical Technology",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8672,7 +8672,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-378",
+    "id": "pharm-378",
     "name": "Department of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8695,7 +8695,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-379",
+    "id": "pharm-379",
     "name": "Deptt. Of Pharmaceutical Science, Amravathi Road",
     "stream": "Pharmacy",
     "district": "Amravathi",
@@ -8718,7 +8718,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-380",
+    "id": "pharm-380",
     "name": "Dr. Bhanuben Nanavati College of Pharmacy, Mithibai College Campus, V.M. Road",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8741,7 +8741,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-381",
+    "id": "pharm-381",
     "name": "Dr. L. H. Hiranandani College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8764,7 +8764,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-382",
+    "id": "pharm-382",
     "name": "Dr. J.J. Magdum Pharmacy College",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8787,7 +8787,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-383",
+    "id": "pharm-383",
     "name": "Dwarka Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8810,7 +8810,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-384",
+    "id": "pharm-384",
     "name": "Geetadevi Khandelwal Institute of Pharmacy, Dabki Road",
     "stream": "Pharmacy",
     "district": "Dabki",
@@ -8833,7 +8833,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-385",
+    "id": "pharm-385",
     "name": "Godavari Shikshan Mandal's Asian Institute of Pharmacy, Survey No.326/2 Pathardi Road",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8856,7 +8856,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-386",
+    "id": "pharm-386",
     "name": "Gondia Education Society's Manoharbhai Patel Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8879,7 +8879,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-387",
+    "id": "pharm-387",
     "name": "Government College of Pharmacy, Amravati",
     "stream": "Pharmacy",
     "district": "Amravati",
@@ -8902,7 +8902,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-388",
+    "id": "pharm-388",
     "name": "Government College of Pharmacy, Aurangabad",
     "stream": "Pharmacy",
     "district": "Aurangabad",
@@ -8925,7 +8925,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-389",
+    "id": "pharm-389",
     "name": "Government College of Pharmacy, Karad",
     "stream": "Pharmacy",
     "district": "Karad",
@@ -8948,7 +8948,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-390",
+    "id": "pharm-390",
     "name": "Government College of Pharmacy, Ratnagiri",
     "stream": "Pharmacy",
     "district": "Ratnagiri",
@@ -8971,7 +8971,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-391",
+    "id": "pharm-391",
     "name": "Govt. Polytechnic",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -8994,7 +8994,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-392",
+    "id": "pharm-392",
     "name": "Gulabrao Patil College of Pharmacy, near Govt. Milk Scheme, Miraj",
     "stream": "Pharmacy",
     "district": "Miraj",
@@ -9017,7 +9017,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-393",
+    "id": "pharm-393",
     "name": "Gurunanak Technical Institute (Diploma in Pharmacy), Foundry & Namagar Nagar",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9040,7 +9040,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-394",
+    "id": "pharm-394",
     "name": "H K College of Pharmacy, Jogeshwari, Mumbai",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9063,7 +9063,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-395",
+    "id": "pharm-395",
     "name": "Indira College of Pharmacy, New Pune Mumbai Highway Tathwade",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9086,7 +9086,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-396",
+    "id": "pharm-396",
     "name": "Institute of Diploma in Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9109,7 +9109,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-397",
+    "id": "pharm-397",
     "name": "Institute of Pharmaceutical Education and Research",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9132,7 +9132,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-398",
+    "id": "pharm-398",
     "name": "Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9155,7 +9155,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-399",
+    "id": "pharm-399",
     "name": "Institute of Pharmacy, Deopur",
     "stream": "Pharmacy",
     "district": "Deopur",
@@ -9178,7 +9178,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-400",
+    "id": "pharm-400",
     "name": "Institute of Pharmacy, Station Road Yavatmal",
     "stream": "Pharmacy",
     "district": "Yavatmal",
@@ -9201,7 +9201,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-401",
+    "id": "pharm-401",
     "name": "J L Chaturvedi College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9224,7 +9224,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-402",
+    "id": "pharm-402",
     "name": "J.B.S.P. Mandar's Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9247,7 +9247,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-403",
+    "id": "pharm-403",
     "name": "J.E.S.'s Institute of Pharmacy, Durga Mata Road",
     "stream": "Pharmacy",
     "district": "Mata",
@@ -9270,7 +9270,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-404",
+    "id": "pharm-404",
     "name": "Jijamata Education Society's College of Pharmacy, Nandurbar",
     "stream": "Pharmacy",
     "district": "Nandurbar",
@@ -9293,7 +9293,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-405",
+    "id": "pharm-405",
     "name": "K.D. Pawar College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9316,7 +9316,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-406",
+    "id": "pharm-406",
     "name": "K.D.C.A's Institute of Pharmacy, Ujalaiwadi",
     "stream": "Pharmacy",
     "district": "Ujalaiwadi",
@@ -9339,7 +9339,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-407",
+    "id": "pharm-407",
     "name": "K.E.S's College of Pharmacy, Manwad Road",
     "stream": "Pharmacy",
     "district": "Manwad",
@@ -9362,7 +9362,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-408",
+    "id": "pharm-408",
     "name": "Kamala Nehru Polytechnic (pharmacy)",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9385,7 +9385,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-409",
+    "id": "pharm-409",
     "name": "Kamla Nehru Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9408,7 +9408,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-410",
+    "id": "pharm-410",
     "name": "Lokmanya Tilak Institute of Pharmaceutical Studies, Laxmi Nagar",
     "stream": "Pharmacy",
     "district": "Nagar",
@@ -9431,7 +9431,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-411",
+    "id": "pharm-411",
     "name": "M.A.H. College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9454,7 +9454,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-412",
+    "id": "pharm-412",
     "name": "Maharashtra Shikshan Samiti's 'Maharashtra College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9477,7 +9477,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-413",
+    "id": "pharm-413",
     "name": "Mahatma Basweshwar Education Society's College Pharmacy, MIDC Area, Barshi Road",
     "stream": "Pharmacy",
     "district": "Barshi",
@@ -9500,7 +9500,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-414",
+    "id": "pharm-414",
     "name": "MGV Mandal's College of Pharmacy, Panchvati",
     "stream": "Pharmacy",
     "district": "Panchvati",
@@ -9523,7 +9523,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-415",
+    "id": "pharm-415",
     "name": "Modern College of Pharmacy, Sector 21, Yamunanagar, Nigdi",
     "stream": "Pharmacy",
     "district": "Nigdi",
@@ -9546,7 +9546,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-416",
+    "id": "pharm-416",
     "name": "Modern College of Pharmacy (Ladies Only), Borhadewadi, A/P Moshi, Taluk. Haveli",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9569,7 +9569,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-417",
+    "id": "pharm-417",
     "name": "Moze college of Pharmacy, Wagholi, Pune",
     "stream": "Pharmacy",
     "district": "Pune",
@@ -9592,7 +9592,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-418",
+    "id": "pharm-418",
     "name": "Mula Education Society's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9615,7 +9615,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-419",
+    "id": "pharm-419",
     "name": "Mumbai Educational Trust's Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9638,7 +9638,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-420",
+    "id": "pharm-420",
     "name": "N D M V P Samaj's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9661,7 +9661,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-421",
+    "id": "pharm-421",
     "name": "N.T.V.S. Institute of Pharmacy, Dhule",
     "stream": "Pharmacy",
     "district": "Dhule",
@@ -9684,7 +9684,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-422",
+    "id": "pharm-422",
     "name": "N.Y.S. Society's Nagpur College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Nagpur",
@@ -9707,7 +9707,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-423",
+    "id": "pharm-423",
     "name": "Nagpur College of Pharmacy/Sharad Pawar College of Pharmacy, Nagpur",
     "stream": "Pharmacy",
     "district": "Nagpur",
@@ -9730,7 +9730,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-424",
+    "id": "pharm-424",
     "name": "Department College of Pharmacy, Nagpur",
     "stream": "Pharmacy",
     "district": "Nagpur",
@@ -9753,7 +9753,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-425",
+    "id": "pharm-425",
     "name": "Navyug Vidyapeeth Trust's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9776,7 +9776,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-426",
+    "id": "pharm-426",
     "name": "NCRD's Sterling Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9799,7 +9799,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-427",
+    "id": "pharm-427",
     "name": "NSS College of Pharmacy, 94, Tardeo Road, M.P.Mill Compound",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9822,7 +9822,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-428",
+    "id": "pharm-428",
     "name": "Oriental College of Pharmacy, Sanpada, Navi Mumbai",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9845,7 +9845,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-429",
+    "id": "pharm-429",
     "name": "P S G V P Mandal's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9868,7 +9868,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-430",
+    "id": "pharm-430",
     "name": "Padmashree Dr D Y Patil College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9891,7 +9891,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-431",
+    "id": "pharm-431",
     "name": "Padmashri Dr Vithalrao Patil Foundation's",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9914,7 +9914,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-432",
+    "id": "pharm-432",
     "name": "Pataldhamal Wadhwani College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9937,7 +9937,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-433",
+    "id": "pharm-433",
     "name": "Pravara Rural College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9960,7 +9960,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-434",
+    "id": "pharm-434",
     "name": "Principal K M Kundnani College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -9983,7 +9983,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-435",
+    "id": "pharm-435",
     "name": "R C Patel College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10006,7 +10006,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-436",
+    "id": "pharm-436",
     "name": "Rajgad Dnyanpeeth's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10029,7 +10029,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-437",
+    "id": "pharm-437",
     "name": "Raoji Naik Institute of Pharmacy, Buldhana",
     "stream": "Pharmacy",
     "district": "Buldhana",
@@ -10052,7 +10052,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-438",
+    "id": "pharm-438",
     "name": "Ravi Institute of Diploma in Pharmacy, Sirapeth",
     "stream": "Pharmacy",
     "district": "Sirapeth",
@@ -10075,7 +10075,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-439",
+    "id": "pharm-439",
     "name": "S.A.S. Polytechnic (Pharmacy), Bhiwandi",
     "stream": "Pharmacy",
     "district": "Bhiwandi",
@@ -10098,7 +10098,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-440",
+    "id": "pharm-440",
     "name": "S.C.S.MS. Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10121,7 +10121,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-441",
+    "id": "pharm-441",
     "name": "S.M.B.T. College of Pharmacy, Igatpuri",
     "stream": "Pharmacy",
     "district": "Igatpuri",
@@ -10144,7 +10144,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-442",
+    "id": "pharm-442",
     "name": "Saraswati Vidya Bhawan's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10167,7 +10167,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-443",
+    "id": "pharm-443",
     "name": "Satara Polytechnic (Dept of Pharmacy), Mangalwar Peth",
     "stream": "Pharmacy",
     "district": "Satara",
@@ -10190,7 +10190,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-444",
+    "id": "pharm-444",
     "name": "Seth Govind Raghunath Sable College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10213,7 +10213,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-445",
+    "id": "pharm-445",
     "name": "Sharad Pawer College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10236,7 +10236,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-446",
+    "id": "pharm-446",
     "name": "Sharadchandra Pawar College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10259,7 +10259,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-447",
+    "id": "pharm-447",
     "name": "Shikshan Prasark Mandal's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10282,7 +10282,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-448",
+    "id": "pharm-448",
     "name": "Shivnagar Vidya Prasarak Mandal's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10305,7 +10305,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-449",
+    "id": "pharm-449",
     "name": "Shree Sant Muktabai Institute of Technology (Pharmacy), P.O.Box 132",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10328,7 +10328,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-450",
+    "id": "pharm-450",
     "name": "Shree Shahu Chhatrapati Shikshan Sanstha's, Dasara Chowk",
     "stream": "Pharmacy",
     "district": "Chowk",
@@ -10351,7 +10351,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-451",
+    "id": "pharm-451",
     "name": "Shri C.S. Shikshan Sanstha's SCSSS College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10374,7 +10374,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-452",
+    "id": "pharm-452",
     "name": "Shri D.F. Lodha Pharmacy College, Chaadwad",
     "stream": "Pharmacy",
     "district": "Chaadwad",
@@ -10397,7 +10397,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-453",
+    "id": "pharm-453",
     "name": "Shri K.R. Pandav Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10420,7 +10420,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-454",
+    "id": "pharm-454",
     "name": "Shri Sadashivrao Patil S. Sanstha College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10443,7 +10443,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-455",
+    "id": "pharm-455",
     "name": "Shri Sharda Bhavan Education Society's College of Pharmacy, Seva Kendra",
     "stream": "Pharmacy",
     "district": "Kendra",
@@ -10466,7 +10466,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-456",
+    "id": "pharm-456",
     "name": "Shri Shivaji Institute of Pharmacy, Parbhani",
     "stream": "Pharmacy",
     "district": "Parbhani",
@@ -10489,7 +10489,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-457",
+    "id": "pharm-457",
     "name": "Sinhgad College of Pharmacy, Narhe/Ambegaon/Lonavala/Kondhwa",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10512,7 +10512,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-458",
+    "id": "pharm-458",
     "name": "Smt Kishoritai Bhoyar College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10535,7 +10535,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-459",
+    "id": "pharm-459",
     "name": "Smt S S Patil College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10558,7 +10558,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-460",
+    "id": "pharm-460",
     "name": "Smt. Kashibai Navale College of Pharmacy, Saswad Road Kondhwa (Bk.)",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10581,7 +10581,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-461",
+    "id": "pharm-461",
     "name": "Smt. Kusumtai Wankhede Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10604,7 +10604,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-462",
+    "id": "pharm-462",
     "name": "Sri. Anand College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10627,7 +10627,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-463",
+    "id": "pharm-463",
     "name": "Sudhakarrao Naik Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10650,7 +10650,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-464",
+    "id": "pharm-464",
     "name": "Tapi Valley Education Society's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10673,7 +10673,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-465",
+    "id": "pharm-465",
     "name": "University Deptt. Of Chemical Technology, Matunga Road",
     "stream": "Pharmacy",
     "district": "Matunga",
@@ -10696,7 +10696,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-466",
+    "id": "pharm-466",
     "name": "V.J.S.M.'s Institute of Pharmacy, Junnar",
     "stream": "Pharmacy",
     "district": "Junnar",
@@ -10719,7 +10719,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-467",
+    "id": "pharm-467",
     "name": "Veer Mata Hiraben P. Shah College of Pharmacy, Kasar-Vadavali, Ghodbunder Road",
     "stream": "Pharmacy",
     "district": "Ghodbunder",
@@ -10742,7 +10742,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-468",
+    "id": "pharm-468",
     "name": "Vidarbha Youth Welfare Society's Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10765,7 +10765,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-469",
+    "id": "pharm-469",
     "name": "Vidya Bharati College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10788,7 +10788,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-470",
+    "id": "pharm-470",
     "name": "Waghire College of Pharmacy, Saswad District",
     "stream": "Pharmacy",
     "district": "Saswad",
@@ -10811,7 +10811,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-471",
+    "id": "pharm-471",
     "name": "Y B Chavan College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10834,7 +10834,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-472",
+    "id": "pharm-472",
     "name": "Yash Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Mumbai",
@@ -10857,7 +10857,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-473",
+    "id": "pharm-473",
     "name": "Yashvantro Chavan College of Pharmacy, near Nagapur Bridge, near Manmad Road",
     "stream": "Pharmacy",
     "district": "Manmad",
@@ -10880,7 +10880,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-474",
+    "id": "pharm-474",
     "name": "Balangi Pharmaceutical",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -10903,7 +10903,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-475",
+    "id": "pharm-475",
     "name": "College of Pharmaceutical Sciences, Ganjam",
     "stream": "Pharmacy",
     "district": "Ganjam",
@@ -10926,7 +10926,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-476",
+    "id": "pharm-476",
     "name": "College of Pharmaceutical Sciences, Marina Drive Road P.O. Baliguali",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -10949,7 +10949,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-477",
+    "id": "pharm-477",
     "name": "The College of Pharmaceutical Science, Via Janla",
     "stream": "Pharmacy",
     "district": "Janla",
@@ -10972,7 +10972,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-478",
+    "id": "pharm-478",
     "name": "Dadhichi College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -10995,7 +10995,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-479",
+    "id": "pharm-479",
     "name": "Gayatri College of Pharmacy, Jamadarpali",
     "stream": "Pharmacy",
     "district": "Jamadarpali",
@@ -11018,7 +11018,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-480",
+    "id": "pharm-480",
     "name": "Indira Gandhi Institute of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11041,7 +11041,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-481",
+    "id": "pharm-481",
     "name": "Indira Gandhi Memorial Institute of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11064,7 +11064,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-482",
+    "id": "pharm-482",
     "name": "Institute of Pharmaceutical Sciences & Technology, P.O. Bahugram",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11087,7 +11087,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-483",
+    "id": "pharm-483",
     "name": "Institute of Pharmaceutical Technology",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11110,7 +11110,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-484",
+    "id": "pharm-484",
     "name": "Institute of Pharmacy & Technology",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11133,7 +11133,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-485",
+    "id": "pharm-485",
     "name": "Jeypore College of Pharmacy, Koraput",
     "stream": "Pharmacy",
     "district": "Koraput",
@@ -11156,7 +11156,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-486",
+    "id": "pharm-486",
     "name": "Kanak Manjari Institute of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11179,7 +11179,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-487",
+    "id": "pharm-487",
     "name": "Mayurbhanj Medical Academy, Baripada",
     "stream": "Pharmacy",
     "district": "Baripada",
@@ -11202,7 +11202,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-488",
+    "id": "pharm-488",
     "name": "Om Sai College of academy, Ganjam",
     "stream": "Pharmacy",
     "district": "Ganjam",
@@ -11225,7 +11225,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-489",
+    "id": "pharm-489",
     "name": "Orissa College of Pharmaceutical Science",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11248,7 +11248,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-490",
+    "id": "pharm-490",
     "name": "Pharmaceutical College, Tingipali",
     "stream": "Pharmacy",
     "district": "Tingipali",
@@ -11271,7 +11271,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-491",
+    "id": "pharm-491",
     "name": "Pranabandhu Institute of Paramedical Science & Technology",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11294,7 +11294,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-492",
+    "id": "pharm-492",
     "name": "Roland Institute of Pharmaceutical Science, Behampur",
     "stream": "Pharmacy",
     "district": "Behampur",
@@ -11317,7 +11317,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-493",
+    "id": "pharm-493",
     "name": "Ronald Institute of Pharmaceutical Sciences, (Ganjam)",
     "stream": "Pharmacy",
     "district": "Ganjam",
@@ -11340,7 +11340,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-494",
+    "id": "pharm-494",
     "name": "Royal College of Pharmacy & Health Sciences, Ganjam",
     "stream": "Pharmacy",
     "district": "Ganjam",
@@ -11363,7 +11363,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-495",
+    "id": "pharm-495",
     "name": "S.C.B. Medical College",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11386,7 +11386,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-496",
+    "id": "pharm-496",
     "name": "School of Pharmaceutical Sciences, Sikhya Anusandhan, Khurda",
     "stream": "Pharmacy",
     "district": "Khurda",
@@ -11409,7 +11409,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-497",
+    "id": "pharm-497",
     "name": "Seemanta Institute of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11432,7 +11432,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-498",
+    "id": "pharm-498",
     "name": "Siddheswar College of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11455,7 +11455,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-499",
+    "id": "pharm-499",
     "name": "Sri Jayadev College of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11478,7 +11478,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-500",
+    "id": "pharm-500",
     "name": "University Department of Pharmaceutical Sciences, Utkal University, Vani Vihar, BBSR (Govt.)",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11501,7 +11501,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-501",
+    "id": "pharm-501",
     "name": "V.S.S. Medical College",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11524,7 +11524,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-502",
+    "id": "pharm-502",
     "name": "Women's Polytechnic",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11547,7 +11547,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-503",
+    "id": "pharm-503",
     "name": "Govt. Medical College",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11570,7 +11570,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-504",
+    "id": "pharm-504",
     "name": "Govt Polytechnic for Women",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11593,7 +11593,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-505",
+    "id": "pharm-505",
     "name": "Govt Polytechnic Institute for Women",
     "stream": "Pharmacy",
     "district": "Bhubaneswar",
@@ -11616,7 +11616,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-506",
+    "id": "pharm-506",
     "name": "Mahatma Gandhi College of pharmaceutical sciences Jaipur",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -11624,7 +11624,7 @@ export const pharmacyCollegesData = [
     "state": "RJ",
     "stateName": "Rajasthan",
     "details": "",
-    "courses": "B.Pharm, D.Pharm, M.Pharm, Pharm.D",
+    "courses": "D. Pharma, B. Pharma, M. Pharma",
     "approvedBy": "Pharmacy Council of India (PCI)",
     "facilities": [
       "Library",
@@ -11639,7 +11639,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-507",
+    "id": "pharm-507",
     "name": "Akashdeep College of Pharmacy, Mansarovar",
     "stream": "Pharmacy",
     "district": "Mansarovar",
@@ -11662,7 +11662,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-508",
+    "id": "pharm-508",
     "name": "Alwar Pharmacy College",
     "stream": "Pharmacy",
     "district": "Alwar",
@@ -11670,7 +11670,7 @@ export const pharmacyCollegesData = [
     "state": "RJ",
     "stateName": "Rajasthan",
     "details": "",
-    "courses": "B.Pharm, D.Pharm, M.Pharm, Pharm.D",
+    "courses": "B. Pharma, D. Pharma, M. Pharma",
     "approvedBy": "Pharmacy Council of India (PCI)",
     "facilities": [
       "Library",
@@ -11685,7 +11685,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-509",
+    "id": "pharm-509",
     "name": "Baba Mungipa College of Pharmacy, Jhunjhunun",
     "stream": "Pharmacy",
     "district": "Jhunjhunun",
@@ -11708,7 +11708,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-510",
+    "id": "pharm-510",
     "name": "Bharti Institute of Pharmaceutical Sciences, Hanumangarh Road",
     "stream": "Pharmacy",
     "district": "Hanumangarh",
@@ -11731,7 +11731,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-511",
+    "id": "pharm-511",
     "name": "Bhupal Nobels' College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -11754,7 +11754,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-512",
+    "id": "pharm-512",
     "name": "Bhupal Nobles' College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -11777,7 +11777,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-513",
+    "id": "pharm-513",
     "name": "Birla Institute of Technology and Sciences",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -11800,7 +11800,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-514",
+    "id": "pharm-514",
     "name": "Deepshikha College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -11823,7 +11823,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-515",
+    "id": "pharm-515",
     "name": "Department of Pharmacy, University of Technology",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -11846,7 +11846,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-516",
+    "id": "pharm-516",
     "name": "Deptt. Of Pharmaceutical Science",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -11869,7 +11869,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-517",
+    "id": "pharm-517",
     "name": "Deptt.of Pharmaceutical Science S.M.S. Medical College",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -11892,7 +11892,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-518",
+    "id": "pharm-518",
     "name": "Goenka College of Pharmacy, Khuri Bari, Lachhmangarh Road",
     "stream": "Pharmacy",
     "district": "Lachhmangarh",
@@ -11900,7 +11900,7 @@ export const pharmacyCollegesData = [
     "state": "RJ",
     "stateName": "Rajasthan",
     "details": "",
-    "courses": "B.Pharm, D.Pharm, M.Pharm, Pharm.D",
+    "courses": "B. Pharma, M. Pharma",
     "approvedBy": "Pharmacy Council of India (PCI)",
     "facilities": [
       "Library",
@@ -11915,7 +11915,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-519",
+    "id": "pharm-519",
     "name": "Gyan Vihar School of Pharmacy, Mahal Jagatpura",
     "stream": "Pharmacy",
     "district": "Jagatpura",
@@ -11938,7 +11938,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-520",
+    "id": "pharm-520",
     "name": "Jaipur College of Pharmacy, Sitapura, Tonk Road",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -11961,7 +11961,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-521",
+    "id": "pharm-521",
     "name": "Lachoo Memorial College of Science & Technology (Pharmacy)",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -11984,7 +11984,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-522",
+    "id": "pharm-522",
     "name": "Lal Bahadur Shastri College of Pharmacy, Tilak Nagar",
     "stream": "Pharmacy",
     "district": "Nagar",
@@ -11992,7 +11992,7 @@ export const pharmacyCollegesData = [
     "state": "RJ",
     "stateName": "Rajasthan",
     "details": "",
-    "courses": "B.Pharm, D.Pharm, M.Pharm, Pharm.D",
+    "courses": "M. Pharma",
     "approvedBy": "Pharmacy Council of India (PCI)",
     "facilities": [
       "Library",
@@ -12007,7 +12007,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-523",
+    "id": "pharm-523",
     "name": "Maharaja Surajmal Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -12030,7 +12030,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-524",
+    "id": "pharm-524",
     "name": "Maharishi Arvind College of Pharmacy, Ambabari",
     "stream": "Pharmacy",
     "district": "Ambabari",
@@ -12038,7 +12038,7 @@ export const pharmacyCollegesData = [
     "state": "RJ",
     "stateName": "Rajasthan",
     "details": "",
-    "courses": "B.Pharm, D.Pharm, M.Pharm, Pharm.D",
+    "courses": "D. Pharma, B. Pharma, M. Pharma",
     "approvedBy": "Pharmacy Council of India (PCI)",
     "facilities": [
       "Library",
@@ -12053,7 +12053,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-525",
+    "id": "pharm-525",
     "name": "Marwar Pharmacy College",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -12076,7 +12076,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-526",
+    "id": "pharm-526",
     "name": "Nehru Memorial College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -12084,7 +12084,7 @@ export const pharmacyCollegesData = [
     "state": "RJ",
     "stateName": "Rajasthan",
     "details": "",
-    "courses": "B.Pharm, D.Pharm, M.Pharm, Pharm.D",
+    "courses": "D. Pharma",
     "approvedBy": "Pharmacy Council of India (PCI)",
     "facilities": [
       "Library",
@@ -12099,7 +12099,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-527",
+    "id": "pharm-527",
     "name": "Permanand College of Technology",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -12122,7 +12122,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-528",
+    "id": "pharm-528",
     "name": "Regional College of Pharmacy, Jaipur",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -12130,7 +12130,7 @@ export const pharmacyCollegesData = [
     "state": "RJ",
     "stateName": "Rajasthan",
     "details": "",
-    "courses": "B.Pharm, D.Pharm, M.Pharm, Pharm.D",
+    "courses": "D. Pharma, B. Pharma",
     "approvedBy": "Pharmacy Council of India (PCI)",
     "facilities": [
       "Library",
@@ -12145,7 +12145,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-529",
+    "id": "pharm-529",
     "name": "Sanjeevan College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -12153,7 +12153,7 @@ export const pharmacyCollegesData = [
     "state": "RJ",
     "stateName": "Rajasthan",
     "details": "",
-    "courses": "B.Pharm, D.Pharm, M.Pharm, Pharm.D",
+    "courses": "B. Pharma, D. Pharma",
     "approvedBy": "Pharmacy Council of India (PCI)",
     "facilities": [
       "Library",
@@ -12168,7 +12168,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-530",
+    "id": "pharm-530",
     "name": "Sanjivani College of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -12176,7 +12176,7 @@ export const pharmacyCollegesData = [
     "state": "RJ",
     "stateName": "Rajasthan",
     "details": "",
-    "courses": "B.Pharm, D.Pharm, M.Pharm, Pharm.D",
+    "courses": "B. Pharma, D. Pharma",
     "approvedBy": "Pharmacy Council of India (PCI)",
     "facilities": [
       "Library",
@@ -12191,7 +12191,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-531",
+    "id": "pharm-531",
     "name": "Shri Bajrang College of Pharmacy, Deeg",
     "stream": "Pharmacy",
     "district": "Deeg",
@@ -12199,7 +12199,7 @@ export const pharmacyCollegesData = [
     "state": "RJ",
     "stateName": "Rajasthan",
     "details": "",
-    "courses": "B.Pharm, D.Pharm, M.Pharm, Pharm.D",
+    "courses": "D. Pharma",
     "approvedBy": "Pharmacy Council of India (PCI)",
     "facilities": [
       "Library",
@@ -12214,7 +12214,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-532",
+    "id": "pharm-532",
     "name": "Shri U.S.B. College of Pharmacy, Santpur, Abu Road",
     "stream": "Pharmacy",
     "district": "Abu",
@@ -12222,7 +12222,7 @@ export const pharmacyCollegesData = [
     "state": "RJ",
     "stateName": "Rajasthan",
     "details": "",
-    "courses": "B.Pharm, D.Pharm, M.Pharm, Pharm.D",
+    "courses": "D. Pharma",
     "approvedBy": "Pharmacy Council of India (PCI)",
     "facilities": [
       "Library",
@@ -12237,7 +12237,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-533",
+    "id": "pharm-533",
     "name": "Sri Balaji College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -12245,7 +12245,7 @@ export const pharmacyCollegesData = [
     "state": "RJ",
     "stateName": "Rajasthan",
     "details": "",
-    "courses": "B.Pharm, D.Pharm, M.Pharm, Pharm.D",
+    "courses": "B. Pharma, D. Pharma",
     "approvedBy": "Pharmacy Council of India (PCI)",
     "facilities": [
       "Library",
@@ -12260,7 +12260,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-534",
+    "id": "pharm-534",
     "name": "Sri Ganganagar Institute of Pharmaceutical Sciences, near RIICO Bus Stand",
     "stream": "Pharmacy",
     "district": "Stand",
@@ -12283,7 +12283,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-535",
+    "id": "pharm-535",
     "name": "Swami Keshvanand Institute of Pharmacy, Jaipur",
     "stream": "Pharmacy",
     "district": "Jaipur",
@@ -12291,7 +12291,7 @@ export const pharmacyCollegesData = [
     "state": "RJ",
     "stateName": "Rajasthan",
     "details": "",
-    "courses": "B.Pharm, D.Pharm, M.Pharm, Pharm.D",
+    "courses": "B. Pharma",
     "approvedBy": "Pharmacy Council of India (PCI)",
     "facilities": [
       "Library",
@@ -12306,7 +12306,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-536",
+    "id": "pharm-536",
     "name": "A J College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12329,7 +12329,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-537",
+    "id": "pharm-537",
     "name": "Aadhi Bhagawan College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12352,7 +12352,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-538",
+    "id": "pharm-538",
     "name": "Adhiparasakthi College of Pharmacy, Chengai M.G.R. District",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12375,7 +12375,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-539",
+    "id": "pharm-539",
     "name": "Amrita Institute of Pharmaceutical Sciences, Elamakkara Post",
     "stream": "Pharmacy",
     "district": "Post",
@@ -12398,7 +12398,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-540",
+    "id": "pharm-540",
     "name": "Annai Velakanni's Pharmacy College",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12421,7 +12421,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-541",
+    "id": "pharm-541",
     "name": "Antarcticaa College of Pharmacy, Palayamkottai",
     "stream": "Pharmacy",
     "district": "Palayamkottai",
@@ -12444,7 +12444,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-542",
+    "id": "pharm-542",
     "name": "Arulmigu Kalasalingam College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12467,7 +12467,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-543",
+    "id": "pharm-543",
     "name": "C L Baid Metha College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12490,7 +12490,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-544",
+    "id": "pharm-544",
     "name": "C.S. Jain College of Pharmacy, Srimushnam",
     "stream": "Pharmacy",
     "district": "Srimushnam",
@@ -12513,7 +12513,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-545",
+    "id": "pharm-545",
     "name": "Cherraan's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12536,7 +12536,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-546",
+    "id": "pharm-546",
     "name": "Coimbatore College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Coimbatore",
@@ -12559,7 +12559,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-547",
+    "id": "pharm-547",
     "name": "Coimbatore Medical College",
     "stream": "Pharmacy",
     "district": "Coimbatore",
@@ -12582,7 +12582,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-548",
+    "id": "pharm-548",
     "name": "College of Allied Medical sciences, Shenoy Nagar",
     "stream": "Pharmacy",
     "district": "Nagar",
@@ -12605,7 +12605,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-549",
+    "id": "pharm-549",
     "name": "College of Paramedical Sciences, Thindal Post",
     "stream": "Pharmacy",
     "district": "Post",
@@ -12628,7 +12628,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-550",
+    "id": "pharm-550",
     "name": "College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12651,7 +12651,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-551",
+    "id": "pharm-551",
     "name": "College of Pharmacy Sri Gokulam Institute of Pharmedical Science, Premier Complex",
     "stream": "Pharmacy",
     "district": "Complex",
@@ -12674,7 +12674,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-552",
+    "id": "pharm-552",
     "name": "Department of Pharmacy, Porur",
     "stream": "Pharmacy",
     "district": "Porur",
@@ -12697,7 +12697,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-553",
+    "id": "pharm-553",
     "name": "Edayathangudy G.S. Pillay College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12720,7 +12720,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-554",
+    "id": "pharm-554",
     "name": "The Erode College of Pharmacy, Valipurathanpalayam (P.O.)",
     "stream": "Pharmacy",
     "district": "Erode",
@@ -12743,7 +12743,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-555",
+    "id": "pharm-555",
     "name": "Fathima College of Pharmacy, Nellai Kattabomman Dt.",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12766,7 +12766,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-556",
+    "id": "pharm-556",
     "name": "Institute of Pharmaceutical Technology",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12789,7 +12789,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-557",
+    "id": "pharm-557",
     "name": "J.K.K. Nattraja College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12812,7 +12812,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-558",
+    "id": "pharm-558",
     "name": "J K K Munirajah Medical Research Foundation",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12835,7 +12835,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-559",
+    "id": "pharm-559",
     "name": "J S S College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12858,7 +12858,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-560",
+    "id": "pharm-560",
     "name": "K M College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12881,7 +12881,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-561",
+    "id": "pharm-561",
     "name": "K. K. College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12904,7 +12904,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-562",
+    "id": "pharm-562",
     "name": "K.M.R. College of Pharmacy, Perundurai",
     "stream": "Pharmacy",
     "district": "Perundurai",
@@ -12927,7 +12927,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-563",
+    "id": "pharm-563",
     "name": "Kamalakshi Pandurangan College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12950,7 +12950,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-564",
+    "id": "pharm-564",
     "name": "KMCH College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12973,7 +12973,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-565",
+    "id": "pharm-565",
     "name": "KRS Pallavan College of Pharmacy, M.M. Avenue",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -12996,7 +12996,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-566",
+    "id": "pharm-566",
     "name": "Laxmi Narayan College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13019,7 +13019,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-567",
+    "id": "pharm-567",
     "name": "Madras College of Pharmacy, Avadi",
     "stream": "Pharmacy",
     "district": "Avadi",
@@ -13042,7 +13042,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-568",
+    "id": "pharm-568",
     "name": "Madras Medical College, Park Town",
     "stream": "Pharmacy",
     "district": "Town",
@@ -13065,7 +13065,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-569",
+    "id": "pharm-569",
     "name": "Madurai Medical College",
     "stream": "Pharmacy",
     "district": "Madurai",
@@ -13088,7 +13088,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-570",
+    "id": "pharm-570",
     "name": "Maharaja College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13111,7 +13111,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-571",
+    "id": "pharm-571",
     "name": "Mayor Radhakrishna Pillai Memorial College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13134,7 +13134,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-572",
+    "id": "pharm-572",
     "name": "Nadar Mahajana Sangam Jayaraj Annapackiam College of Paramedical Sciences",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13157,7 +13157,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-573",
+    "id": "pharm-573",
     "name": "Nandha College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13180,7 +13180,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-574",
+    "id": "pharm-574",
     "name": "National College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13203,7 +13203,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-575",
+    "id": "pharm-575",
     "name": "Padmavathi College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13226,7 +13226,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-576",
+    "id": "pharm-576",
     "name": "Pallavan Pharmacy College",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13249,7 +13249,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-577",
+    "id": "pharm-577",
     "name": "Pandyan College of Pharmacy, Virattipathu",
     "stream": "Pharmacy",
     "district": "Virattipathu",
@@ -13272,7 +13272,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-578",
+    "id": "pharm-578",
     "name": "Pearl Peace Medical Mission College of Pharmacy, Nellai Kattabomman Dt.",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13295,7 +13295,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-579",
+    "id": "pharm-579",
     "name": "Periyar College of Pharmaceutical Sciences for Girls",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13318,7 +13318,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-580",
+    "id": "pharm-580",
     "name": "PGP College of Pharmaceutical Science & Research Institute",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13341,7 +13341,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-581",
+    "id": "pharm-581",
     "name": "PSG College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13364,7 +13364,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-582",
+    "id": "pharm-582",
     "name": "R V S College of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13387,7 +13387,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-583",
+    "id": "pharm-583",
     "name": "Royal College of Pharmacy & Paramedical Science, Madukkarai",
     "stream": "Pharmacy",
     "district": "Madukkarai",
@@ -13410,7 +13410,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-584",
+    "id": "pharm-584",
     "name": "S A Raja Pharmacy College",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13433,7 +13433,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-585",
+    "id": "pharm-585",
     "name": "S Chattanatha Karayalar College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13456,7 +13456,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-586",
+    "id": "pharm-586",
     "name": "S R M College of Pharmacy, Kanchipuram District",
     "stream": "Pharmacy",
     "district": "Kanchipuram",
@@ -13479,7 +13479,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-587",
+    "id": "pharm-587",
     "name": "S. B. College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13502,7 +13502,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-588",
+    "id": "pharm-588",
     "name": "Shoba College of Pharmacy, near Railway Station",
     "stream": "Pharmacy",
     "district": "Station",
@@ -13525,7 +13525,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-589",
+    "id": "pharm-589",
     "name": "Sri Ramachandra College of Pharmacy, Sri Ramachandra Institute of Higher Education and",
     "stream": "Pharmacy",
     "district": "And",
@@ -13548,7 +13548,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-590",
+    "id": "pharm-590",
     "name": "Research (DU)",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13571,7 +13571,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-591",
+    "id": "pharm-591",
     "name": "Sri Ramakrishna Institute of Paramedical Science College, New Sidhapur",
     "stream": "Pharmacy",
     "district": "Sidhapur",
@@ -13594,7 +13594,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-592",
+    "id": "pharm-592",
     "name": "Subbarayalu College of Pharmacy, Industrial Estate P.O.",
     "stream": "Pharmacy",
     "district": "Estate",
@@ -13617,7 +13617,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-593",
+    "id": "pharm-593",
     "name": "SSM College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13640,7 +13640,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-594",
+    "id": "pharm-594",
     "name": "Swamy Vivenkanandha College of Pharmacy.",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13663,7 +13663,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-595",
+    "id": "pharm-595",
     "name": "T.K. College of Pharmacy, Dharapuram Road.",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13686,7 +13686,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-596",
+    "id": "pharm-596",
     "name": "Texcity College of Pharmacy, Podanur Main road",
     "stream": "Pharmacy",
     "district": "Main",
@@ -13709,7 +13709,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-597",
+    "id": "pharm-597",
     "name": "Thanjavur Medical College",
     "stream": "Pharmacy",
     "district": "Thanjavur",
@@ -13732,7 +13732,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-598",
+    "id": "pharm-598",
     "name": "Thanthai Roever College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13755,7 +13755,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-599",
+    "id": "pharm-599",
     "name": "Trichy College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Trichy",
@@ -13778,7 +13778,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-600",
+    "id": "pharm-600",
     "name": "Ultra College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13801,7 +13801,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-601",
+    "id": "pharm-601",
     "name": "VEL's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13824,7 +13824,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-602",
+    "id": "pharm-602",
     "name": "Venkateswara College of Pharmacy, Chennai main road, Anaikkarai, Thanjavur District",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13847,7 +13847,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-603",
+    "id": "pharm-603",
     "name": "Vinayaka Mission's College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Chennai",
@@ -13870,7 +13870,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-604",
+    "id": "pharm-604",
     "name": "Anwarul Uloom College of Pharmacy, New Mallepally, Hyderabad",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -13893,7 +13893,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-605",
+    "id": "pharm-605",
     "name": "A.S.R. Govt. Junior College",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -13916,7 +13916,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-606",
+    "id": "pharm-606",
     "name": "Balaji Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -13939,7 +13939,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-607",
+    "id": "pharm-607",
     "name": "Balaji College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -13962,7 +13962,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-608",
+    "id": "pharm-608",
     "name": "Bojjam Narasimhulu Pharmacy College for Women",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -13985,7 +13985,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-609",
+    "id": "pharm-609",
     "name": "Care College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14008,7 +14008,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-610",
+    "id": "pharm-610",
     "name": "Deccan School of Pharmacy, Kanchanbagh",
     "stream": "Pharmacy",
     "district": "Kanchanbagh",
@@ -14031,7 +14031,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-611",
+    "id": "pharm-611",
     "name": "G. Pulla Reddy College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14054,7 +14054,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-612",
+    "id": "pharm-612",
     "name": "Gokaraju Rangaraju College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14077,7 +14077,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-613",
+    "id": "pharm-613",
     "name": "Govt. Junior College, Warangal Dist",
     "stream": "Pharmacy",
     "district": "Warangal",
@@ -14100,7 +14100,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-614",
+    "id": "pharm-614",
     "name": "Govt. Junior College for Boys",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14123,7 +14123,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-615",
+    "id": "pharm-615",
     "name": "Govt. Junior College for Girls, Malakpet",
     "stream": "Pharmacy",
     "district": "Malakpet",
@@ -14146,7 +14146,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-616",
+    "id": "pharm-616",
     "name": "Govt. Polytechnic for Women, Siddipet",
     "stream": "Pharmacy",
     "district": "Siddipet",
@@ -14169,7 +14169,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-617",
+    "id": "pharm-617",
     "name": "J.J. College of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14192,7 +14192,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-618",
+    "id": "pharm-618",
     "name": "Jangaon Institute of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14215,7 +14215,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-619",
+    "id": "pharm-619",
     "name": "KLR Pharmacy College",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14238,7 +14238,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-620",
+    "id": "pharm-620",
     "name": "Kamala Nehru Polytechnic for Women, Exhibition Grounds",
     "stream": "Pharmacy",
     "district": "Grounds",
@@ -14261,7 +14261,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-621",
+    "id": "pharm-621",
     "name": "Krishnaveni Exhibition Society's",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14284,7 +14284,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-622",
+    "id": "pharm-622",
     "name": "L S Institute of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14307,7 +14307,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-623",
+    "id": "pharm-623",
     "name": "Mak College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14330,7 +14330,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-624",
+    "id": "pharm-624",
     "name": "Madhira Institute of Technology & Science",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14353,7 +14353,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-625",
+    "id": "pharm-625",
     "name": "MLR Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14376,7 +14376,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-626",
+    "id": "pharm-626",
     "name": "Nalanda College of Pharmacy, Nalgonda",
     "stream": "Pharmacy",
     "district": "Nalgonda",
@@ -14399,7 +14399,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-627",
+    "id": "pharm-627",
     "name": "NIPER Hyderabad",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14422,7 +14422,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-628",
+    "id": "pharm-628",
     "name": "Pragathi Pharmacy College",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14445,7 +14445,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-629",
+    "id": "pharm-629",
     "name": "Sarojini Naidu Vanitha Mahavidyalaya, Mukkaramjahi Road",
     "stream": "Pharmacy",
     "district": "Mukkaramjahi",
@@ -14468,7 +14468,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-630",
+    "id": "pharm-630",
     "name": "Shadan College of Pharmacy, Himayat Sagar Road",
     "stream": "Pharmacy",
     "district": "Sagar",
@@ -14491,7 +14491,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-631",
+    "id": "pharm-631",
     "name": "Shadan Women's College of Pharmacy, Khairatabad",
     "stream": "Pharmacy",
     "district": "Khairatabad",
@@ -14514,7 +14514,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-632",
+    "id": "pharm-632",
     "name": "Smt. Sarojini Ramulamma College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14537,7 +14537,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-633",
+    "id": "pharm-633",
     "name": "Sri Venkateswara College of Pharmacy, Serilingampally Mandal",
     "stream": "Pharmacy",
     "district": "Mandal",
@@ -14560,7 +14560,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-634",
+    "id": "pharm-634",
     "name": "SRR College of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14583,7 +14583,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-635",
+    "id": "pharm-635",
     "name": "St. Peter's Institute of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14606,7 +14606,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-636",
+    "id": "pharm-636",
     "name": "Sultan-Ul-Uloom College of Pharmacy, Road No. 3, Banjara Hills",
     "stream": "Pharmacy",
     "district": "Hills",
@@ -14629,7 +14629,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-637",
+    "id": "pharm-637",
     "name": "Talla Padmavathi College of Pharmacy, near 100 ft Flyover Road",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14652,7 +14652,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-638",
+    "id": "pharm-638",
     "name": "University College of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Hyderabad",
@@ -14675,7 +14675,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-639",
+    "id": "pharm-639",
     "name": "Department of Pharmacy, Mohammad Ali Jauhar University, Rampur, U.P.",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -14698,7 +14698,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-640",
+    "id": "pharm-640",
     "name": "A. N. D. College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -14721,7 +14721,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-641",
+    "id": "pharm-641",
     "name": "PharmaState.academy, offers easy access to training & up-skilling programs created by",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -14744,7 +14744,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-642",
+    "id": "pharm-642",
     "name": "experts from Pharma Industry.",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -14767,7 +14767,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-643",
+    "id": "pharm-643",
     "name": "Advanced Institute of Biotech & Paramedical Sciences",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -14790,7 +14790,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-644",
+    "id": "pharm-644",
     "name": "Amity Institute of Pharmacy, Amity University Uttar Pradesh, Lucknow Campus",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -14813,7 +14813,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-645",
+    "id": "pharm-645",
     "name": "Maharana Peatap College of Pharmacy, Kanpur",
     "stream": "Pharmacy",
     "district": "Kanpur",
@@ -14836,7 +14836,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-646",
+    "id": "pharm-646",
     "name": "Amity Institute of Pharmacy, Noida",
     "stream": "Pharmacy",
     "district": "Noida",
@@ -14859,7 +14859,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-647",
+    "id": "pharm-647",
     "name": "Anand College of Pharmacy, NH-2 Keetham",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -14882,7 +14882,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-648",
+    "id": "pharm-648",
     "name": "Azad Institute of Pharmacy & Research, via Bangla Bazaar Road",
     "stream": "Pharmacy",
     "district": "Bazaar",
@@ -14905,7 +14905,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-649",
+    "id": "pharm-649",
     "name": "Bhagwant Institute of Pharmacy, Bhagwantpuram, Muzaffarnagar",
     "stream": "Pharmacy",
     "district": "Muzaffarnagar",
@@ -14928,7 +14928,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-650",
+    "id": "pharm-650",
     "name": "BBS Institute of Pharmaceutical & Allied Sciences",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -14951,7 +14951,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-651",
+    "id": "pharm-651",
     "name": "Department of Pharmaceutical Sciences",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -14974,7 +14974,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-652",
+    "id": "pharm-652",
     "name": "Department of Pharmaceutical Engineering & Technology(Indian Institute of Technology-",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -14997,7 +14997,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-653",
+    "id": "pharm-653",
     "name": "IIT(BHU), Varanasi)",
     "stream": "Pharmacy",
     "district": "Varanasi",
@@ -15020,7 +15020,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-654",
+    "id": "pharm-654",
     "name": "Department of Pharmacy, Bhojipura Post",
     "stream": "Pharmacy",
     "district": "Post",
@@ -15043,7 +15043,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-655",
+    "id": "pharm-655",
     "name": "Dr. K.N. Modi Institute of Pharmaceutical Sciences & Research",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15066,7 +15066,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-656",
+    "id": "pharm-656",
     "name": "Faculty of Engineering & Technology (Department of Pharmacy)",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15089,7 +15089,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-657",
+    "id": "pharm-657",
     "name": "Faculty of Pharmacy, Uttar Pradesh University of Medical Sciences",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15112,7 +15112,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-658",
+    "id": "pharm-658",
     "name": "G.S.V.M. Medical College",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15135,7 +15135,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-659",
+    "id": "pharm-659",
     "name": "Govt. G' Polytechnic",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15158,7 +15158,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-660",
+    "id": "pharm-660",
     "name": "Govt. Polytechnic",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15181,7 +15181,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-661",
+    "id": "pharm-661",
     "name": "HIMT College of Pharmacy, Knowledge Park, 1 District, Gautam Budh Nagar",
     "stream": "Pharmacy",
     "district": "Nagar",
@@ -15204,7 +15204,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-662",
+    "id": "pharm-662",
     "name": "Hind Institute of Medical Sciences, Barabanki Road",
     "stream": "Pharmacy",
     "district": "Barabanki",
@@ -15227,7 +15227,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-663",
+    "id": "pharm-663",
     "name": "HR Institute of Pharmacy, Meerut Road, Morta",
     "stream": "Pharmacy",
     "district": "Meerut",
@@ -15250,7 +15250,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-664",
+    "id": "pharm-664",
     "name": "I.T.S. Paramedical (Pharmacy) College",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15273,7 +15273,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-665",
+    "id": "pharm-665",
     "name": "IIMT College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15296,7 +15296,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-666",
+    "id": "pharm-666",
     "name": "IEC college of Engineering & Technology (Department of Pharmacy), Greater Noida",
     "stream": "Pharmacy",
     "district": "Noida",
@@ -15319,7 +15319,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-667",
+    "id": "pharm-667",
     "name": "Innovative College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15342,7 +15342,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-668",
+    "id": "pharm-668",
     "name": "Institute of Pharmaceutical Sciences & Research",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15365,7 +15365,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-669",
+    "id": "pharm-669",
     "name": "Janta Polytechnic, Bhaipur",
     "stream": "Pharmacy",
     "district": "Bhaipur",
@@ -15388,7 +15388,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-670",
+    "id": "pharm-670",
     "name": "K.G.'s Medical College",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15411,7 +15411,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-671",
+    "id": "pharm-671",
     "name": "Kamla Nehru Institute of Management and Technology, Faculty of Pharmacy",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15434,7 +15434,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-672",
+    "id": "pharm-672",
     "name": "KIET School of Pharmacy",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15457,7 +15457,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-673",
+    "id": "pharm-673",
     "name": "Krishnarpit Institute of Pharmacy, Allahabad",
     "stream": "Pharmacy",
     "district": "Allahabad",
@@ -15480,7 +15480,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-674",
+    "id": "pharm-674",
     "name": "L.L.R.M. Medical College",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15503,7 +15503,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-675",
+    "id": "pharm-675",
     "name": "Lucknow Model College of Pharmacy Ajeetan Khera Road Sadrauna Lucknow",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15526,7 +15526,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-676",
+    "id": "pharm-676",
     "name": "7052180000",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15549,7 +15549,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-677",
+    "id": "pharm-677",
     "name": "M.L.N. Medical college",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15572,7 +15572,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-678",
+    "id": "pharm-678",
     "name": "Meerut Institute of Engineering & Technology, Bagpat Road-Bypass Crossing",
     "stream": "Pharmacy",
     "district": "Meerut",
@@ -15595,7 +15595,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-679",
+    "id": "pharm-679",
     "name": "Nandini Nagar Mahavidyalaya College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15618,7 +15618,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-680",
+    "id": "pharm-680",
     "name": "NIPER Raibareli",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15641,7 +15641,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-681",
+    "id": "pharm-681",
     "name": "NKBR College of Pharmacy & Research Centre",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15664,7 +15664,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-682",
+    "id": "pharm-682",
     "name": "Om Sri Sai College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15687,7 +15687,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-683",
+    "id": "pharm-683",
     "name": "R. V. Northland Institute, Chithera Dadri",
     "stream": "Pharmacy",
     "district": "Dadri",
@@ -15710,7 +15710,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-684",
+    "id": "pharm-684",
     "name": "R.K. College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15733,7 +15733,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-685",
+    "id": "pharm-685",
     "name": "Raj Kumar Goel Institute of Technology",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15756,7 +15756,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-686",
+    "id": "pharm-686",
     "name": "Rajarshi Rananjay Sinh College of Pharmacy, Amethi",
     "stream": "Pharmacy",
     "district": "Amethi",
@@ -15779,7 +15779,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-687",
+    "id": "pharm-687",
     "name": "Rajiv Devi Ram Daya Mahila Polytechnic",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15802,7 +15802,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-688",
+    "id": "pharm-688",
     "name": "Rajiv Gandhi College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15825,7 +15825,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-689",
+    "id": "pharm-689",
     "name": "Rajiv Memorial Academy for Pharmacy, Mathura-Delhi Bypass Road",
     "stream": "Pharmacy",
     "district": "Delhi",
@@ -15848,7 +15848,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-690",
+    "id": "pharm-690",
     "name": "Rakshpal Bahadur College of Pharmacy, Badaun Road",
     "stream": "Pharmacy",
     "district": "Badaun",
@@ -15871,7 +15871,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-691",
+    "id": "pharm-691",
     "name": "S.D. College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15894,7 +15894,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-692",
+    "id": "pharm-692",
     "name": "S.N. Medical College",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15917,7 +15917,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-693",
+    "id": "pharm-693",
     "name": "Sanjay College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15940,7 +15940,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-694",
+    "id": "pharm-694",
     "name": "Saras College of Pharmacy",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15963,7 +15963,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-695",
+    "id": "pharm-695",
     "name": "Saroj Institute of Technology & Management, Lucknow-Sultanpur Road",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -15986,7 +15986,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-696",
+    "id": "pharm-696",
     "name": "The Shivdan Singh Institute of Technology and Management, Aligarh-Mathura Road",
     "stream": "Pharmacy",
     "district": "Aligarh",
@@ -16009,7 +16009,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-697",
+    "id": "pharm-697",
     "name": "Shri Guru Ram Rai Institute of Technology & Science",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -16032,7 +16032,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-698",
+    "id": "pharm-698",
     "name": "Shri Ram College of Pharmacy, Muzaffarnagar",
     "stream": "Pharmacy",
     "district": "Muzaffarnagar",
@@ -16055,7 +16055,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-699",
+    "id": "pharm-699",
     "name": "Sir Madan Lal Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -16078,7 +16078,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-700",
+    "id": "pharm-700",
     "name": "Smt Vidyawati College of Pharmacy, Kanpur Road",
     "stream": "Pharmacy",
     "district": "Kanpur",
@@ -16101,7 +16101,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-701",
+    "id": "pharm-701",
     "name": "Spectrum Institute of Pharmaceutical Sciences & Research, near Kailash Hospital",
     "stream": "Pharmacy",
     "district": "Kailash",
@@ -16124,7 +16124,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-702",
+    "id": "pharm-702",
     "name": "Translam Institute of Pharmaceutical Education & Research",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -16147,7 +16147,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-703",
+    "id": "pharm-703",
     "name": "University Institute of Pharmacy, Kanpur",
     "stream": "Pharmacy",
     "district": "Kanpur",
@@ -16170,7 +16170,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-704",
+    "id": "pharm-704",
     "name": "Vishveshwarya Institute, G.T. Road, near Dadri",
     "stream": "Pharmacy",
     "district": "Dadri",
@@ -16193,7 +16193,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-705",
+    "id": "pharm-705",
     "name": "SR Group of Institutions(College of Pharmacy), Ambabai, Jhansi",
     "stream": "Pharmacy",
     "district": "Jhansi",
@@ -16216,7 +16216,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-706",
+    "id": "pharm-706",
     "name": "SR College of Pharmaceutical Sciences, Ambabai, Jhansi",
     "stream": "Pharmacy",
     "district": "Jhansi",
@@ -16239,7 +16239,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-707",
+    "id": "pharm-707",
     "name": "Banaras Hindu University, Varanasi",
     "stream": "Pharmacy",
     "district": "Varanasi",
@@ -16262,7 +16262,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-708",
+    "id": "pharm-708",
     "name": "Shambhunath Institute of Pharmacy, Prayagraj.",
     "stream": "Pharmacy",
     "district": "Prayagraj",
@@ -16285,7 +16285,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-709",
+    "id": "pharm-709",
     "name": "Sagar Institute of Technology & Management, Lucknow -Faizabad Road National Highway 27,",
     "stream": "Pharmacy",
     "district": "Sagar",
@@ -16308,7 +16308,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-710",
+    "id": "pharm-710",
     "name": "Barabanki.",
     "stream": "Pharmacy",
     "district": "Lucknow",
@@ -16331,7 +16331,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-711",
+    "id": "pharm-711",
     "name": "Gyani Inder Singh Institute of Professional Studies, Dehradun",
     "stream": "Pharmacy",
     "district": "Dehradun",
@@ -16354,7 +16354,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-712",
+    "id": "pharm-712",
     "name": "Siddhartha Institute of Pharmacy, Dehradun",
     "stream": "Pharmacy",
     "district": "Dehradun",
@@ -16377,7 +16377,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-713",
+    "id": "pharm-713",
     "name": "Bengal College of Pharmaceutical Science and Research, Durgapur",
     "stream": "Pharmacy",
     "district": "Durgapur",
@@ -16400,7 +16400,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-714",
+    "id": "pharm-714",
     "name": "BCDA College of Pharmacy & Technology, Barasat",
     "stream": "Pharmacy",
     "district": "Barasat",
@@ -16423,7 +16423,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-715",
+    "id": "pharm-715",
     "name": "Brainware University, Barasat",
     "stream": "Pharmacy",
     "district": "Barasat",
@@ -16446,7 +16446,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-716",
+    "id": "pharm-716",
     "name": "Bengal School Of Technology, Chinsurah",
     "stream": "Pharmacy",
     "district": "Chinsurah",
@@ -16469,7 +16469,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-717",
+    "id": "pharm-717",
     "name": "Burdwan Institute of Pharmacy, Purba Bardhaman",
     "stream": "Pharmacy",
     "district": "Bardhaman",
@@ -16492,7 +16492,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-718",
+    "id": "pharm-718",
     "name": "Department of Pharmaceutical Technology, Jadavpur University",
     "stream": "Pharmacy",
     "district": "University",
@@ -16515,7 +16515,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-719",
+    "id": "pharm-719",
     "name": "Dr. B.C. Roy College of Pharmacy and Allied Health Sciences, Bidhan Nagar",
     "stream": "Pharmacy",
     "district": "Nagar",
@@ -16538,7 +16538,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-720",
+    "id": "pharm-720",
     "name": "Gupta College of Technological Science",
     "stream": "Pharmacy",
     "district": "Kolkata",
@@ -16561,7 +16561,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-721",
+    "id": "pharm-721",
     "name": "Guru Nanak Institute of Pharmaceutical Sciences & Technology, Sodepur",
     "stream": "Pharmacy",
     "district": "Sodepur",
@@ -16584,7 +16584,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-722",
+    "id": "pharm-722",
     "name": "Institute of Pharmacy, Jalpaiguri",
     "stream": "Pharmacy",
     "district": "Jalpaiguri",
@@ -16607,7 +16607,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-723",
+    "id": "pharm-723",
     "name": "Netaji Subhas Chandra Bose Institute of Pharmacy",
     "stream": "Pharmacy",
     "district": "Kolkata",
@@ -16630,7 +16630,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-724",
+    "id": "pharm-724",
     "name": "NSHM College of Pharmaceutical Technology",
     "stream": "Pharmacy",
     "district": "Kolkata",
@@ -16653,7 +16653,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-725",
+    "id": "pharm-725",
     "name": "Women's Polytechnic Govt. of West Bengal",
     "stream": "Pharmacy",
     "district": "Kolkata",
@@ -16676,7 +16676,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-726",
+    "id": "pharm-726",
     "name": "Haldia Institute of Pharmacy, Haldia",
     "stream": "Pharmacy",
     "district": "Haldia",
@@ -16699,7 +16699,7 @@ export const pharmacyCollegesData = [
     "email": "contact@example.com"
   },
   {
-    "id": "pharmacy-727",
+    "id": "pharm-727",
     "name": "Bharat Technology, West Bengal",
     "stream": "Pharmacy",
     "district": "Bengal",
@@ -16717,6 +16717,1194 @@ export const pharmacyCollegesData = [
       "Herbal Garden",
       "Hostel",
       "Transport"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-728",
+    "name": "Arya College of Pharmacy, SPP-40, Industrial Area (RIICO), Delhi Road, Kukas, Jaipur",
+    "stream": "Pharmacy",
+    "district": "Jaipur",
+    "city": "Jaipur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "B. Pharma, D. Pharma, M. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-729",
+    "name": "G. D. Memorial College of Pharmacy, Sector-4, Kuri Bhagtasani Housing Board, Jodhpur",
+    "stream": "Pharmacy",
+    "district": "Jodhpur",
+    "city": "Jodhpur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma, B. Pharma, M. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-730",
+    "name": "Kota College of Pharmacy, RIICO Industrial Area, Jhalawar Road, Ranpur, Kota",
+    "stream": "Pharmacy",
+    "district": "Kota",
+    "city": "Kota",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "B. Pharma, D. Pharma, M. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-731",
+    "name": "Maharshi Arvind Institute of Pharmacy, Sector-7, Madhyam Marg, Mansarovar, Jaipur",
+    "stream": "Pharmacy",
+    "district": "Jaipur",
+    "city": "Jaipur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "B. Pharma, D. Pharma, M. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-732",
+    "name": "Public Health Training Institute, SMS Medical College/Hospital Campus, Jaipur",
+    "stream": "Pharmacy",
+    "district": "Jaipur",
+    "city": "Jaipur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-733",
+    "name": "Rajasthan Pharmacy College, Bhankrota, Ajmer Road, Jaipur",
+    "stream": "Pharmacy",
+    "district": "Jaipur",
+    "city": "Jaipur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "B. Pharma, D. Pharma, M. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-734",
+    "name": "Shrinath Ji Institute of Pharmacy, Nathdwara, Rajsamand",
+    "stream": "Pharmacy",
+    "district": "Rajsamand",
+    "city": "Rajsamand",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma, B. Pharma, M. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-735",
+    "name": "Varun College of Pharmacy, Village Chawandia, Near Bassi, Jaipur",
+    "stream": "Pharmacy",
+    "district": "Jaipur",
+    "city": "Jaipur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-736",
+    "name": "BLM College of Pharmacy, Village Rajota, Tehsil Khetri, Jhunjhunu",
+    "stream": "Pharmacy",
+    "district": "Jhunjhunu",
+    "city": "Jhunjhunu",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-737",
+    "name": "Maharaja Agrasen College of Pharmacy, Khorki Road, Nagar, Bharatpur",
+    "stream": "Pharmacy",
+    "district": "Bharatpur",
+    "city": "Bharatpur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-738",
+    "name": "Saint Soldier College of Pharmacy, Vill-Sohela, NH-12, Peeplu, Tonk",
+    "stream": "Pharmacy",
+    "district": "Tonk",
+    "city": "Tonk",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma, B. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-739",
+    "name": "Gurukul Pharmacy College, RIICO Institutional Area, Ranpur, Kota",
+    "stream": "Pharmacy",
+    "district": "Kota",
+    "city": "Kota",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma, B. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-740",
+    "name": "Vivekanand College of Pharmacy, Vill-Katar Chhoti, Tehsil Bidasar, Churu",
+    "stream": "Pharmacy",
+    "district": "Churu",
+    "city": "Churu",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-741",
+    "name": "Salasar Balaji Institute of Pharmacy, Behind Circuit House, Jaipur Road, Sikar",
+    "stream": "Pharmacy",
+    "district": "Sikar",
+    "city": "Sikar",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-742",
+    "name": "Sunrise College of Pharmacy, Umarda, Udaipur",
+    "stream": "Pharmacy",
+    "district": "Udaipur",
+    "city": "Udaipur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma, B. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-743",
+    "name": "Khairthal Pharmacy College, Village Raipurmewan, Kishangarhbas, Alwar",
+    "stream": "Pharmacy",
+    "district": "Alwar",
+    "city": "Alwar",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-744",
+    "name": "Mahatma Gandhi Engineering College, Shivdaspura, Jaipur",
+    "stream": "Pharmacy",
+    "district": "Jaipur",
+    "city": "Jaipur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma, B. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-745",
+    "name": "Poddar International College of Pharmacy, Fatehpuriyawas, Chaksu, Jaipur",
+    "stream": "Pharmacy",
+    "district": "Jaipur",
+    "city": "Jaipur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-746",
+    "name": "Aryabhatta College of Pharmacy, Kayad Road, Chachiyawas, Ajmer",
+    "stream": "Pharmacy",
+    "district": "Ajmer",
+    "city": "Ajmer",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma, B. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-747",
+    "name": "Krishnadevi Maheshwari Pharmacy College, Jhunjhunu Road, Bagar, Jhunjhunu",
+    "stream": "Pharmacy",
+    "district": "Jhunjhunu",
+    "city": "Jhunjhunu",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-748",
+    "name": "Asian College of Pharmacy, Padi Meini Road, Udaipur",
+    "stream": "Pharmacy",
+    "district": "Udaipur",
+    "city": "Udaipur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma, B. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-749",
+    "name": "Sikar College of Pharmacy, NH-11, Laxmangarh Road, Sikar",
+    "stream": "Pharmacy",
+    "district": "Sikar",
+    "city": "Sikar",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-750",
+    "name": "Mahatma Gandhi College of Pharmacy, Pura Ki Dhani, Sabalpura, Sikar",
+    "stream": "Pharmacy",
+    "district": "Sikar",
+    "city": "Sikar",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-751",
+    "name": "Seth G. L. Bihani S. D. College of Technical Education, Sri Ganganagar",
+    "stream": "Pharmacy",
+    "district": "Sri Ganganagar",
+    "city": "Sri Ganganagar",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "B. Pharma, D. Pharma, M. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-752",
+    "name": "Shri Balaji College of Pharmacy, Bansur, Alwar",
+    "stream": "Pharmacy",
+    "district": "Alwar",
+    "city": "Alwar",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-753",
+    "name": "Swami Keshwanand Institute of Pharmacy, NH-11, Raisar, Jaipur Road, Bikaner",
+    "stream": "Pharmacy",
+    "district": "Bikaner",
+    "city": "Bikaner",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "B. Pharma, D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-754",
+    "name": "Sufiya College of Pharmacy, Old Industrial Area, Nagaur",
+    "stream": "Pharmacy",
+    "district": "Nagaur",
+    "city": "Nagaur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-755",
+    "name": "Global Pharmacy College, Station Road, Kuchaman City, Nagaur",
+    "stream": "Pharmacy",
+    "district": "Nagaur",
+    "city": "Nagaur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-756",
+    "name": "Shekhawati Institute of Pharmacy, Jaipur Road, Sikar",
+    "stream": "Pharmacy",
+    "district": "Sikar",
+    "city": "Sikar",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "B. Pharma, D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-757",
+    "name": "Kamakasha Institute of Pharmacy, Sagwara, Dungarpur",
+    "stream": "Pharmacy",
+    "district": "Dungarpur",
+    "city": "Dungarpur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-758",
+    "name": "Northern Institute of Pharmacy & Research, Baldevbas, Alwar Bhiwadi Mega Highway, Alwar",
+    "stream": "Pharmacy",
+    "district": "Alwar",
+    "city": "Alwar",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "B. Pharma, D. Pharma, M. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-759",
+    "name": "Aman Pharmacy College, Dhola Kheda, Udaipurwati, Jhunjhunu",
+    "stream": "Pharmacy",
+    "district": "Jhunjhunu",
+    "city": "Jhunjhunu",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-760",
+    "name": "M.B.D. College of Pharmacy, Tilak Nagar, Bikaner",
+    "stream": "Pharmacy",
+    "district": "Bikaner",
+    "city": "Bikaner",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-761",
+    "name": "Aravli Institute of Pharmacy, RIICO Industrial Area, Bagru, Jaipur",
+    "stream": "Pharmacy",
+    "district": "Jaipur",
+    "city": "Jaipur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-762",
+    "name": "Mehta College of Pharmacy, Udaipuria, VKI-Sikar Road, Jaipur",
+    "stream": "Pharmacy",
+    "district": "Jaipur",
+    "city": "Jaipur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-763",
+    "name": "Shree P.R. Memorial Pharmacy College, Mithari, Nawa City, Nagaur",
+    "stream": "Pharmacy",
+    "district": "Nagaur",
+    "city": "Nagaur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-764",
+    "name": "Tagore College of Pharmacy, Palsana Road, Khandela, Sikar",
+    "stream": "Pharmacy",
+    "district": "Sikar",
+    "city": "Sikar",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-765",
+    "name": "BIFF & Bright College of Pharmacy, Padasoli, Dudu, Jaipur",
+    "stream": "Pharmacy",
+    "district": "Jaipur",
+    "city": "Jaipur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-766",
+    "name": "Om Shiv Sansthan Pharmacy College, Manglwad, Chittorgarh",
+    "stream": "Pharmacy",
+    "district": "Chittorgarh",
+    "city": "Chittorgarh",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-767",
+    "name": "Mayurakshi College of Pharmacy, Daijar, Jodhpur",
+    "stream": "Pharmacy",
+    "district": "Jodhpur",
+    "city": "Jodhpur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-768",
+    "name": "Prakhar College, Bandikui, Dausa",
+    "stream": "Pharmacy",
+    "district": "Dausa",
+    "city": "Dausa",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-769",
+    "name": "Taj Memorial Institute of Pharmacy, Sarund, Kotputli, Jaipur",
+    "stream": "Pharmacy",
+    "district": "Jaipur",
+    "city": "Jaipur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-770",
+    "name": "Ruhi Convent Education & Research Society, Sadulpur, Churu",
+    "stream": "Pharmacy",
+    "district": "Churu",
+    "city": "Churu",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-771",
+    "name": "Nagfani Institute of Pharmacy, Kherwara, Udaipur",
+    "stream": "Pharmacy",
+    "district": "Udaipur",
+    "city": "Udaipur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-772",
+    "name": "Shree Ji Pharmacy Institute, Nathdwara, Rajsamand",
+    "stream": "Pharmacy",
+    "district": "Rajsamand",
+    "city": "Rajsamand",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-773",
+    "name": "Vidhyashram College of Pharmacy, Shikargarh Road, Jodhpur",
+    "stream": "Pharmacy",
+    "district": "Jodhpur",
+    "city": "Jodhpur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-774",
+    "name": "Ambika College of Pharmacy, Arjansar Road, Rawatsar, Hanumangarh",
+    "stream": "Pharmacy",
+    "district": "Hanumangarh",
+    "city": "Hanumangarh",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-775",
+    "name": "KCP College of Pharmacy, Kuchaman City, Nagaur",
+    "stream": "Pharmacy",
+    "district": "Nagaur",
+    "city": "Nagaur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-776",
+    "name": "Shri Krishan College of Pharmacy, Govindgarh, Chomu, Jaipur",
+    "stream": "Pharmacy",
+    "district": "Jaipur",
+    "city": "Jaipur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-777",
+    "name": "Ghanshyam Baba College of Pharmacy, Nadbai, Bharatpur",
+    "stream": "Pharmacy",
+    "district": "Bharatpur",
+    "city": "Bharatpur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-778",
+    "name": "Katta College of Pharmacy, Bandikui, Dausa",
+    "stream": "Pharmacy",
+    "district": "Dausa",
+    "city": "Dausa",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-779",
+    "name": "Shri Shyam Pharmacy College, Reengus, Sikar",
+    "stream": "Pharmacy",
+    "district": "Sikar",
+    "city": "Sikar",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-780",
+    "name": "Raj Pharmacy College, Bawarla, Jodhpur",
+    "stream": "Pharmacy",
+    "district": "Jodhpur",
+    "city": "Jodhpur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
+    ],
+    "contact": "+91 0000000000",
+    "email": "contact@example.com"
+  },
+  {
+    "id": "pharm-781",
+    "name": "JMK Shikshan Sansthan, Merta City, Nagaur",
+    "stream": "Pharmacy",
+    "district": "Nagaur",
+    "city": "Nagaur",
+    "state": "RJ",
+    "stateName": "Rajasthan",
+    "details": "",
+    "courses": "D. Pharma",
+    "approvedBy": "Pharmacy Council of India (PCI) Approved",
+    "facilities": [
+      "Pharmacy Labs",
+      "Medicinal Chemistry Lab",
+      "Digital Library",
+      "Hostel",
+      "Seminar Hall",
+      "Computer Lab"
     ],
     "contact": "+91 0000000000",
     "email": "contact@example.com"
