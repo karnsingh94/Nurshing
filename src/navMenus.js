@@ -522,10 +522,10 @@ export const megaMenus = {
       {
         title: 'COLLEGES',
         items: [
-          ['A.S.N Pharmacy College', '/pharmacy?search=A.S.N#search-pharmacy-1'],
-          ['Nirma Institute of Pharmacy', '/pharmacy?search=Nirma'],
-          ['ICT Mumbai (Dept of Pharmacy)', '/pharmacy?search=Chemical+Technology'],
-          ['Goa College of Pharmacy', '/pharmacy?search=Goa'],
+          ['A.S.N Pharmacy College', '/pharmacy?search=A.S.N'],
+          ['Adarsha College of Pharmacy', '/pharmacy?search=Adarsha'],
+          ['Annamacharya College of Pharmacy', '/pharmacy?search=Annamacharya'],
+          ['B.V.K. Junior College', '/pharmacy?search=B.V.K.'],
         ],
         viewMoreUrl: '/pharmacy',
         viewMoreLabel: 'View More',
@@ -546,10 +546,10 @@ export const megaMenus = {
       {
         title: 'COLLEGES',
         items: [
-          ['AIIMS New Delhi (Nursing)', '/nursing?search=AIIMS#search-AIIMS-N'],
-          ['PGIMER Chandigarh (Nursing)', '/nursing?search=PGIMER#search-PGIMER-N'],
-          ['CMC Vellore (College of Nursing)', '/nursing?search=CMC#search-CMC-N'],
-          ['St. John\'s College of Nursing', '/nursing?search=St.+John#search-STJOHNS-N'],
+          ['All India Institute Of Medical Sciences', '/nursing?search=All+India+Institute+Of+Medical+Sciences'],
+          ['AIIMS College Of Nursing, Patna', '/nursing?search=Patna'],
+          ['College Of Nursing, AIIMS New Delhi', '/nursing?search=AIIMS'],
+          ['National Institute Of Mental Health & Neuro Sciences', '/nursing?search=Mental+Health'],
         ],
         viewMoreUrl: '/nursing',
         viewMoreLabel: 'View More',
@@ -570,10 +570,10 @@ export const megaMenus = {
       {
         title: 'COLLEGES',
         items: [
-          ['University of Patanjali', '/yoga?search=Patanjali'],
-          ['SVYASA', '/yoga?search=SVYASA'],
-          ['Lakulish Yoga University', '/yoga?search=Lakulish'],
-          ['Dev Sanskriti University', '/yoga?search=Dev+Sanskriti'],
+          ['AISECT University', '/yoga?search=AISECT'],
+          ['ARKA JAIN University', '/yoga?search=ARKA'],
+          ['Binod Bihar Mahto Koylanchal University', '/yoga?search=Binod'],
+          ['Capital University', '/yoga?search=Capital'],
         ],
         viewMoreUrl: '/yoga',
         viewMoreLabel: 'View More',
@@ -594,9 +594,10 @@ export const megaMenus = {
       {
         title: 'COLLEGES',
         items: [
-          ['AIIMS Delhi (Paramedical)', '/paramedical?search=AIIMS#search-AIIMS-P'],
-          ['PGIMER Chandigarh (Allied Health)', '/paramedical?search=PGIMER#search-PGIMER-P'],
-          ['CMC Vellore (Paramedical)', '/paramedical?search=CMC#search-CMC-P'],
+          ['All India Institute of Medical Sciences (AIIMS)', '/paramedical?search=AIIMS'],
+          ['Jamia Hamdard University', '/paramedical?search=Jamia'],
+          ['Vardhman Mahavir Medical College', '/paramedical?search=Vardhman'],
+          ['Armed Forces Medical College (AFMC)', '/paramedical?search=AFMC'],
         ],
         viewMoreUrl: '/paramedical',
         viewMoreLabel: 'View More',
