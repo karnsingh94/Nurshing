@@ -1345,15 +1345,15 @@ function HomeContent() {
             <div className={"customSlider four-cardDisplay"}>
               <div className={"customSliderCards"}>
                 {newsArticles.slice(0, 4).map((article, idx) => (
-                  <a key={idx} className={"displayCard"} href={article.url} target="_blank" rel="noopener noreferrer">
+                  <a key={idx} className={"displayCard group block no-underline"} href={article.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                     <figure style={{ overflow: 'hidden', height: '140px', background: '#e2e8f0', margin: 0 }}>
-                      <img loading={"lazy"} src={article.urlToImage || "/images/imported/1bf1a0a37f7329b2.webp"} alt={article.title || "News"} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      <img loading={"lazy"} src={article.urlToImage || "/images/imported/1bf1a0a37f7329b2.webp"} alt={article.title || "News"} className="transition-transform duration-300 group-hover:scale-105" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </figure>
                     <div className={"textDiv"} style={{ padding: '12px' }}>
-                      <p className={"widgetCardHeading"} style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', minHeight: '2.5em', fontSize: '14px', fontWeight: '600', lineHeight: '1.3' }}>
+                      <p className={"widgetCardHeading group-hover:text-[#0966c2] transition-colors"} style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', minHeight: '2.5em', fontSize: '14px', fontWeight: '600', lineHeight: '1.3', textDecoration: 'none' }}>
                         {article.title}
                       </p>
-                      <p className={"subText"} style={{ marginTop: '8px', color: '#64748b', fontSize: '12px' }}>
+                      <p className={"subText"} style={{ marginTop: '8px', color: '#64748b', fontSize: '12px', textDecoration: 'none' }}>
                         {article.publishedAt ? new Date(article.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : (article.source?.name || 'Medical News')}
                       </p>
                     </div>
@@ -1371,19 +1371,19 @@ function HomeContent() {
             <div className={"customSlider four-cardDisplay"}>
               <div className={"customSliderCards"}>
                 {(newsArticles.length > 4 ? newsArticles.slice(4, 10) : newsArticles).map((article, idx) => (
-                  <div key={idx} className={"displayCard"}>
-                    <a href={article.url} target="_blank" rel="noopener noreferrer">
+                  <div key={idx} className={"displayCard group flex flex-col justify-between"}>
+                    <a href={article.url} target="_blank" rel="noopener noreferrer" className="no-underline block" style={{ textDecoration: 'none' }}>
                       <figure style={{ overflow: 'hidden', height: '140px', background: '#e2e8f0', margin: 0 }}>
-                        <img loading={"lazy"} src={article.urlToImage || "/images/imported/702b915ebaadfeab.webp"} alt={article.title || "Article"} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <img loading={"lazy"} src={article.urlToImage || "/images/imported/702b915ebaadfeab.webp"} alt={article.title || "Article"} className="transition-transform duration-300 group-hover:scale-105" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                       </figure>
                       <div className={"textDiv"} style={{ padding: '12px' }}>
-                        <p className={"widgetCardHeading"} style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', minHeight: '2.5em', fontSize: '14px', fontWeight: '600', lineHeight: '1.3' }}>
+                        <p className={"widgetCardHeading group-hover:text-[#0966c2] transition-colors"} style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', minHeight: '2.5em', fontSize: '14px', fontWeight: '600', lineHeight: '1.3', textDecoration: 'none' }}>
                           {article.title}
                         </p>
                       </div>
                     </a>
-                    <a className={"authorName"} href={article.url} target="_blank" rel="noopener noreferrer" style={{ display: 'block', padding: '0 12px 12px 12px' }}>
-                      <p className={"subText"} style={{ color: '#0966c2', fontSize: '12px', fontWeight: '500', margin: 0 }}>
+                    <a className={"authorName no-underline block hover:no-underline"} href={article.url} target="_blank" rel="noopener noreferrer" style={{ display: 'block', padding: '0 12px 12px 12px', textDecoration: 'none' }}>
+                      <p className={"subText group-hover:text-[#0753a3] transition-colors"} style={{ color: '#0966c2', fontSize: '12px', fontWeight: '500', margin: 0, textDecoration: 'none' }}>
                         ✍️ {article.author || article.source?.name || "Healthcare Desk"}
                       </p>
                     </a>
