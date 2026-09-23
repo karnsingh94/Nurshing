@@ -2688,9 +2688,6 @@ function YogaContent() {
                             <span className="px-2.5 py-0.5 bg-emerald-50 text-emerald-700 font-bold text-[11px] rounded-full border border-emerald-100">
                               AYUSH Approved
                             </span>
-                            <span className="px-2 py-0.5 bg-slate-100 text-slate-600 font-medium text-[11px] rounded-full">
-                              {college.sector || 'Recognized'}
-                            </span>
                           </div>
 
                           <h2 className="text-base sm:text-lg font-extrabold text-slate-900 group-hover:text-[#0966c2] transition-colors leading-snug">
@@ -2704,7 +2701,7 @@ function YogaContent() {
                               📍 <strong className="text-slate-700 font-semibold">{college.district || college.city || 'District'}</strong>, {college.stateName || college.state}
                             </span>
                             <span className="flex items-center gap-1">
-                              🎓 <strong className="text-slate-700 font-semibold">BNYS, B.Sc Yoga, M.Sc Yoga, Diploma</strong>
+                              🎓 <strong className="text-slate-700 font-semibold">{college.courses || 'BNYS, B.Sc Yoga Science, M.Sc Yoga, Diploma in Yoga'}</strong>
                             </span>
                           </div>
 

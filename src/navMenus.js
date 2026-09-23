@@ -522,10 +522,10 @@ export const megaMenus = {
       {
         title: 'COLLEGES',
         items: [
-          ['Jamia Hamdard (Pharmacy)', '/pharmacy?search=Hamdard#search-HAMDARD-PHARM'],
-          ['NIPER Mohali', '/pharmacy?search=NIPER#search-NIPER-M'],
-          ['ICT Mumbai (Dept of Pharmacy)', '/pharmacy?search=ICT#search-ICT-MUM'],
-          ['BITS Pilani (Pharmacy)', '/pharmacy?search=BITS#search-BITS-PILANI-PHARM'],
+          ['A.S.N Pharmacy College', '/pharmacy?search=A.S.N#search-pharmacy-1'],
+          ['Nirma Institute of Pharmacy', '/pharmacy?search=Nirma'],
+          ['ICT Mumbai (Dept of Pharmacy)', '/pharmacy?search=Chemical+Technology'],
+          ['Goa College of Pharmacy', '/pharmacy?search=Goa'],
         ],
         viewMoreUrl: '/pharmacy',
         viewMoreLabel: 'View More',
@@ -533,9 +533,10 @@ export const megaMenus = {
       {
         title: 'COURSES',
         items: [
-          ['B. PHARMACY', '/pharmacy?search=B+Pharm'],
-          ['D. PHARMACY', '/pharmacy?search=D+Pharm'],
-          ['M. PHARMACY', '/pharmacy?search=M+Pharm'],
+          ['B. PHARMACY', '/pharmacy?search=B.Pharm'],
+          ['D. PHARMACY', '/pharmacy?search=D.Pharm'],
+          ['M. PHARMACY', '/pharmacy?search=M.Pharm'],
+          ['PHARM.D', '/pharmacy?search=Pharm.D'],
         ],
       },
     ],
@@ -569,9 +570,10 @@ export const megaMenus = {
       {
         title: 'COLLEGES',
         items: [
-          ['Morarji Desai Institute of Yoga', '/yoga?search=Morarji#search-MDNIY-Y'],
-          ['Patanjali Yogpeeth University', '/yoga?search=Patanjali#search-PATANJALI-Y'],
-          ['SVYASA Yoga University', '/yoga?search=SVYASA#search-SVYASA-Y'],
+          ['University of Patanjali', '/yoga?search=Patanjali'],
+          ['SVYASA', '/yoga?search=SVYASA'],
+          ['Lakulish Yoga University', '/yoga?search=Lakulish'],
+          ['Dev Sanskriti University', '/yoga?search=Dev+Sanskriti'],
         ],
         viewMoreUrl: '/yoga',
         viewMoreLabel: 'View More',
@@ -579,10 +581,10 @@ export const megaMenus = {
       {
         title: 'COURSES',
         items: [
-          ['B.SC. IN YOGIC SCIENCE', '/yoga?search=Yogic+Science'],
-          ['DIPLOMA IN YOGA', '/yoga?search=Diploma'],
-          ['PG DIPLOMA IN YOGA', '/yoga?search=PG+Diploma'],
-          ['CERTIFICATE IN YOGA', '/yoga?search=Certificate'],
+          ['BNYS', '/yoga?search=BNYS'],
+          ['B.Sc Yoga Science', '/yoga?search=B.Sc+Yoga'],
+          ['M.Sc Yoga', '/yoga?search=M.Sc+Yoga'],
+          ['Diploma in Yoga', '/yoga?search=Diploma'],
         ],
       },
     ],
