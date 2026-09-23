@@ -2791,9 +2791,6 @@ function PharmacyContent() {
                             <span className="px-2.5 py-0.5 bg-emerald-50 text-emerald-700 font-bold text-[11px] rounded-full border border-emerald-100">
                               PCI Approved
                             </span>
-                            <span className="px-2 py-0.5 bg-slate-100 text-slate-600 font-medium text-[11px] rounded-full">
-                              {college.sector || 'Recognized'}
-                            </span>
                           </div>
 
                           <h2 className="text-base sm:text-lg font-extrabold text-slate-900 group-hover:text-[#0966c2] transition-colors leading-snug">
@@ -2807,7 +2804,7 @@ function PharmacyContent() {
                               📍 <strong className="text-slate-700 font-semibold">{college.district || college.city || 'District'}</strong>, {college.stateName || college.state}
                             </span>
                             <span className="flex items-center gap-1">
-                              🎓 <strong className="text-slate-700 font-semibold">B.Pharm, D.Pharm, M.Pharm, Pharm.D</strong>
+                              🎓 <strong className="text-slate-700 font-semibold">{college.courses || 'B.Pharm, D.Pharm, M.Pharm, Pharm.D'}</strong>
                             </span>
                           </div>
 
