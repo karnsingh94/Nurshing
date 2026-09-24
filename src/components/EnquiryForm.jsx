@@ -186,16 +186,14 @@ export default function EnquiryForm({
     const msgText = `Hello! Your admission verification OTP is: ${newOtp}. Please enter this code to verify your mobile number. Valid for 10 minutes.`;
     const waUrl = `https://aumsg.in/send?token=${WA_TOKEN}&number=${cleanNumber}&message=${encodeURIComponent(msgText)}`;
 
-    try {
-      await fetch(waUrl, { method: 'GET', mode: 'no-cors' });
-      console.log('WhatsApp OTP sent to:', cleanNumber);
-    } catch (err) {
-      console.warn('WhatsApp API notice:', err);
-    } finally {
-      setIsSendingOtp(false);
-      setOtpSent(true);
-      setOtpTimer(45);
-    }
+    // Fire WhatsApp API request asynchronously without blocking UI
+    fetch(waUrl, { method: 'GET', mode: 'no-cors', keepalive: true })
+      .then(() => console.log('WhatsApp OTP sent to:', cleanNumber))
+      .catch((err) => console.warn('WhatsApp API notice:', err));
+
+    setIsSendingOtp(false);
+    setOtpSent(true);
+    setOtpTimer(45);
   };
 
   const handleVerifyOtp = (e) => {
@@ -217,7 +215,7 @@ export default function EnquiryForm({
         setOtpError('Invalid OTP! Please check your WhatsApp message and try again.');
       }
       setIsVerifying(false);
-    }, 400);
+    }, 200);
   };
 
   const handleSubmit = async (e, type = 'inquiry') => {
@@ -285,32 +283,36 @@ export default function EnquiryForm({
       timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
     };
 
+    // Save submission status to local storage immediately
     try {
-      await fetch(GOOGLE_SHEET_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'text/plain;charset=utf-8'
-        },
-        body: JSON.stringify(sheetData)
+      localStorage.setItem(SUBMITTED_STORAGE_KEY, 'true');
+      localStorage.setItem('enquiry_form_submitted', 'true');
+    } catch (e) {}
+
+    // Send data to Google Sheet asynchronously with keepalive so browser guarantees delivery in background
+    fetch(GOOGLE_SHEET_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      keepalive: true,
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8'
+      },
+      body: JSON.stringify(sheetData)
+    })
+      .then(() => {
+        console.log('Saved to Google Sheet successfully:', sheetData);
+      })
+      .catch((sheetErr) => {
+        console.error('Google Sheet submit error:', sheetErr);
       });
-      console.log('Saved to Google Sheet successfully:', sheetData);
-      try {
-        localStorage.setItem(SUBMITTED_STORAGE_KEY, 'true');
-        localStorage.setItem('enquiry_form_submitted', 'true');
-      } catch (e) {}
-    } catch (sheetErr) {
-      console.error('Google Sheet submit error:', sheetErr);
-    } finally {
+
+    // Instant/smooth transition (< 300ms micro-delay) to success screen for immediate user satisfaction
+    setTimeout(() => {
       setIsSavingToSheet(false);
       setSubmittedData({ ...sheetData });
       setIsSubmitted(true);
-      try {
-        localStorage.setItem(SUBMITTED_STORAGE_KEY, 'true');
-        localStorage.setItem('enquiry_form_submitted', 'true');
-      } catch (e) {}
       if (onSuccess) onSuccess(sheetData);
-    }
+    }, 250);
   };
 
   const handleReset = () => {

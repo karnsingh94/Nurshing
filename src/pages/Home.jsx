@@ -1,7 +1,14 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import CollegeImage from '../components/CollegeImage.jsx';
 import CollegeLogo from '../components/CollegeLogo.jsx';
-import { collegesData } from '../data/collegesData.js';
+import {
+  collegesData,
+  nursingCollegesData,
+  pharmacyCollegesData,
+  paramedicalCollegesData,
+  yogaCollegesData
+} from '../data/collegesData.js';
 import { allowedLink } from '../linkPolicy.js';
 import PageRenderer from '../PageRenderer.jsx';
 import { fetchMedicalNews, fallbackArticles } from '../services/newsApi.js';
@@ -223,6 +230,8 @@ export const page = {
   },
 };
 
+// Commented out old sample dummy data as requested (Only using Nursing, Pharmacy, Yoga, Paramedical datasets)
+/*
 const sampleColleges = [
   { id: '1', name: 'IIT Bombay - Indian Institute of Technology', city: 'Mumbai', state: 'Maharashtra', stream: 'Engineering', sector: 'Government', rating: '4.9', fee: '₹2.2L / Year' },
   { id: '2', name: 'IIT Delhi - Indian Institute of Technology', city: 'New Delhi', state: 'Delhi', stream: 'Engineering', sector: 'Government', rating: '4.9', fee: '₹2.1L / Year' },
@@ -253,14 +262,44 @@ const sampleCourses = [
   { id: 'c9', name: 'B.Des - Bachelor of Design (UI/UX / Fashion)', stream: 'Design', duration: '4 Years', avgFee: '₹2.0L - ₹4.5L / Year', popularIn: 'NIFT, NID, Pearl Academy' },
   { id: 'c10', name: 'B.Com (Hons) - Bachelor of Commerce', stream: 'Commerce', duration: '3 Years', avgFee: '₹30K - ₹1.5L / Year', popularIn: 'SRCC Delhi, Loyola, St. Xaviers' }
 ];
+*/
 
-function HomeContent() {
+// Exact datasets from active routes: Nursing, Pharmacy, Yoga, Paramedical
+const categoryCollegesData = [
+  ...nursingCollegesData,
+  ...pharmacyCollegesData,
+  ...paramedicalCollegesData,
+  ...yogaCollegesData
+];
+
+const categoryCoursesData = [
+  { id: 'nc1', name: 'B.Sc Nursing - Bachelor of Science in Nursing', stream: 'Nursing', duration: '4 Years', avgFee: '₹40K - ₹1.5L / Year', popularIn: 'Nursing Colleges' },
+  { id: 'nc2', name: 'General Nursing & Midwifery (GNM)', stream: 'Nursing', duration: '3 Years', avgFee: '₹30K - ₹1.2L / Year', popularIn: 'Nursing Institutes' },
+  { id: 'nc3', name: 'Auxiliary Nurse Midwife (ANM)', stream: 'Nursing', duration: '2 Years', avgFee: '₹20K - ₹80K / Year', popularIn: 'Nursing Institutes' },
+  { id: 'nc4', name: 'Post Basic B.Sc Nursing', stream: 'Nursing', duration: '2 Years', avgFee: '₹35K - ₹1.2L / Year', popularIn: 'Nursing Colleges' },
+  { id: 'nc5', name: 'M.Sc Nursing', stream: 'Nursing', duration: '2 Years', avgFee: '₹50K - ₹2.0L / Year', popularIn: 'Nursing Colleges' },
+  { id: 'pc1', name: 'Bachelor of Pharmacy (B.Pharm)', stream: 'Pharmacy', duration: '4 Years', avgFee: '₹60K - ₹2.5L / Year', popularIn: 'Pharmacy Colleges' },
+  { id: 'pc2', name: 'Diploma in Pharmacy (D.Pharm)', stream: 'Pharmacy', duration: '2 Years', avgFee: '₹40K - ₹1.5L / Year', popularIn: 'Pharmacy Institutes' },
+  { id: 'pc3', name: 'Doctor of Pharmacy (Pharm.D)', stream: 'Pharmacy', duration: '6 Years', avgFee: '₹1.0L - ₹3.5L / Year', popularIn: 'Pharmacy Colleges' },
+  { id: 'pc4', name: 'Master of Pharmacy (M.Pharm)', stream: 'Pharmacy', duration: '2 Years', avgFee: '₹80K - ₹2.8L / Year', popularIn: 'Pharmacy Colleges' },
+  { id: 'pm1', name: 'Bachelor of Medical Laboratory Technology (BMLT)', stream: 'Paramedical', duration: '3 Years', avgFee: '₹45K - ₹1.8L / Year', popularIn: 'Paramedical Colleges' },
+  { id: 'pm2', name: 'Diploma in Medical Laboratory Technology (DMLT)', stream: 'Paramedical', duration: '2 Years', avgFee: '₹30K - ₹1.2L / Year', popularIn: 'Paramedical Institutes' },
+  { id: 'pm3', name: 'Bachelor of Physiotherapy (BPT)', stream: 'Paramedical', duration: '4.5 Years', avgFee: '₹50K - ₹2.2L / Year', popularIn: 'Paramedical Colleges' },
+  { id: 'pm4', name: 'B.Sc Operation Theatre Technology (OTT)', stream: 'Paramedical', duration: '3 Years', avgFee: '₹40K - ₹1.6L / Year', popularIn: 'Paramedical Colleges' },
+  { id: 'yg1', name: 'Bachelor of Naturopathy & Yogic Sciences (BNYS)', stream: 'Yoga', duration: '5.5 Years', avgFee: '₹50K - ₹2.0L / Year', popularIn: 'Yoga & Naturopathy Colleges' },
+  { id: 'yg2', name: 'B.Sc Yogic Science / Yoga Therapy', stream: 'Yoga', duration: '3 Years', avgFee: '₹30K - ₹1.2L / Year', popularIn: 'Yoga Institutes' },
+  { id: 'yg3', name: 'Diploma in Yoga Science (DYSc)', stream: 'Yoga', duration: '1 Year', avgFee: '₹15K - ₹60K / Year', popularIn: 'Yoga Institutes' }
+];
+
+function HomeContent({ onNavigate }) {
   const [activeSearchTab, setActiveSearchTab] = useState('colleges');
   const [searchQuery, setSearchQuery] = useState('');
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [newsArticles, setNewsArticles] = useState(fallbackArticles);
   const featuredSliderRef = useRef(null);
   const isHoveredRef = useRef(false);
+  const modalInputRef = useRef(null);
+  const searchContainerRef = useRef(null);
 
   useEffect(() => {
     fetchMedicalNews().then((articles) => {
@@ -269,6 +308,32 @@ function HomeContent() {
       }
     });
   }, []);
+
+  // Prevent ANY page scroll jump when Search Popup Modal opens
+  useEffect(() => {
+    if (isPopupOpen) {
+      const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+      const originalOverflow = document.body.style.overflow;
+      const originalPaddingRight = document.body.style.paddingRight;
+
+      document.body.style.overflow = 'hidden';
+      if (scrollBarWidth > 0) {
+        document.body.style.paddingRight = `${scrollBarWidth}px`;
+      }
+
+      const timer = setTimeout(() => {
+        if (modalInputRef.current) {
+          modalInputRef.current.focus({ preventScroll: true });
+        }
+      }, 50);
+
+      return () => {
+        clearTimeout(timer);
+        document.body.style.overflow = originalOverflow;
+        document.body.style.paddingRight = originalPaddingRight;
+      };
+    }
+  }, [isPopupOpen]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -287,45 +352,41 @@ function HomeContent() {
   }, []);
 
   const allColleges = useMemo(() => {
-    const list = [...sampleColleges];
-    if (Array.isArray(collegesData)) {
-      collegesData.forEach((c) => {
-        if (c && c.name && !list.some(item => item.name.toLowerCase() === c.name.toLowerCase())) {
-          list.push({
-            id: c.id || c.name,
-            name: c.name,
-            city: c.city || c.stateName || 'India',
-            state: c.stateName || '',
-            stream: c.sector || 'Colleges',
-            sector: c.sector || 'Private/Govt',
-            rating: '4.5',
-            fee: '₹1.5L / Year'
-          });
-        }
-      });
-    }
-    return list;
+    return categoryCollegesData.map((c) => ({
+      id: c.id,
+      name: c.name,
+      city: c.district || c.city || 'District',
+      state: c.stateName || c.state || '',
+      stream: c.stream || 'Nursing / Pharmacy / Yoga / Paramedical',
+      sector: c.approvedBy || c.sector || 'Recognized',
+      rating: c.rating || '4.5',
+      fee: c.fee || c.avgFee || '₹1.5L / Year',
+      courses: c.courses || '',
+      details: c.details || ''
+    }));
   }, []);
 
-  const filteredResults = useMemo(() => {
-    const query = searchQuery.trim().toLowerCase();
-    if (activeSearchTab === 'colleges') {
-      if (!query) return allColleges.slice(0, 12);
-      return allColleges.filter((item) =>
-        item.name.toLowerCase().includes(query) ||
-        (item.city && item.city.toLowerCase().includes(query)) ||
-        (item.state && item.state.toLowerCase().includes(query)) ||
-        (item.stream && item.stream.toLowerCase().includes(query))
-      ).slice(0, 30);
-    } else {
-      if (!query) return sampleCourses.slice(0, 10);
-      return sampleCourses.filter((item) =>
-        item.name.toLowerCase().includes(query) ||
-        item.stream.toLowerCase().includes(query) ||
-        item.popularIn.toLowerCase().includes(query)
-      );
-    }
-  }, [searchQuery, activeSearchTab, allColleges]);
+  const matchingColleges = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return allColleges.slice(0, 16);
+    const keywords = q.split(/\s+/).filter(Boolean);
+    return allColleges.filter((item) => {
+      const targetText = `${item.name} ${item.city} ${item.state} ${item.stream} ${item.courses} ${item.details}`.toLowerCase();
+      return keywords.every(kw => targetText.includes(kw));
+    }).slice(0, 50);
+  }, [searchQuery, allColleges]);
+
+  const matchingCourses = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return categoryCoursesData.slice(0, 10);
+    const keywords = q.split(/\s+/).filter(Boolean);
+    return categoryCoursesData.filter((item) => {
+      const targetText = `${item.name} ${item.stream} ${item.popularIn}`.toLowerCase();
+      return keywords.every(kw => targetText.includes(kw));
+    });
+  }, [searchQuery]);
+
+  const currentDisplayList = activeSearchTab === 'colleges' ? matchingColleges : matchingCourses;
 
   const handleSearchSubmit = (e) => {
     if (e) e.preventDefault();
@@ -334,20 +395,20 @@ function HomeContent() {
 
   return (
     <>
-      {/* Search Results Popup Overlay */}
-      {isPopupOpen && (
+      {/* Search Results Popup Overlay (Portaled to Body for Zero Scroll Jump & Top Alignment) */}
+      {isPopupOpen && createPortal(
         <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-all duration-200"
+          className="fixed inset-0 z-[999999] flex items-start justify-center pt-6 sm:pt-12 p-3 sm:p-5 bg-slate-950/65 backdrop-blur-md transition-all duration-200"
           onClick={() => setIsPopupOpen(false)}
         >
           <div
-            className="bg-white w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[88vh] border border-gray-100 animate-in fade-in zoom-in-95 duration-200"
+            className="bg-white w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh] border border-gray-100 animate-in fade-in zoom-in-95 duration-200 text-left"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header with Live Search Input */}
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 px-6 py-4 bg-gradient-to-r from-[#0966c2] to-[#008080] text-white">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 px-6 py-4 bg-[#007f8c] text-white">
               <div className="flex items-center gap-3 shrink-0">
-                <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center font-bold text-xl">
+                <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center font-bold text-xl select-none">
                   {activeSearchTab === 'colleges' ? '🎓' : '📚'}
                 </div>
                 <div>
@@ -356,8 +417,8 @@ function HomeContent() {
                       ? `Searching "${searchQuery}"`
                       : `Explore ${activeSearchTab === 'colleges' ? 'Colleges' : 'Courses'}`}
                   </h3>
-                  <p className="text-xs text-white/80">
-                    {filteredResults.length} {activeSearchTab} found
+                  <p className="text-xs text-white/80 font-medium mt-0.5">
+                    {activeSearchTab === 'colleges' ? matchingColleges.length : matchingCourses.length} {activeSearchTab} found
                   </p>
                 </div>
               </div>
@@ -365,19 +426,19 @@ function HomeContent() {
               {/* Top Search Input inside Popup Header */}
               <div className="relative flex-1 max-w-md mx-2">
                 <input
+                  ref={modalInputRef}
                   type="text"
-                  autoFocus
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder={`Search ${activeSearchTab === 'colleges' ? 'Colleges (e.g. IIT, VIT, Delhi, CSE)...' : 'Courses (e.g. B.Tech, MBA, MBBS)...'}`}
-                  className="w-full pl-9 pr-8 py-2 text-xs md:text-sm border border-white/20 rounded-xl outline-none focus:bg-white focus:text-gray-900 bg-white/95 text-gray-900 placeholder-gray-500 shadow-inner transition-all"
+                  placeholder={`Search ${activeSearchTab === 'colleges' ? 'Colleges (e.g. AIIMS, Nursing, Pharmacy)...' : 'Courses (e.g. B.Sc Nursing, B.Pharm)...'}`}
+                  className="w-full pl-9 pr-8 py-2 text-xs md:text-sm border border-white/20 rounded-full outline-none focus:bg-white focus:text-gray-900 bg-white text-gray-900 placeholder-gray-500 shadow-inner transition-all font-medium"
                 />
-                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm">🔍</span>
+                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm select-none">🔍</span>
                 {searchQuery && (
                   <button
                     type="button"
                     onClick={() => setSearchQuery('')}
-                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 text-xs font-bold w-4 h-4 rounded-full flex items-center justify-center bg-gray-200"
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 text-xs font-bold w-4 h-4 rounded-full flex items-center justify-center bg-gray-200 cursor-pointer"
                   >
                     ✕
                   </button>
@@ -387,7 +448,7 @@ function HomeContent() {
               <button
                 type="button"
                 onClick={() => setIsPopupOpen(false)}
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white text-lg font-bold transition-all cursor-pointer shrink-0 ml-auto md:ml-0"
+                className="w-9 h-9 rounded-full bg-[#00636d] hover:bg-[#005159] flex items-center justify-center text-white text-lg font-bold transition-all cursor-pointer shrink-0 ml-auto md:ml-0"
                 aria-label="Close search popup"
               >
                 ✕
@@ -399,42 +460,59 @@ function HomeContent() {
               <button
                 type="button"
                 onClick={() => setActiveSearchTab('colleges')}
-                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${activeSearchTab === 'colleges'
-                    ? 'bg-[#0966c2] text-white shadow-sm'
+                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                  activeSearchTab === 'colleges'
+                    ? 'bg-[#0d6efd] text-white shadow-sm'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                  }`}
+                }`}
               >
-                🎓 Colleges ({activeSearchTab === 'colleges' ? filteredResults.length : allColleges.length})
+                🎓 Colleges ({matchingColleges.length})
               </button>
               <button
                 type="button"
                 onClick={() => setActiveSearchTab('courses')}
-                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${activeSearchTab === 'courses'
-                    ? 'bg-[#008080] text-white shadow-sm'
+                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                  activeSearchTab === 'courses'
+                    ? 'bg-[#0d6efd] text-white shadow-sm'
                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                  }`}
+                }`}
               >
-                📚 Courses ({sampleCourses.length})
+                📚 Courses ({matchingCourses.length})
               </button>
             </div>
 
-            {/* Modal Body / Results Grid */}
-            <div className="p-6 overflow-y-auto max-h-[60vh] bg-slate-50/50">
-              {filteredResults.length > 0 ? (
+            {/* Modal Body / 2-Column Grid */}
+            <div className="p-6 overflow-y-auto max-h-[62vh] bg-slate-50/50">
+              {currentDisplayList.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {filteredResults.map((item) => (
+                  {currentDisplayList.map((item) => (
                     <div
                       key={item.id || item.name}
-                      className="bg-white p-4 rounded-xl border border-gray-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group hover:border-[#0966c2]/40"
+                      className="bg-white p-4.5 rounded-2xl border border-gray-200/90 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group hover:border-[#0966c2]/40 text-left"
                     >
                       <div>
-                        <div className="flex items-start justify-between gap-2 mb-1.5">
-                          <h4 className="font-bold text-sm text-gray-900 group-hover:text-[#0966c2] transition-colors leading-snug">
-                            {item.name}
+                        <div className="flex items-start justify-between gap-2 mb-2">
+                          <h4 className="font-extrabold text-sm text-gray-900 group-hover:text-[#0966c2] transition-colors leading-snug">
+                            {activeSearchTab === 'colleges' ? (
+                              <a
+                                href={allowedLink(`/college/${item.id}`)}
+                                onClick={(e) => {
+                                  setIsPopupOpen(false);
+                                  if (onNavigate) {
+                                    e.preventDefault();
+                                    onNavigate(allowedLink(`/college/${item.id}`));
+                                  }
+                                }}
+                              >
+                                {item.name}
+                              </a>
+                            ) : (
+                              item.name
+                            )}
                           </h4>
-                          {item.rating && (
-                            <span className="shrink-0 bg-amber-50 text-amber-700 font-bold text-[11px] px-2 py-0.5 rounded-md border border-amber-200/60 flex items-center gap-1">
-                              ★ {item.rating}
+                          {activeSearchTab === 'colleges' && (
+                            <span className="shrink-0 text-[11px] font-extrabold text-amber-800 bg-amber-100/90 border border-amber-200/90 px-2 py-0.5 rounded-md flex items-center gap-0.5 shadow-2xs">
+                              ★ {item.rating || '4.5'}
                             </span>
                           )}
                         </div>
@@ -471,20 +549,46 @@ function HomeContent() {
                       </div>
 
                       <div className="pt-2.5 border-t border-gray-100 flex items-center justify-between">
-                        <span className="text-xs font-semibold text-gray-500">
-                          {activeSearchTab === 'colleges' ? `Fees: ${item.fee}` : `Top: ${item.popularIn}`}
+                        <span className="text-xs font-semibold text-gray-500 truncate max-w-[200px]">
+                          {activeSearchTab === 'colleges'
+                            ? (item.courses ? `Courses: ${item.courses}` : 'Recognized')
+                            : `Top: ${item.popularIn}`}
                         </span>
-                        <a
-                          href={
-                            activeSearchTab === 'colleges'
-                              ? `/colleges?search=${encodeURIComponent(item.name.split('-')[0].trim())}`
-                              : `/colleges?search=${encodeURIComponent(item.stream)}`
-                          }
-                          onClick={() => setIsPopupOpen(false)}
-                          className="inline-flex items-center gap-1 text-xs font-bold text-[#0966c2] hover:text-[#084e96] hover:underline"
-                        >
-                          {activeSearchTab === 'colleges' ? 'View College →' : 'Explore Colleges →'}
-                        </a>
+
+                        {activeSearchTab === 'colleges' ? (
+                          <a
+                            href={allowedLink(`/college/${item.id}`)}
+                            onClick={(e) => {
+                              setIsPopupOpen(false);
+                              if (onNavigate) {
+                                e.preventDefault();
+                                onNavigate(allowedLink(`/college/${item.id}`));
+                              }
+                            }}
+                            className="inline-flex items-center gap-1 text-xs font-bold text-[#0966c2] hover:text-[#084e96] hover:underline cursor-pointer"
+                          >
+                            View College →
+                          </a>
+                        ) : (
+                          <a
+                            href={allowedLink(`/${(item.stream || 'nursing').toLowerCase().split(' ')[0]}`)}
+                            onClick={(e) => {
+                              setIsPopupOpen(false);
+                              const st = (item.stream || '').toLowerCase();
+                              const targetRoute = st.includes('pharmacy') ? '/pharmacy'
+                                : st.includes('yoga') ? '/yoga'
+                                : st.includes('paramedical') ? '/paramedical'
+                                : '/nursing';
+                              if (onNavigate) {
+                                e.preventDefault();
+                                onNavigate(allowedLink(targetRoute));
+                              }
+                            }}
+                            className="inline-flex items-center gap-1 text-xs font-bold text-[#0966c2] hover:text-[#084e96] hover:underline cursor-pointer"
+                          >
+                            Explore Colleges →
+                          </a>
+                        )}
                       </div>
                     </div>
                   ))}
@@ -496,23 +600,23 @@ function HomeContent() {
                     No {activeSearchTab} found matching "{searchQuery}"
                   </h4>
                   <p className="text-xs text-gray-500 mb-4 max-w-md mx-auto">
-                    Try searching with different keywords like engineering, MBA, medical, Delhi, or IIT.
+                    Try searching with keywords like Nursing, Pharmacy, Jaipur, or AIIMS.
                   </p>
                   <button
                     type="button"
                     onClick={() => setSearchQuery('')}
                     className="px-4 py-2 bg-[#0966c2] text-white text-xs font-semibold rounded-lg shadow hover:bg-[#084e96] transition-all cursor-pointer"
                   >
-                    Clear Search & Show All {activeSearchTab}
+                    Clear Search
                   </button>
                 </div>
               )}
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
-      <div className={"blueBgDiv mobileOnly"}></div>
       <div className={"indexPage"}>
         <section className={"indexSection p-0"}>
           <div className={"carouselSection"}>
@@ -582,26 +686,46 @@ function HomeContent() {
                   </li>
                 </ul>
               </div>
-              <div className={"inputSection"}>
-                <form onSubmit={handleSearchSubmit} className={"tab-content activeTab m-0"}>
-                  <div className={"search-input-wrapper flex items-stretch w-full rounded-r-md rounded-bl-md shadow-lg bg-white overflow-hidden border border-slate-200"} style={{ position: 'relative' }}>
+              <div ref={searchContainerRef} className={"inputSection relative"}>
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    setIsPopupOpen(true);
+                  }}
+                  className={"tab-content activeTab m-0"}
+                >
+                  <div className={"search-input-wrapper flex items-stretch w-full rounded-r-md rounded-bl-md shadow-lg bg-white overflow-hidden border border-slate-200"}>
                     <input
                       type={"text"}
                       value={searchQuery}
                       onChange={(e) => {
                         setSearchQuery(e.target.value);
-                        if (!isPopupOpen) setIsPopupOpen(true);
+                        if (e.target.value.trim()) {
+                          setIsPopupOpen(true);
+                        }
+                      }}
+                      onFocus={() => {
+                        if (searchQuery.trim()) {
+                          setIsPopupOpen(true);
+                        }
                       }}
                       placeholder={
                         activeSearchTab === 'colleges'
-                          ? "Enter College Name, City or Stream (e.g. IIT, Chandigarh, VIT)"
-                          : "Enter Course Name (e.g. B.Tech, MBA, MBBS, Nursing)"
+                          ? "Enter College Name, City or Stream (e.g. AIIMS, Nursing, Pharmacy)..."
+                          : "Enter Course Name (e.g. B.Sc Nursing, B.Pharm, BNYS)..."
                       }
                       spellCheck={"false"}
-                      className={"college-name-text-box foucus-search flex-1"}
+                      className={"college-name-text-box foucus-search flex-1 text-slate-800 font-medium"}
                       autoComplete={"off"}
                     />
-                    <button type="submit" className={"primaryBtn searchIcon-home"} onClick={handleSearchSubmit}>
+                    <button
+                      type="submit"
+                      className={"primaryBtn searchIcon-home"}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setIsPopupOpen(true);
+                      }}
+                    >
                       <i className={"spriteIcon searchIcon"}></i>
                       <span className={"desktopOnly font-semibold text-white"}>
                         {"Search"}
@@ -1817,7 +1941,7 @@ function HomeContent() {
 export default function HomePage({ onNavigate }) {
   return (
     <PageRenderer page={page} onNavigate={onNavigate}>
-      <HomeContent />
+      <HomeContent onNavigate={onNavigate} />
     </PageRenderer>
   );
 }
