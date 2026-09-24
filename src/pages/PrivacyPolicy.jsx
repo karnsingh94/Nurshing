@@ -69,7 +69,7 @@ export default function PrivacyPolicy({ onNavigate }) {
               ))}
             </nav>
 
-            <div className="mt-6 pt-6 border-t border-slate-100 text-xs text-slate-500">
+            {/* <div className="mt-6 pt-6 border-t border-slate-100 text-xs text-slate-500">
               <p className="mb-2">Need a copy of this policy for records?</p>
               <button
                 type="button"
@@ -78,7 +78,7 @@ export default function PrivacyPolicy({ onNavigate }) {
               >
                 <span>🖨️</span> Print / Save PDF
               </button>
-            </div>
+            </div> */}
           </aside>
 
           {/* Legal Text Sections */}

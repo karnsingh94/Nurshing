@@ -71,7 +71,7 @@ export default function TermsConditions({ onNavigate }) {
               ))}
             </nav>
 
-            <div className="mt-6 pt-6 border-t border-slate-100 text-xs text-slate-500">
+            {/* <div className="mt-6 pt-6 border-t border-slate-100 text-xs text-slate-500">
               <p className="mb-2">Need a printable copy of these terms?</p>
               <button
                 type="button"
@@ -80,7 +80,7 @@ export default function TermsConditions({ onNavigate }) {
               >
                 <span>🖨️</span> Print / Save Terms
               </button>
-            </div>
+            </div> */}
           </aside>
 
           {/* Legal Clauses */}
