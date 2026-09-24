@@ -555,7 +555,7 @@ export default function EnquiryForm({
                 id="email"
                 name="email"
                 required
-                placeholder="student@example.com"
+                placeholder="student@gmail.com"
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50/70 text-slate-800 text-sm focus:bg-white focus:border-[#0966c2] focus:ring-2 focus:ring-[#0966c2]/15 outline-none transition-all"

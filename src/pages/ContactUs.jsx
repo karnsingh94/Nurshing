@@ -19,7 +19,7 @@ export default function ContactUs({ onNavigate }) {
     },
     {
       q: 'Can we visit your counseling centers in person?',
-      a: 'Absolutely. We welcome students and parents at our regional advisory centers in Delhi NCR, Bangalore, Mumbai, Hyderabad, and Kolkata between 9:00 AM and 7:00 PM (Monday to Saturday).'
+      a: 'Absolutely. We welcome students and parents at our regional advisory centers in Delhi NCR, Bangalore, Mumbai, Hyderabad, and Kolkata between 9:00 AM and 4:00 PM (Monday to Saturday).'
     }
   ];
 
