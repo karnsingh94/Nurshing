@@ -46,7 +46,7 @@ export const page = {
       },
       {
         "property": "og:site_name",
-        "content": "Admission Portal"
+        "content": "Career Sarathi"
       },
       {
         "property": "og:description",
@@ -58,7 +58,7 @@ export const page = {
       },
       {
         "property": "twitter:site",
-        "content": "Admission Portal"
+        "content": "Career Sarathi"
       },
       {
         "property": "twitter:creator",

@@ -41,7 +41,7 @@ export default function TermsConditions({ onNavigate }) {
             Effective Date: January 1, 2026 | Last Revised: 2026 Edition
           </p>
           <p className="text-slate-300 text-xs sm:text-sm max-w-3xl mt-2 leading-relaxed">
-            Please read these terms and conditions carefully before utilizing the educational search, counseling, ranking information, or application assistance tools provided on Admission Portal.
+            Please read these terms and conditions carefully before utilizing the educational search, counseling, ranking information, or application assistance tools provided on Career Sarathi.
           </p>
         </div>
       </section>
@@ -92,10 +92,10 @@ export default function TermsConditions({ onNavigate }) {
                 1. Acceptance of Agreement
               </h2>
               <p className="mb-3">
-                This document constitutes a legally binding agreement between you ("User", "Student", "Parent", or "Visitor") and <strong>Admission Portal</strong> ("Website", "Portal", "We", "Us").
+                This document constitutes a legally binding agreement between you ("User", "Student", "Parent", or "Visitor") and <strong>Career Sarathi</strong> ("Website", "Portal", "We", "Us").
               </p>
               <p>
-                By accessing, browsing, registering on, or submitting an inquiry via Admission Portal, you unconditionally accept and agree to comply with and be bound by these Terms & Conditions. If you do not agree with any part of these terms, please discontinue use of this portal.
+                By accessing, browsing, registering on, or submitting an inquiry via Career Sarathi, you unconditionally accept and agree to comply with and be bound by these Terms & Conditions. If you do not agree with any part of these terms, please discontinue use of this portal.
               </p>
             </section>
 
@@ -105,7 +105,7 @@ export default function TermsConditions({ onNavigate }) {
                 2. Scope of Counseling Services
               </h2>
               <p className="mb-3">
-                Admission Portal is an educational discovery portal and independent student counseling facilitator. Our platform provides:
+                Career Sarathi is an educational discovery portal and independent student counseling facilitator. Our platform provides:
               </p>
               <ul className="list-disc pl-5 space-y-2 mb-3">
                 <li>Aggregated college details including courses offered, fees, campus facilities, cutoffs, and NIRF rankings.</li>
@@ -113,7 +113,7 @@ export default function TermsConditions({ onNavigate }) {
                 <li>Direct assistance in downloading brochures, contacting admissions desks, and completing preliminary application forms.</li>
               </ul>
               <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm">
-                <strong>Important Notice:</strong> Admission Portal is not an examination conducting authority, university, or affiliated board. Final admission decisions, seat confirmations, and fee disbursements are solely within the jurisdiction of respective colleges and regulatory counseling bodies (such as NTA, MCC, JoSAA, State DTEs).
+                <strong>Important Notice:</strong> Career Sarathi is not an examination conducting authority, university, or affiliated board. Final admission decisions, seat confirmations, and fee disbursements are solely within the jurisdiction of respective colleges and regulatory counseling bodies (such as NTA, MCC, JoSAA, State DTEs).
               </div>
             </section>
 
@@ -138,10 +138,10 @@ export default function TermsConditions({ onNavigate }) {
                 4. Information Accuracy & Fee Structure Revisions
               </h2>
               <p className="mb-3">
-                While Admission Portal takes every reasonable step to ensure the data displayed (tuition fees, hostel charges, cutoff ranks, placement metrics) is accurate and synchronized with official college prospectuses, <strong>institutions frequently update fee structures and quota policies</strong>.
+                While Career Sarathi takes every reasonable step to ensure the data displayed (tuition fees, hostel charges, cutoff ranks, placement metrics) is accurate and synchronized with official college prospectuses, <strong>institutions frequently update fee structures and quota policies</strong>.
               </p>
               <p>
-                Students are strongly encouraged to verify final fee amounts, eligibility criteria, and quota seats with the official college administration before finalizing payments. Admission Portal shall not be held liable for discrepancies resulting from unnotified institutional revisions.
+                Students are strongly encouraged to verify final fee amounts, eligibility criteria, and quota seats with the official college administration before finalizing payments. Career Sarathi shall not be held liable for discrepancies resulting from unnotified institutional revisions.
               </p>
             </section>
 
@@ -151,7 +151,7 @@ export default function TermsConditions({ onNavigate }) {
                 5. Intellectual Property Rights
               </h2>
               <p className="mb-3">
-                All contents, software code, UI designs, brand marks, logos, graphics, and articles on Admission Portal are the exclusive intellectual property of Admission Portal or its licensors.
+                All contents, software code, UI designs, brand marks, logos, graphics, and articles on Career Sarathi are the exclusive intellectual property of Career Sarathi or its licensors.
               </p>
               <p>
                 Institutional logos and college names belong to their respective registered universities and are utilized strictly for informational identification and comparative directory purposes.
@@ -189,7 +189,7 @@ export default function TermsConditions({ onNavigate }) {
                 8. Limitation of Liability
               </h2>
               <p>
-                To the fullest extent permitted under applicable law, Admission Portal and its directors, counselors, and employees shall not be liable for any direct, indirect, incidental, or consequential damages resulting from admission rejections, cutoff variations, seat cancellations, or technical outages.
+                To the fullest extent permitted under applicable law, Career Sarathi and its directors, counselors, and employees shall not be liable for any direct, indirect, incidental, or consequential damages resulting from admission rejections, cutoff variations, seat cancellations, or technical outages.
               </p>
             </section>
 
@@ -199,7 +199,7 @@ export default function TermsConditions({ onNavigate }) {
                 9. User Indemnification
               </h2>
               <p>
-                You agree to indemnify, defend, and hold harmless Admission Portal from any claims, losses, liabilities, and expenses (including legal fees) arising from your breach of these Terms & Conditions or submission of false academic information.
+                You agree to indemnify, defend, and hold harmless Career Sarathi from any claims, losses, liabilities, and expenses (including legal fees) arising from your breach of these Terms & Conditions or submission of false academic information.
               </p>
             </section>
 

@@ -1,4 +1,9 @@
 import { dropdownPages, getDropdownSelection } from '../navMenus.js';
+import HomeDefault, { page as homePageMeta } from './Home.jsx';
+
+export const eagerHomeModule = { default: HomeDefault, page: homePageMeta };
+export const pageCache = new Map();
+pageCache.set('home', eagerHomeModule);
 
 export const pageInfo = {
   "architecture": {
@@ -59,7 +64,7 @@ export const pageInfo = {
     "name": "Home",
     "sourceFile": "home.html",
     "slug": "home",
-    "title": "Admission Portal - Explore Top Colleges, Courses, Fees and Exams"
+    "title": "Career Sarathi - Explore Top Colleges, Courses, Fees and Exams"
   },
   "hospitality": {
     "name": "Hospitality",
@@ -77,7 +82,7 @@ export const pageInfo = {
     "name": "Logo",
     "sourceFile": "logo.html",
     "slug": "logo",
-    "title": "Admission Portal - Explore Top Colleges, Courses, Fees and Exams"
+    "title": "Career Sarathi - Explore Top Colleges, Courses, Fees and Exams"
   },
   "management": {
     "name": "Management",
@@ -149,25 +154,25 @@ export const pageInfo = {
     "name": "About Us",
     "sourceFile": "AboutUs.jsx",
     "slug": "about-us",
-    "title": "About Us — Admission Portal | College Discovery & Admission Advisory"
+    "title": "About Us — Career Sarathi | College Discovery & Admission Advisory"
   },
   "contact-us": {
     "name": "Contact Us",
     "sourceFile": "ContactUs.jsx",
     "slug": "contact-us",
-    "title": "Contact Us — Admission Portal | Student Counseling & Helpdesk"
+    "title": "Contact Us — Career Sarathi | Student Counseling & Helpdesk"
   },
   "privacy-policy": {
     "name": "Privacy Policy",
     "sourceFile": "PrivacyPolicy.jsx",
     "slug": "privacy-policy",
-    "title": "Privacy Policy — Admission Portal | Student Data Protection"
+    "title": "Privacy Policy — Career Sarathi | Student Data Protection"
   },
   "terms-conditions": {
     "name": "Terms & Conditions",
     "sourceFile": "TermsConditions.jsx",
     "slug": "terms-conditions",
-    "title": "Terms & Conditions — Admission Portal | User Agreement"
+    "title": "Terms & Conditions — Career Sarathi | User Agreement"
   }
 };
 
@@ -181,7 +186,7 @@ export const pageLoaders = {
   "design": () => import('./Design.jsx'),
   "education": () => import('./Education.jsx'),
   "engineering": () => import('./Engineering.jsx'),
-  "home": () => import('./Home.jsx'),
+  "home": () => Promise.resolve(eagerHomeModule),
   "hospitality": () => import('./Hospitality.jsx'),
   "law": () => import('./Law.jsx'),
   "logo": () => import('./Logo.jsx'),
@@ -278,7 +283,46 @@ export function findPageLoaderByPath(pathname) {
   return pageLoaders[slug] || null;
 }
 
+export function getCachedPageModule(pathname) {
+  const slug = slugFromPath(pathname);
+  return pageCache.get(slug) || null;
+}
+
+export function cachePageModule(pathname, module) {
+  const slug = slugFromPath(pathname);
+  if (slug && module) {
+    pageCache.set(slug, module);
+  }
+}
+
+export function prefetchPage(pathname) {
+  const slug = slugFromPath(pathname);
+  if (!slug) return Promise.resolve(null);
+  if (pageCache.has(slug)) return Promise.resolve(pageCache.get(slug));
+  const loader = pageLoaders[slug];
+  if (!loader) return Promise.resolve(null);
+  return loader().then((mod) => {
+    pageCache.set(slug, mod);
+    return mod;
+  }).catch((err) => {
+    console.warn(`Prefetch failed for ${slug}:`, err);
+    return null;
+  });
+}
+
+export function prefetchAllPages() {
+  const slugs = Object.keys(pageLoaders);
+  slugs.forEach((slug, index) => {
+    // Stagger prefetching so network isn't clogged all at once
+    setTimeout(() => {
+      prefetchPage(slug);
+    }, index * 120);
+  });
+}
+
 export function findPageInfoByPath(pathname) {
   const slug = slugFromPath(pathname);
   return pageInfo[slug] || null;
 }
+
+

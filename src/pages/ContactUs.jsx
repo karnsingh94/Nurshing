@@ -6,7 +6,7 @@ export default function ContactUs({ onNavigate }) {
 
   const faqs = [
     {
-      q: 'Is admission counseling at Admission Portal completely free?',
+      q: 'Is admission counseling at Career Sarathi completely free?',
       a: 'Yes! Our fundamental college exploration, cutoff analysis, and standard admission counseling sessions are 100% free of charge for students and parents.'
     },
     {

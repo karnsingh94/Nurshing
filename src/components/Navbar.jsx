@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { pageInfo } from '../pages/index.jsx';
+import { pageInfo, prefetchPage } from '../pages/index.jsx';
 import { abroadMenu, megaMenus } from '../navMenus.js';
 
 
@@ -160,6 +160,8 @@ function PageNavLink({ page, activeSlug, onNavigate, withCaret = false }) {
     <a
       className={isActive ? 'active' : ''}
       href={`/${page.slug}`}
+      onMouseEnter={() => prefetchPage(`/${page.slug}`)}
+      onTouchStart={() => prefetchPage(`/${page.slug}`)}
       onClick={(event) => {
         if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         event.preventDefault();
@@ -171,6 +173,7 @@ function PageNavLink({ page, activeSlug, onNavigate, withCaret = false }) {
     </a>
   );
 }
+
 
 function DropdownNavItem({ page, activeSlug, onNavigate, isLast = false }) {
   const menu = page.slug === 'colleges' ? null : megaMenus[page.slug];

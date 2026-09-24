@@ -99,7 +99,7 @@ export default function Footer({ onNavigate }) {
               </li>
             </ul>
             <p className="copyright-text">
-              © 2026 Admission Portal. All Rights Reserved.
+              © 2026 Cits Admission.com. All Rights Reserved.
             </p>
           </div>
         </div>

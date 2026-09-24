@@ -39,7 +39,7 @@ export default function PrivacyPolicy({ onNavigate }) {
             Effective Date: January 1, 2026 | Last Updated: 2026 Edition
           </p>
           <p className="text-slate-300 text-xs sm:text-sm max-w-3xl mt-2 leading-relaxed">
-            At Admission Portal, we are deeply committed to safeguarding your personal and academic information. This policy explains our data practices and your rights regarding your information.
+            At Career Sarathi, we are deeply committed to safeguarding your personal and academic information. This policy explains our data practices and your rights regarding your information.
           </p>
         </div>
       </section>
@@ -90,10 +90,10 @@ export default function PrivacyPolicy({ onNavigate }) {
                 1. Introduction & Scope
               </h2>
               <p className="mb-3">
-                Welcome to <strong>Admission Portal</strong> ("we", "our", or "us"). This Privacy Policy applies to all students, parents, educators, and visitors ("you" or "User") who access our website, mobile interfaces, counseling services, cutoff estimation tools, and college application assistance features.
+                Welcome to <strong>Career Sarathi</strong> ("we", "our", or "us"). This Privacy Policy applies to all students, parents, educators, and visitors ("you" or "User") who access our website, mobile interfaces, counseling services, cutoff estimation tools, and college application assistance features.
               </p>
               <p>
-                By accessing or using Admission Portal, you acknowledge that you have read, understood, and agree to the collection and handling of your data as outlined in this Privacy Policy.
+                By accessing or using Career Sarathi, you acknowledge that you have read, understood, and agree to the collection and handling of your data as outlined in this Privacy Policy.
               </p>
             </section>
 
@@ -176,7 +176,7 @@ export default function PrivacyPolicy({ onNavigate }) {
                 5. Cookies & Tracking Technologies
               </h2>
               <p className="mb-3">
-                Admission Portal uses standard cookies and session tracking to improve user experience, memorize search filters (e.g. stream, city, state selections), and analyze website performance.
+                Career Sarathi uses standard cookies and session tracking to improve user experience, memorize search filters (e.g. stream, city, state selections), and analyze website performance.
               </p>
               <p>
                 You can configure your browser to reject cookies or notify you when cookies are being stored; however, certain portal functions such as customized college comparisons may have reduced performance.

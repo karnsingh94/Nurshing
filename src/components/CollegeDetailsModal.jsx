@@ -146,7 +146,7 @@ export default function CollegeDetailsModal() {
 
           <div className="flex-1 pr-6">
             <div className="flex flex-wrap gap-2 mb-1.5">
-              <span className="px-2.5 py-0.5 bg-red-50 text-red-600 font-bold text-[11px] rounded-full uppercase tracking-wider">
+              <span className="px-2.5 py-0.5 bg-blue-50 text-[#0966c2] font-bold text-[11px] rounded-full uppercase tracking-wider">
                 {college.sector || 'Private'}
               </span>
               <span className="px-2.5 py-0.5 bg-emerald-50 text-emerald-700 font-bold text-[11px] rounded-full uppercase tracking-wider">
@@ -183,7 +183,7 @@ export default function CollegeDetailsModal() {
               <span className="text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-0.5">
                 Courses Offered
               </span>
-              <span className="text-sm font-semibold text-[#e5383b]">
+              <span className="text-sm font-semibold text-[#0966c2]">
                 {college.coursesCount ? `${college.coursesCount}+ Accredited Programs` : 'B.Sc, GNM, ANM, B.Pharm & More'}
               </span>
             </div>
@@ -220,14 +220,14 @@ export default function CollegeDetailsModal() {
           )}
 
           {/* Key Campus Facilities */}
-          <div className="p-4 bg-rose-50/50 rounded-xl border border-rose-100/60">
+          <div className="p-4 bg-blue-50/40 rounded-xl border border-blue-100/70">
             <span className="text-[11px] font-bold text-gray-700 uppercase tracking-wider block mb-2">
               Campus Facilities & Highlights
             </span>
             <div className="flex flex-wrap gap-2">
               {['Hostel Facility', 'Modern Labs', 'Central Library', 'Placement Cell', 'Sports Complex', 'Transport'].map((facility, i) => (
                 <span key={i} className="px-3 py-1 bg-white text-gray-700 font-medium text-xs rounded-lg border border-gray-200/60 shadow-2xs flex items-center gap-1">
-                  <span className="text-[#e5383b]">✓</span> {facility}
+                  <span className="text-[#0966c2] font-bold">✓</span> {facility}
                 </span>
               ))}
             </div>
@@ -239,14 +239,14 @@ export default function CollegeDetailsModal() {
           <button
             type="button"
             onClick={handleApplyNow}
-            className="flex-1 py-3.5 px-6 rounded-full bg-[#e5383b] hover:bg-[#c92a37] active:bg-[#b01e2b] text-white font-extrabold text-sm tracking-wide shadow-md hover:shadow-lg transition-all text-center"
+            className="flex-1 py-3.5 px-6 rounded-full bg-[#0966c2] hover:bg-[#07519a] active:bg-[#06427d] text-white font-extrabold text-sm tracking-wide shadow-md hover:shadow-lg transition-all text-center cursor-pointer"
           >
             Apply Now For Admission
           </button>
           <button
             type="button"
             onClick={handleClose}
-            className="py-3.5 px-6 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-50 font-bold text-sm transition-all"
+            className="py-3.5 px-6 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-50 font-bold text-sm transition-all cursor-pointer"
           >
             Close
           </button>

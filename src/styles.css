@@ -1772,6 +1772,31 @@ a.view-more-btn:hover {
   left: auto !important;
 }
 
+/* Smooth Page Transitions & Micro-animations */
+@keyframes pageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition-enter {
+  animation: pageFadeIn 0.26s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: opacity, transform;
+}
+
+.page-transition-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  transition: opacity 0.2s ease-in-out;
+}
+
+
 
 
 

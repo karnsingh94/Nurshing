@@ -159,11 +159,11 @@ export default function CityCollegesModal() {
         <div className="text-left mb-5 pb-4 border-b border-gray-100 shrink-0">
           <div className="flex flex-wrap items-center justify-between gap-3 pr-8">
             <div>
-              <span className="inline-block px-3.5 py-0.5 bg-red-50 text-red-600 font-extrabold text-[11px] tracking-wider uppercase rounded-full mb-1">
+              <span className="inline-block px-3.5 py-0.5 bg-blue-50 text-[#0966c2] font-extrabold text-[11px] tracking-wider uppercase rounded-full mb-1">
                 📍 CITY SEARCH RESULT
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
-                Top Colleges in <span className="text-[#e5383b]">{cityName}</span>
+                Top Colleges in <span className="text-[#0966c2]">{cityName}</span>
               </h2>
             </div>
             <span className="px-3.5 py-1 bg-gray-100 text-gray-700 font-bold text-xs rounded-full">
@@ -178,7 +178,7 @@ export default function CityCollegesModal() {
               placeholder={`Search colleges in ${cityName}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 text-sm focus:bg-white focus:border-red-500 focus:ring-2 focus:ring-red-500/15 outline-none transition-all"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 text-sm focus:bg-white focus:border-[#0966c2] focus:ring-2 focus:ring-[#0966c2]/15 outline-none transition-all"
             />
           </div>
         </div>
@@ -198,7 +198,7 @@ export default function CityCollegesModal() {
               return (
                 <div
                   key={item.id || index}
-                  className="p-4 sm:p-5 rounded-2xl border border-gray-150 bg-white hover:border-red-200 hover:shadow-md transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+                  className="p-4 sm:p-5 rounded-2xl border border-gray-150 bg-white hover:border-blue-200 hover:shadow-md transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
                 >
                   <div className="flex items-start gap-3.5 flex-1 min-w-0">
                     <CollegeLogo college={item}
@@ -207,7 +207,7 @@ export default function CityCollegesModal() {
                     />
                     <div className="min-w-0">
                       <div className="flex flex-wrap gap-1.5 mb-1">
-                        <span className="px-2 py-0.5 bg-red-50 text-red-600 font-bold text-[10px] rounded-md uppercase">
+                        <span className="px-2 py-0.5 bg-blue-50 text-[#0966c2] font-bold text-[10px] rounded-md uppercase">
                           {item.sector || "Private"}
                         </span>
                         <span className="px-2 py-0.5 bg-emerald-50 text-emerald-700 font-bold text-[10px] rounded-md uppercase">
@@ -233,14 +233,14 @@ export default function CityCollegesModal() {
                     <button
                       type="button"
                       onClick={() => handleApplyNow(item)}
-                      className="flex-1 sm:flex-none px-4 py-2 rounded-xl border-1.8 border-[#e5383b] text-[#e5383b] hover:bg-[#fff5f5] font-bold text-xs transition-all text-center"
+                      className="flex-1 sm:flex-none px-4 py-2 rounded-xl border border-[#0966c2] text-[#0966c2] hover:bg-blue-50 font-bold text-xs transition-all text-center cursor-pointer"
                     >
                       Apply Now
                     </button>
                     <button
                       type="button"
                       onClick={() => handleViewDetails(item)}
-                      className="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-[#e5383b] hover:bg-[#c92a37] text-white font-bold text-xs transition-all text-center shadow-2xs"
+                      className="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-[#0966c2] hover:bg-[#07519a] text-white font-bold text-xs transition-all text-center shadow-xs cursor-pointer"
                     >
                       View College
                     </button>

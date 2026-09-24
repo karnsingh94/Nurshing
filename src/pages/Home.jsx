@@ -10,7 +10,7 @@ export const page = {
   name: "Home",
   sourceFile: "home.html",
   slug: "home",
-  title: "Admission Portal - Explore Top Colleges, Courses, Fees and Exams",
+  title: "Career Sarathi - Explore Top Colleges, Courses, Fees and Exams",
   head: {
     "meta": [
       {
@@ -30,7 +30,7 @@ export const page = {
       },
       {
         "name": "description",
-        "content": "Explore top colleges, universities, courses, fee structures, cutoff predictor and exams across India on Admission Portal"
+        "content": "Explore top colleges, universities, courses, fee structures, cutoff predictor and exams across India on Career Sarathi"
       },
       {
         "property": "og:type",
@@ -38,7 +38,7 @@ export const page = {
       },
       {
         "property": "og:title",
-        "content": "Admission Portal - Explore Top Colleges, Courses, Fees and Exams"
+        "content": "Career Sarathi - Explore Top Colleges, Courses, Fees and Exams"
       },
       {
         "property": "og:url",
@@ -46,11 +46,11 @@ export const page = {
       },
       {
         "property": "og:site_name",
-        "content": "Admission Portal"
+        "content": "Career Sarathi"
       },
       {
         "property": "og:description",
-        "content": "Explore top colleges, universities, courses, fee structures, cutoff predictor and exams across India on Admission Portal"
+        "content": "Explore top colleges, universities, courses, fee structures, cutoff predictor and exams across India on Career Sarathi"
       },
       {
         "property": "twitter:card",
@@ -58,11 +58,11 @@ export const page = {
       },
       {
         "property": "twitter:site",
-        "content": "Admission Portal"
+        "content": "Career Sarathi"
       },
       {
         "property": "twitter:creator",
-        "content": "@admissionportal"
+        "content": "@careersarathi"
       },
       {
         "property": "twitter:url",
@@ -70,11 +70,11 @@ export const page = {
       },
       {
         "property": "twitter:title",
-        "content": "Admission Portal - Explore Top Colleges, Courses, Fees and Exams"
+        "content": "Career Sarathi - Explore Top Colleges, Courses, Fees and Exams"
       },
       {
         "property": "twitter:description",
-        "content": "Explore top colleges, universities, courses, fee structures, cutoff predictor and exams across India on Admission Portal"
+        "content": "Explore top colleges, universities, courses, fee structures, cutoff predictor and exams across India on Career Sarathi"
       },
       {
         "property": "og:image",
@@ -561,7 +561,7 @@ function HomeContent() {
           </div>
           <div className={"bannerContent"}>
             <h1>
-              {"Admission Portal - Where Educational Choices Are Made Easy"}
+              {"Career Sarathi - Where Educational Choices Are Made Easy"}
             </h1>
             <div className={"searchSection"}>
               <div>
@@ -1397,7 +1397,7 @@ function HomeContent() {
           <div className={"container"}>
             <div className={"mobileOnly"}>
               <h2>
-                {"Admission Portal - Top Education Search Platform."}
+                {"Career Sarathi - Top Education Search Platform."}
               </h2>
               <p className={"sectionSubheading"}>
                 {"Your dreams are valuable, let the experts guide to achieve them."}
@@ -1537,7 +1537,7 @@ function HomeContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"I am Muskan Babele from Jhansi, Uttar Pradesh. My experience at Sharda University, Greater Noida, in the B.Tech CSE course, is excellent. I got admission in June 2022. Thank you, Admission Portal, for making my career better."}
+                      {"I am Muskan Babele from Jhansi, Uttar Pradesh. My experience at Sharda University, Greater Noida, in the B.Tech CSE course, is excellent. I got admission in June 2022. Thank you, Career Sarathi, for making my career better."}
                     </p>
                   </div>
                 </div>
@@ -1556,7 +1556,7 @@ function HomeContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"This portal has allowed me to enhance my design skills and enrich my knowledge. Presidency University has dependent teachers who make everyone thrilled about future classes. Thanks to Admission Portal for assisting me."}
+                      {"This portal has allowed me to enhance my design skills and enrich my knowledge. Presidency University has dependent teachers who make everyone thrilled about future classes. Thanks to Career Sarathi for assisting me."}
                     </p>
                   </div>
                 </div>
@@ -1575,7 +1575,7 @@ function HomeContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"I am Vikash from Samastipur, Bihar. When I was connected with Admission Portal for my future career in Computer Applications, they were more than happy to help me select the best college according to my financial preferences."}
+                      {"I am Vikash from Samastipur, Bihar. When I was connected with Career Sarathi for my future career in Computer Applications, they were more than happy to help me select the best college according to my financial preferences."}
                     </p>
                   </div>
                 </div>
@@ -1594,7 +1594,7 @@ function HomeContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"Admission Portal helped me to find my dream university, and I am thankful to them. Parul University of technology, Gujarat, is among the best colleges for knowledge and learning. Admission Portal's support team helped me a lot."}
+                      {"Career Sarathi helped me to find my dream university, and I am thankful to them. Parul University of technology, Gujarat, is among the best colleges for knowledge and learning. Career Sarathi's support team helped me a lot."}
                     </p>
                   </div>
                 </div>
@@ -1613,7 +1613,7 @@ function HomeContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"I am thankful for the assistance and guidance from Admission Portal counsellors while choosing the best and budget-friendly college from the never-ending list of colleges."}
+                      {"I am thankful for the assistance and guidance from Career Sarathi counsellors while choosing the best and budget-friendly college from the never-ending list of colleges."}
                     </p>
                   </div>
                 </div>
@@ -1632,7 +1632,7 @@ function HomeContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"Admission Portal provided the best academic assistance. Here, counsellors are very supportive and helpful. When I completed 12th, I was confused about my career, but I got proper guidance in every field, so my path was clearer."}
+                      {"Career Sarathi provided the best academic assistance. Here, counsellors are very supportive and helpful. When I completed 12th, I was confused about my career, but I got proper guidance in every field, so my path was clearer."}
                     </p>
                   </div>
                 </div>
@@ -1651,7 +1651,7 @@ function HomeContent() {
                   </p>
                   <div className={"studentReviewDiv"}>
                     <p className={"studentReview"}>
-                      {"I got to know a lot about LEXICON MILE from Admission Portal. The website provided information about campus placement, courses etc. I got a call from their consultant, which greatly helped me. Thank you."}
+                      {"I got to know a lot about LEXICON MILE from Career Sarathi. The website provided information about campus placement, courses etc. I got a call from their consultant, which greatly helped me. Thank you."}
                     </p>
                   </div>
                 </div>
@@ -1662,7 +1662,7 @@ function HomeContent() {
         <section className="py-10 bg-slate-50 border-y border-slate-200/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-center mb-6 text-xl md:text-2xl font-bold text-slate-900">
-              {"Admission Portal in Media"}
+              {"Career Sarathi in Media"}
             </h2>
             <div className={"featuredBrandWrapper"}>
               <div className={"featuredBrandTrack"}>

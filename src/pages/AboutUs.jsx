@@ -99,7 +99,7 @@ export default function AboutUs({ onNavigate }) {
   ];
 
   const milestones = [
-    { year: '2021', title: 'Portal Inception', desc: 'Launched Admission Portal with 50 top Engineering and Management colleges.' },
+    { year: '2021', title: 'Portal Inception', desc: 'Launched Career Sarathi with 50 top Engineering and Management colleges.' },
     { year: '2023', title: 'Pan-India Stream Expansion', desc: 'Added Medical, Paramedical, Pharmacy, Law, and Architecture with over 300+ institutions.' },
     { year: '2025', title: 'Interactive City & Seat Matrix Engine', desc: 'Introduced intelligent city-based college filtering and real-time seat matrix guides.' },
     { year: '2026', title: 'National Leader in Admission Guidance', desc: 'Empowering over 50,000 students annually across all 28 states and union territories in India.' }
@@ -120,13 +120,13 @@ export default function AboutUs({ onNavigate }) {
         <div className="relative max-w-6xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-cyan-300 text-xs sm:text-sm font-semibold mb-6">
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-            About Admission Portal
+            About Career Sarathi
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight max-w-4xl mx-auto mb-6">
             Guiding India's Brightest Minds to Their <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-200 to-blue-200">Dream Colleges</span>
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed mb-8">
-            Admission Portal is India's dedicated higher education discovery and admission counseling portal. We empower students and parents with unbiased college comparisons, verified fee structures, cutoffs, and personalized mentorship.
+            Career Sarathi is India's dedicated higher education discovery and admission counseling portal. We empower students and parents with unbiased college comparisons, verified fee structures, cutoffs, and personalized mentorship.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <button
