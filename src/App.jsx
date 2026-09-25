@@ -106,8 +106,13 @@ export default function App() {
       window.history.pushState({}, '', normalizedPath);
     }
 
-    const isCached = Boolean(getCachedPageModule(normalizedPath));
-    if (!isCached) {
+    const cached = getCachedPageModule(normalizedPath);
+    if (cached) {
+      setPageModule(cached);
+      setPageLoadError(null);
+      setIsNavigating(false);
+      isNavigatingRef.current = false;
+    } else {
       setIsNavigating(true);
       isNavigatingRef.current = true;
     }
@@ -120,6 +125,13 @@ export default function App() {
   useEffect(() => {
     const handlePopState = () => {
       const current = window.location.pathname + window.location.search;
+      const cached = getCachedPageModule(current);
+      if (cached) {
+        setPageModule(cached);
+        setPageLoadError(null);
+        setIsNavigating(false);
+        isNavigatingRef.current = false;
+      }
       setPathname(current);
       setNavigationKey((key) => key + 1);
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
@@ -128,6 +140,7 @@ export default function App() {
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
+
 
   // Global hover/touch prefetching across ALL links on the page
   useEffect(() => {

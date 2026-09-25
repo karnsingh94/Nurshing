@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { collegesData } from '../data/collegesData.js';
 
 const DEFAULT_STATES_CITIES = {
@@ -120,8 +121,36 @@ export default function EnquiryForm({
   const [submissionType, setSubmissionType] = useState('inquiry'); // 'inquiry' | 'callback'
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submittedData, setSubmittedData] = useState(null);
+  const [toast, setToast] = useState(null); // { message, type: 'error' | 'success' | 'info', title, id }
+  const [isToastLeaving, setIsToastLeaving] = useState(false);
 
   const timerRef = useRef(null);
+  const toastTimerRef = useRef(null);
+
+  const dismissToast = () => {
+    setIsToastLeaving(true);
+    if (toastTimerRef.current) {
+      clearTimeout(toastTimerRef.current);
+      toastTimerRef.current = null;
+    }
+    setTimeout(() => {
+      setToast(null);
+      setIsToastLeaving(false);
+    }, 380); // matches 380ms exit animation
+  };
+
+  const showToast = (message, type = 'error', title = '') => {
+    if (toastTimerRef.current) {
+      clearTimeout(toastTimerRef.current);
+      toastTimerRef.current = null;
+    }
+    setIsToastLeaving(false);
+    setToast({ message, type, title, id: Date.now() });
+
+    toastTimerRef.current = setTimeout(() => {
+      dismissToast();
+    }, 4500);
+  };
 
   const statesCitiesMap = useMemo(() => {
     const map = { ...DEFAULT_STATES_CITIES };
@@ -168,13 +197,17 @@ export default function EnquiryForm({
     }));
   };
 
-  const handleSendOtp = async () => {
+  const handleSendOtp = (keepFormError = false) => {
     setOtpError('');
-    setFormError('');
+    if (!keepFormError) {
+      setFormError('');
+    }
     const rawPhone = formData.mobile.trim();
 
     if (!rawPhone || rawPhone.length !== 10) {
-      setOtpError('Please enter a valid 10-digit mobile number first.');
+      const err = 'Please enter a valid 10-digit mobile number first.';
+      setOtpError(err);
+      showToast(err, 'error', 'Invalid Mobile');
       return;
     }
 
@@ -186,7 +219,7 @@ export default function EnquiryForm({
     const msgText = `Hello! Your admission verification OTP is: ${newOtp}. Please enter this code to verify your mobile number. Valid for 10 minutes.`;
     const waUrl = `https://aumsg.in/send?token=${WA_TOKEN}&number=${cleanNumber}&message=${encodeURIComponent(msgText)}`;
 
-    // Fire WhatsApp API request asynchronously without blocking UI
+    // Fire GET request to WhatsApp API
     fetch(waUrl, { method: 'GET', mode: 'no-cors', keepalive: true })
       .then(() => console.log('WhatsApp OTP sent to:', cleanNumber))
       .catch((err) => console.warn('WhatsApp API notice:', err));
@@ -194,79 +227,115 @@ export default function EnquiryForm({
     setIsSendingOtp(false);
     setOtpSent(true);
     setOtpTimer(45);
+
+    showToast(
+      `Verification OTP sent to WhatsApp (+91 ${rawPhone})! Please enter the 4-digit code to verify.`,
+      'info',
+      'WhatsApp OTP Sent'
+    );
   };
 
   const handleVerifyOtp = (e) => {
     e?.preventDefault();
     setOtpError('');
     if (!enteredOtp.trim()) {
-      setOtpError('Please enter the 4-digit OTP received on your WhatsApp.');
+      const err = 'Please enter the 4-digit OTP received on your WhatsApp.';
+      setOtpError(err);
+      showToast(err, 'error', 'OTP Required');
       return;
     }
 
     setIsVerifying(true);
-    setTimeout(() => {
-      if (enteredOtp.trim() === generatedOtp.trim()) {
-        setIsPhoneVerified(true);
-        setOtpSent(false);
-        setOtpError('');
-        setFormError('');
-      } else {
-        setOtpError('Invalid OTP! Please check your WhatsApp message and try again.');
-      }
-      setIsVerifying(false);
-    }, 200);
+    if (enteredOtp.trim() === generatedOtp.trim()) {
+      setIsPhoneVerified(true);
+      setOtpSent(false);
+      setOtpError('');
+      setFormError('');
+      showToast('WhatsApp mobile number verified successfully!', 'success', 'Mobile Verified');
+    } else {
+      const err = 'Invalid OTP! Please check your WhatsApp message and try again.';
+      setOtpError(err);
+      showToast(err, 'error', 'Verification Failed');
+    }
+    setIsVerifying(false);
   };
 
-  const handleSubmit = async (e, type = 'inquiry') => {
+  const handleSubmit = (e, type = 'inquiry') => {
     e?.preventDefault();
     setFormError('');
 
-    if (!isPhoneVerified) {
-      setFormError('Please verify your mobile number via WhatsApp OTP to proceed.');
-      if (!otpSent) {
-        handleSendOtp();
-      }
+    if (!formData.name.trim()) {
+      const err = 'Please enter candidate\'s full name.';
+      setFormError(err);
+      showToast(err, 'error', 'Full Name Required');
       return;
     }
 
-    if (!formData.name.trim()) {
-      setFormError('Please enter your full name.');
+    const rawPhone = formData.mobile.trim();
+    if (!rawPhone || rawPhone.length !== 10) {
+      const err = 'Please enter a valid 10-digit mobile number first.';
+      setFormError(err);
+      showToast(err, 'error', 'Invalid Mobile');
+      return;
+    }
+
+    if (!isPhoneVerified) {
+      if (!otpSent) {
+        handleSendOtp(true);
+        const err = `WhatsApp OTP Verification Required! We sent a 4-digit OTP to +91 ${rawPhone}. Please enter OTP below.`;
+        setFormError(err);
+        showToast(err, 'error', 'WhatsApp OTP Required');
+      } else {
+        const err = `Please enter the 4-digit OTP sent to +91 ${rawPhone} and click 'Submit OTP' to verify.`;
+        setFormError(err);
+        showToast(err, 'error', 'Enter OTP Code');
+      }
       return;
     }
 
     if (!formData.email.trim()) {
-      setFormError('Please enter your email address.');
+      const err = 'Please enter your email address.';
+      setFormError(err);
+      showToast(err, 'error', 'Email Required');
       return;
     }
 
     if (!formData.state) {
-      setFormError('Please select your state.');
+      const err = 'Please select your state.';
+      setFormError(err);
+      showToast(err, 'error', 'State Required');
       return;
     }
 
     if (!formData.city) {
-      setFormError('Please select your city.');
+      const err = 'Please select your city.';
+      setFormError(err);
+      showToast(err, 'error', 'City Required');
       return;
     }
 
     if (!formData.course) {
-      setFormError('Please select your preferred course.');
+      const err = 'Please select your preferred course.';
+      setFormError(err);
+      showToast(err, 'error', 'Target Course Required');
       return;
     }
 
     if (!formData.subject12) {
-      setFormError('Please select your 12th subject stream.');
+      const err = 'Please select your 12th subject stream.';
+      setFormError(err);
+      showToast(err, 'error', '12th Stream Required');
       return;
     }
 
     if (!formData.percentage12 || !String(formData.percentage12).trim()) {
-      setFormError('Please enter your 12th score / percentage.');
+      const err = 'Please enter your 12th score / percentage.';
+      setFormError(err);
+      showToast(err, 'error', '12th Score Required');
       return;
     }
 
     setSubmissionType(type);
-    setIsSavingToSheet(true);
 
     const sheetData = {
       name: formData.name.trim(),
@@ -289,30 +358,45 @@ export default function EnquiryForm({
       localStorage.setItem('enquiry_form_submitted', 'true');
     } catch (e) {}
 
-    // Send data to Google Sheet asynchronously with keepalive so browser guarantees delivery in background
-    fetch(GOOGLE_SHEET_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      keepalive: true,
-      headers: {
-        'Content-Type': 'text/plain;charset=utf-8'
-      },
-      body: JSON.stringify(sheetData)
-    })
-      .then(() => {
-        console.log('Saved to Google Sheet successfully:', sheetData);
-      })
-      .catch((sheetErr) => {
-        console.error('Google Sheet submit error:', sheetErr);
-      });
+    // INSTANT UI update: show success state immediately on click (0ms delay)!
+    setIsSavingToSheet(false);
+    setSubmittedData({ ...sheetData });
+    setIsSubmitted(true);
 
-    // Instant/smooth transition (< 300ms micro-delay) to success screen for immediate user satisfaction
+    showToast(
+      'Your admission inquiry has been submitted successfully! Our counselor will call you shortly.',
+      'success',
+      'Enquiry Submitted Successfully'
+    );
+
+    if (onSuccess) onSuccess(sheetData);
+
+    // Asynchronously transmit data to Google Sheet in background without slowing down UI
     setTimeout(() => {
-      setIsSavingToSheet(false);
-      setSubmittedData({ ...sheetData });
-      setIsSubmitted(true);
-      if (onSuccess) onSuccess(sheetData);
-    }, 250);
+      const payload = JSON.stringify(sheetData);
+      try {
+        if (navigator.sendBeacon) {
+          const blob = new Blob([payload], { type: 'text/plain;charset=utf-8' });
+          navigator.sendBeacon(GOOGLE_SHEET_URL, blob);
+        } else {
+          fetch(GOOGLE_SHEET_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            keepalive: true,
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: payload
+          }).catch((sheetErr) => console.error('Sheet send error:', sheetErr));
+        }
+      } catch (err) {
+        fetch(GOOGLE_SHEET_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          keepalive: true,
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: payload
+        }).catch((sheetErr) => console.error('Sheet send error:', sheetErr));
+      }
+    }, 0);
   };
 
   const handleReset = () => {
@@ -729,6 +813,60 @@ export default function EnquiryForm({
             </p>
           </form>
         </>
+      )}
+      {/* Side Floating Toast Notification Portal with Smooth Animations */}
+      {toast && createPortal(
+        <div
+          key={toast.id || 'toast-container'}
+          className={`fixed top-5 right-5 z-[999999] max-w-sm w-full p-2 pointer-events-auto ${
+            isToastLeaving ? 'toast-exit' : 'toast-enter'
+          }`}
+        >
+          <div className={`relative overflow-hidden p-4 rounded-2xl shadow-2xl border backdrop-blur-xl flex items-start gap-3 text-left transition-all ${
+            toast.type === 'error'
+              ? 'bg-slate-950/95 text-rose-300 border-rose-800/80 shadow-rose-950/40 ring-1 ring-rose-500/20'
+              : toast.type === 'success'
+              ? 'bg-slate-950/95 text-emerald-300 border-emerald-800/80 shadow-emerald-950/40 ring-1 ring-emerald-500/20'
+              : 'bg-slate-950/95 text-blue-300 border-blue-800/80 shadow-blue-950/40 ring-1 ring-blue-500/20'
+          }`}>
+            <div className="text-xl shrink-0 mt-0.5 select-none">
+              {toast.type === 'error' ? '⚠️' : toast.type === 'success' ? '✅' : '📲'}
+            </div>
+            <div className="flex-1 min-w-0 pr-1">
+              {toast.title && (
+                <h4 className="font-extrabold text-xs tracking-wider uppercase mb-0.5 text-white">
+                  {toast.title}
+                </h4>
+              )}
+              <p className="text-xs font-medium text-slate-200 leading-relaxed break-words">
+                {toast.message}
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={dismissToast}
+              className="text-slate-400 hover:text-white text-xs font-bold p-1.5 rounded-full hover:bg-white/10 shrink-0 cursor-pointer transition-colors"
+              title="Close"
+            >
+              ✕
+            </button>
+            {/* Animated progress bar indicator */}
+            <div
+              key={toast.id || 'toast-progress'}
+              className={`absolute bottom-0 left-0 h-1 rounded-b-2xl ${
+                toast.type === 'error'
+                  ? 'bg-gradient-to-r from-rose-500 to-red-400'
+                  : toast.type === 'success'
+                  ? 'bg-gradient-to-r from-emerald-500 to-teal-400'
+                  : 'bg-gradient-to-r from-blue-500 to-cyan-400'
+              }`}
+              style={{
+                animation: `toastProgress 4.5s linear forwards`
+              }}
+            />
+          </div>
+        </div>,
+        document.body
       )}
     </div>
   );

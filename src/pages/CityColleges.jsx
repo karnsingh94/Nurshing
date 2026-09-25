@@ -77,11 +77,56 @@ const popularCities = [
   { name: 'Panipat', image: 'https://media.getmyuni.com/assets/images/city-logos/panipat.webp' },
 ];
 
+function getInitialFiltersFromUrl() {
+  const searchParams = new URLSearchParams(typeof window !== 'undefined' ? window.location.search : '');
+  const querySearch = searchParams.get('search') || searchParams.get('q') || '';
+  const queryCity = searchParams.get('city') || '';
+  const queryState = searchParams.get('state') || '';
+  const queryCategory = searchParams.get('category') || searchParams.get('stream') || '';
+
+  let pathCity = '';
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
+  const pathParts = pathname.split('/').filter(Boolean);
+  if (pathParts.length >= 2 && pathParts[0] === 'city') {
+    const rawCity = pathParts[1].replace(/-/g, ' ');
+    pathCity = rawCity.charAt(0).toUpperCase() + rawCity.slice(1);
+  }
+
+  const pathSlug = (pathParts[0] || '').toLowerCase();
+  const streamCandidate = queryCategory || pathSlug;
+  let initialStream = 'ALL';
+  if (['nursing', 'pharmacy', 'paramedical', 'yoga'].includes(streamCandidate.toLowerCase())) {
+    initialStream = streamCandidate.charAt(0).toUpperCase() + streamCandidate.slice(1).toLowerCase();
+  }
+
+  const effectiveCity = queryCity || pathCity;
+  let initialNextState = '';
+  if (queryState) {
+    initialNextState = queryState;
+  } else if (effectiveCity) {
+    for (const [st, cities] of Object.entries(STATE_CITIES_MAP)) {
+      if (cities.some(c => c.toLowerCase() === effectiveCity.toLowerCase())) {
+        initialNextState = st;
+        break;
+      }
+    }
+  }
+
+  return {
+    selectedState: initialNextState,
+    selectedCity: effectiveCity,
+    selectedStream: initialStream,
+    searchQuery: querySearch
+  };
+}
+
 export default function CityColleges({ onNavigate }) {
-  const [selectedState, setSelectedState] = useState('');
-  const [selectedCity, setSelectedCity] = useState('');
-  const [selectedStream, setSelectedStream] = useState('ALL');
-  const [searchQuery, setSearchQuery] = useState('');
+  const initialParams = useMemo(() => getInitialFiltersFromUrl(), []);
+
+  const [selectedState, setSelectedState] = useState(initialParams.selectedState);
+  const [selectedCity, setSelectedCity] = useState(initialParams.selectedCity);
+  const [selectedStream, setSelectedStream] = useState(initialParams.selectedStream);
+  const [searchQuery, setSearchQuery] = useState(initialParams.searchQuery);
   const [sectorFilter, setSectorFilter] = useState('ALL');
   const [genderFilter, setGenderFilter] = useState('ALL');
 
@@ -101,49 +146,14 @@ export default function CityColleges({ onNavigate }) {
   }, []);
 
   useEffect(() => {
-    const searchParams = new URLSearchParams(window.location.search);
-    const querySearch = searchParams.get('search') || searchParams.get('q') || '';
-    const queryCity = searchParams.get('city') || '';
-    const queryState = searchParams.get('state') || '';
-    const queryCategory = searchParams.get('category') || searchParams.get('stream') || '';
-
-    let pathCity = '';
-    const pathParts = window.location.pathname.split('/').filter(Boolean);
-    if (pathParts.length >= 2 && pathParts[0] === 'city') {
-      const rawCity = pathParts[1].replace(/-/g, ' ');
-      pathCity = rawCity.charAt(0).toUpperCase() + rawCity.slice(1);
-    }
-
-    const pathSlug = (pathParts[0] || '').toLowerCase();
-    const streamCandidate = queryCategory || pathSlug;
-    if (['nursing', 'pharmacy', 'paramedical', 'yoga'].includes(streamCandidate.toLowerCase())) {
-      setSelectedStream(streamCandidate.charAt(0).toUpperCase() + streamCandidate.slice(1).toLowerCase());
-    } else {
-      setSelectedStream('ALL');
-    }
-
-    const effectiveCity = queryCity || pathCity;
-
-    setSearchQuery(querySearch);
-    setSelectedCity(effectiveCity);
-
-    if (queryState) {
-      setSelectedState(queryState);
-    } else if (effectiveCity) {
-      let foundState = '';
-      for (const [st, cities] of Object.entries(STATE_CITIES_MAP)) {
-        if (cities.some(c => c.toLowerCase() === effectiveCity.toLowerCase())) {
-          foundState = st;
-          break;
-        }
-      }
-      setSelectedState(foundState);
-    } else {
-      setSelectedState('');
-    }
-
+    const parsed = getInitialFiltersFromUrl();
+    setSelectedState(parsed.selectedState);
+    setSelectedCity(parsed.selectedCity);
+    setSelectedStream(parsed.selectedStream);
+    setSearchQuery(parsed.searchQuery);
     window.scrollTo(0, 0);
-  }, [window.location.search, window.location.pathname]);
+  }, []);
+
 
   const availableCities = useMemo(() => {
     if (selectedState && STATE_CITIES_MAP[selectedState]) {
