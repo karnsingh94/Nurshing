@@ -1,7 +1,10 @@
 import CollegeImage from '../components/CollegeImage.jsx';
 import CollegeLogo from '../components/CollegeLogo.jsx';
+import Pagination from '../components/Pagination.jsx';
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { collegesData } from '../data/collegesData.js';
+import { allowedLink } from '../linkPolicy.js';
+import { getCollegeStreamRoute } from './Home.jsx';
 
 const stateMap = {
   'HR': 'Haryana',
@@ -27,20 +30,33 @@ const stateMap = {
   'MP': 'Madhya Pradesh',
   'KL': 'Kerala',
   'UT': 'Uttarakhand',
+  'DL': 'Delhi',
+  'CH': 'Chandigarh',
+  'PY': 'Puducherry',
+  'AS': 'Assam'
 };
 
 const cityAliases = {
-  'bangalore': ['bangalore', 'bengaluru', 'bangalore urban'],
-  'bengaluru': ['bangalore', 'bengaluru', 'bangalore urban'],
-  'delhi': ['delhi', 'new delhi', 'north delhi', 'south delhi'],
-  'new delhi': ['delhi', 'new delhi', 'north delhi', 'south delhi'],
-  'mumbai': ['mumbai'],
-  'chennai': ['chennai'],
-  'kolkata': ['kolkata', 'howrah'],
-  'hyderabad': ['hyderabad'],
-  'pune': ['pune'],
+  'bangalore': ['bangalore', 'bengaluru', 'bangalore urban', 'bangalore rural'],
+  'bengaluru': ['bangalore', 'bengaluru', 'bangalore urban', 'bangalore rural'],
+  'delhi': ['delhi', 'new delhi', 'north delhi', 'south delhi', 'east delhi', 'west delhi'],
+  'new delhi': ['delhi', 'new delhi', 'north delhi', 'south delhi', 'east delhi', 'west delhi'],
+  'mumbai': ['mumbai', 'mumbai city', 'mumbai suburban', 'navi mumbai', 'thane'],
+  'chennai': ['chennai', 'madras'],
+  'kolkata': ['kolkata', 'howrah', 'calcutta'],
+  'hyderabad': ['hyderabad', 'secunderabad', 'cyberabad'],
+  'pune': ['pune', 'pimpri-chinchwad'],
   'jaipur': ['jaipur'],
   'panipat': ['panipat'],
+  'chandigarh': ['chandigarh', 'mohali', 'panchkula'],
+  'lucknow': ['lucknow'],
+  'ahmedabad': ['ahmedabad', 'gandhinagar'],
+  'kochi': ['kochi', 'cochin', 'ernakulam'],
+  'patna': ['patna'],
+  'ranchi': ['ranchi'],
+  'bhopal': ['bhopal'],
+  'indore': ['indore'],
+  'dehradun': ['dehradun']
 };
 
 const STATE_CITIES_MAP = {
@@ -51,19 +67,22 @@ const STATE_CITIES_MAP = {
   "Punjab": ["Ludhiana", "Patiala", "Bathinda", "Hoshiarpur", "Jalandhar", "Amritsar", "Fazilka", "Mohali", "Phagwara"],
   "Maharashtra": ["Mumbai", "Nashik", "Pune", "Nagpur", "Aurangabad", "Amravati", "Nanded"],
   "Uttar Pradesh": ["Lucknow", "Kanpur", "Varanasi", "Noida", "Allahabad", "Bareilly", "Gorakhpur"],
-  "Karnataka": ["Bengaluru", "Bangalore", "Davangere", "Honnavar", "Mandya"],
+  "Karnataka": ["Bengaluru", "Bangalore", "Davangere", "Honnavar", "Mandya", "Mangalore", "Mysore", "Manipal"],
   "Himachal Pradesh": ["Mandi", "Solan", "Kangra", "Kullu", "Bilaspur", "Shimla"],
   "Delhi": ["New Delhi", "North Delhi", "South Delhi", "Delhi"],
   "Gujarat": ["Vadodara", "Ahmedabad", "Surat", "Rajkot"],
   "Bihar": ["Patna", "Gaya", "Muzaffarpur"],
-  "Kerala": ["Calicut", "Thiruvananthapuram", "Kochi"],
+  "Kerala": ["Calicut", "Thiruvananthapuram", "Kochi", "Ernakulam"],
   "Jharkhand": ["Ranchi", "Latehar", "Jamshedpur", "Hazaribagh"],
   "Jammu & Kashmir": ["Kathua", "Anantnag", "Jammu", "Srinagar", "Badgam"],
   "Tripura": ["West Tripura", "Khumulwang", "Kamalpur"],
   "West Bengal": ["Kolkata", "Howrah"],
   "Meghalaya": ["Tura", "Shillong"],
   "Goa": ["Goa Velha", "Panaji"],
-  "Tamil Nadu": ["Chennai", "Vellore", "Coimbatore", "Madurai", "Tiruchirappalli"]
+  "Tamil Nadu": ["Chennai", "Vellore", "Coimbatore", "Madurai", "Tiruchirappalli"],
+  "Chandigarh": ["Chandigarh"],
+  "Uttarakhand": ["Dehradun", "Haridwar", "Rishikesh", "Nainital"],
+  "Madhya Pradesh": ["Bhopal", "Indore", "Gwalior", "Jabalpur"]
 };
 
 const popularCities = [
@@ -74,8 +93,12 @@ const popularCities = [
   { name: 'Pune', image: 'https://media.getmyuni.com/assets/images/city-logos/pune.webp' },
   { name: 'Jaipur', image: 'https://media.getmyuni.com/assets/images/city-logos/jaipur.webp' },
   { name: 'Hyderabad', image: 'https://media.getmyuni.com/assets/images/city-logos/hyderabad.webp' },
-  { name: 'Panipat', image: 'https://media.getmyuni.com/assets/images/city-logos/panipat.webp' },
+  { name: 'Kolkata', image: 'https://media.getmyuni.com/assets/images/city-logos/kolkata.webp' },
+  { name: 'Lucknow', image: 'https://media.getmyuni.com/assets/images/city-logos/lucknow.webp' },
+  { name: 'Chandigarh', image: 'https://media.getmyuni.com/assets/images/city-logos/chandigarh.webp' }
 ];
+
+const PAGE_SIZE = 20;
 
 function getInitialFiltersFromUrl() {
   const searchParams = new URLSearchParams(typeof window !== 'undefined' ? window.location.search : '');
@@ -121,18 +144,32 @@ function getInitialFiltersFromUrl() {
 }
 
 export default function CityColleges({ onNavigate }) {
-  const initialParams = useMemo(() => getInitialFiltersFromUrl(), []);
-
-  const [selectedState, setSelectedState] = useState(initialParams.selectedState);
-  const [selectedCity, setSelectedCity] = useState(initialParams.selectedCity);
-  const [selectedStream, setSelectedStream] = useState(initialParams.selectedStream);
-  const [searchQuery, setSearchQuery] = useState(initialParams.searchQuery);
+  const [selectedState, setSelectedState] = useState(() => getInitialFiltersFromUrl().selectedState);
+  const [selectedCity, setSelectedCity] = useState(() => getInitialFiltersFromUrl().selectedCity);
+  const [selectedStream, setSelectedStream] = useState(() => getInitialFiltersFromUrl().selectedStream);
+  const [searchQuery, setSearchQuery] = useState(() => getInitialFiltersFromUrl().searchQuery);
+  const [currentPage, setCurrentPage] = useState(1);
   const [sectorFilter, setSectorFilter] = useState('ALL');
-  const [genderFilter, setGenderFilter] = useState('ALL');
 
   const [isStateOpen, setIsStateOpen] = useState(false);
   const [isCityOpen, setIsCityOpen] = useState(false);
   const dropdownRef = useRef(null);
+
+  // Sync with URL parameters dynamically
+  useEffect(() => {
+    const handleUrlSync = () => {
+      const parsed = getInitialFiltersFromUrl();
+      setSelectedState(parsed.selectedState);
+      setSelectedCity(parsed.selectedCity);
+      setSelectedStream(parsed.selectedStream);
+      setSearchQuery(parsed.searchQuery);
+      setCurrentPage(1);
+    };
+
+    handleUrlSync();
+    window.addEventListener('popstate', handleUrlSync);
+    return () => window.removeEventListener('popstate', handleUrlSync);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -144,16 +181,6 @@ export default function CityColleges({ onNavigate }) {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
-
-  useEffect(() => {
-    const parsed = getInitialFiltersFromUrl();
-    setSelectedState(parsed.selectedState);
-    setSelectedCity(parsed.selectedCity);
-    setSelectedStream(parsed.selectedStream);
-    setSearchQuery(parsed.searchQuery);
-    window.scrollTo(0, 0);
-  }, []);
-
 
   const availableCities = useMemo(() => {
     if (selectedState && STATE_CITIES_MAP[selectedState]) {
@@ -168,6 +195,7 @@ export default function CityColleges({ onNavigate }) {
 
   const handleSelectCity = (cityName) => {
     setSelectedCity(cityName);
+    setCurrentPage(1);
     if (cityName) {
       for (const [st, cities] of Object.entries(STATE_CITIES_MAP)) {
         if (cities.some(c => c.toLowerCase() === cityName.toLowerCase())) {
@@ -206,91 +234,105 @@ export default function CityColleges({ onNavigate }) {
         if (!matchesState) return false;
       }
 
-      // 2. City Filter Check (Only checked when city is selected)
+      // 2. City Filter Check (Strictly matches the college's district or city)
       if (selectedCity) {
-        const cCity = (c.city || c.district || '').toLowerCase().trim();
-        const cAddr = (c.address || '').toLowerCase().trim();
-        const cName = (c.name || '').toLowerCase().trim();
+        const cCity = (c.city || '').toLowerCase().trim().replace(/\s*\(location\)$/i, '');
+        const cDistrict = (c.district || '').toLowerCase().trim().replace(/\s*\(location\)$/i, '');
         const reqCity = selectedCity.toLowerCase().trim();
         const aliasList = cityAliases[reqCity] || [reqCity];
 
         const matchesCity = aliasList.some(alias =>
-          cCity.includes(alias) || alias.includes(cCity) ||
-          cAddr.includes(` ${alias}`) || cAddr.endsWith(alias) ||
-          cName.includes(`(${alias})`) || cName.includes(` ${alias}`)
+          cDistrict === alias ||
+          cCity === alias ||
+          cDistrict.includes(alias) ||
+          cCity.includes(alias)
         );
         if (!matchesCity) return false;
       }
 
       // 3. Search Query Check
-      if (searchQuery) {
+      if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase().trim();
         const matchesSearch = (c.name || '').toLowerCase().includes(q) ||
           (c.city || '').toLowerCase().includes(q) ||
+          (c.district || '').toLowerCase().includes(q) ||
           (c.stateName || '').toLowerCase().includes(q) ||
           (c.sector || '').toLowerCase().includes(q) ||
           (c.summary || '').toLowerCase().includes(q) ||
           (c.courses || '').toLowerCase().includes(q) ||
-          (c.stream || '').toLowerCase().includes(q);
+          (c.stream || '').toLowerCase().includes(q) ||
+          (c.details || '').toLowerCase().includes(q);
         if (!matchesSearch) return false;
       }
 
-      // 4. Sector & Gender Check
+      // 4. Sector Filter Check
       if (sectorFilter !== 'ALL' && (c.sector || '').toUpperCase() !== sectorFilter.toUpperCase()) {
-        return false;
-      }
-      if (genderFilter !== 'ALL' && !(c.genderAcceptance || '').toUpperCase().includes(genderFilter.toUpperCase())) {
         return false;
       }
 
       return true;
     });
-  }, [selectedStream, selectedState, selectedCity, searchQuery, sectorFilter, genderFilter]);
+  }, [selectedStream, selectedState, selectedCity, searchQuery, sectorFilter]);
 
-  const handleApplyNow = (college) => {
+  const displayedColleges = useMemo(() => {
+    const start = (currentPage - 1) * PAGE_SIZE;
+    return filteredColleges.slice(start, start + PAGE_SIZE);
+  }, [filteredColleges, currentPage]);
+
+  const handleApplyNow = (collegeName) => {
     window.dispatchEvent(new CustomEvent('open-apply-modal', {
-      detail: { collegeName: college.name }
-    }));
-  };
-
-  const handleViewDetails = (college) => {
-    window.dispatchEvent(new CustomEvent('open-details-modal', {
-      detail: { collegeId: college.id, collegeName: college.name }
+      detail: { collegeName: collegeName || 'College Admission' }
     }));
   };
 
   const handleSwitchCity = (cityName) => {
     handleSelectCity(cityName);
+    const targetUrl = allowedLink(`/city-colleges?city=${encodeURIComponent(cityName)}`);
     if (onNavigate) {
-      onNavigate(`/city-colleges?city=${encodeURIComponent(cityName)}`);
+      onNavigate(targetUrl);
     } else {
-      window.history.pushState({}, '', `/city-colleges?city=${encodeURIComponent(cityName)}`);
+      window.history.pushState({}, '', targetUrl);
       window.scrollTo(0, 0);
     }
+  };
+
+  const handleResetFilters = () => {
+    setSelectedState('');
+    setSelectedCity('');
+    setSearchQuery('');
+    setSelectedStream('ALL');
+    setSectorFilter('ALL');
+    setCurrentPage(1);
+    const newUrl = window.location.pathname;
+    window.history.replaceState({}, '', newUrl);
   };
 
   const activeTargetLocation = selectedCity || selectedState || 'India';
 
   return (
-    <div className="converted-page min-h-screen bg-[#f4f5f7] pb-16" style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif" }}>
+    <div className="converted-page min-h-screen bg-[#f8fafc] pb-16 font-sans" style={{ fontFamily: "'Inter', system-ui, -apple-system, sans-serif" }}>
       {/* Hero Header Banner */}
-      <div className="bg-[#0966c2] text-white pt-8 pb-12 px-4 sm:px-6 shadow-md">
-        <div className="max-w-[1240px] mx-auto">
+      <div className="bg-[#0966c2] text-white pt-8 pb-10 px-4 sm:px-6 shadow-md">
+        <div className="max-w-7xl mx-auto">
           {/* Breadcrumb */}
           <nav className="text-xs text-white/80 mb-3 flex items-center gap-2">
             <a 
-              href="/home" 
-              onClick={(e) => { e.preventDefault(); onNavigate?.('/home'); }}
-              className="hover:underline text-white/90"
+              href={allowedLink("/home")} 
+              onClick={(e) => { 
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                e.preventDefault(); 
+                onNavigate?.(allowedLink("/home")); 
+              }}
+              className="hover:underline text-white/90 font-medium"
             >
               Home
             </a>
             <span>›</span>
-            <span>Colleges</span>
+            <span className="text-white/90">Colleges</span>
             {selectedState && (
               <>
                 <span>›</span>
-                <span>{selectedState}</span>
+                <span className="text-white/90">{selectedState}</span>
               </>
             )}
             {selectedCity && (
@@ -301,15 +343,15 @@ export default function CityColleges({ onNavigate }) {
             )}
           </nav>
 
-          <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight mb-2">
-            Top {selectedStream !== 'ALL' ? `${selectedStream} ` : ''}Colleges in <span className="text-[#a5f3fc]">{activeTargetLocation}</span> 2026
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-2 leading-tight">
+            Top {selectedStream !== 'ALL' ? `${selectedStream} ` : ''}Colleges in <span className="text-amber-300">{activeTargetLocation}</span> 2026
           </h1>
-          <p className="text-sm sm:text-base text-white/90 max-w-3xl leading-relaxed mb-6">
-            Find and compare top accredited colleges in {activeTargetLocation} with details on course fees, rankings, admission cut-offs, review ratings, and placement records.
+          <p className="text-xs sm:text-sm text-white/90 max-w-3xl leading-relaxed mb-6 font-medium">
+            Explore verified colleges in {activeTargetLocation} across Nursing, Pharmacy, Paramedical, Yoga, and Medical streams with courses, seat matrix, rankings, and direct counseling admission guide.
           </p>
 
           {/* Search & Filter Bar Container */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-lg flex flex-col gap-3">
+          <div className="bg-white/15 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-lg flex flex-col gap-3">
             <div className="flex flex-col sm:flex-row gap-3 items-center w-full">
               {/* Search Input */}
               <div className="relative flex-1 w-full">
@@ -317,15 +359,27 @@ export default function CityColleges({ onNavigate }) {
                   type="text"
                   placeholder={`Search colleges in ${activeTargetLocation}...`}
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white text-gray-800 text-sm font-medium placeholder-gray-400 border border-transparent focus:border-white outline-none shadow-sm"
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setCurrentPage(1);
+                  }}
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-white text-gray-800 text-xs sm:text-sm font-medium placeholder-gray-400 border border-transparent focus:border-blue-400 outline-none shadow-xs"
                 />
-                <span className="absolute left-3.5 top-3.5 text-gray-400 text-base">🔍</span>
+                <span className="absolute left-3.5 top-3.5 text-gray-400 text-sm select-none">🔍</span>
+                {searchQuery && (
+                  <button
+                    type="button"
+                    onClick={() => { setSearchQuery(''); setCurrentPage(1); }}
+                    className="absolute right-3 top-3 text-gray-400 hover:text-gray-600 text-xs font-bold w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center cursor-pointer"
+                  >
+                    ✕
+                  </button>
+                )}
               </div>
 
               {/* Custom Filter Dropdowns: State -> City */}
               <div ref={dropdownRef} className="flex flex-wrap gap-2 w-full sm:w-auto relative">
-                {/* Custom State Dropdown */}
+                {/* State Dropdown */}
                 <div className="relative flex-1 sm:flex-none">
                   <button
                     type="button"
@@ -333,23 +387,24 @@ export default function CityColleges({ onNavigate }) {
                       setIsStateOpen(!isStateOpen);
                       setIsCityOpen(false);
                     }}
-                    className="w-full min-w-[140px] px-4 py-3 rounded-xl bg-white text-gray-800 font-bold text-xs border border-transparent outline-none cursor-pointer shadow-sm flex items-center justify-between gap-2"
+                    className="w-full min-w-[140px] px-4 py-3 rounded-xl bg-white text-gray-800 font-bold text-xs border border-transparent outline-none cursor-pointer shadow-xs flex items-center justify-between gap-2"
                   >
                     <span className="truncate">{selectedState || 'Select State'}</span>
                     <span className="text-[10px] text-gray-500">▼</span>
                   </button>
 
                   {isStateOpen && (
-                    <div className="absolute top-full left-0 mt-1.5 w-52 bg-white text-gray-800 rounded-xl shadow-2xl border border-gray-100 z-50 max-h-60 overflow-y-auto py-1">
+                    <div className="absolute top-full left-0 mt-1.5 w-56 bg-white text-gray-800 rounded-xl shadow-2xl border border-gray-100 z-50 max-h-60 overflow-y-auto py-1">
                       <div
                         onClick={() => {
                           setSelectedState('');
                           setSelectedCity('');
                           setIsStateOpen(false);
+                          setCurrentPage(1);
                         }}
                         className="px-4 py-2 hover:bg-blue-50 cursor-pointer font-bold text-xs text-gray-500 border-b border-gray-100"
                       >
-                        Select State (All)
+                        All States
                       </div>
                       {Object.keys(STATE_CITIES_MAP).map((st) => (
                         <div
@@ -358,6 +413,7 @@ export default function CityColleges({ onNavigate }) {
                             setSelectedState(st);
                             setSelectedCity('');
                             setIsStateOpen(false);
+                            setCurrentPage(1);
                           }}
                           className={`px-4 py-2.5 hover:bg-blue-50 cursor-pointer font-semibold text-xs ${
                             selectedState === st ? 'bg-blue-50 text-[#0966c2] font-bold' : 'text-gray-700'
@@ -370,7 +426,7 @@ export default function CityColleges({ onNavigate }) {
                   )}
                 </div>
 
-                {/* Custom City Dropdown */}
+                {/* City Dropdown */}
                 <div className="relative flex-1 sm:flex-none">
                   <button
                     type="button"
@@ -378,7 +434,7 @@ export default function CityColleges({ onNavigate }) {
                       setIsCityOpen(!isCityOpen);
                       setIsStateOpen(false);
                     }}
-                    className="w-full min-w-[140px] px-4 py-3 rounded-xl bg-white text-gray-800 font-bold text-xs border border-transparent outline-none cursor-pointer shadow-sm flex items-center justify-between gap-2"
+                    className="w-full min-w-[140px] px-4 py-3 rounded-xl bg-white text-gray-800 font-bold text-xs border border-transparent outline-none cursor-pointer shadow-xs flex items-center justify-between gap-2"
                   >
                     <span className="truncate">{selectedCity || 'Select City'}</span>
                     <span className="text-[10px] text-gray-500">▼</span>
@@ -390,10 +446,11 @@ export default function CityColleges({ onNavigate }) {
                         onClick={() => {
                           setSelectedCity('');
                           setIsCityOpen(false);
+                          setCurrentPage(1);
                         }}
                         className="px-4 py-2 hover:bg-blue-50 cursor-pointer font-bold text-xs text-gray-500 border-b border-gray-100"
                       >
-                        Select City (All)
+                        All Cities
                       </div>
                       {availableCities.map((ct) => (
                         <div
@@ -413,26 +470,17 @@ export default function CityColleges({ onNavigate }) {
             </div>
 
             {/* Quick Stream Filter Pills (Nursing, Pharmacy, Paramedical, Yoga) */}
-            <div className="w-full flex flex-wrap items-center gap-2 pt-3 border-t border-white/20">
-              <span className="text-xs font-bold text-white/90 mr-1 uppercase tracking-wider">Stream:</span>
+            <div className="w-full flex flex-wrap items-center gap-2 pt-2 border-t border-white/20">
+              <span className="text-[11px] font-bold text-white/90 mr-1 uppercase tracking-wider">Stream:</span>
               {['ALL', 'Nursing', 'Pharmacy', 'Paramedical', 'Yoga'].map((stream) => (
                 <button
                   key={stream}
                   type="button"
                   onClick={() => {
                     setSelectedStream(stream);
-                    const searchParams = new URLSearchParams(window.location.search);
-                    if (stream === 'ALL') {
-                      searchParams.delete('category');
-                      searchParams.delete('stream');
-                    } else {
-                      searchParams.set('category', stream);
-                    }
-                    const newSearch = searchParams.toString();
-                    const newUrl = `${window.location.pathname}${newSearch ? `?${newSearch}` : ''}`;
-                    window.history.replaceState({}, '', newUrl);
+                    setCurrentPage(1);
                   }}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                  className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
                     selectedStream.toUpperCase() === stream.toUpperCase()
                       ? 'bg-white text-[#0966c2] shadow-md scale-105'
                       : 'bg-white/20 hover:bg-white/30 text-white border border-white/30'
@@ -447,123 +495,131 @@ export default function CityColleges({ onNavigate }) {
       </div>
 
       {/* Main Content Area */}
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
         <div className="flex flex-col lg:flex-row gap-8 items-start">
           
-          {/* Left / Main Colleges List */}
-          <div className="w-full flex-1">
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-bold text-gray-900">
-                Showing {filteredColleges.length} {selectedStream !== 'ALL' ? `${selectedStream} ` : ''}Colleges {selectedCity ? `in ${selectedCity}` : selectedState ? `in ${selectedState}` : 'in India'}
+          {/* Main Colleges List */}
+          <div className="w-full flex-1 min-w-0">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5 pb-3 border-b border-slate-200">
+              <h2 className="text-lg sm:text-xl font-extrabold text-slate-900">
+                Showing <span className="text-[#0966c2]">{filteredColleges.length}</span> {selectedStream !== 'ALL' ? `${selectedStream} ` : ''}Colleges {selectedCity ? `in ${selectedCity}` : selectedState ? `in ${selectedState}` : 'Across India'}
               </h2>
               {(selectedState || selectedCity || searchQuery || selectedStream !== 'ALL') && (
                 <button
                   type="button"
-                  onClick={() => {
-                    setSelectedState('');
-                    setSelectedCity('');
-                    setSearchQuery('');
-                    setSelectedStream('ALL');
-                    const searchParams = new URLSearchParams(window.location.search);
-                    searchParams.delete('category');
-                    searchParams.delete('stream');
-                    searchParams.delete('search');
-                    searchParams.delete('city');
-                    searchParams.delete('state');
-                    const newSearch = searchParams.toString();
-                    window.history.replaceState({}, '', `${window.location.pathname}${newSearch ? `?${newSearch}` : ''}`);
-                  }}
-                  className="text-xs font-bold text-[#e5383b] hover:underline cursor-pointer"
+                  onClick={handleResetFilters}
+                  className="text-xs font-bold text-red-600 hover:text-red-700 hover:underline cursor-pointer self-start sm:self-auto"
                 >
-                  Clear Filters
+                  Clear All Filters
                 </button>
               )}
             </div>
 
-            {/* Colleges Grid */}
-            {filteredColleges.length === 0 ? (
-              <div className="bg-white rounded-2xl p-12 text-center shadow-xs border border-gray-200">
-                <p className="text-lg font-semibold text-gray-700">No colleges match your search criteria</p>
-                <p className="text-xs text-gray-400 mt-1">Try clearing your filters or searching for another term.</p>
+            {/* Colleges Cards Grid */}
+            {displayedColleges.length === 0 ? (
+              <div className="bg-white rounded-2xl p-12 text-center shadow-xs border border-slate-200/90">
+                <div className="text-4xl mb-3">🔍</div>
+                <h3 className="text-base font-bold text-slate-800 mb-1">No colleges found matching your filter</h3>
+                <p className="text-xs text-slate-500 mb-4 max-w-md mx-auto">
+                  Try clearing the search query or selecting a different city/state.
+                </p>
+                <button
+                  type="button"
+                  onClick={handleResetFilters}
+                  className="px-5 py-2.5 bg-[#0966c2] text-white text-xs font-bold rounded-xl shadow-xs hover:bg-[#07519a] transition-all cursor-pointer"
+                >
+                  Reset All Filters
+                </button>
               </div>
             ) : (
-              <div className="searchedcollegeList space-y-4">
-                {filteredColleges.map((item, index) => {
-                  const stateName = stateMap[item.state] || item.state || '';
-                  const locationStr = [item.city || item.district, stateName].filter(Boolean).join(', ');
+              <div className="space-y-4">
+                {displayedColleges.map((college) => {
+                  const stateFullName = college.stateName || stateMap[college.state] || college.state || '';
+                  const locationStr = [college.district || college.city || 'District', stateFullName].filter(Boolean).join(', ');
+                  const targetCollegeRoute = allowedLink(`${getCollegeStreamRoute(college)}?search=${encodeURIComponent(college.name)}`);
 
                   return (
                     <div
-                      className="college__card__new bg-white rounded-2xl p-5 border border-gray-200 shadow-xs hover:shadow-md transition-all"
-                      key={item.id || index}
+                      key={college.id}
+                      className="bg-white rounded-2xl border border-slate-200/90 p-5 sm:p-6 shadow-xs hover:shadow-md transition-all group"
                     >
-                      <div className="card__header__row flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                        <div className="college__detail__grid flex items-start gap-4">
-                          <CollegeLogo college={item}
-                            size={64}
-                            className="college__image rounded-xl shrink-0"
+                      <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
+                        {/* Left: Logo & Info */}
+                        <div className="flex items-start gap-4 flex-1 min-w-0">
+                          <CollegeLogo
+                            college={college}
+                            size={56}
+                            className="w-14 h-14 rounded-xl shadow-xs shrink-0 border border-slate-100 mt-1"
                           />
-                          <div className="college__detail__row min-w-0">
-                            <h2 className="college__name text-lg font-bold text-gray-900 hover:text-[#0966c2]">
-                              <a href={`/college/${item.id}`} title={item.name}>
-                                {item.name}
-                              </a>
-                            </h2>
-                            <div className="detail__list__mobile flex flex-wrap items-center gap-2 mt-1.5 text-xs text-gray-500">
-                              <span className="px-2 py-0.5 bg-gray-100 text-gray-700 font-semibold rounded-md">
-                                📍 {locationStr}
+                          <div className="flex-1 min-w-0">
+                            <div className="flex flex-wrap items-center gap-1.5 mb-1.5">
+                              <span className="px-2.5 py-0.5 bg-blue-50 text-[#0966c2] font-bold text-[11px] rounded-full border border-blue-100 uppercase">
+                                {college.stream || 'Healthcare'}
                               </span>
-                              <span className="px-2 py-0.5 bg-red-50 text-red-600 font-bold rounded-md uppercase">
-                                {item.sector || "Private"}
+                              <span className="px-2.5 py-0.5 bg-emerald-50 text-emerald-700 font-bold text-[11px] rounded-full border border-emerald-100">
+                                {college.approvedBy || 'Approved Institute'}
                               </span>
-                              <span className="px-2 py-0.5 bg-emerald-50 text-emerald-700 font-bold rounded-md uppercase">
-                                {item.genderAcceptance || "Co-ed"}
-                              </span>
-                              <span className="px-2 py-0.5 bg-amber-50 text-amber-700 font-bold rounded-md">
-                                ⭐ 4.5
+                              <span className="px-2 py-0.5 bg-amber-50 text-amber-800 font-extrabold text-[11px] rounded-full border border-amber-200">
+                                ★ {college.rating || '4.5'}
                               </span>
                             </div>
+
+                            <h3 className="text-base sm:text-lg font-extrabold text-slate-900 group-hover:text-[#0966c2] transition-colors leading-snug">
+                              <a
+                                href={targetCollegeRoute}
+                                onClick={(e) => {
+                                  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                                  if (onNavigate) {
+                                    e.preventDefault();
+                                    onNavigate(targetCollegeRoute);
+                                  }
+                                }}
+                              >
+                                {college.name}
+                              </a>
+                            </h3>
+
+                            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-xs text-slate-500 font-medium">
+                              <span className="flex items-center gap-1">
+                                📍 <strong className="text-slate-700 font-semibold">{college.district || college.city || 'District'}</strong>, {stateFullName}
+                              </span>
+                              <span className="flex items-center gap-1">
+                                🎓 <strong className="text-slate-700 font-semibold">{college.courses || 'Degree & Diploma Programs'}</strong>
+                              </span>
+                            </div>
+
+                            {college.details && (
+                              <div className="mt-2.5 p-2.5 bg-slate-50 rounded-xl border border-slate-100 text-xs text-slate-600 leading-relaxed">
+                                <span className="font-bold text-slate-700">Official Details: </span>
+                                {college.details}
+                              </div>
+                            )}
                           </div>
                         </div>
-                      </div>
 
-                      <div className="summary-text my-3">
-                        <p className="text-xs text-gray-600 leading-relaxed">
-                          {`${item.name} is a leading ${item.sector || 'Private'} educational institute located in ${locationStr}. Code: ${item.code || 'N/A'}. Affiliated with ${item.affiliation || item.name}.`}
-                        </p>
-                      </div>
-
-                      <div className="highlight__cta__row flex flex-col sm:flex-row items-center justify-between gap-4 pt-3 border-t border-gray-100">
-                        <div className="highlights__grid flex flex-wrap gap-4 text-xs">
-                          <div>
-                            <span className="text-gray-400 font-semibold block">Courses</span>
-                            <span className="font-bold text-gray-800">{item.coursesCount || 6}+ Programs</span>
-                          </div>
-                          <div>
-                            <span className="text-gray-400 font-semibold block">Entrance</span>
-                            <span className="font-bold text-gray-800">Neet / Merit</span>
-                          </div>
-                          <div>
-                            <span className="text-gray-400 font-semibold block">Rating</span>
-                            <span className="font-bold text-amber-600">4.5 / 5 ★</span>
-                          </div>
-                        </div>
-
-                        <div className="cta__grid flex items-center gap-2.5 w-full sm:w-auto">
+                        {/* Right: Action Buttons */}
+                        <div className="flex sm:flex-col items-center gap-2 w-full sm:w-auto shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-100">
                           <button
                             type="button"
-                            onClick={() => handleApplyNow(item)}
-                            className="cta__div lead-cta-college-filter-2 apply-now-btn flex-1 sm:flex-none px-5 py-2.5 rounded-xl border-1.8 border-[#e5383b] text-[#e5383b] hover:bg-[#fff5f5] font-bold text-xs transition-all text-center"
+                            onClick={() => handleApplyNow(college.name)}
+                            className="flex-1 sm:flex-none w-full px-5 py-2.5 bg-[#0966c2] hover:bg-[#07519a] text-white text-xs font-bold rounded-xl shadow-xs transition-all text-center cursor-pointer"
                           >
                             Apply Now
                           </button>
-                          <button
-                            type="button"
-                            onClick={() => handleViewDetails(item)}
-                            className="cta__div lead-cta-college-filter-1 view-details-btn flex-1 sm:flex-none px-5 py-2.5 rounded-xl bg-[#e5383b] hover:bg-[#c92a37] text-white font-bold text-xs transition-all text-center shadow-2xs"
+                          <a
+                            href={targetCollegeRoute}
+                            onClick={(e) => {
+                              if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                              if (onNavigate) {
+                                e.preventDefault();
+                                onNavigate(targetCollegeRoute);
+                              }
+                            }}
+                            className="flex-1 sm:flex-none w-full px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold rounded-xl transition-all text-center no-underline hover:no-underline cursor-pointer"
+                            style={{ textDecoration: 'none' }}
                           >
                             View College
-                          </button>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -571,24 +627,32 @@ export default function CityColleges({ onNavigate }) {
                 })}
               </div>
             )}
+
+            {/* Pagination Controls */}
+            <Pagination
+              currentPage={currentPage}
+              totalItems={filteredColleges.length}
+              pageSize={PAGE_SIZE}
+              onPageChange={setCurrentPage}
+            />
           </div>
 
           {/* Right Sidebar: Popular Cities Navigation */}
           <div className="w-full lg:w-[320px] shrink-0 space-y-6">
-            <div className="bg-white rounded-2xl p-5 border border-gray-200 shadow-xs">
-              <h3 className="text-base font-bold text-gray-900 mb-3 pb-2 border-b border-gray-100 flex items-center gap-2">
-                🏙️ Popular Cities
+            <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs">
+              <h3 className="text-sm font-extrabold text-slate-900 mb-3 pb-2 border-b border-slate-100 flex items-center gap-2">
+                🏙️ Popular Cities in India
               </h3>
-              <div className="grid grid-cols-2 gap-2.5">
+              <div className="grid grid-cols-2 gap-2">
                 {popularCities.map(city => (
                   <button
                     key={city.name}
                     type="button"
                     onClick={() => handleSwitchCity(city.name)}
-                    className={`p-2.5 rounded-xl text-xs font-bold text-left transition-all border ${
+                    className={`p-2.5 rounded-xl text-xs font-bold text-left transition-all border cursor-pointer ${
                       selectedCity.toLowerCase() === city.name.toLowerCase()
-                        ? 'bg-[#e5383b] text-white border-[#e5383b] shadow-xs'
-                        : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-gray-200/80'
+                        ? 'bg-[#0966c2] text-white border-[#0966c2] shadow-xs'
+                        : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border-slate-200/80'
                     }`}
                   >
                     📍 {city.name}
@@ -597,17 +661,19 @@ export default function CityColleges({ onNavigate }) {
               </div>
             </div>
 
-            {/* Help / Counseling Card */}
-            <div className="bg-gradient-to-br from-[#0966c2] to-[#04478a] text-white rounded-2xl p-6 shadow-md text-center">
-              <span className="text-2xl mb-2 block">🎓</span>
-              <h4 className="text-base font-bold mb-1">Need Admission Help?</h4>
-              <p className="text-xs text-white/80 mb-4">Get free expert 1-on-1 counseling for top colleges in {selectedCity}.</p>
+            {/* Admission Counseling Card */}
+            <div className="bg-gradient-to-br from-[#0966c2] to-blue-800 text-white rounded-2xl p-6 shadow-md text-center">
+              <span className="text-3xl mb-2 block">🎓</span>
+              <h4 className="text-base font-extrabold mb-1">Need Admission Help?</h4>
+              <p className="text-xs text-blue-100 mb-4 leading-relaxed">
+                Connect with our certified academic advisors for cut-off evaluation, fee verification, and choice filling in {activeTargetLocation}.
+              </p>
               <button
                 type="button"
-                onClick={() => handleApplyNow({ name: `General Counseling - ${selectedCity}` })}
-                className="w-full py-2.5 px-4 rounded-xl bg-white text-[#0966c2] font-extrabold text-xs shadow-sm hover:bg-gray-50 transition-all"
+                onClick={() => handleApplyNow(`General Counseling - ${activeTargetLocation}`)}
+                className="w-full py-2.5 px-4 rounded-xl bg-white text-[#0966c2] font-extrabold text-xs shadow-sm hover:bg-blue-50 transition-all uppercase tracking-wider cursor-pointer"
               >
-                Talk to Admission Expert
+                Request Free Callback
               </button>
             </div>
           </div>

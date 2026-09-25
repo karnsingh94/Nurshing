@@ -61,16 +61,14 @@ export default function CityCollegesModal() {
       const aliasList = cityAliases[normalizedQuery] || [normalizedQuery];
 
       const matched = collegesData.filter(c => {
-        const cCity = (c.city || '').toLowerCase().trim();
-        const cDistrict = (c.district || '').toLowerCase().trim();
-        const cAddr = (c.address || '').toLowerCase().trim();
-        const cName = (c.name || '').toLowerCase().trim();
+        const cCity = (c.city || '').toLowerCase().trim().replace(/\s*\(location\)$/i, '');
+        const cDistrict = (c.district || '').toLowerCase().trim().replace(/\s*\(location\)$/i, '');
 
         return aliasList.some(alias =>
-          cCity.includes(alias) || alias.includes(cCity) ||
           cDistrict === alias ||
-          cAddr.includes(` ${alias}`) || cAddr.endsWith(alias) ||
-          cName.includes(`(${alias})`) || cName.includes(` ${alias}`)
+          cCity === alias ||
+          cDistrict.includes(alias) ||
+          cCity.includes(alias)
         );
       });
 
@@ -80,29 +78,8 @@ export default function CityCollegesModal() {
 
     window.addEventListener('open-city-modal', handleOpenCity);
 
-    // Global click listener for city cards & city links -> Navigate to dedicated route
-    const handleGlobalClick = (e) => {
-      const card = e.target.closest('.sliderCard, [data-city], .cityCardLink, .cityName');
-      if (card) {
-        const extractedCity = card.getAttribute('data-city') ||
-          card.querySelector('.cityName')?.textContent?.trim() ||
-          card.textContent?.trim() || '';
-
-        if (extractedCity) {
-          e.preventDefault();
-          e.stopPropagation();
-          const targetUrl = `/city-colleges?city=${encodeURIComponent(extractedCity)}`;
-          window.history.pushState({}, '', targetUrl);
-          window.dispatchEvent(new Event('popstate'));
-        }
-      }
-    };
-
-    document.addEventListener('click', handleGlobalClick, true);
-
     return () => {
       window.removeEventListener('open-city-modal', handleOpenCity);
-      document.removeEventListener('click', handleGlobalClick, true);
     };
   }, []);
 

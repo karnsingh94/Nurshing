@@ -988,36 +988,41 @@ function HomeContent({ onNavigate }) {
               </button>
 
               <div className={"customSliderList"} style={{ scrollBehavior: 'smooth' }}>
-                <a className={"sliderCard"} href="/city-colleges?city=Bangalore" data-city="Bangalore" style={{ cursor: 'pointer' }}>
-                  <img loading={"lazy"} src={"/images/imported/046d9cf7e2d349b9.webp"} width={"276"} height={"207"} alt={"Bangalore"} />
-                  <p className={"cityName"}>
-                    {"Bangalore"}
-                  </p>
-                </a>
-                <a className={"sliderCard"} href="/city-colleges?city=Chennai" data-city="Chennai" style={{ cursor: 'pointer' }}>
-                  <img loading={"lazy"} src={"/images/imported/d1cbdd6277777130.webp"} width={"276"} height={"207"} alt={"Chennai"} />
-                  <p className={"cityName"}>
-                    {"Chennai"}
-                  </p>
-                </a>
-                <a className={"sliderCard"} href="/city-colleges?city=Delhi" data-city="Delhi" style={{ cursor: 'pointer' }}>
-                  <img loading={"lazy"} src={"/images/imported/116e4c7edefec305.webp"} width={"276"} height={"207"} alt={"Delhi"} />
-                  <p className={"cityName"}>
-                    {"Delhi"}
-                  </p>
-                </a>
-                <a className={"sliderCard"} href="/city-colleges?city=Mumbai" data-city="Mumbai" style={{ cursor: 'pointer' }}>
-                  <img loading={"lazy"} src={"/images/imported/7e5f71ce8f040395.webp"} width={"276"} height={"207"} alt={"Mumbai"} />
-                  <p className={"cityName"}>
-                    {"Mumbai"}
-                  </p>
-                </a>
-                <a className={"sliderCard"} href="/city-colleges?city=Pune" data-city="Pune" style={{ cursor: 'pointer' }}>
-                  <img loading={"lazy"} src={"/images/imported/90e00f695743c668.webp"} width={"276"} height={"207"} alt={"Pune"} />
-                  <p className={"cityName"}>
-                    {"Pune"}
-                  </p>
-                </a>
+                {[
+                  { name: "Bangalore", img: "/images/imported/046d9cf7e2d349b9.webp" },
+                  { name: "Chennai", img: "/images/imported/d1cbdd6277777130.webp" },
+                  { name: "Delhi", img: "/images/imported/116e4c7edefec305.webp" },
+                  { name: "Mumbai", img: "/images/imported/7e5f71ce8f040395.webp" },
+                  { name: "Pune", img: "/images/imported/90e00f695743c668.webp" },
+                  { name: "Jaipur", img: "https://media.getmyuni.com/assets/images/city-logos/jaipur.webp" },
+                  { name: "Hyderabad", img: "https://media.getmyuni.com/assets/images/city-logos/hyderabad.webp" },
+                  { name: "Kolkata", img: "https://media.getmyuni.com/assets/images/city-logos/kolkata.webp" },
+                  { name: "Lucknow", img: "https://media.getmyuni.com/assets/images/city-logos/lucknow.webp" },
+                  { name: "Chandigarh", img: "https://media.getmyuni.com/assets/images/city-logos/chandigarh.webp" },
+                ].map((city) => {
+                  const cityRoute = allowedLink(`/city-colleges?city=${encodeURIComponent(city.name)}`);
+                  return (
+                    <a
+                      key={city.name}
+                      className={"sliderCard"}
+                      href={cityRoute}
+                      data-city={city.name}
+                      onClick={(e) => {
+                        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                        if (onNavigate) {
+                          e.preventDefault();
+                          onNavigate(cityRoute);
+                        }
+                      }}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      <img loading={"lazy"} src={city.img} width={"276"} height={"207"} alt={city.name} />
+                      <p className={"cityName"}>
+                        {city.name}
+                      </p>
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
