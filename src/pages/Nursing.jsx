@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { allowedLink } from '../linkPolicy.js';
 import PageRenderer from '../PageRenderer.jsx';
 import CollegeImage from '../components/CollegeImage.jsx';
@@ -221,11 +221,26 @@ export const page = {
 
 const PAGE_SIZE = 20;
 
-function NursingContent() {
+function NursingContent({ onNavigate }) {
   const [selectedState, setSelectedState] = useState("all");
   const [selectedCity, setSelectedCity] = useState("all");
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const sp = new URLSearchParams(window.location.search);
+      return sp.get('search') || sp.get('q') || '';
+    }
+    return '';
+  });
   const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const q = sp.get('search') || sp.get('q') || '';
+    if (q) {
+      setSearchQuery(q);
+      setCurrentPage(1);
+    }
+  }, []);
 
   // States with counts
   const statesList = useMemo(() => {
@@ -2758,7 +2773,7 @@ function NursingContent() {
 export default function NursingPage({ onNavigate }) {
   return (
     <PageRenderer page={page} onNavigate={onNavigate}>
-      <NursingContent />
+      <NursingContent onNavigate={onNavigate} />
     </PageRenderer>
   );
 }
