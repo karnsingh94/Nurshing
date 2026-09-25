@@ -1104,14 +1104,35 @@ function resetPageOverflow() {
   document.body.style.position = '';
 }
 
-function resetManagedHead() {
-  document.querySelectorAll(`[${MANAGED_ATTR}]`).forEach((node) => node.remove());
+function resetManagedHeadMeta() {
+  document.querySelectorAll(`meta[${MANAGED_ATTR}]`).forEach((node) => node.remove());
 }
 
 function appendHead(page) {
-  resetManagedHead();
+  if (!page) return;
 
-  document.title = page.title || page.name || 'Nurshing Azz';
+  if (page.title || page.name) {
+    document.title = page.title || page.name;
+  }
+
+  resetManagedHeadMeta();
+
+  const currentPageLinkHrefs = new Set(
+    (page.head?.links || [])
+      .map(attributes => {
+        const rel = String(attributes.rel || '').toLowerCase();
+        return rel === 'stylesheet' ? getStylesheetHref(attributes.href) || attributes.href : null;
+      })
+      .filter(Boolean)
+  );
+
+  // Clean up page-specific extra stylesheets that are NOT in the current page's head links
+  document.head.querySelectorAll(`link[${MANAGED_ATTR}="true"]`).forEach((link) => {
+    const href = link.getAttribute('href');
+    if (href && !currentPageLinkHrefs.has(href)) {
+      link.remove();
+    }
+  });
 
   page.head?.meta?.forEach((attributes) => {
     if (String(attributes['http-equiv'] || '').toLowerCase() === 'refresh') return;
@@ -1126,11 +1147,18 @@ function appendHead(page) {
     document.head.appendChild(meta);
   });
 
+  // Append stylesheets if not already loaded in <head>
   page.head?.links?.forEach((attributes) => {
     const rel = String(attributes.rel || '').toLowerCase();
-    const stylesheetHref = rel === 'stylesheet' ? getStylesheetHref(attributes.href) : null;
+    const href = attributes.href;
+    const stylesheetHref = rel === 'stylesheet' ? getStylesheetHref(href) : null;
 
     if (rel === 'stylesheet' && !stylesheetHref) return;
+
+    const targetHref = stylesheetHref || href;
+    if (targetHref && document.head.querySelector(`link[href="${targetHref}"]`)) {
+      return; // Already present in head, keep it!
+    }
 
     const link = document.createElement('link');
 
@@ -1151,9 +1179,12 @@ function appendHead(page) {
     document.head.appendChild(link);
   });
 
-  page.head?.styles?.forEach((css) => {
-    const style = document.createElement('style');
 
+  page.head?.styles?.forEach((css) => {
+    const existingStyles = Array.from(document.head.querySelectorAll('style'));
+    if (existingStyles.some(s => s.textContent === css)) return;
+
+    const style = document.createElement('style');
     style.textContent = css;
     style.setAttribute(MANAGED_ATTR, 'true');
     document.head.appendChild(style);
@@ -1184,10 +1215,10 @@ export default function PageRenderer({ page, onNavigate, children }) {
     return () => {
       cleanupFilters?.();
       cleanupScrollers?.();
-      resetManagedHead();
       resetPageOverflow();
     };
   }, [page]);
+
 
   useEffect(() => {
     const root = pageRef.current;

@@ -1,9 +1,29 @@
 import { dropdownPages, getDropdownSelection } from '../navMenus.js';
 import HomeDefault, { page as homePageMeta } from './Home.jsx';
+import CityCollegesDefault from './CityColleges.jsx';
+import CollegeDetailsDefault from './CollegeDetails.jsx';
+import NursingDefault from './Nursing.jsx';
+import PharmacyDefault from './Pharmacy.jsx';
+import ParamedicalDefault from './Paramedical.jsx';
+import YogaDefault from './Yoga.jsx';
 
 export const eagerHomeModule = { default: HomeDefault, page: homePageMeta };
+export const eagerCityCollegesModule = { default: CityCollegesDefault };
+export const eagerCollegeDetailsModule = { default: CollegeDetailsDefault };
+export const eagerNursingModule = { default: NursingDefault };
+export const eagerPharmacyModule = { default: PharmacyDefault };
+export const eagerParamedicalModule = { default: ParamedicalDefault };
+export const eagerYogaModule = { default: YogaDefault };
+
 export const pageCache = new Map();
 pageCache.set('home', eagerHomeModule);
+pageCache.set('citycolleges', eagerCityCollegesModule);
+pageCache.set('colleges', eagerCityCollegesModule);
+pageCache.set('collegedetails', eagerCollegeDetailsModule);
+pageCache.set('nursing', eagerNursingModule);
+pageCache.set('pharmacy', eagerPharmacyModule);
+pageCache.set('paramedical', eagerParamedicalModule);
+pageCache.set('yoga', eagerYogaModule);
 
 export const pageInfo = {
   "architecture": {
@@ -179,7 +199,7 @@ export const pageInfo = {
 export const pageLoaders = {
   "architecture": () => import('./Architecture.jsx'),
   "arts": () => import('./Arts.jsx'),
-  "colleges": () => import('./CityColleges.jsx'),
+  "colleges": () => Promise.resolve(eagerCityCollegesModule),
   "commerce": () => import('./Commerce.jsx'),
   "computer": () => import('./Computer.jsx'),
   "dental": () => import('./Dental.jsx'),
@@ -192,15 +212,15 @@ export const pageLoaders = {
   "logo": () => import('./Logo.jsx'),
   "management": () => import('./Management.jsx'),
   "medical": () => import('./Medical.jsx'),
-  "paramedical": () => import('./Paramedical.jsx'),
-  "pharmacy": () => import('./Pharmacy.jsx'),
+  "paramedical": () => Promise.resolve(eagerParamedicalModule),
+  "pharmacy": () => Promise.resolve(eagerPharmacyModule),
   "science": () => import('./Science.jsx'),
   "veterinary": () => import('./Veterinary.jsx'),
   "vocational": () => import('./Vocational.jsx'),
-  "citycolleges": () => import('./CityColleges.jsx'),
-  "collegedetails": () => import('./CollegeDetails.jsx'),
-  "nursing": () => import('./Nursing.jsx'),
-  "yoga": () => import('./Yoga.jsx'),
+  "citycolleges": () => Promise.resolve(eagerCityCollegesModule),
+  "collegedetails": () => Promise.resolve(eagerCollegeDetailsModule),
+  "nursing": () => Promise.resolve(eagerNursingModule),
+  "yoga": () => Promise.resolve(eagerYogaModule),
   "about-us": () => import('./AboutUs.jsx'),
   "contact-us": () => import('./ContactUs.jsx'),
   "privacy-policy": () => import('./PrivacyPolicy.jsx'),

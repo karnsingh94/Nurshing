@@ -40,33 +40,35 @@ const stateMap = {
   'DD': 'Daman and Diu'
 };
 
+function parseCollegeFromUrl() {
+  const searchParams = new URLSearchParams(typeof window !== 'undefined' ? window.location.search : '');
+  const queryId = searchParams.get('id');
+
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
+  const pathParts = pathname.split('/').filter(Boolean);
+  const pathId = pathParts.length >= 2 && pathParts[0] === 'college' ? decodeURIComponent(pathParts[1]) : '';
+
+  const targetId = queryId || pathId;
+
+  if (targetId) {
+    let found = collegesData.find(c => String(c.id).toLowerCase() === String(targetId).toLowerCase());
+    if (!found) {
+      found = collegesData.find(c => c.name?.toLowerCase().includes(targetId.toLowerCase()) || targetId.toLowerCase().includes(c.name?.toLowerCase()));
+    }
+    if (found) return found;
+  }
+
+  return collegesData[0];
+}
+
 export default function CollegeDetails({ onNavigate }) {
-  const [college, setCollege] = useState(null);
+  const [college, setCollege] = useState(() => parseCollegeFromUrl());
 
   useEffect(() => {
-    const parseCollegeFromUrl = () => {
-      const searchParams = new URLSearchParams(window.location.search);
-      const queryId = searchParams.get('id');
-
-      const pathParts = window.location.pathname.split('/').filter(Boolean);
-      const pathId = pathParts.length >= 2 && pathParts[0] === 'college' ? decodeURIComponent(pathParts[1]) : '';
-
-      const targetId = queryId || pathId;
-
-      if (targetId) {
-        let found = collegesData.find(c => String(c.id).toLowerCase() === String(targetId).toLowerCase());
-        if (!found) {
-          found = collegesData.find(c => c.name?.toLowerCase().includes(targetId.toLowerCase()) || targetId.toLowerCase().includes(c.name?.toLowerCase()));
-        }
-        if (found) return found;
-      }
-
-      return collegesData[0];
-    };
-
     setCollege(parseCollegeFromUrl());
     window.scrollTo(0, 0);
-  }, [window.location.search, window.location.pathname]);
+  }, []);
+
 
   if (!college) return null;
 
