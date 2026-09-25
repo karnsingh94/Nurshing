@@ -84,16 +84,42 @@ function HomeFallback({ onNavigate }) {
   );
 }
 
+function getInitialRoute() {
+  if (typeof window === 'undefined') return '/home';
+
+  // Detect page refresh/reload across browsers
+  const navEntries = window.performance?.getEntriesByType?.('navigation');
+  const isReload = (navEntries && navEntries[0]?.type === 'reload') || window.performance?.navigation?.type === 1;
+
+  if (isReload) {
+    if (window.location.pathname !== '/home' && window.location.pathname !== '/') {
+      window.history.replaceState({}, '', '/home');
+    }
+    return '/home';
+  }
+
+  const current = window.location.pathname + window.location.search;
+  return (!current || current === '/') ? '/home' : current;
+}
+
 export default function App() {
-  const [pathname, setPathname] = useState(() => {
-    return window.location.pathname + window.location.search || '/home';
-  });
+  const [pathname, setPathname] = useState(() => getInitialRoute());
   const [navigationKey, setNavigationKey] = useState(0);
-  const [pageModule, setPageModule] = useState(() => getCachedPageModule(pathname));
+  const [pageModule, setPageModule] = useState(() => getCachedPageModule(getInitialRoute()));
   const [pageLoadError, setPageLoadError] = useState(null);
   const [isNavigating, setIsNavigating] = useState(false);
   const [reloadKey, setReloadKey] = useState(0);
   const isNavigatingRef = useRef(false);
+
+  useEffect(() => {
+    // If page was refreshed, make sure URL in browser is synced to /home
+    const navEntries = window.performance?.getEntriesByType?.('navigation');
+    const isReload = (navEntries && navEntries[0]?.type === 'reload') || window.performance?.navigation?.type === 1;
+
+    if (isReload && window.location.pathname !== '/home' && window.location.pathname !== '/') {
+      window.history.replaceState({}, '', '/home');
+    }
+  }, []);
 
   const currentPageInfo = findPageInfoByPath(pathname);
   const pageLoader = findPageLoaderByPath(pathname);

@@ -2337,7 +2337,7 @@ function LogoContent() {
                 </div>
               </div>
               <div className={"col-md-6"}>
-                <img className={"websiteImg desktopOnly"} src={"https://media.getmyuni.com/assets/img/home_new/site.webp"} loading={"lazy"} alt={"img"} width={"660"} height={"450"} />
+                <img className={"websiteImg desktopOnly"} src={"/images/imported/e76db46cba7697ec.webp"} loading={"lazy"} alt={"Career Sarathi"} width={"660"} height={"450"} />
               </div>
             </div>
           </div>

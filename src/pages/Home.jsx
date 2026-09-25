@@ -456,6 +456,15 @@ function HomeContent({ onNavigate }) {
 
   const currentDisplayList = activeSearchTab === 'colleges' ? matchingColleges : matchingCourses;
 
+  const featuredColleges = useMemo(() => {
+    return [
+      ...nursingCollegesData.slice(0, 4),
+      ...pharmacyCollegesData.slice(0, 4),
+      ...paramedicalCollegesData.slice(0, 4),
+      ...yogaCollegesData.slice(0, 4)
+    ];
+  }, []);
+
   const handleSearchSubmit = (e) => {
     if (e) e.preventDefault();
     setIsPopupOpen(true);
@@ -849,9 +858,9 @@ function HomeContent({ onNavigate }) {
             </div>
           </div>
         </section>
-        <section className="py-10 md:py-14 bg-[#fbf9f4] border-y border-[#ede7db]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">
+        <section className={"indexSection pt-0"}>
+          <div className={"container"}>
+            <h2>
               {"Featured Colleges"}
             </h2>
             <div className={"customSlider four-cardDisplay"} style={{ position: 'relative' }}>
@@ -887,8 +896,8 @@ function HomeContent({ onNavigate }) {
                 onMouseEnter={() => { isHoveredRef.current = true; }}
                 onMouseLeave={() => { isHoveredRef.current = false; }}
               >
-                {collegesData.filter(item => item.sector === 'Government').slice(0, 16).map((item, index) => {
-                  const stateName = { "HR": "Haryana", "RJ": "Rajasthan", "TG": "Telangana", "OR": "Odisha", "JK": "Jammu & Kashmir", "KA": "Karnataka", "BR": "Bihar", "ML": "Meghalaya", "UP": "Uttar Pradesh", "PB": "Punjab", "MH": "Maharashtra", "WB": "West Bengal", "TR": "Tripura", "HP": "Himachal Pradesh", "JH": "Jharkhand", "CT": "Chhattisgarh", "AP": "Andhra Pradesh", "GJ": "Gujarat", "GA": "Goa", "TN": "Tamil Nadu", "MP": "Madhya Pradesh", "KL": "Kerala", "UT": "Uttarakhand" }[item.state] || item.state || '';
+                {featuredColleges.map((item, index) => {
+                  const stateName = { "HR": "Haryana", "RJ": "Rajasthan", "TG": "Telangana", "OR": "Odisha", "JK": "Jammu & Kashmir", "KA": "Karnataka", "BR": "Bihar", "ML": "Meghalaya", "UP": "Uttar Pradesh", "PB": "Punjab", "MH": "Maharashtra", "WB": "West Bengal", "TR": "Tripura", "HP": "Himachal Pradesh", "JH": "Jharkhand", "CT": "Chhattisgarh", "AP": "Andhra Pradesh", "GJ": "Gujarat", "GA": "Goa", "TN": "Tamil Nadu", "MP": "Madhya Pradesh", "KL": "Kerala", "UT": "Uttarakhand" }[item.state] || item.stateName || item.state || '';
                   const locationStr = `${item.city || item.district || ''}${(item.city || item.district) && stateName ? ', ' : ''}${stateName}`;
                   const collegeRoute = allowedLink(`${getCollegeStreamRoute(item)}?search=${encodeURIComponent(item.name)}`);
                   return (
@@ -994,11 +1003,11 @@ function HomeContent({ onNavigate }) {
                   { name: "Delhi", img: "/images/imported/116e4c7edefec305.webp" },
                   { name: "Mumbai", img: "/images/imported/7e5f71ce8f040395.webp" },
                   { name: "Pune", img: "/images/imported/90e00f695743c668.webp" },
-                  { name: "Jaipur", img: "https://media.getmyuni.com/assets/images/city-logos/jaipur.webp" },
-                  { name: "Hyderabad", img: "https://media.getmyuni.com/assets/images/city-logos/hyderabad.webp" },
-                  { name: "Kolkata", img: "https://media.getmyuni.com/assets/images/city-logos/kolkata.webp" },
-                  { name: "Lucknow", img: "https://media.getmyuni.com/assets/images/city-logos/lucknow.webp" },
-                  { name: "Chandigarh", img: "https://media.getmyuni.com/assets/images/city-logos/chandigarh.webp" },
+                  { name: "Jaipur", img: "/images/imported/046d9cf7e2d349b9.webp" },
+                  { name: "Hyderabad", img: "/images/imported/d1cbdd6277777130.webp" },
+                  { name: "Kolkata", img: "/images/imported/116e4c7edefec305.webp" },
+                  { name: "Lucknow", img: "/images/imported/7e5f71ce8f040395.webp" },
+                  { name: "Chandigarh", img: "/images/imported/90e00f695743c668.webp" },
                 ].map((city) => {
                   const cityRoute = allowedLink(`/city-colleges?city=${encodeURIComponent(city.name)}`);
                   return (
@@ -1016,7 +1025,17 @@ function HomeContent({ onNavigate }) {
                       }}
                       style={{ cursor: 'pointer' }}
                     >
-                      <img loading={"lazy"} src={city.img} width={"276"} height={"207"} alt={city.name} />
+                      <img
+                        loading={"lazy"}
+                        src={city.img}
+                        width={"276"}
+                        height={"207"}
+                        alt={city.name}
+                        onError={(e) => {
+                          e.currentTarget.onerror = null;
+                          e.currentTarget.src = "/images/imported/046d9cf7e2d349b9.webp";
+                        }}
+                      />
                       <p className={"cityName"}>
                         {city.name}
                       </p>

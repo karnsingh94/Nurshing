@@ -86,16 +86,16 @@ const STATE_CITIES_MAP = {
 };
 
 const popularCities = [
-  { name: 'Bangalore', image: 'https://media.getmyuni.com/assets/images/city-logos/bangalore-bengaluru.webp' },
-  { name: 'Chennai', image: 'https://media.getmyuni.com/assets/images/city-logos/chennai.webp' },
-  { name: 'Delhi', image: 'https://media.getmyuni.com/assets/images/city-logos/delhi.webp' },
-  { name: 'Mumbai', image: 'https://media.getmyuni.com/assets/images/city-logos/mumbai.webp' },
-  { name: 'Pune', image: 'https://media.getmyuni.com/assets/images/city-logos/pune.webp' },
-  { name: 'Jaipur', image: 'https://media.getmyuni.com/assets/images/city-logos/jaipur.webp' },
-  { name: 'Hyderabad', image: 'https://media.getmyuni.com/assets/images/city-logos/hyderabad.webp' },
-  { name: 'Kolkata', image: 'https://media.getmyuni.com/assets/images/city-logos/kolkata.webp' },
-  { name: 'Lucknow', image: 'https://media.getmyuni.com/assets/images/city-logos/lucknow.webp' },
-  { name: 'Chandigarh', image: 'https://media.getmyuni.com/assets/images/city-logos/chandigarh.webp' }
+  { name: 'Bangalore', image: '/images/imported/046d9cf7e2d349b9.webp' },
+  { name: 'Chennai', image: '/images/imported/d1cbdd6277777130.webp' },
+  { name: 'Delhi', image: '/images/imported/116e4c7edefec305.webp' },
+  { name: 'Mumbai', image: '/images/imported/7e5f71ce8f040395.webp' },
+  { name: 'Pune', image: '/images/imported/90e00f695743c668.webp' },
+  { name: 'Jaipur', image: '/images/imported/046d9cf7e2d349b9.webp' },
+  { name: 'Hyderabad', image: '/images/imported/d1cbdd6277777130.webp' },
+  { name: 'Kolkata', image: '/images/imported/116e4c7edefec305.webp' },
+  { name: 'Lucknow', image: '/images/imported/7e5f71ce8f040395.webp' },
+  { name: 'Chandigarh', image: '/images/imported/90e00f695743c668.webp' }
 ];
 
 const PAGE_SIZE = 20;
