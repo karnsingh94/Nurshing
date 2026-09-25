@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import CollegeImage from '../components/CollegeImage.jsx';
 import CollegeLogo from '../components/CollegeLogo.jsx';
 import Pagination from '../components/Pagination.jsx';
@@ -404,11 +404,26 @@ const premierPharmacyColleges = [
 
 const PAGE_SIZE = 20;
 
-function PharmacyContent() {
+function PharmacyContent({ onNavigate }) {
   const [selectedState, setSelectedState] = useState("all");
   const [selectedCity, setSelectedCity] = useState("all");
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const sp = new URLSearchParams(window.location.search);
+      return sp.get('search') || sp.get('q') || '';
+    }
+    return '';
+  });
   const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const q = sp.get('search') || sp.get('q') || '';
+    if (q) {
+      setSearchQuery(q);
+      setCurrentPage(1);
+    }
+  }, []);
 
   // States with counts
   const statesList = useMemo(() => {
@@ -3044,7 +3059,7 @@ function PharmacyContent() {
 export default function PharmacyPage({ onNavigate }) {
   return (
     <PageRenderer page={page} onNavigate={onNavigate}>
-      <PharmacyContent />
+      <PharmacyContent onNavigate={onNavigate} />
     </PageRenderer>
   );
 }

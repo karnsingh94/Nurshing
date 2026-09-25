@@ -291,6 +291,74 @@ const categoryCoursesData = [
   { id: 'yg3', name: 'Diploma in Yoga Science (DYSc)', stream: 'Yoga', duration: '1 Year', avgFee: '₹15K - ₹60K / Year', popularIn: 'Yoga Institutes' }
 ];
 
+export function getCollegeStreamRoute(college) {
+  if (!college) return '/nursing';
+
+  const stream = (college.stream || '').toLowerCase();
+  const name = (college.name || '').toLowerCase();
+  const id = String(college.id || '').toLowerCase();
+
+  if (stream.includes('yoga') || id.startsWith('yoga') || name.includes('yoga') || name.includes('naturopathy')) {
+    return '/yoga';
+  }
+  if (stream.includes('pharmacy') || id.startsWith('pharm') || name.includes('pharmacy') || name.includes('pharm')) {
+    return '/pharmacy';
+  }
+  if (stream.includes('paramedical') || id.startsWith('param') || name.includes('paramedical') || name.includes('allied health') || name.includes('physiotherapy')) {
+    return '/paramedical';
+  }
+  if (stream.includes('nursing') || id.startsWith('nurs') || name.includes('nursing') || name.includes('anm') || name.includes('gnm')) {
+    return '/nursing';
+  }
+  if (stream.includes('engineering') || name.includes('engineering') || name.includes('technology') || name.includes('iit') || name.includes('nit')) {
+    return '/engineering';
+  }
+  if (stream.includes('medical') || stream.includes('mbbs') || name.includes('medical') || name.includes('aiims')) {
+    return '/medical';
+  }
+  if (stream.includes('management') || stream.includes('mba') || name.includes('management') || name.includes('iim')) {
+    return '/management';
+  }
+  if (stream.includes('computer') || stream.includes('bca') || stream.includes('mca')) {
+    return '/computer';
+  }
+  if (stream.includes('design') || stream.includes('fashion')) {
+    return '/design';
+  }
+  if (stream.includes('dental') || stream.includes('bds')) {
+    return '/dental';
+  }
+  if (stream.includes('architecture') || stream.includes('b.arch')) {
+    return '/architecture';
+  }
+  if (stream.includes('law') || stream.includes('llb')) {
+    return '/law';
+  }
+  if (stream.includes('commerce') || stream.includes('b.com')) {
+    return '/commerce';
+  }
+  if (stream.includes('arts') || stream.includes('humanities')) {
+    return '/arts';
+  }
+  if (stream.includes('science') || stream.includes('b.sc')) {
+    return '/science';
+  }
+  if (stream.includes('education') || stream.includes('b.ed')) {
+    return '/education';
+  }
+  if (stream.includes('hospitality') || stream.includes('hotel')) {
+    return '/hospitality';
+  }
+  if (stream.includes('veterinary') || stream.includes('bvsc')) {
+    return '/veterinary';
+  }
+  if (stream.includes('vocational') || stream.includes('itot') || stream.includes('iti')) {
+    return '/vocational';
+  }
+
+  return '/nursing';
+}
+
 function HomeContent({ onNavigate }) {
   const [activeSearchTab, setActiveSearchTab] = useState('colleges');
   const [searchQuery, setSearchQuery] = useState('');
@@ -485,113 +553,114 @@ function HomeContent({ onNavigate }) {
             <div className="p-6 overflow-y-auto max-h-[62vh] bg-slate-50/50">
               {currentDisplayList.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {currentDisplayList.map((item) => (
-                    <div
-                      key={item.id || item.name}
-                      className="bg-white p-4.5 rounded-2xl border border-gray-200/90 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group hover:border-[#0966c2]/40 text-left"
-                    >
-                      <div>
-                        <div className="flex items-start justify-between gap-2 mb-2">
-                          <h4 className="font-extrabold text-sm text-gray-900 group-hover:text-[#0966c2] transition-colors leading-snug">
-                            {activeSearchTab === 'colleges' ? (
-                              <a
-                                href={allowedLink(`/college/${item.id}`)}
-                                onClick={(e) => {
-                                  setIsPopupOpen(false);
-                                  if (onNavigate) {
-                                    e.preventDefault();
-                                    onNavigate(allowedLink(`/college/${item.id}`));
-                                  }
-                                }}
-                              >
-                                {item.name}
-                              </a>
-                            ) : (
-                              item.name
+                  {currentDisplayList.map((item) => {
+                    const targetCollegeRoute = activeSearchTab === 'colleges'
+                      ? allowedLink(`${getCollegeStreamRoute(item)}?search=${encodeURIComponent(item.name)}`)
+                      : allowedLink(`/${(item.stream || 'nursing').toLowerCase().split(' ')[0]}`);
+
+                    return (
+                      <div
+                        key={item.id || item.name}
+                        className="bg-white p-4.5 rounded-2xl border border-gray-200/90 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group hover:border-[#0966c2]/40 text-left"
+                      >
+                        <div>
+                          <div className="flex items-start justify-between gap-2 mb-2">
+                            <h4 className="font-extrabold text-sm text-gray-900 group-hover:text-[#0966c2] transition-colors leading-snug">
+                              {activeSearchTab === 'colleges' ? (
+                                <a
+                                  href={targetCollegeRoute}
+                                  onClick={(e) => {
+                                    setIsPopupOpen(false);
+                                    if (onNavigate) {
+                                      e.preventDefault();
+                                      onNavigate(targetCollegeRoute);
+                                    }
+                                  }}
+                                >
+                                  {item.name}
+                                </a>
+                              ) : (
+                                item.name
+                              )}
+                            </h4>
+                            {activeSearchTab === 'colleges' && (
+                              <span className="shrink-0 text-[11px] font-extrabold text-amber-800 bg-amber-100/90 border border-amber-200/90 px-2 py-0.5 rounded-md flex items-center gap-0.5 shadow-2xs">
+                                ★ {item.rating || '4.5'}
+                              </span>
                             )}
-                          </h4>
-                          {activeSearchTab === 'colleges' && (
-                            <span className="shrink-0 text-[11px] font-extrabold text-amber-800 bg-amber-100/90 border border-amber-200/90 px-2 py-0.5 rounded-md flex items-center gap-0.5 shadow-2xs">
-                              ★ {item.rating || '4.5'}
-                            </span>
+                          </div>
+
+                          {activeSearchTab === 'colleges' ? (
+                            <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500 mb-3">
+                              <span className="bg-blue-50 text-blue-700 font-medium px-2 py-0.5 rounded">
+                                📍 {item.city}{item.state ? `, ${item.state}` : ''}
+                              </span>
+                              {item.stream && (
+                                <span className="bg-teal-50 text-teal-700 font-medium px-2 py-0.5 rounded">
+                                  🏷️ {item.stream}
+                                </span>
+                              )}
+                              {item.sector && (
+                                <span className="bg-gray-100 text-gray-600 font-medium px-2 py-0.5 rounded">
+                                  🏛️ {item.sector}
+                                </span>
+                              )}
+                            </div>
+                          ) : (
+                            <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500 mb-3">
+                              <span className="bg-teal-50 text-teal-700 font-medium px-2 py-0.5 rounded">
+                                ⏱️ {item.duration}
+                              </span>
+                              <span className="bg-blue-50 text-blue-700 font-medium px-2 py-0.5 rounded">
+                                🏷️ Stream: {item.stream}
+                              </span>
+                              <span className="bg-emerald-50 text-emerald-700 font-medium px-2 py-0.5 rounded">
+                                💰 Fee: {item.avgFee}
+                              </span>
+                            </div>
                           )}
                         </div>
 
-                        {activeSearchTab === 'colleges' ? (
-                          <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500 mb-3">
-                            <span className="bg-blue-50 text-blue-700 font-medium px-2 py-0.5 rounded">
-                              📍 {item.city}{item.state ? `, ${item.state}` : ''}
-                            </span>
-                            {item.stream && (
-                              <span className="bg-teal-50 text-teal-700 font-medium px-2 py-0.5 rounded">
-                                🏷️ {item.stream}
-                              </span>
-                            )}
-                            {item.sector && (
-                              <span className="bg-gray-100 text-gray-600 font-medium px-2 py-0.5 rounded">
-                                🏛️ {item.sector}
-                              </span>
-                            )}
-                          </div>
-                        ) : (
-                          <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500 mb-3">
-                            <span className="bg-teal-50 text-teal-700 font-medium px-2 py-0.5 rounded">
-                              ⏱️ {item.duration}
-                            </span>
-                            <span className="bg-blue-50 text-blue-700 font-medium px-2 py-0.5 rounded">
-                              🏷️ Stream: {item.stream}
-                            </span>
-                            <span className="bg-emerald-50 text-emerald-700 font-medium px-2 py-0.5 rounded">
-                              💰 Fee: {item.avgFee}
-                            </span>
-                          </div>
-                        )}
-                      </div>
+                        <div className="pt-2.5 border-t border-gray-100 flex items-center justify-between">
+                          <span className="text-xs font-semibold text-gray-500 truncate max-w-[200px]">
+                            {activeSearchTab === 'colleges'
+                              ? (item.courses ? `Courses: ${item.courses}` : 'Recognized')
+                              : `Top: ${item.popularIn}`}
+                          </span>
 
-                      <div className="pt-2.5 border-t border-gray-100 flex items-center justify-between">
-                        <span className="text-xs font-semibold text-gray-500 truncate max-w-[200px]">
-                          {activeSearchTab === 'colleges'
-                            ? (item.courses ? `Courses: ${item.courses}` : 'Recognized')
-                            : `Top: ${item.popularIn}`}
-                        </span>
-
-                        {activeSearchTab === 'colleges' ? (
-                          <a
-                            href={allowedLink(`/college/${item.id}`)}
-                            onClick={(e) => {
-                              setIsPopupOpen(false);
-                              if (onNavigate) {
-                                e.preventDefault();
-                                onNavigate(allowedLink(`/college/${item.id}`));
-                              }
-                            }}
-                            className="inline-flex items-center gap-1 text-xs font-bold text-[#0966c2] hover:text-[#084e96] hover:underline cursor-pointer"
-                          >
-                            View College →
-                          </a>
-                        ) : (
-                          <a
-                            href={allowedLink(`/${(item.stream || 'nursing').toLowerCase().split(' ')[0]}`)}
-                            onClick={(e) => {
-                              setIsPopupOpen(false);
-                              const st = (item.stream || '').toLowerCase();
-                              const targetRoute = st.includes('pharmacy') ? '/pharmacy'
-                                : st.includes('yoga') ? '/yoga'
-                                : st.includes('paramedical') ? '/paramedical'
-                                : '/nursing';
-                              if (onNavigate) {
-                                e.preventDefault();
-                                onNavigate(allowedLink(targetRoute));
-                              }
-                            }}
-                            className="inline-flex items-center gap-1 text-xs font-bold text-[#0966c2] hover:text-[#084e96] hover:underline cursor-pointer"
-                          >
-                            Explore Colleges →
-                          </a>
-                        )}
+                          {activeSearchTab === 'colleges' ? (
+                            <a
+                              href={targetCollegeRoute}
+                              onClick={(e) => {
+                                setIsPopupOpen(false);
+                                if (onNavigate) {
+                                  e.preventDefault();
+                                  onNavigate(targetCollegeRoute);
+                                }
+                              }}
+                              className="inline-flex items-center gap-1 text-xs font-bold text-[#0966c2] hover:text-[#084e96] hover:underline cursor-pointer"
+                            >
+                              View College →
+                            </a>
+                          ) : (
+                            <a
+                              href={targetCollegeRoute}
+                              onClick={(e) => {
+                                setIsPopupOpen(false);
+                                if (onNavigate) {
+                                  e.preventDefault();
+                                  onNavigate(targetCollegeRoute);
+                                }
+                              }}
+                              className="inline-flex items-center gap-1 text-xs font-bold text-[#0966c2] hover:text-[#084e96] hover:underline cursor-pointer"
+                            >
+                              Explore Colleges →
+                            </a>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               ) : (
                 <div className="text-center py-12 px-4">
@@ -821,8 +890,20 @@ function HomeContent({ onNavigate }) {
                 {collegesData.filter(item => item.sector === 'Government').slice(0, 16).map((item, index) => {
                   const stateName = { "HR": "Haryana", "RJ": "Rajasthan", "TG": "Telangana", "OR": "Odisha", "JK": "Jammu & Kashmir", "KA": "Karnataka", "BR": "Bihar", "ML": "Meghalaya", "UP": "Uttar Pradesh", "PB": "Punjab", "MH": "Maharashtra", "WB": "West Bengal", "TR": "Tripura", "HP": "Himachal Pradesh", "JH": "Jharkhand", "CT": "Chhattisgarh", "AP": "Andhra Pradesh", "GJ": "Gujarat", "GA": "Goa", "TN": "Tamil Nadu", "MP": "Madhya Pradesh", "KL": "Kerala", "UT": "Uttarakhand" }[item.state] || item.state || '';
                   const locationStr = `${item.city || item.district || ''}${(item.city || item.district) && stateName ? ', ' : ''}${stateName}`;
+                  const collegeRoute = allowedLink(`${getCollegeStreamRoute(item)}?search=${encodeURIComponent(item.name)}`);
                   return (
-                    <a className={"displayCard"} key={item.id || index} href={allowedLink(`/college/${item.id}`)}>
+                    <a
+                      className={"displayCard"}
+                      key={item.id || index}
+                      href={collegeRoute}
+                      onClick={(e) => {
+                        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                        if (onNavigate) {
+                          e.preventDefault();
+                          onNavigate(collegeRoute);
+                        }
+                      }}
+                    >
                       <figure>
                         <CollegeImage college={item}
                           loading={"lazy"}
