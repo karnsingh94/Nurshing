@@ -5718,9 +5718,9 @@ const baseCollegesData = [
 ];
 
 export const collegesData = [
-  ...baseCollegesData,
   ...nursingCollegesData,
   ...pharmacyCollegesData,
   ...paramedicalCollegesData,
   ...yogaCollegesData
 ];
+
