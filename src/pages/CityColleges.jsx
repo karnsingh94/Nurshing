@@ -150,6 +150,9 @@ export default function CityColleges({ onNavigate }) {
   const [searchQuery, setSearchQuery] = useState(() => getInitialFiltersFromUrl().searchQuery);
   const [currentPage, setCurrentPage] = useState(1);
   const [sectorFilter, setSectorFilter] = useState('ALL');
+  const [genderFilter, setGenderFilter] = useState('ALL');
+
+
 
   const [isStateOpen, setIsStateOpen] = useState(false);
   const [isCityOpen, setIsCityOpen] = useState(false);
@@ -234,10 +237,11 @@ export default function CityColleges({ onNavigate }) {
         if (!matchesState) return false;
       }
 
-      // 2. City Filter Check (Strictly matches the college's district or city)
+      // 2. City Filter Check (Strictly matches the college's district, city, or name)
       if (selectedCity) {
         const cCity = (c.city || '').toLowerCase().trim().replace(/\s*\(location\)$/i, '');
         const cDistrict = (c.district || '').toLowerCase().trim().replace(/\s*\(location\)$/i, '');
+        const cName = (c.name || '').toLowerCase().trim();
         const reqCity = selectedCity.toLowerCase().trim();
         const aliasList = cityAliases[reqCity] || [reqCity];
 
@@ -245,10 +249,14 @@ export default function CityColleges({ onNavigate }) {
           cDistrict === alias ||
           cCity === alias ||
           cDistrict.includes(alias) ||
-          cCity.includes(alias)
+          cCity.includes(alias) ||
+          cName.includes(` ${alias}`) ||
+          cName.includes(`(${alias})`) ||
+          cName.endsWith(alias)
         );
         if (!matchesCity) return false;
       }
+
 
       // 3. Search Query Check
       if (searchQuery.trim()) {
@@ -466,8 +474,35 @@ export default function CityColleges({ onNavigate }) {
                     </div>
                   )}
                 </div>
+
+                {/* Clear Filter Button */}
+                {(selectedCity || selectedState || selectedStream !== 'ALL' || searchQuery || sectorFilter !== 'ALL' || genderFilter !== 'ALL') && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSelectedState('');
+                      setSelectedCity('');
+                      setSelectedStream('ALL');
+                      setSearchQuery('');
+                      setSectorFilter('ALL');
+                      setGenderFilter('ALL');
+                      setCurrentPage(1);
+                      if (onNavigate) {
+                        onNavigate(allowedLink('/city-colleges'));
+                      } else {
+                        window.history.pushState({}, '', allowedLink('/city-colleges'));
+                      }
+                    }}
+                    className="px-3.5 py-3 rounded-xl bg-rose-500/90 hover:bg-rose-600 text-white font-extrabold text-xs border border-rose-400/40 outline-none cursor-pointer shadow-xs flex items-center gap-1.5 transition-all shrink-0 active:scale-95"
+                    title="Clear all active filters"
+                  >
+                    <span>✕</span>
+                    <span>Clear Filter</span>
+                  </button>
+                )}
               </div>
             </div>
+
 
             {/* Quick Stream Filter Pills (Nursing, Pharmacy, Paramedical, Yoga) */}
             <div className="w-full flex flex-wrap items-center gap-2 pt-2 border-t border-white/20">
