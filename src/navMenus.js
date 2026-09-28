@@ -605,8 +605,11 @@ export const megaMenus = {
       {
         title: 'COURSES',
         items: [
+          ['B.SC MLT', '/paramedical?search=MLT'],
+          ['BPT (PHYSIOTHERAPY)', '/paramedical?search=BPT'],
+          ['B.SC OTT', '/paramedical?search=OTT'],
+          ['RADIOGRAPHY', '/paramedical?search=Radiography'],
           ['DMLT', '/paramedical?search=DMLT'],
-          ['DRT', '/paramedical?search=DRT'],
         ],
       },
     ],

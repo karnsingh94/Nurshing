@@ -1072,28 +1072,28 @@ function HomeContent({ onNavigate }) {
                     <span title={"Nursing Colleges"} className={"indexSprite medical"}></span>
                     <div className={"dataCardText"}>
                       <p>{"Nursing"}</p>
-                      <p className={"count"}>{"48 Colleges"}</p>
+                      <p className={"count"}>{`${nursingCollegesData.length.toLocaleString()} Colleges`}</p>
                     </div>
                   </a>
                   <a href={allowedLink("/pharmacy")} className={"dataCard"}>
                     <span title={"Pharmacy Colleges"} className={"indexSprite pharmacy"}></span>
                     <div className={"dataCardText"}>
                       <p>{"Pharmacy"}</p>
-                      <p className={"count"}>{"40 Colleges"}</p>
+                      <p className={"count"}>{`${pharmacyCollegesData.length.toLocaleString()} Colleges`}</p>
                     </div>
                   </a>
                   <a href={allowedLink("/paramedical")} className={"dataCard"}>
                     <span title={"Paramedical Colleges"} className={"indexSprite paramedical"}></span>
                     <div className={"dataCardText"}>
                       <p>{"Paramedical"}</p>
-                      <p className={"count"}>{"36 Colleges"}</p>
+                      <p className={"count"}>{`${paramedicalCollegesData.length.toLocaleString()} Colleges`}</p>
                     </div>
                   </a>
                   <a href={allowedLink("/yoga")} className={"dataCard"}>
                     <span title={"Yoga Colleges"} className={"indexSprite science"}></span>
                     <div className={"dataCardText"}>
                       <p>{"Yoga"}</p>
-                      <p className={"count"}>{"25 Colleges"}</p>
+                      <p className={"count"}>{`${yogaCollegesData.length.toLocaleString()} Colleges`}</p>
                     </div>
                   </a>
                 </div>
@@ -1101,28 +1101,28 @@ function HomeContent({ onNavigate }) {
               <div id={"courses-category"} className={"tab-content"}>
                 <div className={"row limitCards"}>
                   {/* Nursing Courses */}
-                  <a href={allowedLink("/colleges?search=B.Sc.+Nursing")} className={"dataCard"}>
+                  <a href={allowedLink("/nursing?search=B.Sc+Nursing")} className={"dataCard"}>
                     <span title={"B.Sc. Nursing"} className={"indexSprite medical"}></span>
                     <div className={"dataCardText"}>
                       <p>{"B.SC. NURSING"}</p>
                       <p className={"count"}>{"Nursing Course"}</p>
                     </div>
                   </a>
-                  <a href={allowedLink("/colleges?search=Post+Basic+B.Sc+Nursing")} className={"dataCard"}>
+                  <a href={allowedLink("/nursing?search=Post+Basic")} className={"dataCard"}>
                     <span title={"Post Basic B.Sc Nursing"} className={"indexSprite medical"}></span>
                     <div className={"dataCardText"}>
                       <p>{"POST BASIC B.SC NURSING"}</p>
                       <p className={"count"}>{"Nursing Course"}</p>
                     </div>
                   </a>
-                  <a href={allowedLink("/colleges?search=GNM")} className={"dataCard"}>
+                  <a href={allowedLink("/nursing?search=GNM")} className={"dataCard"}>
                     <span title={"G.N.M."} className={"indexSprite medical"}></span>
                     <div className={"dataCardText"}>
                       <p>{"G.N.M."}</p>
                       <p className={"count"}>{"Nursing Course"}</p>
                     </div>
                   </a>
-                  <a href={allowedLink("/colleges?search=ANM")} className={"dataCard"}>
+                  <a href={allowedLink("/nursing?search=ANM")} className={"dataCard"}>
                     <span title={"A.N.M."} className={"indexSprite medical"}></span>
                     <div className={"dataCardText"}>
                       <p>{"A.N.M."}</p>
@@ -1131,70 +1131,98 @@ function HomeContent({ onNavigate }) {
                   </a>
 
                   {/* Pharmacy Courses */}
-                  <a href={allowedLink("/colleges?search=B.+Pharmacy")} className={"dataCard"}>
+                  <a href={allowedLink("/pharmacy?search=B.Pharm")} className={"dataCard"}>
                     <span title={"B. Pharmacy"} className={"indexSprite pharmacy"}></span>
                     <div className={"dataCardText"}>
                       <p>{"B. PHARMACY"}</p>
                       <p className={"count"}>{"Pharmacy Course"}</p>
                     </div>
                   </a>
-                  <a href={allowedLink("/colleges?search=D.+Pharmacy")} className={"dataCard"}>
+                  <a href={allowedLink("/pharmacy?search=D.Pharm")} className={"dataCard"}>
                     <span title={"D. Pharmacy"} className={"indexSprite pharmacy"}></span>
                     <div className={"dataCardText"}>
                       <p>{"D. PHARMACY"}</p>
                       <p className={"count"}>{"Pharmacy Course"}</p>
                     </div>
                   </a>
-                  <a href={allowedLink("/colleges?search=M.+Pharmacy")} className={"dataCard"}>
+                  <a href={allowedLink("/pharmacy?search=M.Pharm")} className={"dataCard"}>
                     <span title={"M. Pharmacy"} className={"indexSprite pharmacy"}></span>
                     <div className={"dataCardText"}>
                       <p>{"M. PHARMACY"}</p>
                       <p className={"count"}>{"Pharmacy Course"}</p>
                     </div>
                   </a>
+                  <a href={allowedLink("/pharmacy?search=Pharm.D")} className={"dataCard"}>
+                    <span title={"Pharm.D"} className={"indexSprite pharmacy"}></span>
+                    <div className={"dataCardText"}>
+                      <p>{"PHARM.D"}</p>
+                      <p className={"count"}>{"Pharmacy Course"}</p>
+                    </div>
+                  </a>
 
                   {/* Paramedical Courses */}
-                  <a href={allowedLink("/colleges?search=DMLT")} className={"dataCard"}>
+                  <a href={allowedLink("/paramedical?search=MLT")} className={"dataCard"}>
+                    <span title={"B.Sc MLT"} className={"indexSprite paramedical"}></span>
+                    <div className={"dataCardText"}>
+                      <p>{"B.SC MLT"}</p>
+                      <p className={"count"}>{"Paramedical Course"}</p>
+                    </div>
+                  </a>
+                  <a href={allowedLink("/paramedical?search=BPT")} className={"dataCard"}>
+                    <span title={"BPT (Physiotherapy)"} className={"indexSprite paramedical"}></span>
+                    <div className={"dataCardText"}>
+                      <p>{"BPT (PHYSIOTHERAPY)"}</p>
+                      <p className={"count"}>{"Paramedical Course"}</p>
+                    </div>
+                  </a>
+                  <a href={allowedLink("/paramedical?search=OTT")} className={"dataCard"}>
+                    <span title={"B.Sc OTT"} className={"indexSprite paramedical"}></span>
+                    <div className={"dataCardText"}>
+                      <p>{"B.SC OTT"}</p>
+                      <p className={"count"}>{"Paramedical Course"}</p>
+                    </div>
+                  </a>
+                  <a href={allowedLink("/paramedical?search=Radiography")} className={"dataCard"}>
+                    <span title={"Radiography"} className={"indexSprite paramedical"}></span>
+                    <div className={"dataCardText"}>
+                      <p>{"RADIOGRAPHY"}</p>
+                      <p className={"count"}>{"Paramedical Course"}</p>
+                    </div>
+                  </a>
+                  <a href={allowedLink("/paramedical?search=DMLT")} className={"dataCard"}>
                     <span title={"DMLT"} className={"indexSprite paramedical"}></span>
                     <div className={"dataCardText"}>
                       <p>{"DMLT"}</p>
                       <p className={"count"}>{"Paramedical Course"}</p>
                     </div>
                   </a>
-                  <a href={allowedLink("/colleges?search=DRT")} className={"dataCard"}>
-                    <span title={"DRT"} className={"indexSprite paramedical"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"DRT"}</p>
-                      <p className={"count"}>{"Paramedical Course"}</p>
-                    </div>
-                  </a>
 
                   {/* Yoga Courses */}
-                  <a href={allowedLink("/colleges?search=Yogic+Science")} className={"dataCard"}>
-                    <span title={"B.Sc. in Yogic Science"} className={"indexSprite science"}></span>
+                  <a href={allowedLink("/yoga?search=BNYS")} className={"dataCard"}>
+                    <span title={"BNYS"} className={"indexSprite science"}></span>
                     <div className={"dataCardText"}>
-                      <p>{"B.SC. IN YOGIC SCIENCE"}</p>
+                      <p>{"BNYS"}</p>
                       <p className={"count"}>{"Yoga Course"}</p>
                     </div>
                   </a>
-                  <a href={allowedLink("/colleges?search=Diploma+in+Yoga")} className={"dataCard"}>
+                  <a href={allowedLink("/yoga?search=B.Sc+Yoga")} className={"dataCard"}>
+                    <span title={"B.Sc Yoga Science"} className={"indexSprite science"}></span>
+                    <div className={"dataCardText"}>
+                      <p>{"B.SC YOGA SCIENCE"}</p>
+                      <p className={"count"}>{"Yoga Course"}</p>
+                    </div>
+                  </a>
+                  <a href={allowedLink("/yoga?search=M.Sc+Yoga")} className={"dataCard"}>
+                    <span title={"M.Sc Yoga"} className={"indexSprite science"}></span>
+                    <div className={"dataCardText"}>
+                      <p>{"M.SC YOGA"}</p>
+                      <p className={"count"}>{"Yoga Course"}</p>
+                    </div>
+                  </a>
+                  <a href={allowedLink("/yoga?search=Diploma")} className={"dataCard"}>
                     <span title={"Diploma in Yoga"} className={"indexSprite science"}></span>
                     <div className={"dataCardText"}>
                       <p>{"DIPLOMA IN YOGA"}</p>
-                      <p className={"count"}>{"Yoga Course"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/colleges?search=PG+Diploma+in+Yoga")} className={"dataCard"}>
-                    <span title={"PG Diploma in Yoga"} className={"indexSprite science"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"PG DIPLOMA IN YOGA"}</p>
-                      <p className={"count"}>{"Yoga Course"}</p>
-                    </div>
-                  </a>
-                  <a href={allowedLink("/colleges?search=Certificate+in+Yoga")} className={"dataCard"}>
-                    <span title={"Certificate in Yoga"} className={"indexSprite science"}></span>
-                    <div className={"dataCardText"}>
-                      <p>{"CERTIFICATE IN YOGA"}</p>
                       <p className={"count"}>{"Yoga Course"}</p>
                     </div>
                   </a>

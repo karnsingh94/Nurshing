@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react';
-import { collegesData } from '../data/collegesData.js';
+import {
+  collegesData,
+  nursingCollegesData,
+  pharmacyCollegesData,
+  paramedicalCollegesData,
+  yogaCollegesData
+} from '../data/collegesData.js';
 import { allowedLink } from '../linkPolicy.js';
 import PageRenderer from '../PageRenderer.jsx';
 import { fetchMedicalNews, fallbackArticles } from '../services/newsApi.js';
@@ -899,28 +905,28 @@ function LogoContent() {
                     <span title={"Nursing Colleges"} className={"indexSprite medical"}></span>
                     <div className={"dataCardText"}>
                       <p>{"Nursing"}</p>
-                      <p className={"count"}>{"48 Colleges"}</p>
+                      <p className={"count"}>{`${nursingCollegesData.length.toLocaleString()} Colleges`}</p>
                     </div>
                   </a>
                   <a href={allowedLink("/pharmacy")} className={"dataCard"}>
                     <span title={"Pharmacy Colleges"} className={"indexSprite pharmacy"}></span>
                     <div className={"dataCardText"}>
                       <p>{"Pharmacy"}</p>
-                      <p className={"count"}>{"40 Colleges"}</p>
+                      <p className={"count"}>{`${pharmacyCollegesData.length.toLocaleString()} Colleges`}</p>
                     </div>
                   </a>
                   <a href={allowedLink("/paramedical")} className={"dataCard"}>
                     <span title={"Paramedical Colleges"} className={"indexSprite paramedical"}></span>
                     <div className={"dataCardText"}>
                       <p>{"Paramedical"}</p>
-                      <p className={"count"}>{"36 Colleges"}</p>
+                      <p className={"count"}>{`${paramedicalCollegesData.length.toLocaleString()} Colleges`}</p>
                     </div>
                   </a>
                   <a href={allowedLink("/yoga")} className={"dataCard"}>
                     <span title={"Yoga Colleges"} className={"indexSprite science"}></span>
                     <div className={"dataCardText"}>
                       <p>{"Yoga"}</p>
-                      <p className={"count"}>{"25 Colleges"}</p>
+                      <p className={"count"}>{`${yogaCollegesData.length.toLocaleString()} Colleges`}</p>
                     </div>
                   </a>
 

@@ -479,8 +479,9 @@ function PharmacyContent({ onNavigate }) {
         const matchName = college.name?.toLowerCase().includes(q);
         const matchCity = (college.district || college.city || '').toLowerCase().includes(q);
         const matchState = (college.stateName || college.state || '').toLowerCase().includes(q);
+        const matchCourses = (college.courses || '').toLowerCase().includes(q);
         const matchDetails = (college.details || '').toLowerCase().includes(q);
-        if (!matchName && !matchCity && !matchState && !matchDetails) {
+        if (!matchName && !matchCity && !matchState && !matchCourses && !matchDetails) {
           return false;
         }
       }
@@ -2731,7 +2732,7 @@ function PharmacyContent({ onNavigate }) {
                     type="text"
                     value={searchQuery}
                     onChange={handleSearchChange}
-                    placeholder="Search Pharmacy Colleges by name, city, state..."
+                    placeholder={`Search ${pharmacyCollegesData.length.toLocaleString()} Pharmacy Colleges by name, city, state, course...`}
                     className="w-full bg-slate-50 border border-slate-200 text-slate-800 placeholder-slate-400 text-sm rounded-xl pl-9 pr-8 py-2.5 focus:ring-2 focus:ring-[#0966c2] focus:outline-hidden"
                   />
                   <span className="absolute left-3 top-2.5 text-slate-400 text-sm">🔍</span>
